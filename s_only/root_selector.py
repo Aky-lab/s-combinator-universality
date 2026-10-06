@@ -31,6 +31,8 @@ class SelectorTable:
             for entry in row:
                 if type(entry) is not Command:
                     raise ValueError('invalid instruction')
+                if type(entry.command) is not str:
+                    raise ValueError('primitive command must be a plain string')
                 if entry.command in ('normal', 'contracted'):
                     if any(other != entry for other in row) or entry.next_state is not None:
                         raise ValueError('terminal must be uniform and absorbing')

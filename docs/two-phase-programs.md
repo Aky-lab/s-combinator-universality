@@ -168,9 +168,10 @@ construction and all-input trajectory equivalence are separate next steps.
 
 ## Remaining positive-period extension points
 
-The current implementation deliberately rejects periods other than two. A
-future generic-period compiler would need these changes before relaxing that
-check:
+The two-phase API retains its compatibility restriction. The separate
+[positive-period API](periodic-controllers.md) implements the routing and
+phase generalization below, with the original two-phase graphs preserved.
+The construction dependencies are:
 
 1. Replace the four-leaf `patterns._dispatch` construction with the encoder's
    adjacent-pairing forest, carrying an unpaired final tree unchanged. Keep a
@@ -190,8 +191,8 @@ uses a Boolean for arbitrary programs. It controls deletion versus handoff,
 whereas
 [carrier phase recovery](https://github.com/cstrawberry/predictive-universe/blob/85a867988442fc423279341200f81634a1e65582/docs/paper/related/pure_s_universality/formalization/PureSFormal/Research/RootResetCarrierPhaseProbe.lean)
 uses `CTS.nextPhase`. The existing clock parity concerns numeral stages and
-also does not become a modulo-program-period counter. No generic-period
-implementation or large-program integration is included in this extension.
+also does not become a modulo-program-period counter. Large-program
+construction costs remain an explicit scaling problem.
 
 ## Pinned definitions
 

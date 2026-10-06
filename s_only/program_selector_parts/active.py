@@ -86,7 +86,7 @@ def compile_dispatcher(builder, p: PatternFamily, yes, no):
     """Recover phase and deleted front bit, restore LLLR, select route row."""
     absent = _ups(builder, 4, no)
     targets = {}
-    for phase in (0, 1):
+    for phase in range(len(p.program.appendants)):
         returns = tuple(_ups(builder, 4,
                             builder.rows(p.dispatcher_rows((phase, bit)), yes, no))
                         for bit in (0, 1))
@@ -106,6 +106,6 @@ def compile_endpoint(builder, p: PatternFamily, yes, no):
 
 
 def compile_active(builder, p: PatternFamily, yes, no):
-    """RootResetActiveEndpointProbe.worker for the fixed two-phase program."""
+    """RootResetActiveEndpointProbe.worker for the fixed positive-period program."""
     endpoint = compile_endpoint(builder, p, yes, no)
     return compile_frontend(builder, p, yes, endpoint)

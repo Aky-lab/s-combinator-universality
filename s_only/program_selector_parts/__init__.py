@@ -1,1 +1,1 @@
-"""Compile-time helpers for input-independent two-phase program tables."""
+"""Compile-time helpers for input-independent fixed-program tables."""

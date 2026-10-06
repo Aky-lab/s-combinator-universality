@@ -1,0 +1,29 @@
+{
+  "analysis": "independent cost derivation for current Python literal inlining",
+  "constructed_controller": false,
+  "constructed_patterns": false,
+  "constructed_terms": false,
+  "dispatcher_layout": "bottom-up-adjacent-pairs-no-padding",
+  "dispatcher_matcher_states": 4510017,
+  "dispatcher_nodes": 1288577,
+  "dormant_literal_state_lower_bound": 568498572096,
+  "full_controller_state_lower_bound": 571594401546,
+  "leaf_depth_histogram": {
+    "10": 960,
+    "6": 4
+  },
+  "max_appendant_bits": 1998,
+  "nonempty_appendant_count": 126,
+  "phase_count": 482,
+  "program_file_sha256": "aa28952e044bc498b505f9720e6208400865f97d87ca80a2baf875d8232bb865",
+  "schema": "s-only-compilation-cost-v1",
+  "scope": "pre-quotient state allocation for successful current-compiler materialization; exact selected-action component only; no memory-byte or runtime estimate",
+  "selected_action_address_states": 42514486,
+  "selected_action_embedded_states": 571594401546,
+  "selected_action_matcher_states": 571551887060,
+  "selected_action_rows": 127288,
+  "source_commit": "85a867988442fc423279341200f81634a1e65582",
+  "total_appendant_bits": 63644,
+  "total_appendant_ones": 140,
+  "unique_appendant_count": 41
+}

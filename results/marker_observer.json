@@ -1,0 +1,5244 @@
+{
+  "schema": "s-only-finite-marker-observer-v1",
+  "source_commit": "85a867988442fc423279341200f81634a1e65582",
+  "appendants": [
+    "1",
+    ""
+  ],
+  "scope": "four native trajectories; a fresh observer invocation at every current-tree sample",
+  "event": "successful priority selection at a literal fresh HALT payload redex before contraction",
+  "sample_convention": "sample n is the tree after n native contractions; true concerns the next selected occurrence",
+  "source_semantics": "ordinary CTS until empty; empty-word phase advance thereafter for structural checkpoint comparison only",
+  "runtime_inputs": "precompiled finite table and current S tree only; fresh control and root cursor per invocation",
+  "external_instrumentation": "bounds, counters, paths, exact tokens, hashes, structural reader and source comparison never enter either machine",
+  "event_scope": "A current-tree selection predicate, with marker and checkpoint times recorded separately.",
+  "external_bounds": {
+    "control_states_per_graph": 1000000,
+    "total_appendant_bits": 128,
+    "phases": 16,
+    "native_contractions_per_run": 100,
+    "observer_microticks_per_invocation": 2000000,
+    "selection_microticks_per_invocation": 2000000,
+    "contraction_microticks_per_native_step": 1,
+    "expanded_nodes": 5000000,
+    "soft_wall_seconds": 300
+  },
+  "hard_process_guard": "caller-enforced; reproduction uses timeout 600s and ulimit -v 2097152",
+  "graphs": {
+    "observer": {
+      "finite_control_states": 257308,
+      "control_table_sha256": "464ea7ce381e22f0afb16b563d5d6e836e8f7ef552e0dd1f5be3217608dc2c90",
+      "start_control": 227388,
+      "euler_fallback": false
+    },
+    "native_selector": {
+      "finite_control_states": 257299,
+      "control_table_sha256": "bb4c1f981a8dba4fb14d7f93f55d6f6927c460ebc8263037643903ddec291924",
+      "start_control": 227379,
+      "euler_fallback": true
+    }
+  },
+  "run_count": 4,
+  "native_contractions_checked": 400,
+  "samples_checked": 404,
+  "true_samples": 12,
+  "checkpoints_checked": 12,
+  "observer_microticks": 5276638,
+  "selection_microticks": 5180062,
+  "runs": [
+    {
+      "seed": "101",
+      "native_contractions": 100,
+      "samples_checked": 101,
+      "true_samples": [],
+      "false_samples": 101,
+      "observer_microticks": 1805325,
+      "max_observer_microticks": 41936,
+      "selection_microticks": 1763841,
+      "max_selection_microticks": 41917,
+      "native_primitive_microticks": 1763941,
+      "peak_expanded_nodes": 341519,
+      "exact_read_only_sample_checks": 101,
+      "observer_absorbing_terminal_checks": 101,
+      "exact_one_contraction_checks": 100,
+      "native_absorbing_terminal_checks": 100,
+      "checkpoints": [
+        {
+          "horizon": 0,
+          "phase": 0,
+          "data": "101",
+          "sample": 0,
+          "expanded_nodes": 171,
+          "prefix_sha256": "3c66d04a273dd1e8401995ae114be5e8bbacaae1dd936a4d6dd169ffa60d60be"
+        },
+        {
+          "horizon": 1,
+          "phase": 1,
+          "data": "011",
+          "sample": 22,
+          "expanded_nodes": 17057,
+          "prefix_sha256": "8de1b75dcacef7b2641823be685aea431a05e74e47c2c1dbf43406c8b6676798"
+        },
+        {
+          "horizon": 2,
+          "phase": 0,
+          "data": "11",
+          "sample": 85,
+          "expanded_nodes": 339285,
+          "prefix_sha256": "b00d252f18fc7a4036938b2145ce579f3f537c7df614aeb88e872212e21657ca"
+        }
+      ],
+      "markers": [],
+      "samples": [
+        {
+          "sample": 0,
+          "answer": false,
+          "observer_cursor_path": "0",
+          "observer_microticks": 1511,
+          "expanded_nodes": 171
+        },
+        {
+          "sample": 1,
+          "answer": false,
+          "observer_cursor_path": "0",
+          "observer_microticks": 1513,
+          "expanded_nodes": 179
+        },
+        {
+          "sample": 2,
+          "answer": false,
+          "observer_cursor_path": "01",
+          "observer_microticks": 2314,
+          "expanded_nodes": 191
+        },
+        {
+          "sample": 3,
+          "answer": false,
+          "observer_cursor_path": "",
+          "observer_microticks": 2302,
+          "expanded_nodes": 203
+        },
+        {
+          "sample": 4,
+          "answer": false,
+          "observer_cursor_path": "0",
+          "observer_microticks": 1694,
+          "expanded_nodes": 353
+        },
+        {
+          "sample": 5,
+          "answer": false,
+          "observer_cursor_path": "",
+          "observer_microticks": 2308,
+          "expanded_nodes": 503
+        },
+        {
+          "sample": 6,
+          "answer": false,
+          "observer_cursor_path": "10",
+          "observer_microticks": 7874,
+          "expanded_nodes": 689
+        },
+        {
+          "sample": 7,
+          "answer": false,
+          "observer_cursor_path": "10",
+          "observer_microticks": 11973,
+          "expanded_nodes": 839
+        },
+        {
+          "sample": 8,
+          "answer": false,
+          "observer_cursor_path": "1",
+          "observer_microticks": 14784,
+          "expanded_nodes": 993
+        },
+        {
+          "sample": 9,
+          "answer": false,
+          "observer_cursor_path": "10",
+          "observer_microticks": 16340,
+          "expanded_nodes": 1179
+        },
+        {
+          "sample": 10,
+          "answer": false,
+          "observer_cursor_path": "1",
+          "observer_microticks": 14204,
+          "expanded_nodes": 1365
+        },
+        {
+          "sample": 11,
+          "answer": false,
+          "observer_cursor_path": "1010011111",
+          "observer_microticks": 25309,
+          "expanded_nodes": 1859
+        },
+        {
+          "sample": 12,
+          "answer": false,
+          "observer_cursor_path": "",
+          "observer_microticks": 23862,
+          "expanded_nodes": 1859
+        },
+        {
+          "sample": 13,
+          "answer": false,
+          "observer_cursor_path": "0",
+          "observer_microticks": 572,
+          "expanded_nodes": 3377
+        },
+        {
+          "sample": 14,
+          "answer": false,
+          "observer_cursor_path": "00",
+          "observer_microticks": 942,
+          "expanded_nodes": 4895
+        },
+        {
+          "sample": 15,
+          "answer": false,
+          "observer_cursor_path": "001",
+          "observer_microticks": 5236,
+          "expanded_nodes": 6413
+        },
+        {
+          "sample": 16,
+          "answer": false,
+          "observer_cursor_path": "0011",
+          "observer_microticks": 5584,
+          "expanded_nodes": 7931
+        },
+        {
+          "sample": 17,
+          "answer": false,
+          "observer_cursor_path": "00110",
+          "observer_microticks": 6738,
+          "expanded_nodes": 9449
+        },
+        {
+          "sample": 18,
+          "answer": false,
+          "observer_cursor_path": "001101",
+          "observer_microticks": 5797,
+          "expanded_nodes": 10967
+        },
+        {
+          "sample": 19,
+          "answer": false,
+          "observer_cursor_path": "0011011",
+          "observer_microticks": 5957,
+          "expanded_nodes": 12485
+        },
+        {
+          "sample": 20,
+          "answer": false,
+          "observer_cursor_path": "00110111",
+          "observer_microticks": 6145,
+          "expanded_nodes": 14003
+        },
+        {
+          "sample": 21,
+          "answer": false,
+          "observer_cursor_path": "00110111",
+          "observer_microticks": 6281,
+          "expanded_nodes": 15521
+        },
+        {
+          "sample": 22,
+          "answer": false,
+          "observer_cursor_path": "100",
+          "observer_microticks": 7593,
+          "expanded_nodes": 17057
+        },
+        {
+          "sample": 23,
+          "answer": false,
+          "observer_cursor_path": "1001",
+          "observer_microticks": 8390,
+          "expanded_nodes": 17073
+        },
+        {
+          "sample": 24,
+          "answer": false,
+          "observer_cursor_path": "10011",
+          "observer_microticks": 8424,
+          "expanded_nodes": 17089
+        },
+        {
+          "sample": 25,
+          "answer": false,
+          "observer_cursor_path": "10",
+          "observer_microticks": 8402,
+          "expanded_nodes": 17105
+        },
+        {
+          "sample": 26,
+          "answer": false,
+          "observer_cursor_path": "100",
+          "observer_microticks": 7774,
+          "expanded_nodes": 17255
+        },
+        {
+          "sample": 27,
+          "answer": false,
+          "observer_cursor_path": "10",
+          "observer_microticks": 8344,
+          "expanded_nodes": 17405
+        },
+        {
+          "sample": 28,
+          "answer": false,
+          "observer_cursor_path": "1010",
+          "observer_microticks": 14801,
+          "expanded_nodes": 17619
+        },
+        {
+          "sample": 29,
+          "answer": false,
+          "observer_cursor_path": "101",
+          "observer_microticks": 17266,
+          "expanded_nodes": 17769
+        },
+        {
+          "sample": 30,
+          "answer": false,
+          "observer_cursor_path": "10110",
+          "observer_microticks": 15910,
+          "expanded_nodes": 17983
+        },
+        {
+          "sample": 31,
+          "answer": false,
+          "observer_cursor_path": "10110",
+          "observer_microticks": 20009,
+          "expanded_nodes": 18133
+        },
+        {
+          "sample": 32,
+          "answer": false,
+          "observer_cursor_path": "1011",
+          "observer_microticks": 22850,
+          "expanded_nodes": 18287
+        },
+        {
+          "sample": 33,
+          "answer": false,
+          "observer_cursor_path": "10110",
+          "observer_microticks": 24388,
+          "expanded_nodes": 18501
+        },
+        {
+          "sample": 34,
+          "answer": false,
+          "observer_cursor_path": "1011",
+          "observer_microticks": 22270,
+          "expanded_nodes": 18715
+        },
+        {
+          "sample": 35,
+          "answer": false,
+          "observer_cursor_path": "1011010011111",
+          "observer_microticks": 33792,
+          "expanded_nodes": 19237
+        },
+        {
+          "sample": 36,
+          "answer": false,
+          "observer_cursor_path": "101",
+          "observer_microticks": 32345,
+          "expanded_nodes": 19237
+        },
+        {
+          "sample": 37,
+          "answer": false,
+          "observer_cursor_path": "1010",
+          "observer_microticks": 6685,
+          "expanded_nodes": 20867
+        },
+        {
+          "sample": 38,
+          "answer": false,
+          "observer_cursor_path": "10100",
+          "observer_microticks": 6887,
+          "expanded_nodes": 22497
+        },
+        {
+          "sample": 39,
+          "answer": false,
+          "observer_cursor_path": "101001",
+          "observer_microticks": 13800,
+          "expanded_nodes": 24127
+        },
+        {
+          "sample": 40,
+          "answer": false,
+          "observer_cursor_path": "1010011",
+          "observer_microticks": 14148,
+          "expanded_nodes": 25757
+        },
+        {
+          "sample": 41,
+          "answer": false,
+          "observer_cursor_path": "10100110",
+          "observer_microticks": 15302,
+          "expanded_nodes": 27387
+        },
+        {
+          "sample": 42,
+          "answer": false,
+          "observer_cursor_path": "101001101",
+          "observer_microticks": 14361,
+          "expanded_nodes": 29017
+        },
+        {
+          "sample": 43,
+          "answer": false,
+          "observer_cursor_path": "1010011011",
+          "observer_microticks": 14521,
+          "expanded_nodes": 30647
+        },
+        {
+          "sample": 44,
+          "answer": false,
+          "observer_cursor_path": "10100110111",
+          "observer_microticks": 14709,
+          "expanded_nodes": 32277
+        },
+        {
+          "sample": 45,
+          "answer": false,
+          "observer_cursor_path": "10100110111",
+          "observer_microticks": 14845,
+          "expanded_nodes": 33907
+        },
+        {
+          "sample": 46,
+          "answer": false,
+          "observer_cursor_path": "1010011011101101001111",
+          "observer_microticks": 12749,
+          "expanded_nodes": 35555
+        },
+        {
+          "sample": 47,
+          "answer": false,
+          "observer_cursor_path": "10",
+          "observer_microticks": 10698,
+          "expanded_nodes": 35573
+        },
+        {
+          "sample": 48,
+          "answer": false,
+          "observer_cursor_path": "100",
+          "observer_microticks": 6637,
+          "expanded_nodes": 53907
+        },
+        {
+          "sample": 49,
+          "answer": false,
+          "observer_cursor_path": "1000",
+          "observer_microticks": 6999,
+          "expanded_nodes": 72241
+        },
+        {
+          "sample": 50,
+          "answer": false,
+          "observer_cursor_path": "10001",
+          "observer_microticks": 11644,
+          "expanded_nodes": 90575
+        },
+        {
+          "sample": 51,
+          "answer": false,
+          "observer_cursor_path": "100011",
+          "observer_microticks": 11992,
+          "expanded_nodes": 108909
+        },
+        {
+          "sample": 52,
+          "answer": false,
+          "observer_cursor_path": "1000111",
+          "observer_microticks": 13146,
+          "expanded_nodes": 127243
+        },
+        {
+          "sample": 53,
+          "answer": false,
+          "observer_cursor_path": "10001111",
+          "observer_microticks": 13510,
+          "expanded_nodes": 145577
+        },
+        {
+          "sample": 54,
+          "answer": false,
+          "observer_cursor_path": "100011110",
+          "observer_microticks": 13810,
+          "expanded_nodes": 163911
+        },
+        {
+          "sample": 55,
+          "answer": false,
+          "observer_cursor_path": "1010",
+          "observer_microticks": 16596,
+          "expanded_nodes": 182245
+        },
+        {
+          "sample": 56,
+          "answer": false,
+          "observer_cursor_path": "10100",
+          "observer_microticks": 16001,
+          "expanded_nodes": 182395
+        },
+        {
+          "sample": 57,
+          "answer": false,
+          "observer_cursor_path": "1010",
+          "observer_microticks": 16541,
+          "expanded_nodes": 182545
+        },
+        {
+          "sample": 58,
+          "answer": false,
+          "observer_cursor_path": "101010",
+          "observer_microticks": 23028,
+          "expanded_nodes": 182739
+        },
+        {
+          "sample": 59,
+          "answer": false,
+          "observer_cursor_path": "10101",
+          "observer_microticks": 25463,
+          "expanded_nodes": 182889
+        },
+        {
+          "sample": 60,
+          "answer": false,
+          "observer_cursor_path": "1010110",
+          "observer_microticks": 24137,
+          "expanded_nodes": 183083
+        },
+        {
+          "sample": 61,
+          "answer": false,
+          "observer_cursor_path": "1010110",
+          "observer_microticks": 28236,
+          "expanded_nodes": 183233
+        },
+        {
+          "sample": 62,
+          "answer": false,
+          "observer_cursor_path": "101011",
+          "observer_microticks": 31047,
+          "expanded_nodes": 183387
+        },
+        {
+          "sample": 63,
+          "answer": false,
+          "observer_cursor_path": "1010110",
+          "observer_microticks": 32603,
+          "expanded_nodes": 183581
+        },
+        {
+          "sample": 64,
+          "answer": false,
+          "observer_cursor_path": "101011",
+          "observer_microticks": 30467,
+          "expanded_nodes": 183775
+        },
+        {
+          "sample": 65,
+          "answer": false,
+          "observer_cursor_path": "101011010011111",
+          "observer_microticks": 41936,
+          "expanded_nodes": 184277
+        },
+        {
+          "sample": 66,
+          "answer": false,
+          "observer_cursor_path": "10101",
+          "observer_microticks": 40489,
+          "expanded_nodes": 184277
+        },
+        {
+          "sample": 67,
+          "answer": false,
+          "observer_cursor_path": "101010",
+          "observer_microticks": 14912,
+          "expanded_nodes": 185827
+        },
+        {
+          "sample": 68,
+          "answer": false,
+          "observer_cursor_path": "1010100",
+          "observer_microticks": 15114,
+          "expanded_nodes": 187377
+        },
+        {
+          "sample": 69,
+          "answer": false,
+          "observer_cursor_path": "10101001",
+          "observer_microticks": 21947,
+          "expanded_nodes": 188927
+        },
+        {
+          "sample": 70,
+          "answer": false,
+          "observer_cursor_path": "101010011",
+          "observer_microticks": 22295,
+          "expanded_nodes": 190477
+        },
+        {
+          "sample": 71,
+          "answer": false,
+          "observer_cursor_path": "1010100110",
+          "observer_microticks": 23449,
+          "expanded_nodes": 192027
+        },
+        {
+          "sample": 72,
+          "answer": false,
+          "observer_cursor_path": "10101001101",
+          "observer_microticks": 22508,
+          "expanded_nodes": 193577
+        },
+        {
+          "sample": 73,
+          "answer": false,
+          "observer_cursor_path": "101010011011",
+          "observer_microticks": 22668,
+          "expanded_nodes": 195127
+        },
+        {
+          "sample": 74,
+          "answer": false,
+          "observer_cursor_path": "1010100110111",
+          "observer_microticks": 22856,
+          "expanded_nodes": 196677
+        },
+        {
+          "sample": 75,
+          "answer": false,
+          "observer_cursor_path": "1010100110111",
+          "observer_microticks": 22992,
+          "expanded_nodes": 198227
+        },
+        {
+          "sample": 76,
+          "answer": false,
+          "observer_cursor_path": "101010011011101101001111",
+          "observer_microticks": 14938,
+          "expanded_nodes": 199795
+        },
+        {
+          "sample": 77,
+          "answer": false,
+          "observer_cursor_path": "1010",
+          "observer_microticks": 12887,
+          "expanded_nodes": 199813
+        },
+        {
+          "sample": 78,
+          "answer": false,
+          "observer_cursor_path": "10100",
+          "observer_microticks": 14864,
+          "expanded_nodes": 217247
+        },
+        {
+          "sample": 79,
+          "answer": false,
+          "observer_cursor_path": "101000",
+          "observer_microticks": 15226,
+          "expanded_nodes": 234681
+        },
+        {
+          "sample": 80,
+          "answer": false,
+          "observer_cursor_path": "1010001",
+          "observer_microticks": 19871,
+          "expanded_nodes": 252115
+        },
+        {
+          "sample": 81,
+          "answer": false,
+          "observer_cursor_path": "10100011",
+          "observer_microticks": 20219,
+          "expanded_nodes": 269549
+        },
+        {
+          "sample": 82,
+          "answer": false,
+          "observer_cursor_path": "101000111",
+          "observer_microticks": 21373,
+          "expanded_nodes": 286983
+        },
+        {
+          "sample": 83,
+          "answer": false,
+          "observer_cursor_path": "1010001111",
+          "observer_microticks": 21737,
+          "expanded_nodes": 304417
+        },
+        {
+          "sample": 84,
+          "answer": false,
+          "observer_cursor_path": "10100011110",
+          "observer_microticks": 22037,
+          "expanded_nodes": 321851
+        },
+        {
+          "sample": 85,
+          "answer": false,
+          "observer_cursor_path": "1010100",
+          "observer_microticks": 23045,
+          "expanded_nodes": 339285
+        },
+        {
+          "sample": 86,
+          "answer": false,
+          "observer_cursor_path": "10101001",
+          "observer_microticks": 23903,
+          "expanded_nodes": 339305
+        },
+        {
+          "sample": 87,
+          "answer": false,
+          "observer_cursor_path": "101010011",
+          "observer_microticks": 23946,
+          "expanded_nodes": 339325
+        },
+        {
+          "sample": 88,
+          "answer": false,
+          "observer_cursor_path": "1010100111",
+          "observer_microticks": 23974,
+          "expanded_nodes": 339345
+        },
+        {
+          "sample": 89,
+          "answer": false,
+          "observer_cursor_path": "101010",
+          "observer_microticks": 23939,
+          "expanded_nodes": 339365
+        },
+        {
+          "sample": 90,
+          "answer": false,
+          "observer_cursor_path": "1010100",
+          "observer_microticks": 23226,
+          "expanded_nodes": 339515
+        },
+        {
+          "sample": 91,
+          "answer": false,
+          "observer_cursor_path": "101010",
+          "observer_microticks": 23796,
+          "expanded_nodes": 339665
+        },
+        {
+          "sample": 92,
+          "answer": false,
+          "observer_cursor_path": "10101010",
+          "observer_microticks": 30256,
+          "expanded_nodes": 339915
+        },
+        {
+          "sample": 93,
+          "answer": false,
+          "observer_cursor_path": "1010101",
+          "observer_microticks": 32715,
+          "expanded_nodes": 340065
+        },
+        {
+          "sample": 94,
+          "answer": false,
+          "observer_cursor_path": "101010110",
+          "observer_microticks": 32280,
+          "expanded_nodes": 340315
+        },
+        {
+          "sample": 95,
+          "answer": false,
+          "observer_cursor_path": "10101011",
+          "observer_microticks": 34745,
+          "expanded_nodes": 340465
+        },
+        {
+          "sample": 96,
+          "answer": false,
+          "observer_cursor_path": "1010101110",
+          "observer_microticks": 33389,
+          "expanded_nodes": 340715
+        },
+        {
+          "sample": 97,
+          "answer": false,
+          "observer_cursor_path": "1010101110",
+          "observer_microticks": 37488,
+          "expanded_nodes": 340865
+        },
+        {
+          "sample": 98,
+          "answer": false,
+          "observer_cursor_path": "101010111",
+          "observer_microticks": 40329,
+          "expanded_nodes": 341019
+        },
+        {
+          "sample": 99,
+          "answer": false,
+          "observer_cursor_path": "1010101110",
+          "observer_microticks": 41867,
+          "expanded_nodes": 341269
+        },
+        {
+          "sample": 100,
+          "answer": false,
+          "observer_cursor_path": "101010111",
+          "observer_microticks": 39749,
+          "expanded_nodes": 341519
+        }
+      ],
+      "native_selections": [
+        {
+          "sample": 0,
+          "selected_cursor_path": "0",
+          "selection_microticks": 1498
+        },
+        {
+          "sample": 1,
+          "selected_cursor_path": "0",
+          "selection_microticks": 1488
+        },
+        {
+          "sample": 2,
+          "selected_cursor_path": "01",
+          "selection_microticks": 2301
+        },
+        {
+          "sample": 3,
+          "selected_cursor_path": "",
+          "selection_microticks": 2289
+        },
+        {
+          "sample": 4,
+          "selected_cursor_path": "0",
+          "selection_microticks": 1669
+        },
+        {
+          "sample": 5,
+          "selected_cursor_path": "",
+          "selection_microticks": 2295
+        },
+        {
+          "sample": 6,
+          "selected_cursor_path": "10",
+          "selection_microticks": 7861
+        },
+        {
+          "sample": 7,
+          "selected_cursor_path": "10",
+          "selection_microticks": 11954
+        },
+        {
+          "sample": 8,
+          "selected_cursor_path": "1",
+          "selection_microticks": 14771
+        },
+        {
+          "sample": 9,
+          "selected_cursor_path": "10",
+          "selection_microticks": 16321
+        },
+        {
+          "sample": 10,
+          "selected_cursor_path": "1",
+          "selection_microticks": 14191
+        },
+        {
+          "sample": 11,
+          "selected_cursor_path": "1010011111",
+          "selection_microticks": 25290
+        },
+        {
+          "sample": 12,
+          "selected_cursor_path": "",
+          "selection_microticks": 23849
+        },
+        {
+          "sample": 13,
+          "selected_cursor_path": "0",
+          "selection_microticks": 559
+        },
+        {
+          "sample": 14,
+          "selected_cursor_path": "00",
+          "selection_microticks": 929
+        },
+        {
+          "sample": 15,
+          "selected_cursor_path": "001",
+          "selection_microticks": 5211
+        },
+        {
+          "sample": 16,
+          "selected_cursor_path": "0011",
+          "selection_microticks": 5571
+        },
+        {
+          "sample": 17,
+          "selected_cursor_path": "00110",
+          "selection_microticks": 6713
+        },
+        {
+          "sample": 18,
+          "selected_cursor_path": "001101",
+          "selection_microticks": 5784
+        },
+        {
+          "sample": 19,
+          "selected_cursor_path": "0011011",
+          "selection_microticks": 5932
+        },
+        {
+          "sample": 20,
+          "selected_cursor_path": "00110111",
+          "selection_microticks": 6132
+        },
+        {
+          "sample": 21,
+          "selected_cursor_path": "00110111",
+          "selection_microticks": 6268
+        },
+        {
+          "sample": 22,
+          "selected_cursor_path": "100",
+          "selection_microticks": 7565
+        },
+        {
+          "sample": 23,
+          "selected_cursor_path": "1001",
+          "selection_microticks": 8365
+        },
+        {
+          "sample": 24,
+          "selected_cursor_path": "10011",
+          "selection_microticks": 8411
+        },
+        {
+          "sample": 25,
+          "selected_cursor_path": "10",
+          "selection_microticks": 8389
+        },
+        {
+          "sample": 26,
+          "selected_cursor_path": "100",
+          "selection_microticks": 7746
+        },
+        {
+          "sample": 27,
+          "selected_cursor_path": "10",
+          "selection_microticks": 8331
+        },
+        {
+          "sample": 28,
+          "selected_cursor_path": "1010",
+          "selection_microticks": 14776
+        },
+        {
+          "sample": 29,
+          "selected_cursor_path": "101",
+          "selection_microticks": 17253
+        },
+        {
+          "sample": 30,
+          "selected_cursor_path": "10110",
+          "selection_microticks": 15897
+        },
+        {
+          "sample": 31,
+          "selected_cursor_path": "10110",
+          "selection_microticks": 19990
+        },
+        {
+          "sample": 32,
+          "selected_cursor_path": "1011",
+          "selection_microticks": 22837
+        },
+        {
+          "sample": 33,
+          "selected_cursor_path": "10110",
+          "selection_microticks": 24369
+        },
+        {
+          "sample": 34,
+          "selected_cursor_path": "1011",
+          "selection_microticks": 22257
+        },
+        {
+          "sample": 35,
+          "selected_cursor_path": "1011010011111",
+          "selection_microticks": 33773
+        },
+        {
+          "sample": 36,
+          "selected_cursor_path": "101",
+          "selection_microticks": 32332
+        },
+        {
+          "sample": 37,
+          "selected_cursor_path": "1010",
+          "selection_microticks": 6672
+        },
+        {
+          "sample": 38,
+          "selected_cursor_path": "10100",
+          "selection_microticks": 6874
+        },
+        {
+          "sample": 39,
+          "selected_cursor_path": "101001",
+          "selection_microticks": 13775
+        },
+        {
+          "sample": 40,
+          "selected_cursor_path": "1010011",
+          "selection_microticks": 14135
+        },
+        {
+          "sample": 41,
+          "selected_cursor_path": "10100110",
+          "selection_microticks": 15277
+        },
+        {
+          "sample": 42,
+          "selected_cursor_path": "101001101",
+          "selection_microticks": 14348
+        },
+        {
+          "sample": 43,
+          "selected_cursor_path": "1010011011",
+          "selection_microticks": 14496
+        },
+        {
+          "sample": 44,
+          "selected_cursor_path": "10100110111",
+          "selection_microticks": 14696
+        },
+        {
+          "sample": 45,
+          "selected_cursor_path": "10100110111",
+          "selection_microticks": 14832
+        },
+        {
+          "sample": 46,
+          "selected_cursor_path": "1010011011101101001111",
+          "selection_microticks": 12730
+        },
+        {
+          "sample": 47,
+          "selected_cursor_path": "10",
+          "selection_microticks": 10685
+        },
+        {
+          "sample": 48,
+          "selected_cursor_path": "100",
+          "selection_microticks": 6624
+        },
+        {
+          "sample": 49,
+          "selected_cursor_path": "1000",
+          "selection_microticks": 6986
+        },
+        {
+          "sample": 50,
+          "selected_cursor_path": "10001",
+          "selection_microticks": 11619
+        },
+        {
+          "sample": 51,
+          "selected_cursor_path": "100011",
+          "selection_microticks": 11979
+        },
+        {
+          "sample": 52,
+          "selected_cursor_path": "1000111",
+          "selection_microticks": 13121
+        },
+        {
+          "sample": 53,
+          "selected_cursor_path": "10001111",
+          "selection_microticks": 13497
+        },
+        {
+          "sample": 54,
+          "selected_cursor_path": "100011110",
+          "selection_microticks": 13791
+        },
+        {
+          "sample": 55,
+          "selected_cursor_path": "1010",
+          "selection_microticks": 16583
+        },
+        {
+          "sample": 56,
+          "selected_cursor_path": "10100",
+          "selection_microticks": 15973
+        },
+        {
+          "sample": 57,
+          "selected_cursor_path": "1010",
+          "selection_microticks": 16528
+        },
+        {
+          "sample": 58,
+          "selected_cursor_path": "101010",
+          "selection_microticks": 23003
+        },
+        {
+          "sample": 59,
+          "selected_cursor_path": "10101",
+          "selection_microticks": 25450
+        },
+        {
+          "sample": 60,
+          "selected_cursor_path": "1010110",
+          "selection_microticks": 24124
+        },
+        {
+          "sample": 61,
+          "selected_cursor_path": "1010110",
+          "selection_microticks": 28217
+        },
+        {
+          "sample": 62,
+          "selected_cursor_path": "101011",
+          "selection_microticks": 31034
+        },
+        {
+          "sample": 63,
+          "selected_cursor_path": "1010110",
+          "selection_microticks": 32584
+        },
+        {
+          "sample": 64,
+          "selected_cursor_path": "101011",
+          "selection_microticks": 30454
+        },
+        {
+          "sample": 65,
+          "selected_cursor_path": "101011010011111",
+          "selection_microticks": 41917
+        },
+        {
+          "sample": 66,
+          "selected_cursor_path": "10101",
+          "selection_microticks": 40476
+        },
+        {
+          "sample": 67,
+          "selected_cursor_path": "101010",
+          "selection_microticks": 14899
+        },
+        {
+          "sample": 68,
+          "selected_cursor_path": "1010100",
+          "selection_microticks": 15101
+        },
+        {
+          "sample": 69,
+          "selected_cursor_path": "10101001",
+          "selection_microticks": 21922
+        },
+        {
+          "sample": 70,
+          "selected_cursor_path": "101010011",
+          "selection_microticks": 22282
+        },
+        {
+          "sample": 71,
+          "selected_cursor_path": "1010100110",
+          "selection_microticks": 23424
+        },
+        {
+          "sample": 72,
+          "selected_cursor_path": "10101001101",
+          "selection_microticks": 22495
+        },
+        {
+          "sample": 73,
+          "selected_cursor_path": "101010011011",
+          "selection_microticks": 22643
+        },
+        {
+          "sample": 74,
+          "selected_cursor_path": "1010100110111",
+          "selection_microticks": 22843
+        },
+        {
+          "sample": 75,
+          "selected_cursor_path": "1010100110111",
+          "selection_microticks": 22979
+        },
+        {
+          "sample": 76,
+          "selected_cursor_path": "101010011011101101001111",
+          "selection_microticks": 14919
+        },
+        {
+          "sample": 77,
+          "selected_cursor_path": "1010",
+          "selection_microticks": 12874
+        },
+        {
+          "sample": 78,
+          "selected_cursor_path": "10100",
+          "selection_microticks": 14851
+        },
+        {
+          "sample": 79,
+          "selected_cursor_path": "101000",
+          "selection_microticks": 15213
+        },
+        {
+          "sample": 80,
+          "selected_cursor_path": "1010001",
+          "selection_microticks": 19846
+        },
+        {
+          "sample": 81,
+          "selected_cursor_path": "10100011",
+          "selection_microticks": 20206
+        },
+        {
+          "sample": 82,
+          "selected_cursor_path": "101000111",
+          "selection_microticks": 21348
+        },
+        {
+          "sample": 83,
+          "selected_cursor_path": "1010001111",
+          "selection_microticks": 21724
+        },
+        {
+          "sample": 84,
+          "selected_cursor_path": "10100011110",
+          "selection_microticks": 22018
+        },
+        {
+          "sample": 85,
+          "selected_cursor_path": "1010100",
+          "selection_microticks": 23017
+        },
+        {
+          "sample": 86,
+          "selected_cursor_path": "10101001",
+          "selection_microticks": 23875
+        },
+        {
+          "sample": 87,
+          "selected_cursor_path": "101010011",
+          "selection_microticks": 23921
+        },
+        {
+          "sample": 88,
+          "selected_cursor_path": "1010100111",
+          "selection_microticks": 23961
+        },
+        {
+          "sample": 89,
+          "selected_cursor_path": "101010",
+          "selection_microticks": 23926
+        },
+        {
+          "sample": 90,
+          "selected_cursor_path": "1010100",
+          "selection_microticks": 23198
+        },
+        {
+          "sample": 91,
+          "selected_cursor_path": "101010",
+          "selection_microticks": 23783
+        },
+        {
+          "sample": 92,
+          "selected_cursor_path": "10101010",
+          "selection_microticks": 30228
+        },
+        {
+          "sample": 93,
+          "selected_cursor_path": "1010101",
+          "selection_microticks": 32702
+        },
+        {
+          "sample": 94,
+          "selected_cursor_path": "101010110",
+          "selection_microticks": 32255
+        },
+        {
+          "sample": 95,
+          "selected_cursor_path": "10101011",
+          "selection_microticks": 34732
+        },
+        {
+          "sample": 96,
+          "selected_cursor_path": "1010101110",
+          "selection_microticks": 33376
+        },
+        {
+          "sample": 97,
+          "selected_cursor_path": "1010101110",
+          "selection_microticks": 37469
+        },
+        {
+          "sample": 98,
+          "selected_cursor_path": "101010111",
+          "selection_microticks": 40316
+        },
+        {
+          "sample": 99,
+          "selected_cursor_path": "1010101110",
+          "selection_microticks": 41848
+        }
+      ]
+    },
+    {
+      "seed": "1",
+      "native_contractions": 100,
+      "samples_checked": 101,
+      "true_samples": [
+        55,
+        86
+      ],
+      "false_samples": 99,
+      "observer_microticks": 1405708,
+      "max_observer_microticks": 35186,
+      "selection_microticks": 1374290,
+      "max_selection_microticks": 35167,
+      "native_primitive_microticks": 1374390,
+      "peak_expanded_nodes": 329619,
+      "exact_read_only_sample_checks": 101,
+      "observer_absorbing_terminal_checks": 101,
+      "exact_one_contraction_checks": 100,
+      "native_absorbing_terminal_checks": 100,
+      "checkpoints": [
+        {
+          "horizon": 0,
+          "phase": 0,
+          "data": "1",
+          "sample": 0,
+          "expanded_nodes": 137,
+          "prefix_sha256": "802c17deb32990756e60ed7391ea2c26992bf63b3adadcf9a4fa3042e4995b68"
+        },
+        {
+          "horizon": 1,
+          "phase": 1,
+          "data": "1",
+          "sample": 22,
+          "expanded_nodes": 13623,
+          "prefix_sha256": "fedeffafddd4aed486a93e496cc23f855862354e5a5b247c687e431e74e9441c"
+        },
+        {
+          "horizon": 2,
+          "phase": 0,
+          "data": "",
+          "sample": 87,
+          "expanded_nodes": 328191,
+          "prefix_sha256": "73bfcac3c0fca2602dd1aad9157aa70907c532f0346248d2a2384152c6de45c5"
+        }
+      ],
+      "markers": [
+        {
+          "sample": 55,
+          "selected_cursor_path": "10000",
+          "occurrence_shape": "HALT payload = ((S S) ((S S) S)) payload",
+          "payload_is_opaque": true,
+          "expanded_nodes": 16217,
+          "occurrence_prefix_sha256": "28e4c80fc4af25b4a5e084beeea156522f4590fd9776637e4a6b1addaf034af0",
+          "payload_prefix_sha256": "6729ab78428e1e7daebd6a4c8f69867e856e0063d853b44166a48d98c88db655",
+          "contracted_in_this_run": true,
+          "after_shape": "S payload (HALT_TAG payload)",
+          "after_occurrence_prefix_sha256": "e5aa99d4143b4918a409e9d2f523b2963e31c5d7baac1e6ef444aa7494ec237b",
+          "native_selection_agrees": true
+        },
+        {
+          "sample": 86,
+          "selected_cursor_path": "1010000",
+          "occurrence_shape": "HALT payload = ((S S) ((S S) S)) payload",
+          "payload_is_opaque": true,
+          "expanded_nodes": 15237,
+          "occurrence_prefix_sha256": "c172ce7264630babf86b0f16b952c551c9f427e8853215b55c1ddc6ef848e85a",
+          "payload_prefix_sha256": "2265822b240ee29c7b1c5f7d3f6651cd7f840c96159770ee2d502f2d43e1495b",
+          "contracted_in_this_run": true,
+          "after_shape": "S payload (HALT_TAG payload)",
+          "after_occurrence_prefix_sha256": "ac3664f2f6aea7d3c2d3fd14340d2cc9f9494c2e3503e98ba09841902832cae8",
+          "native_selection_agrees": true
+        }
+      ],
+      "samples": [
+        {
+          "sample": 0,
+          "answer": false,
+          "observer_cursor_path": "0",
+          "observer_microticks": 1511,
+          "expanded_nodes": 137
+        },
+        {
+          "sample": 1,
+          "answer": false,
+          "observer_cursor_path": "0",
+          "observer_microticks": 1513,
+          "expanded_nodes": 145
+        },
+        {
+          "sample": 2,
+          "answer": false,
+          "observer_cursor_path": "01",
+          "observer_microticks": 2314,
+          "expanded_nodes": 157
+        },
+        {
+          "sample": 3,
+          "answer": false,
+          "observer_cursor_path": "",
+          "observer_microticks": 2302,
+          "expanded_nodes": 169
+        },
+        {
+          "sample": 4,
+          "answer": false,
+          "observer_cursor_path": "0",
+          "observer_microticks": 1694,
+          "expanded_nodes": 285
+        },
+        {
+          "sample": 5,
+          "answer": false,
+          "observer_cursor_path": "",
+          "observer_microticks": 2308,
+          "expanded_nodes": 401
+        },
+        {
+          "sample": 6,
+          "answer": false,
+          "observer_cursor_path": "10",
+          "observer_microticks": 7874,
+          "expanded_nodes": 553
+        },
+        {
+          "sample": 7,
+          "answer": false,
+          "observer_cursor_path": "10",
+          "observer_microticks": 11973,
+          "expanded_nodes": 669
+        },
+        {
+          "sample": 8,
+          "answer": false,
+          "observer_cursor_path": "1",
+          "observer_microticks": 14784,
+          "expanded_nodes": 789
+        },
+        {
+          "sample": 9,
+          "answer": false,
+          "observer_cursor_path": "10",
+          "observer_microticks": 16340,
+          "expanded_nodes": 941
+        },
+        {
+          "sample": 10,
+          "answer": false,
+          "observer_cursor_path": "1",
+          "observer_microticks": 14204,
+          "expanded_nodes": 1093
+        },
+        {
+          "sample": 11,
+          "answer": false,
+          "observer_cursor_path": "10100111",
+          "observer_microticks": 24109,
+          "expanded_nodes": 1485
+        },
+        {
+          "sample": 12,
+          "answer": false,
+          "observer_cursor_path": "",
+          "observer_microticks": 23035,
+          "expanded_nodes": 1485
+        },
+        {
+          "sample": 13,
+          "answer": false,
+          "observer_cursor_path": "0",
+          "observer_microticks": 572,
+          "expanded_nodes": 2697
+        },
+        {
+          "sample": 14,
+          "answer": false,
+          "observer_cursor_path": "00",
+          "observer_microticks": 942,
+          "expanded_nodes": 3909
+        },
+        {
+          "sample": 15,
+          "answer": false,
+          "observer_cursor_path": "001",
+          "observer_microticks": 4635,
+          "expanded_nodes": 5121
+        },
+        {
+          "sample": 16,
+          "answer": false,
+          "observer_cursor_path": "0011",
+          "observer_microticks": 4983,
+          "expanded_nodes": 6333
+        },
+        {
+          "sample": 17,
+          "answer": false,
+          "observer_cursor_path": "00110",
+          "observer_microticks": 6137,
+          "expanded_nodes": 7545
+        },
+        {
+          "sample": 18,
+          "answer": false,
+          "observer_cursor_path": "001101",
+          "observer_microticks": 5196,
+          "expanded_nodes": 8757
+        },
+        {
+          "sample": 19,
+          "answer": false,
+          "observer_cursor_path": "0011011",
+          "observer_microticks": 5356,
+          "expanded_nodes": 9969
+        },
+        {
+          "sample": 20,
+          "answer": false,
+          "observer_cursor_path": "00110111",
+          "observer_microticks": 5544,
+          "expanded_nodes": 11181
+        },
+        {
+          "sample": 21,
+          "answer": false,
+          "observer_cursor_path": "00110111",
+          "observer_microticks": 5680,
+          "expanded_nodes": 12393
+        },
+        {
+          "sample": 22,
+          "answer": false,
+          "observer_cursor_path": "100",
+          "observer_microticks": 7593,
+          "expanded_nodes": 13623
+        },
+        {
+          "sample": 23,
+          "answer": false,
+          "observer_cursor_path": "1001",
+          "observer_microticks": 8390,
+          "expanded_nodes": 13639
+        },
+        {
+          "sample": 24,
+          "answer": false,
+          "observer_cursor_path": "10011",
+          "observer_microticks": 8424,
+          "expanded_nodes": 13655
+        },
+        {
+          "sample": 25,
+          "answer": false,
+          "observer_cursor_path": "10",
+          "observer_microticks": 8402,
+          "expanded_nodes": 13671
+        },
+        {
+          "sample": 26,
+          "answer": false,
+          "observer_cursor_path": "100",
+          "observer_microticks": 7774,
+          "expanded_nodes": 13787
+        },
+        {
+          "sample": 27,
+          "answer": false,
+          "observer_cursor_path": "10",
+          "observer_microticks": 8344,
+          "expanded_nodes": 13903
+        },
+        {
+          "sample": 28,
+          "answer": false,
+          "observer_cursor_path": "1010",
+          "observer_microticks": 14801,
+          "expanded_nodes": 14083
+        },
+        {
+          "sample": 29,
+          "answer": false,
+          "observer_cursor_path": "101",
+          "observer_microticks": 17266,
+          "expanded_nodes": 14199
+        },
+        {
+          "sample": 30,
+          "answer": false,
+          "observer_cursor_path": "10110",
+          "observer_microticks": 15910,
+          "expanded_nodes": 14379
+        },
+        {
+          "sample": 31,
+          "answer": false,
+          "observer_cursor_path": "10110",
+          "observer_microticks": 20009,
+          "expanded_nodes": 14495
+        },
+        {
+          "sample": 32,
+          "answer": false,
+          "observer_cursor_path": "1011",
+          "observer_microticks": 22850,
+          "expanded_nodes": 14615
+        },
+        {
+          "sample": 33,
+          "answer": false,
+          "observer_cursor_path": "10110",
+          "observer_microticks": 24388,
+          "expanded_nodes": 14795
+        },
+        {
+          "sample": 34,
+          "answer": false,
+          "observer_cursor_path": "1011",
+          "observer_microticks": 22270,
+          "expanded_nodes": 14975
+        },
+        {
+          "sample": 35,
+          "answer": false,
+          "observer_cursor_path": "10110100111",
+          "observer_microticks": 32592,
+          "expanded_nodes": 15395
+        },
+        {
+          "sample": 36,
+          "answer": false,
+          "observer_cursor_path": "101",
+          "observer_microticks": 31518,
+          "expanded_nodes": 15395
+        },
+        {
+          "sample": 37,
+          "answer": false,
+          "observer_cursor_path": "1010",
+          "observer_microticks": 6685,
+          "expanded_nodes": 16719
+        },
+        {
+          "sample": 38,
+          "answer": false,
+          "observer_cursor_path": "10100",
+          "observer_microticks": 6887,
+          "expanded_nodes": 18043
+        },
+        {
+          "sample": 39,
+          "answer": false,
+          "observer_cursor_path": "101001",
+          "observer_microticks": 13199,
+          "expanded_nodes": 19367
+        },
+        {
+          "sample": 40,
+          "answer": false,
+          "observer_cursor_path": "1010011",
+          "observer_microticks": 13547,
+          "expanded_nodes": 20691
+        },
+        {
+          "sample": 41,
+          "answer": false,
+          "observer_cursor_path": "10100110",
+          "observer_microticks": 14701,
+          "expanded_nodes": 22015
+        },
+        {
+          "sample": 42,
+          "answer": false,
+          "observer_cursor_path": "101001101",
+          "observer_microticks": 13760,
+          "expanded_nodes": 23339
+        },
+        {
+          "sample": 43,
+          "answer": false,
+          "observer_cursor_path": "1010011011",
+          "observer_microticks": 13920,
+          "expanded_nodes": 24663
+        },
+        {
+          "sample": 44,
+          "answer": false,
+          "observer_cursor_path": "10100110111",
+          "observer_microticks": 14108,
+          "expanded_nodes": 25987
+        },
+        {
+          "sample": 45,
+          "answer": false,
+          "observer_cursor_path": "10100110111",
+          "observer_microticks": 14244,
+          "expanded_nodes": 27311
+        },
+        {
+          "sample": 46,
+          "answer": false,
+          "observer_cursor_path": "1010011011101",
+          "observer_microticks": 12320,
+          "expanded_nodes": 28653
+        },
+        {
+          "sample": 47,
+          "answer": false,
+          "observer_cursor_path": "10",
+          "observer_microticks": 13356,
+          "expanded_nodes": 29977
+        },
+        {
+          "sample": 48,
+          "answer": false,
+          "observer_cursor_path": "100",
+          "observer_microticks": 6637,
+          "expanded_nodes": 46183
+        },
+        {
+          "sample": 49,
+          "answer": false,
+          "observer_cursor_path": "1000",
+          "observer_microticks": 6999,
+          "expanded_nodes": 62389
+        },
+        {
+          "sample": 50,
+          "answer": false,
+          "observer_cursor_path": "10001",
+          "observer_microticks": 9733,
+          "expanded_nodes": 78595
+        },
+        {
+          "sample": 51,
+          "answer": false,
+          "observer_cursor_path": "100011",
+          "observer_microticks": 10081,
+          "expanded_nodes": 94801
+        },
+        {
+          "sample": 52,
+          "answer": false,
+          "observer_cursor_path": "1000111",
+          "observer_microticks": 11235,
+          "expanded_nodes": 111007
+        },
+        {
+          "sample": 53,
+          "answer": false,
+          "observer_cursor_path": "10001111",
+          "observer_microticks": 11599,
+          "expanded_nodes": 127213
+        },
+        {
+          "sample": 54,
+          "answer": false,
+          "observer_cursor_path": "100011111",
+          "observer_microticks": 11899,
+          "expanded_nodes": 143419
+        },
+        {
+          "sample": 55,
+          "answer": true,
+          "observer_cursor_path": "10000",
+          "observer_microticks": 11407,
+          "expanded_nodes": 159625
+        },
+        {
+          "sample": 56,
+          "answer": false,
+          "observer_cursor_path": "1010",
+          "observer_microticks": 11046,
+          "expanded_nodes": 175831
+        },
+        {
+          "sample": 57,
+          "answer": false,
+          "observer_cursor_path": "10100",
+          "observer_microticks": 10451,
+          "expanded_nodes": 175947
+        },
+        {
+          "sample": 58,
+          "answer": false,
+          "observer_cursor_path": "1010",
+          "observer_microticks": 10991,
+          "expanded_nodes": 176063
+        },
+        {
+          "sample": 59,
+          "answer": false,
+          "observer_cursor_path": "101010",
+          "observer_microticks": 17478,
+          "expanded_nodes": 176223
+        },
+        {
+          "sample": 60,
+          "answer": false,
+          "observer_cursor_path": "10101",
+          "observer_microticks": 19913,
+          "expanded_nodes": 176339
+        },
+        {
+          "sample": 61,
+          "answer": false,
+          "observer_cursor_path": "1010110",
+          "observer_microticks": 18587,
+          "expanded_nodes": 176499
+        },
+        {
+          "sample": 62,
+          "answer": false,
+          "observer_cursor_path": "1010110",
+          "observer_microticks": 22686,
+          "expanded_nodes": 176615
+        },
+        {
+          "sample": 63,
+          "answer": false,
+          "observer_cursor_path": "101011",
+          "observer_microticks": 25497,
+          "expanded_nodes": 176735
+        },
+        {
+          "sample": 64,
+          "answer": false,
+          "observer_cursor_path": "1010110",
+          "observer_microticks": 27053,
+          "expanded_nodes": 176895
+        },
+        {
+          "sample": 65,
+          "answer": false,
+          "observer_cursor_path": "101011",
+          "observer_microticks": 24917,
+          "expanded_nodes": 177055
+        },
+        {
+          "sample": 66,
+          "answer": false,
+          "observer_cursor_path": "1010110100111",
+          "observer_microticks": 35186,
+          "expanded_nodes": 177455
+        },
+        {
+          "sample": 67,
+          "answer": false,
+          "observer_cursor_path": "10101",
+          "observer_microticks": 34112,
+          "expanded_nodes": 177455
+        },
+        {
+          "sample": 68,
+          "answer": false,
+          "observer_cursor_path": "101010",
+          "observer_microticks": 9362,
+          "expanded_nodes": 178699
+        },
+        {
+          "sample": 69,
+          "answer": false,
+          "observer_cursor_path": "1010100",
+          "observer_microticks": 9564,
+          "expanded_nodes": 179943
+        },
+        {
+          "sample": 70,
+          "answer": false,
+          "observer_cursor_path": "10101001",
+          "observer_microticks": 15796,
+          "expanded_nodes": 181187
+        },
+        {
+          "sample": 71,
+          "answer": false,
+          "observer_cursor_path": "101010011",
+          "observer_microticks": 16144,
+          "expanded_nodes": 182431
+        },
+        {
+          "sample": 72,
+          "answer": false,
+          "observer_cursor_path": "1010100110",
+          "observer_microticks": 17298,
+          "expanded_nodes": 183675
+        },
+        {
+          "sample": 73,
+          "answer": false,
+          "observer_cursor_path": "10101001101",
+          "observer_microticks": 16357,
+          "expanded_nodes": 184919
+        },
+        {
+          "sample": 74,
+          "answer": false,
+          "observer_cursor_path": "101010011011",
+          "observer_microticks": 16517,
+          "expanded_nodes": 186163
+        },
+        {
+          "sample": 75,
+          "answer": false,
+          "observer_cursor_path": "1010100110111",
+          "observer_microticks": 16705,
+          "expanded_nodes": 187407
+        },
+        {
+          "sample": 76,
+          "answer": false,
+          "observer_cursor_path": "1010100110111",
+          "observer_microticks": 16841,
+          "expanded_nodes": 188651
+        },
+        {
+          "sample": 77,
+          "answer": false,
+          "observer_cursor_path": "101010011011101",
+          "observer_microticks": 12787,
+          "expanded_nodes": 189913
+        },
+        {
+          "sample": 78,
+          "answer": false,
+          "observer_cursor_path": "1010",
+          "observer_microticks": 14001,
+          "expanded_nodes": 191157
+        },
+        {
+          "sample": 79,
+          "answer": false,
+          "observer_cursor_path": "10100",
+          "observer_microticks": 9314,
+          "expanded_nodes": 206383
+        },
+        {
+          "sample": 80,
+          "answer": false,
+          "observer_cursor_path": "101000",
+          "observer_microticks": 9676,
+          "expanded_nodes": 221609
+        },
+        {
+          "sample": 81,
+          "answer": false,
+          "observer_cursor_path": "1010001",
+          "observer_microticks": 12410,
+          "expanded_nodes": 236835
+        },
+        {
+          "sample": 82,
+          "answer": false,
+          "observer_cursor_path": "10100011",
+          "observer_microticks": 12758,
+          "expanded_nodes": 252061
+        },
+        {
+          "sample": 83,
+          "answer": false,
+          "observer_cursor_path": "101000111",
+          "observer_microticks": 13912,
+          "expanded_nodes": 267287
+        },
+        {
+          "sample": 84,
+          "answer": false,
+          "observer_cursor_path": "1010001111",
+          "observer_microticks": 14276,
+          "expanded_nodes": 282513
+        },
+        {
+          "sample": 85,
+          "answer": false,
+          "observer_cursor_path": "10100011111",
+          "observer_microticks": 14576,
+          "expanded_nodes": 297739
+        },
+        {
+          "sample": 86,
+          "answer": true,
+          "observer_cursor_path": "1010000",
+          "observer_microticks": 12048,
+          "expanded_nodes": 312965
+        },
+        {
+          "sample": 87,
+          "answer": false,
+          "observer_cursor_path": "1010100",
+          "observer_microticks": 12371,
+          "expanded_nodes": 328191
+        },
+        {
+          "sample": 88,
+          "answer": false,
+          "observer_cursor_path": "10101001",
+          "observer_microticks": 13229,
+          "expanded_nodes": 328211
+        },
+        {
+          "sample": 89,
+          "answer": false,
+          "observer_cursor_path": "101010011",
+          "observer_microticks": 13272,
+          "expanded_nodes": 328231
+        },
+        {
+          "sample": 90,
+          "answer": false,
+          "observer_cursor_path": "1010100111",
+          "observer_microticks": 13300,
+          "expanded_nodes": 328251
+        },
+        {
+          "sample": 91,
+          "answer": false,
+          "observer_cursor_path": "101010",
+          "observer_microticks": 13265,
+          "expanded_nodes": 328271
+        },
+        {
+          "sample": 92,
+          "answer": false,
+          "observer_cursor_path": "1010100",
+          "observer_microticks": 12552,
+          "expanded_nodes": 328387
+        },
+        {
+          "sample": 93,
+          "answer": false,
+          "observer_cursor_path": "101010",
+          "observer_microticks": 13122,
+          "expanded_nodes": 328503
+        },
+        {
+          "sample": 94,
+          "answer": false,
+          "observer_cursor_path": "10101010",
+          "observer_microticks": 19582,
+          "expanded_nodes": 328719
+        },
+        {
+          "sample": 95,
+          "answer": false,
+          "observer_cursor_path": "1010101",
+          "observer_microticks": 22041,
+          "expanded_nodes": 328835
+        },
+        {
+          "sample": 96,
+          "answer": false,
+          "observer_cursor_path": "101010110",
+          "observer_microticks": 21606,
+          "expanded_nodes": 329051
+        },
+        {
+          "sample": 97,
+          "answer": false,
+          "observer_cursor_path": "10101011",
+          "observer_microticks": 24071,
+          "expanded_nodes": 329167
+        },
+        {
+          "sample": 98,
+          "answer": false,
+          "observer_cursor_path": "1010101110",
+          "observer_microticks": 22715,
+          "expanded_nodes": 329383
+        },
+        {
+          "sample": 99,
+          "answer": false,
+          "observer_cursor_path": "1010101110",
+          "observer_microticks": 26814,
+          "expanded_nodes": 329499
+        },
+        {
+          "sample": 100,
+          "answer": false,
+          "observer_cursor_path": "101010111",
+          "observer_microticks": 29655,
+          "expanded_nodes": 329619
+        }
+      ],
+      "native_selections": [
+        {
+          "sample": 0,
+          "selected_cursor_path": "0",
+          "selection_microticks": 1498
+        },
+        {
+          "sample": 1,
+          "selected_cursor_path": "0",
+          "selection_microticks": 1488
+        },
+        {
+          "sample": 2,
+          "selected_cursor_path": "01",
+          "selection_microticks": 2301
+        },
+        {
+          "sample": 3,
+          "selected_cursor_path": "",
+          "selection_microticks": 2289
+        },
+        {
+          "sample": 4,
+          "selected_cursor_path": "0",
+          "selection_microticks": 1669
+        },
+        {
+          "sample": 5,
+          "selected_cursor_path": "",
+          "selection_microticks": 2295
+        },
+        {
+          "sample": 6,
+          "selected_cursor_path": "10",
+          "selection_microticks": 7861
+        },
+        {
+          "sample": 7,
+          "selected_cursor_path": "10",
+          "selection_microticks": 11954
+        },
+        {
+          "sample": 8,
+          "selected_cursor_path": "1",
+          "selection_microticks": 14771
+        },
+        {
+          "sample": 9,
+          "selected_cursor_path": "10",
+          "selection_microticks": 16321
+        },
+        {
+          "sample": 10,
+          "selected_cursor_path": "1",
+          "selection_microticks": 14191
+        },
+        {
+          "sample": 11,
+          "selected_cursor_path": "10100111",
+          "selection_microticks": 24090
+        },
+        {
+          "sample": 12,
+          "selected_cursor_path": "",
+          "selection_microticks": 23022
+        },
+        {
+          "sample": 13,
+          "selected_cursor_path": "0",
+          "selection_microticks": 559
+        },
+        {
+          "sample": 14,
+          "selected_cursor_path": "00",
+          "selection_microticks": 929
+        },
+        {
+          "sample": 15,
+          "selected_cursor_path": "001",
+          "selection_microticks": 4610
+        },
+        {
+          "sample": 16,
+          "selected_cursor_path": "0011",
+          "selection_microticks": 4970
+        },
+        {
+          "sample": 17,
+          "selected_cursor_path": "00110",
+          "selection_microticks": 6112
+        },
+        {
+          "sample": 18,
+          "selected_cursor_path": "001101",
+          "selection_microticks": 5183
+        },
+        {
+          "sample": 19,
+          "selected_cursor_path": "0011011",
+          "selection_microticks": 5331
+        },
+        {
+          "sample": 20,
+          "selected_cursor_path": "00110111",
+          "selection_microticks": 5531
+        },
+        {
+          "sample": 21,
+          "selected_cursor_path": "00110111",
+          "selection_microticks": 5667
+        },
+        {
+          "sample": 22,
+          "selected_cursor_path": "100",
+          "selection_microticks": 7565
+        },
+        {
+          "sample": 23,
+          "selected_cursor_path": "1001",
+          "selection_microticks": 8365
+        },
+        {
+          "sample": 24,
+          "selected_cursor_path": "10011",
+          "selection_microticks": 8411
+        },
+        {
+          "sample": 25,
+          "selected_cursor_path": "10",
+          "selection_microticks": 8389
+        },
+        {
+          "sample": 26,
+          "selected_cursor_path": "100",
+          "selection_microticks": 7746
+        },
+        {
+          "sample": 27,
+          "selected_cursor_path": "10",
+          "selection_microticks": 8331
+        },
+        {
+          "sample": 28,
+          "selected_cursor_path": "1010",
+          "selection_microticks": 14776
+        },
+        {
+          "sample": 29,
+          "selected_cursor_path": "101",
+          "selection_microticks": 17253
+        },
+        {
+          "sample": 30,
+          "selected_cursor_path": "10110",
+          "selection_microticks": 15897
+        },
+        {
+          "sample": 31,
+          "selected_cursor_path": "10110",
+          "selection_microticks": 19990
+        },
+        {
+          "sample": 32,
+          "selected_cursor_path": "1011",
+          "selection_microticks": 22837
+        },
+        {
+          "sample": 33,
+          "selected_cursor_path": "10110",
+          "selection_microticks": 24369
+        },
+        {
+          "sample": 34,
+          "selected_cursor_path": "1011",
+          "selection_microticks": 22257
+        },
+        {
+          "sample": 35,
+          "selected_cursor_path": "10110100111",
+          "selection_microticks": 32573
+        },
+        {
+          "sample": 36,
+          "selected_cursor_path": "101",
+          "selection_microticks": 31505
+        },
+        {
+          "sample": 37,
+          "selected_cursor_path": "1010",
+          "selection_microticks": 6672
+        },
+        {
+          "sample": 38,
+          "selected_cursor_path": "10100",
+          "selection_microticks": 6874
+        },
+        {
+          "sample": 39,
+          "selected_cursor_path": "101001",
+          "selection_microticks": 13174
+        },
+        {
+          "sample": 40,
+          "selected_cursor_path": "1010011",
+          "selection_microticks": 13534
+        },
+        {
+          "sample": 41,
+          "selected_cursor_path": "10100110",
+          "selection_microticks": 14676
+        },
+        {
+          "sample": 42,
+          "selected_cursor_path": "101001101",
+          "selection_microticks": 13747
+        },
+        {
+          "sample": 43,
+          "selected_cursor_path": "1010011011",
+          "selection_microticks": 13895
+        },
+        {
+          "sample": 44,
+          "selected_cursor_path": "10100110111",
+          "selection_microticks": 14095
+        },
+        {
+          "sample": 45,
+          "selected_cursor_path": "10100110111",
+          "selection_microticks": 14231
+        },
+        {
+          "sample": 46,
+          "selected_cursor_path": "1010011011101",
+          "selection_microticks": 12301
+        },
+        {
+          "sample": 47,
+          "selected_cursor_path": "10",
+          "selection_microticks": 13343
+        },
+        {
+          "sample": 48,
+          "selected_cursor_path": "100",
+          "selection_microticks": 6624
+        },
+        {
+          "sample": 49,
+          "selected_cursor_path": "1000",
+          "selection_microticks": 6986
+        },
+        {
+          "sample": 50,
+          "selected_cursor_path": "10001",
+          "selection_microticks": 9708
+        },
+        {
+          "sample": 51,
+          "selected_cursor_path": "100011",
+          "selection_microticks": 10068
+        },
+        {
+          "sample": 52,
+          "selected_cursor_path": "1000111",
+          "selection_microticks": 11210
+        },
+        {
+          "sample": 53,
+          "selected_cursor_path": "10001111",
+          "selection_microticks": 11586
+        },
+        {
+          "sample": 54,
+          "selected_cursor_path": "100011111",
+          "selection_microticks": 11880
+        },
+        {
+          "sample": 55,
+          "selected_cursor_path": "10000",
+          "selection_microticks": 11377
+        },
+        {
+          "sample": 56,
+          "selected_cursor_path": "1010",
+          "selection_microticks": 11033
+        },
+        {
+          "sample": 57,
+          "selected_cursor_path": "10100",
+          "selection_microticks": 10423
+        },
+        {
+          "sample": 58,
+          "selected_cursor_path": "1010",
+          "selection_microticks": 10978
+        },
+        {
+          "sample": 59,
+          "selected_cursor_path": "101010",
+          "selection_microticks": 17453
+        },
+        {
+          "sample": 60,
+          "selected_cursor_path": "10101",
+          "selection_microticks": 19900
+        },
+        {
+          "sample": 61,
+          "selected_cursor_path": "1010110",
+          "selection_microticks": 18574
+        },
+        {
+          "sample": 62,
+          "selected_cursor_path": "1010110",
+          "selection_microticks": 22667
+        },
+        {
+          "sample": 63,
+          "selected_cursor_path": "101011",
+          "selection_microticks": 25484
+        },
+        {
+          "sample": 64,
+          "selected_cursor_path": "1010110",
+          "selection_microticks": 27034
+        },
+        {
+          "sample": 65,
+          "selected_cursor_path": "101011",
+          "selection_microticks": 24904
+        },
+        {
+          "sample": 66,
+          "selected_cursor_path": "1010110100111",
+          "selection_microticks": 35167
+        },
+        {
+          "sample": 67,
+          "selected_cursor_path": "10101",
+          "selection_microticks": 34099
+        },
+        {
+          "sample": 68,
+          "selected_cursor_path": "101010",
+          "selection_microticks": 9349
+        },
+        {
+          "sample": 69,
+          "selected_cursor_path": "1010100",
+          "selection_microticks": 9551
+        },
+        {
+          "sample": 70,
+          "selected_cursor_path": "10101001",
+          "selection_microticks": 15771
+        },
+        {
+          "sample": 71,
+          "selected_cursor_path": "101010011",
+          "selection_microticks": 16131
+        },
+        {
+          "sample": 72,
+          "selected_cursor_path": "1010100110",
+          "selection_microticks": 17273
+        },
+        {
+          "sample": 73,
+          "selected_cursor_path": "10101001101",
+          "selection_microticks": 16344
+        },
+        {
+          "sample": 74,
+          "selected_cursor_path": "101010011011",
+          "selection_microticks": 16492
+        },
+        {
+          "sample": 75,
+          "selected_cursor_path": "1010100110111",
+          "selection_microticks": 16692
+        },
+        {
+          "sample": 76,
+          "selected_cursor_path": "1010100110111",
+          "selection_microticks": 16828
+        },
+        {
+          "sample": 77,
+          "selected_cursor_path": "101010011011101",
+          "selection_microticks": 12768
+        },
+        {
+          "sample": 78,
+          "selected_cursor_path": "1010",
+          "selection_microticks": 13988
+        },
+        {
+          "sample": 79,
+          "selected_cursor_path": "10100",
+          "selection_microticks": 9301
+        },
+        {
+          "sample": 80,
+          "selected_cursor_path": "101000",
+          "selection_microticks": 9663
+        },
+        {
+          "sample": 81,
+          "selected_cursor_path": "1010001",
+          "selection_microticks": 12385
+        },
+        {
+          "sample": 82,
+          "selected_cursor_path": "10100011",
+          "selection_microticks": 12745
+        },
+        {
+          "sample": 83,
+          "selected_cursor_path": "101000111",
+          "selection_microticks": 13887
+        },
+        {
+          "sample": 84,
+          "selected_cursor_path": "1010001111",
+          "selection_microticks": 14263
+        },
+        {
+          "sample": 85,
+          "selected_cursor_path": "10100011111",
+          "selection_microticks": 14557
+        },
+        {
+          "sample": 86,
+          "selected_cursor_path": "1010000",
+          "selection_microticks": 12018
+        },
+        {
+          "sample": 87,
+          "selected_cursor_path": "1010100",
+          "selection_microticks": 12343
+        },
+        {
+          "sample": 88,
+          "selected_cursor_path": "10101001",
+          "selection_microticks": 13201
+        },
+        {
+          "sample": 89,
+          "selected_cursor_path": "101010011",
+          "selection_microticks": 13247
+        },
+        {
+          "sample": 90,
+          "selected_cursor_path": "1010100111",
+          "selection_microticks": 13287
+        },
+        {
+          "sample": 91,
+          "selected_cursor_path": "101010",
+          "selection_microticks": 13252
+        },
+        {
+          "sample": 92,
+          "selected_cursor_path": "1010100",
+          "selection_microticks": 12524
+        },
+        {
+          "sample": 93,
+          "selected_cursor_path": "101010",
+          "selection_microticks": 13109
+        },
+        {
+          "sample": 94,
+          "selected_cursor_path": "10101010",
+          "selection_microticks": 19554
+        },
+        {
+          "sample": 95,
+          "selected_cursor_path": "1010101",
+          "selection_microticks": 22028
+        },
+        {
+          "sample": 96,
+          "selected_cursor_path": "101010110",
+          "selection_microticks": 21581
+        },
+        {
+          "sample": 97,
+          "selected_cursor_path": "10101011",
+          "selection_microticks": 24058
+        },
+        {
+          "sample": 98,
+          "selected_cursor_path": "1010101110",
+          "selection_microticks": 22702
+        },
+        {
+          "sample": 99,
+          "selected_cursor_path": "1010101110",
+          "selection_microticks": 26795
+        }
+      ]
+    },
+    {
+      "seed": "0",
+      "native_contractions": 100,
+      "samples_checked": 101,
+      "true_samples": [
+        20,
+        43,
+        52,
+        72,
+        81
+      ],
+      "false_samples": 96,
+      "observer_microticks": 1071361,
+      "max_observer_microticks": 32662,
+      "selection_microticks": 1064380,
+      "max_selection_microticks": 32643,
+      "native_primitive_microticks": 1064480,
+      "peak_expanded_nodes": 275111,
+      "exact_read_only_sample_checks": 101,
+      "observer_absorbing_terminal_checks": 101,
+      "exact_one_contraction_checks": 100,
+      "native_absorbing_terminal_checks": 100,
+      "checkpoints": [
+        {
+          "horizon": 0,
+          "phase": 0,
+          "data": "0",
+          "sample": 0,
+          "expanded_nodes": 135,
+          "prefix_sha256": "d354e52589711668f7e895019a93cfda0bb00a42a35ad80c8b89e8413e045ef4"
+        },
+        {
+          "horizon": 1,
+          "phase": 1,
+          "data": "",
+          "sample": 21,
+          "expanded_nodes": 12209,
+          "prefix_sha256": "395b8898d7b96beb955466688bcdb59c7467deca82910f123bd855703c821127"
+        },
+        {
+          "horizon": 2,
+          "phase": 0,
+          "data": "",
+          "sample": 82,
+          "expanded_nodes": 271373,
+          "prefix_sha256": "a24f4bacc3b4f47d20fe623df35432a62972ae8949d886ebf9b38adc8a529c88"
+        }
+      ],
+      "markers": [
+        {
+          "sample": 20,
+          "selected_cursor_path": "000",
+          "occurrence_shape": "HALT payload = ((S S) ((S S) S)) payload",
+          "payload_is_opaque": true,
+          "expanded_nodes": 1205,
+          "occurrence_prefix_sha256": "3b863cba79e2ed0256b1834a337cfa2e6253498afead747df4000e4170bd6794",
+          "payload_prefix_sha256": "8e2c9329a3e71a2bc88ea8a8e45e88476ef1982ec57addbdd46e7e62913dc5f1",
+          "contracted_in_this_run": true,
+          "after_shape": "S payload (HALT_TAG payload)",
+          "after_occurrence_prefix_sha256": "cbe8b80c826d811f8af5ad7848c7ed1faf6381f720df4fa79fb7416db543b99d",
+          "native_selection_agrees": true
+        },
+        {
+          "sample": 43,
+          "selected_cursor_path": "101000",
+          "occurrence_shape": "HALT payload = ((S S) ((S S) S)) payload",
+          "payload_is_opaque": true,
+          "expanded_nodes": 1317,
+          "occurrence_prefix_sha256": "7c4b0665ee57e9c70ad88ff9abcc8aef0a9dcf5c75cf4631293f4a35c8cb7e6a",
+          "payload_prefix_sha256": "456c1a277c4d85140a4a80e9162238886f5037bf84cc9d83d0f2305d9b9f0ec1",
+          "contracted_in_this_run": true,
+          "after_shape": "S payload (HALT_TAG payload)",
+          "after_occurrence_prefix_sha256": "909c252f5eee26bd6ce39c1cd0a70dc81b03af70f393a19ce3b768184ac09c5e",
+          "native_selection_agrees": true
+        },
+        {
+          "sample": 52,
+          "selected_cursor_path": "10000",
+          "occurrence_shape": "HALT payload = ((S S) ((S S) S)) payload",
+          "payload_is_opaque": true,
+          "expanded_nodes": 13367,
+          "occurrence_prefix_sha256": "842c33e07dc4ca4bdecabc9cdaea2c670ebb4fda62d57b3fa6b7041e0beb5551",
+          "payload_prefix_sha256": "fe0a2ea83aefdfc2659b1338129b7cad0fe747c65e3bc32dc6176f2bbccfa90a",
+          "contracted_in_this_run": true,
+          "after_shape": "S payload (HALT_TAG payload)",
+          "after_occurrence_prefix_sha256": "108ad8c257ff389081439b95b40c9ea541876bda39497200e6761fc03f2d3189",
+          "native_selection_agrees": true
+        },
+        {
+          "sample": 72,
+          "selected_cursor_path": "10101000",
+          "occurrence_shape": "HALT payload = ((S S) ((S S) S)) payload",
+          "payload_is_opaque": true,
+          "expanded_nodes": 1237,
+          "occurrence_prefix_sha256": "90398ecef63b0879976df48ec0545752c3c6c3c08463bd0b577ed58de8f88e5a",
+          "payload_prefix_sha256": "0c44eaad243f4e8287a21711e011888263f544f582826252bfc4e6f389aba15d",
+          "contracted_in_this_run": true,
+          "after_shape": "S payload (HALT_TAG payload)",
+          "after_occurrence_prefix_sha256": "1620806bac75029922dd72956ae5a16ee60eb85d4859f7dc289b1a8b9c578ad4",
+          "native_selection_agrees": true
+        },
+        {
+          "sample": 81,
+          "selected_cursor_path": "1010000",
+          "occurrence_shape": "HALT payload = ((S S) ((S S) S)) payload",
+          "payload_is_opaque": true,
+          "expanded_nodes": 12547,
+          "occurrence_prefix_sha256": "a41f364ea2d7e934c4662cf7c6cf559c7e380ef7398decc3e807abb29a58ea6c",
+          "payload_prefix_sha256": "daa49900578a1c5307d9dffb41796e3f5dbb4db6a7becc458390beeb367dec18",
+          "contracted_in_this_run": true,
+          "after_shape": "S payload (HALT_TAG payload)",
+          "after_occurrence_prefix_sha256": "cbddd12cd8c105a0e3e4964953cb12254036eefbfd881e98b5adcf6707363b6e",
+          "native_selection_agrees": true
+        }
+      ],
+      "samples": [
+        {
+          "sample": 0,
+          "answer": false,
+          "observer_cursor_path": "0",
+          "observer_microticks": 1511,
+          "expanded_nodes": 135
+        },
+        {
+          "sample": 1,
+          "answer": false,
+          "observer_cursor_path": "0",
+          "observer_microticks": 1513,
+          "expanded_nodes": 143
+        },
+        {
+          "sample": 2,
+          "answer": false,
+          "observer_cursor_path": "01",
+          "observer_microticks": 2314,
+          "expanded_nodes": 155
+        },
+        {
+          "sample": 3,
+          "answer": false,
+          "observer_cursor_path": "",
+          "observer_microticks": 2302,
+          "expanded_nodes": 167
+        },
+        {
+          "sample": 4,
+          "answer": false,
+          "observer_cursor_path": "0",
+          "observer_microticks": 1694,
+          "expanded_nodes": 281
+        },
+        {
+          "sample": 5,
+          "answer": false,
+          "observer_cursor_path": "",
+          "observer_microticks": 2308,
+          "expanded_nodes": 395
+        },
+        {
+          "sample": 6,
+          "answer": false,
+          "observer_cursor_path": "10",
+          "observer_microticks": 7874,
+          "expanded_nodes": 545
+        },
+        {
+          "sample": 7,
+          "answer": false,
+          "observer_cursor_path": "10",
+          "observer_microticks": 11973,
+          "expanded_nodes": 659
+        },
+        {
+          "sample": 8,
+          "answer": false,
+          "observer_cursor_path": "1",
+          "observer_microticks": 14784,
+          "expanded_nodes": 777
+        },
+        {
+          "sample": 9,
+          "answer": false,
+          "observer_cursor_path": "10",
+          "observer_microticks": 16340,
+          "expanded_nodes": 927
+        },
+        {
+          "sample": 10,
+          "answer": false,
+          "observer_cursor_path": "1",
+          "observer_microticks": 14204,
+          "expanded_nodes": 1077
+        },
+        {
+          "sample": 11,
+          "answer": false,
+          "observer_cursor_path": "10100111",
+          "observer_microticks": 23948,
+          "expanded_nodes": 1463
+        },
+        {
+          "sample": 12,
+          "answer": false,
+          "observer_cursor_path": "",
+          "observer_microticks": 22939,
+          "expanded_nodes": 1463
+        },
+        {
+          "sample": 13,
+          "answer": false,
+          "observer_cursor_path": "0",
+          "observer_microticks": 572,
+          "expanded_nodes": 2657
+        },
+        {
+          "sample": 14,
+          "answer": false,
+          "observer_cursor_path": "00",
+          "observer_microticks": 942,
+          "expanded_nodes": 3851
+        },
+        {
+          "sample": 15,
+          "answer": false,
+          "observer_cursor_path": "001",
+          "observer_microticks": 4605,
+          "expanded_nodes": 5045
+        },
+        {
+          "sample": 16,
+          "answer": false,
+          "observer_cursor_path": "0011",
+          "observer_microticks": 4953,
+          "expanded_nodes": 6239
+        },
+        {
+          "sample": 17,
+          "answer": false,
+          "observer_cursor_path": "00110",
+          "observer_microticks": 6107,
+          "expanded_nodes": 7433
+        },
+        {
+          "sample": 18,
+          "answer": false,
+          "observer_cursor_path": "001101",
+          "observer_microticks": 5166,
+          "expanded_nodes": 8627
+        },
+        {
+          "sample": 19,
+          "answer": false,
+          "observer_cursor_path": "0011010",
+          "observer_microticks": 5320,
+          "expanded_nodes": 9821
+        },
+        {
+          "sample": 20,
+          "answer": true,
+          "observer_cursor_path": "000",
+          "observer_microticks": 5905,
+          "expanded_nodes": 11015
+        },
+        {
+          "sample": 21,
+          "answer": false,
+          "observer_cursor_path": "100",
+          "observer_microticks": 2955,
+          "expanded_nodes": 12209
+        },
+        {
+          "sample": 22,
+          "answer": false,
+          "observer_cursor_path": "1001",
+          "observer_microticks": 3752,
+          "expanded_nodes": 12225
+        },
+        {
+          "sample": 23,
+          "answer": false,
+          "observer_cursor_path": "10011",
+          "observer_microticks": 3786,
+          "expanded_nodes": 12241
+        },
+        {
+          "sample": 24,
+          "answer": false,
+          "observer_cursor_path": "10",
+          "observer_microticks": 3764,
+          "expanded_nodes": 12257
+        },
+        {
+          "sample": 25,
+          "answer": false,
+          "observer_cursor_path": "100",
+          "observer_microticks": 3136,
+          "expanded_nodes": 12371
+        },
+        {
+          "sample": 26,
+          "answer": false,
+          "observer_cursor_path": "10",
+          "observer_microticks": 3706,
+          "expanded_nodes": 12485
+        },
+        {
+          "sample": 27,
+          "answer": false,
+          "observer_cursor_path": "1010",
+          "observer_microticks": 10163,
+          "expanded_nodes": 12663
+        },
+        {
+          "sample": 28,
+          "answer": false,
+          "observer_cursor_path": "101",
+          "observer_microticks": 12628,
+          "expanded_nodes": 12777
+        },
+        {
+          "sample": 29,
+          "answer": false,
+          "observer_cursor_path": "10110",
+          "observer_microticks": 11272,
+          "expanded_nodes": 12955
+        },
+        {
+          "sample": 30,
+          "answer": false,
+          "observer_cursor_path": "10110",
+          "observer_microticks": 15371,
+          "expanded_nodes": 13069
+        },
+        {
+          "sample": 31,
+          "answer": false,
+          "observer_cursor_path": "1011",
+          "observer_microticks": 18212,
+          "expanded_nodes": 13187
+        },
+        {
+          "sample": 32,
+          "answer": false,
+          "observer_cursor_path": "10110",
+          "observer_microticks": 19750,
+          "expanded_nodes": 13365
+        },
+        {
+          "sample": 33,
+          "answer": false,
+          "observer_cursor_path": "1011",
+          "observer_microticks": 17632,
+          "expanded_nodes": 13543
+        },
+        {
+          "sample": 34,
+          "answer": false,
+          "observer_cursor_path": "10110100111",
+          "observer_microticks": 27793,
+          "expanded_nodes": 13957
+        },
+        {
+          "sample": 35,
+          "answer": false,
+          "observer_cursor_path": "101",
+          "observer_microticks": 26784,
+          "expanded_nodes": 13957
+        },
+        {
+          "sample": 36,
+          "answer": false,
+          "observer_cursor_path": "1010",
+          "observer_microticks": 2047,
+          "expanded_nodes": 15263
+        },
+        {
+          "sample": 37,
+          "answer": false,
+          "observer_cursor_path": "10100",
+          "observer_microticks": 2249,
+          "expanded_nodes": 16569
+        },
+        {
+          "sample": 38,
+          "answer": false,
+          "observer_cursor_path": "101001",
+          "observer_microticks": 8531,
+          "expanded_nodes": 17875
+        },
+        {
+          "sample": 39,
+          "answer": false,
+          "observer_cursor_path": "1010011",
+          "observer_microticks": 8879,
+          "expanded_nodes": 19181
+        },
+        {
+          "sample": 40,
+          "answer": false,
+          "observer_cursor_path": "10100110",
+          "observer_microticks": 10033,
+          "expanded_nodes": 20487
+        },
+        {
+          "sample": 41,
+          "answer": false,
+          "observer_cursor_path": "101001101",
+          "observer_microticks": 9092,
+          "expanded_nodes": 21793
+        },
+        {
+          "sample": 42,
+          "answer": false,
+          "observer_cursor_path": "1010011010",
+          "observer_microticks": 9246,
+          "expanded_nodes": 23099
+        },
+        {
+          "sample": 43,
+          "answer": true,
+          "observer_cursor_path": "101000",
+          "observer_microticks": 14881,
+          "expanded_nodes": 24405
+        },
+        {
+          "sample": 44,
+          "answer": false,
+          "observer_cursor_path": "10",
+          "observer_microticks": 12234,
+          "expanded_nodes": 25711
+        },
+        {
+          "sample": 45,
+          "answer": false,
+          "observer_cursor_path": "100",
+          "observer_microticks": 1999,
+          "expanded_nodes": 39067
+        },
+        {
+          "sample": 46,
+          "answer": false,
+          "observer_cursor_path": "1000",
+          "observer_microticks": 2361,
+          "expanded_nodes": 52423
+        },
+        {
+          "sample": 47,
+          "answer": false,
+          "observer_cursor_path": "10001",
+          "observer_microticks": 4522,
+          "expanded_nodes": 65779
+        },
+        {
+          "sample": 48,
+          "answer": false,
+          "observer_cursor_path": "100011",
+          "observer_microticks": 4870,
+          "expanded_nodes": 79135
+        },
+        {
+          "sample": 49,
+          "answer": false,
+          "observer_cursor_path": "1000111",
+          "observer_microticks": 6024,
+          "expanded_nodes": 92491
+        },
+        {
+          "sample": 50,
+          "answer": false,
+          "observer_cursor_path": "10001111",
+          "observer_microticks": 6388,
+          "expanded_nodes": 105847
+        },
+        {
+          "sample": 51,
+          "answer": false,
+          "observer_cursor_path": "100011110",
+          "observer_microticks": 6688,
+          "expanded_nodes": 119203
+        },
+        {
+          "sample": 52,
+          "answer": true,
+          "observer_cursor_path": "10000",
+          "observer_microticks": 8525,
+          "expanded_nodes": 132559
+        },
+        {
+          "sample": 53,
+          "answer": false,
+          "observer_cursor_path": "1010",
+          "observer_microticks": 5291,
+          "expanded_nodes": 145915
+        },
+        {
+          "sample": 54,
+          "answer": false,
+          "observer_cursor_path": "10100",
+          "observer_microticks": 4696,
+          "expanded_nodes": 146029
+        },
+        {
+          "sample": 55,
+          "answer": false,
+          "observer_cursor_path": "1010",
+          "observer_microticks": 5236,
+          "expanded_nodes": 146143
+        },
+        {
+          "sample": 56,
+          "answer": false,
+          "observer_cursor_path": "101010",
+          "observer_microticks": 11723,
+          "expanded_nodes": 146301
+        },
+        {
+          "sample": 57,
+          "answer": false,
+          "observer_cursor_path": "10101",
+          "observer_microticks": 14158,
+          "expanded_nodes": 146415
+        },
+        {
+          "sample": 58,
+          "answer": false,
+          "observer_cursor_path": "1010110",
+          "observer_microticks": 12832,
+          "expanded_nodes": 146573
+        },
+        {
+          "sample": 59,
+          "answer": false,
+          "observer_cursor_path": "1010110",
+          "observer_microticks": 16931,
+          "expanded_nodes": 146687
+        },
+        {
+          "sample": 60,
+          "answer": false,
+          "observer_cursor_path": "101011",
+          "observer_microticks": 19742,
+          "expanded_nodes": 146805
+        },
+        {
+          "sample": 61,
+          "answer": false,
+          "observer_cursor_path": "1010110",
+          "observer_microticks": 21298,
+          "expanded_nodes": 146963
+        },
+        {
+          "sample": 62,
+          "answer": false,
+          "observer_cursor_path": "101011",
+          "observer_microticks": 19162,
+          "expanded_nodes": 147121
+        },
+        {
+          "sample": 63,
+          "answer": false,
+          "observer_cursor_path": "1010110100111",
+          "observer_microticks": 29270,
+          "expanded_nodes": 147515
+        },
+        {
+          "sample": 64,
+          "answer": false,
+          "observer_cursor_path": "10101",
+          "observer_microticks": 28261,
+          "expanded_nodes": 147515
+        },
+        {
+          "sample": 65,
+          "answer": false,
+          "observer_cursor_path": "101010",
+          "observer_microticks": 3607,
+          "expanded_nodes": 148741
+        },
+        {
+          "sample": 66,
+          "answer": false,
+          "observer_cursor_path": "1010100",
+          "observer_microticks": 3809,
+          "expanded_nodes": 149967
+        },
+        {
+          "sample": 67,
+          "answer": false,
+          "observer_cursor_path": "10101001",
+          "observer_microticks": 10011,
+          "expanded_nodes": 151193
+        },
+        {
+          "sample": 68,
+          "answer": false,
+          "observer_cursor_path": "101010011",
+          "observer_microticks": 10359,
+          "expanded_nodes": 152419
+        },
+        {
+          "sample": 69,
+          "answer": false,
+          "observer_cursor_path": "1010100110",
+          "observer_microticks": 11513,
+          "expanded_nodes": 153645
+        },
+        {
+          "sample": 70,
+          "answer": false,
+          "observer_cursor_path": "10101001101",
+          "observer_microticks": 10572,
+          "expanded_nodes": 154871
+        },
+        {
+          "sample": 71,
+          "answer": false,
+          "observer_cursor_path": "101010011010",
+          "observer_microticks": 10726,
+          "expanded_nodes": 156097
+        },
+        {
+          "sample": 72,
+          "answer": true,
+          "observer_cursor_path": "10101000",
+          "observer_microticks": 15305,
+          "expanded_nodes": 157323
+        },
+        {
+          "sample": 73,
+          "answer": false,
+          "observer_cursor_path": "1010",
+          "observer_microticks": 12920,
+          "expanded_nodes": 158549
+        },
+        {
+          "sample": 74,
+          "answer": false,
+          "observer_cursor_path": "10100",
+          "observer_microticks": 3559,
+          "expanded_nodes": 171085
+        },
+        {
+          "sample": 75,
+          "answer": false,
+          "observer_cursor_path": "101000",
+          "observer_microticks": 3921,
+          "expanded_nodes": 183621
+        },
+        {
+          "sample": 76,
+          "answer": false,
+          "observer_cursor_path": "1010001",
+          "observer_microticks": 6082,
+          "expanded_nodes": 196157
+        },
+        {
+          "sample": 77,
+          "answer": false,
+          "observer_cursor_path": "10100011",
+          "observer_microticks": 6430,
+          "expanded_nodes": 208693
+        },
+        {
+          "sample": 78,
+          "answer": false,
+          "observer_cursor_path": "101000111",
+          "observer_microticks": 7584,
+          "expanded_nodes": 221229
+        },
+        {
+          "sample": 79,
+          "answer": false,
+          "observer_cursor_path": "1010001111",
+          "observer_microticks": 7948,
+          "expanded_nodes": 233765
+        },
+        {
+          "sample": 80,
+          "answer": false,
+          "observer_cursor_path": "10100011110",
+          "observer_microticks": 8248,
+          "expanded_nodes": 246301
+        },
+        {
+          "sample": 81,
+          "answer": true,
+          "observer_cursor_path": "1010000",
+          "observer_microticks": 8945,
+          "expanded_nodes": 258837
+        },
+        {
+          "sample": 82,
+          "answer": false,
+          "observer_cursor_path": "1010100",
+          "observer_microticks": 5953,
+          "expanded_nodes": 271373
+        },
+        {
+          "sample": 83,
+          "answer": false,
+          "observer_cursor_path": "10101001",
+          "observer_microticks": 6811,
+          "expanded_nodes": 271393
+        },
+        {
+          "sample": 84,
+          "answer": false,
+          "observer_cursor_path": "101010011",
+          "observer_microticks": 6854,
+          "expanded_nodes": 271413
+        },
+        {
+          "sample": 85,
+          "answer": false,
+          "observer_cursor_path": "1010100111",
+          "observer_microticks": 6882,
+          "expanded_nodes": 271433
+        },
+        {
+          "sample": 86,
+          "answer": false,
+          "observer_cursor_path": "101010",
+          "observer_microticks": 6847,
+          "expanded_nodes": 271453
+        },
+        {
+          "sample": 87,
+          "answer": false,
+          "observer_cursor_path": "1010100",
+          "observer_microticks": 6134,
+          "expanded_nodes": 271567
+        },
+        {
+          "sample": 88,
+          "answer": false,
+          "observer_cursor_path": "101010",
+          "observer_microticks": 6704,
+          "expanded_nodes": 271681
+        },
+        {
+          "sample": 89,
+          "answer": false,
+          "observer_cursor_path": "10101010",
+          "observer_microticks": 13164,
+          "expanded_nodes": 271895
+        },
+        {
+          "sample": 90,
+          "answer": false,
+          "observer_cursor_path": "1010101",
+          "observer_microticks": 15623,
+          "expanded_nodes": 272009
+        },
+        {
+          "sample": 91,
+          "answer": false,
+          "observer_cursor_path": "101010110",
+          "observer_microticks": 15188,
+          "expanded_nodes": 272223
+        },
+        {
+          "sample": 92,
+          "answer": false,
+          "observer_cursor_path": "10101011",
+          "observer_microticks": 17653,
+          "expanded_nodes": 272337
+        },
+        {
+          "sample": 93,
+          "answer": false,
+          "observer_cursor_path": "1010101110",
+          "observer_microticks": 16297,
+          "expanded_nodes": 272551
+        },
+        {
+          "sample": 94,
+          "answer": false,
+          "observer_cursor_path": "1010101110",
+          "observer_microticks": 20396,
+          "expanded_nodes": 272665
+        },
+        {
+          "sample": 95,
+          "answer": false,
+          "observer_cursor_path": "101010111",
+          "observer_microticks": 23237,
+          "expanded_nodes": 272783
+        },
+        {
+          "sample": 96,
+          "answer": false,
+          "observer_cursor_path": "1010101110",
+          "observer_microticks": 24775,
+          "expanded_nodes": 272997
+        },
+        {
+          "sample": 97,
+          "answer": false,
+          "observer_cursor_path": "101010111",
+          "observer_microticks": 22657,
+          "expanded_nodes": 273211
+        },
+        {
+          "sample": 98,
+          "answer": false,
+          "observer_cursor_path": "1010101110100111",
+          "observer_microticks": 32662,
+          "expanded_nodes": 273661
+        },
+        {
+          "sample": 99,
+          "answer": false,
+          "observer_cursor_path": "10101011",
+          "observer_microticks": 31653,
+          "expanded_nodes": 273661
+        },
+        {
+          "sample": 100,
+          "answer": false,
+          "observer_cursor_path": "101010110",
+          "observer_microticks": 5185,
+          "expanded_nodes": 275111
+        }
+      ],
+      "native_selections": [
+        {
+          "sample": 0,
+          "selected_cursor_path": "0",
+          "selection_microticks": 1498
+        },
+        {
+          "sample": 1,
+          "selected_cursor_path": "0",
+          "selection_microticks": 1488
+        },
+        {
+          "sample": 2,
+          "selected_cursor_path": "01",
+          "selection_microticks": 2301
+        },
+        {
+          "sample": 3,
+          "selected_cursor_path": "",
+          "selection_microticks": 2289
+        },
+        {
+          "sample": 4,
+          "selected_cursor_path": "0",
+          "selection_microticks": 1669
+        },
+        {
+          "sample": 5,
+          "selected_cursor_path": "",
+          "selection_microticks": 2295
+        },
+        {
+          "sample": 6,
+          "selected_cursor_path": "10",
+          "selection_microticks": 7861
+        },
+        {
+          "sample": 7,
+          "selected_cursor_path": "10",
+          "selection_microticks": 11954
+        },
+        {
+          "sample": 8,
+          "selected_cursor_path": "1",
+          "selection_microticks": 14771
+        },
+        {
+          "sample": 9,
+          "selected_cursor_path": "10",
+          "selection_microticks": 16321
+        },
+        {
+          "sample": 10,
+          "selected_cursor_path": "1",
+          "selection_microticks": 14191
+        },
+        {
+          "sample": 11,
+          "selected_cursor_path": "10100111",
+          "selection_microticks": 23929
+        },
+        {
+          "sample": 12,
+          "selected_cursor_path": "",
+          "selection_microticks": 22926
+        },
+        {
+          "sample": 13,
+          "selected_cursor_path": "0",
+          "selection_microticks": 559
+        },
+        {
+          "sample": 14,
+          "selected_cursor_path": "00",
+          "selection_microticks": 929
+        },
+        {
+          "sample": 15,
+          "selected_cursor_path": "001",
+          "selection_microticks": 4580
+        },
+        {
+          "sample": 16,
+          "selected_cursor_path": "0011",
+          "selection_microticks": 4940
+        },
+        {
+          "sample": 17,
+          "selected_cursor_path": "00110",
+          "selection_microticks": 6082
+        },
+        {
+          "sample": 18,
+          "selected_cursor_path": "001101",
+          "selection_microticks": 5153
+        },
+        {
+          "sample": 19,
+          "selected_cursor_path": "0011010",
+          "selection_microticks": 5301
+        },
+        {
+          "sample": 20,
+          "selected_cursor_path": "000",
+          "selection_microticks": 5875
+        },
+        {
+          "sample": 21,
+          "selected_cursor_path": "100",
+          "selection_microticks": 2927
+        },
+        {
+          "sample": 22,
+          "selected_cursor_path": "1001",
+          "selection_microticks": 3727
+        },
+        {
+          "sample": 23,
+          "selected_cursor_path": "10011",
+          "selection_microticks": 3773
+        },
+        {
+          "sample": 24,
+          "selected_cursor_path": "10",
+          "selection_microticks": 3751
+        },
+        {
+          "sample": 25,
+          "selected_cursor_path": "100",
+          "selection_microticks": 3108
+        },
+        {
+          "sample": 26,
+          "selected_cursor_path": "10",
+          "selection_microticks": 3693
+        },
+        {
+          "sample": 27,
+          "selected_cursor_path": "1010",
+          "selection_microticks": 10138
+        },
+        {
+          "sample": 28,
+          "selected_cursor_path": "101",
+          "selection_microticks": 12615
+        },
+        {
+          "sample": 29,
+          "selected_cursor_path": "10110",
+          "selection_microticks": 11259
+        },
+        {
+          "sample": 30,
+          "selected_cursor_path": "10110",
+          "selection_microticks": 15352
+        },
+        {
+          "sample": 31,
+          "selected_cursor_path": "1011",
+          "selection_microticks": 18199
+        },
+        {
+          "sample": 32,
+          "selected_cursor_path": "10110",
+          "selection_microticks": 19731
+        },
+        {
+          "sample": 33,
+          "selected_cursor_path": "1011",
+          "selection_microticks": 17619
+        },
+        {
+          "sample": 34,
+          "selected_cursor_path": "10110100111",
+          "selection_microticks": 27774
+        },
+        {
+          "sample": 35,
+          "selected_cursor_path": "101",
+          "selection_microticks": 26771
+        },
+        {
+          "sample": 36,
+          "selected_cursor_path": "1010",
+          "selection_microticks": 2034
+        },
+        {
+          "sample": 37,
+          "selected_cursor_path": "10100",
+          "selection_microticks": 2236
+        },
+        {
+          "sample": 38,
+          "selected_cursor_path": "101001",
+          "selection_microticks": 8506
+        },
+        {
+          "sample": 39,
+          "selected_cursor_path": "1010011",
+          "selection_microticks": 8866
+        },
+        {
+          "sample": 40,
+          "selected_cursor_path": "10100110",
+          "selection_microticks": 10008
+        },
+        {
+          "sample": 41,
+          "selected_cursor_path": "101001101",
+          "selection_microticks": 9079
+        },
+        {
+          "sample": 42,
+          "selected_cursor_path": "1010011010",
+          "selection_microticks": 9227
+        },
+        {
+          "sample": 43,
+          "selected_cursor_path": "101000",
+          "selection_microticks": 14851
+        },
+        {
+          "sample": 44,
+          "selected_cursor_path": "10",
+          "selection_microticks": 12221
+        },
+        {
+          "sample": 45,
+          "selected_cursor_path": "100",
+          "selection_microticks": 1986
+        },
+        {
+          "sample": 46,
+          "selected_cursor_path": "1000",
+          "selection_microticks": 2348
+        },
+        {
+          "sample": 47,
+          "selected_cursor_path": "10001",
+          "selection_microticks": 4497
+        },
+        {
+          "sample": 48,
+          "selected_cursor_path": "100011",
+          "selection_microticks": 4857
+        },
+        {
+          "sample": 49,
+          "selected_cursor_path": "1000111",
+          "selection_microticks": 5999
+        },
+        {
+          "sample": 50,
+          "selected_cursor_path": "10001111",
+          "selection_microticks": 6375
+        },
+        {
+          "sample": 51,
+          "selected_cursor_path": "100011110",
+          "selection_microticks": 6669
+        },
+        {
+          "sample": 52,
+          "selected_cursor_path": "10000",
+          "selection_microticks": 8495
+        },
+        {
+          "sample": 53,
+          "selected_cursor_path": "1010",
+          "selection_microticks": 5278
+        },
+        {
+          "sample": 54,
+          "selected_cursor_path": "10100",
+          "selection_microticks": 4668
+        },
+        {
+          "sample": 55,
+          "selected_cursor_path": "1010",
+          "selection_microticks": 5223
+        },
+        {
+          "sample": 56,
+          "selected_cursor_path": "101010",
+          "selection_microticks": 11698
+        },
+        {
+          "sample": 57,
+          "selected_cursor_path": "10101",
+          "selection_microticks": 14145
+        },
+        {
+          "sample": 58,
+          "selected_cursor_path": "1010110",
+          "selection_microticks": 12819
+        },
+        {
+          "sample": 59,
+          "selected_cursor_path": "1010110",
+          "selection_microticks": 16912
+        },
+        {
+          "sample": 60,
+          "selected_cursor_path": "101011",
+          "selection_microticks": 19729
+        },
+        {
+          "sample": 61,
+          "selected_cursor_path": "1010110",
+          "selection_microticks": 21279
+        },
+        {
+          "sample": 62,
+          "selected_cursor_path": "101011",
+          "selection_microticks": 19149
+        },
+        {
+          "sample": 63,
+          "selected_cursor_path": "1010110100111",
+          "selection_microticks": 29251
+        },
+        {
+          "sample": 64,
+          "selected_cursor_path": "10101",
+          "selection_microticks": 28248
+        },
+        {
+          "sample": 65,
+          "selected_cursor_path": "101010",
+          "selection_microticks": 3594
+        },
+        {
+          "sample": 66,
+          "selected_cursor_path": "1010100",
+          "selection_microticks": 3796
+        },
+        {
+          "sample": 67,
+          "selected_cursor_path": "10101001",
+          "selection_microticks": 9986
+        },
+        {
+          "sample": 68,
+          "selected_cursor_path": "101010011",
+          "selection_microticks": 10346
+        },
+        {
+          "sample": 69,
+          "selected_cursor_path": "1010100110",
+          "selection_microticks": 11488
+        },
+        {
+          "sample": 70,
+          "selected_cursor_path": "10101001101",
+          "selection_microticks": 10559
+        },
+        {
+          "sample": 71,
+          "selected_cursor_path": "101010011010",
+          "selection_microticks": 10707
+        },
+        {
+          "sample": 72,
+          "selected_cursor_path": "10101000",
+          "selection_microticks": 15275
+        },
+        {
+          "sample": 73,
+          "selected_cursor_path": "1010",
+          "selection_microticks": 12907
+        },
+        {
+          "sample": 74,
+          "selected_cursor_path": "10100",
+          "selection_microticks": 3546
+        },
+        {
+          "sample": 75,
+          "selected_cursor_path": "101000",
+          "selection_microticks": 3908
+        },
+        {
+          "sample": 76,
+          "selected_cursor_path": "1010001",
+          "selection_microticks": 6057
+        },
+        {
+          "sample": 77,
+          "selected_cursor_path": "10100011",
+          "selection_microticks": 6417
+        },
+        {
+          "sample": 78,
+          "selected_cursor_path": "101000111",
+          "selection_microticks": 7559
+        },
+        {
+          "sample": 79,
+          "selected_cursor_path": "1010001111",
+          "selection_microticks": 7935
+        },
+        {
+          "sample": 80,
+          "selected_cursor_path": "10100011110",
+          "selection_microticks": 8229
+        },
+        {
+          "sample": 81,
+          "selected_cursor_path": "1010000",
+          "selection_microticks": 8915
+        },
+        {
+          "sample": 82,
+          "selected_cursor_path": "1010100",
+          "selection_microticks": 5925
+        },
+        {
+          "sample": 83,
+          "selected_cursor_path": "10101001",
+          "selection_microticks": 6783
+        },
+        {
+          "sample": 84,
+          "selected_cursor_path": "101010011",
+          "selection_microticks": 6829
+        },
+        {
+          "sample": 85,
+          "selected_cursor_path": "1010100111",
+          "selection_microticks": 6869
+        },
+        {
+          "sample": 86,
+          "selected_cursor_path": "101010",
+          "selection_microticks": 6834
+        },
+        {
+          "sample": 87,
+          "selected_cursor_path": "1010100",
+          "selection_microticks": 6106
+        },
+        {
+          "sample": 88,
+          "selected_cursor_path": "101010",
+          "selection_microticks": 6691
+        },
+        {
+          "sample": 89,
+          "selected_cursor_path": "10101010",
+          "selection_microticks": 13136
+        },
+        {
+          "sample": 90,
+          "selected_cursor_path": "1010101",
+          "selection_microticks": 15610
+        },
+        {
+          "sample": 91,
+          "selected_cursor_path": "101010110",
+          "selection_microticks": 15163
+        },
+        {
+          "sample": 92,
+          "selected_cursor_path": "10101011",
+          "selection_microticks": 17640
+        },
+        {
+          "sample": 93,
+          "selected_cursor_path": "1010101110",
+          "selection_microticks": 16284
+        },
+        {
+          "sample": 94,
+          "selected_cursor_path": "1010101110",
+          "selection_microticks": 20377
+        },
+        {
+          "sample": 95,
+          "selected_cursor_path": "101010111",
+          "selection_microticks": 23224
+        },
+        {
+          "sample": 96,
+          "selected_cursor_path": "1010101110",
+          "selection_microticks": 24756
+        },
+        {
+          "sample": 97,
+          "selected_cursor_path": "101010111",
+          "selection_microticks": 22644
+        },
+        {
+          "sample": 98,
+          "selected_cursor_path": "1010101110100111",
+          "selection_microticks": 32643
+        },
+        {
+          "sample": 99,
+          "selected_cursor_path": "10101011",
+          "selection_microticks": 31640
+        }
+      ]
+    },
+    {
+      "seed": "",
+      "native_contractions": 100,
+      "samples_checked": 101,
+      "true_samples": [
+        19,
+        41,
+        50,
+        69,
+        78
+      ],
+      "false_samples": 96,
+      "observer_microticks": 994244,
+      "max_observer_microticks": 32723,
+      "selection_microticks": 977551,
+      "max_selection_microticks": 32710,
+      "native_primitive_microticks": 977651,
+      "peak_expanded_nodes": 249023,
+      "exact_read_only_sample_checks": 101,
+      "observer_absorbing_terminal_checks": 101,
+      "exact_one_contraction_checks": 100,
+      "native_absorbing_terminal_checks": 100,
+      "checkpoints": [
+        {
+          "horizon": 0,
+          "phase": 0,
+          "data": "",
+          "sample": 0,
+          "expanded_nodes": 119,
+          "prefix_sha256": "01773b09a23bf0b503dbcdbdc063715f8a6f865a5981428e2056022e40f5ab73"
+        },
+        {
+          "horizon": 1,
+          "phase": 1,
+          "data": "",
+          "sample": 20,
+          "expanded_nodes": 10737,
+          "prefix_sha256": "2902c318103b7d6bfeeaaa3816f1ec8745f2325261e070ea7054e4558855dea3"
+        },
+        {
+          "horizon": 2,
+          "phase": 0,
+          "data": "",
+          "sample": 79,
+          "expanded_nodes": 240429,
+          "prefix_sha256": "d1b1d293e9fb44964d4b39c239ce6dfbcdd6a4b836c7d8a046d326a34825dde0"
+        }
+      ],
+      "markers": [
+        {
+          "sample": 19,
+          "selected_cursor_path": "000",
+          "occurrence_shape": "HALT payload = ((S S) ((S S) S)) payload",
+          "payload_is_opaque": true,
+          "expanded_nodes": 1061,
+          "occurrence_prefix_sha256": "95634bc10c1c56faf5628ad666ce910665c552d7a2ef36e4bc992ce1d7cab44f",
+          "payload_prefix_sha256": "873b878fa1631e458e5f51a48cf821483f89b686c3aac433f5b6c22b855e3809",
+          "contracted_in_this_run": true,
+          "after_shape": "S payload (HALT_TAG payload)",
+          "after_occurrence_prefix_sha256": "28b48cf1a97ac91322d132b66824ec81ba30b29f4e089aa3abadddfc209b1144",
+          "native_selection_agrees": true
+        },
+        {
+          "sample": 41,
+          "selected_cursor_path": "101000",
+          "occurrence_shape": "HALT payload = ((S S) ((S S) S)) payload",
+          "payload_is_opaque": true,
+          "expanded_nodes": 1173,
+          "occurrence_prefix_sha256": "da29f76d1682c9dbb1ff39a19bf073ff799a412a4da8f5b6c5a8c083e8ecc711",
+          "payload_prefix_sha256": "f1a5b5c5849801462aceee9fd745e8fbd7900793be2f5c955c0afb59e069ae9c",
+          "contracted_in_this_run": true,
+          "after_shape": "S payload (HALT_TAG payload)",
+          "after_occurrence_prefix_sha256": "a7d0d8baed888e0f2c7c0217f2165f88e67063c0ed71766350611ccfe6255b9a",
+          "native_selection_agrees": true
+        },
+        {
+          "sample": 50,
+          "selected_cursor_path": "10000",
+          "occurrence_shape": "HALT payload = ((S S) ((S S) S)) payload",
+          "payload_is_opaque": true,
+          "expanded_nodes": 11895,
+          "occurrence_prefix_sha256": "3b83369e7109295d3ae8bbf9db1c88d19a1d063dec3ed8373724a1a331a5f61d",
+          "payload_prefix_sha256": "20ef478979597ac0931ee1f2da068c4c11b510b1a523ee2d5eb55697b90487e8",
+          "contracted_in_this_run": true,
+          "after_shape": "S payload (HALT_TAG payload)",
+          "after_occurrence_prefix_sha256": "2be0e74501bdce400d18372d0dde8b6e388aab20f521e4c1152cea17707d0127",
+          "native_selection_agrees": true
+        },
+        {
+          "sample": 69,
+          "selected_cursor_path": "10101000",
+          "occurrence_shape": "HALT payload = ((S S) ((S S) S)) payload",
+          "payload_is_opaque": true,
+          "expanded_nodes": 1093,
+          "occurrence_prefix_sha256": "c241fb8e5ca1f6e3b6fe9acb1c1cccd128716903238632a0caddafb7add8adc1",
+          "payload_prefix_sha256": "5b7ad8838eb98cc021159696e3963a185fcbc99ffb7f79f72b4f4c0d7768b77c",
+          "contracted_in_this_run": true,
+          "after_shape": "S payload (HALT_TAG payload)",
+          "after_occurrence_prefix_sha256": "49ed89ba8fb2df23d410b293a015eac01904199309759822e9e0a71d59fc8ee1",
+          "native_selection_agrees": true
+        },
+        {
+          "sample": 78,
+          "selected_cursor_path": "1010000",
+          "occurrence_shape": "HALT payload = ((S S) ((S S) S)) payload",
+          "payload_is_opaque": true,
+          "expanded_nodes": 11075,
+          "occurrence_prefix_sha256": "6da587224fe7817e608590c0568a1f4e7b34f12493512ea473a65ee77c5c5b19",
+          "payload_prefix_sha256": "6bfb3236dc73ea5597fe9d707087f751ec2a1675e2bdad1de1af5855b4a324f1",
+          "contracted_in_this_run": true,
+          "after_shape": "S payload (HALT_TAG payload)",
+          "after_occurrence_prefix_sha256": "cda31932f7ec7c2235f3e1f0e6e2ea85c0f746fb5dfea4c686c7fb56e72b1e08",
+          "native_selection_agrees": true
+        }
+      ],
+      "samples": [
+        {
+          "sample": 0,
+          "answer": false,
+          "observer_cursor_path": "0",
+          "observer_microticks": 1511,
+          "expanded_nodes": 119
+        },
+        {
+          "sample": 1,
+          "answer": false,
+          "observer_cursor_path": "0",
+          "observer_microticks": 1513,
+          "expanded_nodes": 127
+        },
+        {
+          "sample": 2,
+          "answer": false,
+          "observer_cursor_path": "01",
+          "observer_microticks": 2314,
+          "expanded_nodes": 139
+        },
+        {
+          "sample": 3,
+          "answer": false,
+          "observer_cursor_path": "",
+          "observer_microticks": 2302,
+          "expanded_nodes": 151
+        },
+        {
+          "sample": 4,
+          "answer": false,
+          "observer_cursor_path": "0",
+          "observer_microticks": 1694,
+          "expanded_nodes": 249
+        },
+        {
+          "sample": 5,
+          "answer": false,
+          "observer_cursor_path": "",
+          "observer_microticks": 2308,
+          "expanded_nodes": 347
+        },
+        {
+          "sample": 6,
+          "answer": false,
+          "observer_cursor_path": "10",
+          "observer_microticks": 7874,
+          "expanded_nodes": 481
+        },
+        {
+          "sample": 7,
+          "answer": false,
+          "observer_cursor_path": "10",
+          "observer_microticks": 11973,
+          "expanded_nodes": 579
+        },
+        {
+          "sample": 8,
+          "answer": false,
+          "observer_cursor_path": "1",
+          "observer_microticks": 14784,
+          "expanded_nodes": 681
+        },
+        {
+          "sample": 9,
+          "answer": false,
+          "observer_cursor_path": "10",
+          "observer_microticks": 16340,
+          "expanded_nodes": 815
+        },
+        {
+          "sample": 10,
+          "answer": false,
+          "observer_cursor_path": "1",
+          "observer_microticks": 14204,
+          "expanded_nodes": 949
+        },
+        {
+          "sample": 11,
+          "answer": false,
+          "observer_cursor_path": "",
+          "observer_microticks": 23976,
+          "expanded_nodes": 1287
+        },
+        {
+          "sample": 12,
+          "answer": false,
+          "observer_cursor_path": "0",
+          "observer_microticks": 572,
+          "expanded_nodes": 2337
+        },
+        {
+          "sample": 13,
+          "answer": false,
+          "observer_cursor_path": "00",
+          "observer_microticks": 942,
+          "expanded_nodes": 3387
+        },
+        {
+          "sample": 14,
+          "answer": false,
+          "observer_cursor_path": "001",
+          "observer_microticks": 4492,
+          "expanded_nodes": 4437
+        },
+        {
+          "sample": 15,
+          "answer": false,
+          "observer_cursor_path": "0011",
+          "observer_microticks": 4840,
+          "expanded_nodes": 5487
+        },
+        {
+          "sample": 16,
+          "answer": false,
+          "observer_cursor_path": "00110",
+          "observer_microticks": 5994,
+          "expanded_nodes": 6537
+        },
+        {
+          "sample": 17,
+          "answer": false,
+          "observer_cursor_path": "001101",
+          "observer_microticks": 5053,
+          "expanded_nodes": 7587
+        },
+        {
+          "sample": 18,
+          "answer": false,
+          "observer_cursor_path": "0011010",
+          "observer_microticks": 5207,
+          "expanded_nodes": 8637
+        },
+        {
+          "sample": 19,
+          "answer": true,
+          "observer_cursor_path": "000",
+          "observer_microticks": 5439,
+          "expanded_nodes": 9687
+        },
+        {
+          "sample": 20,
+          "answer": false,
+          "observer_cursor_path": "100",
+          "observer_microticks": 2955,
+          "expanded_nodes": 10737
+        },
+        {
+          "sample": 21,
+          "answer": false,
+          "observer_cursor_path": "1001",
+          "observer_microticks": 3752,
+          "expanded_nodes": 10753
+        },
+        {
+          "sample": 22,
+          "answer": false,
+          "observer_cursor_path": "10011",
+          "observer_microticks": 3786,
+          "expanded_nodes": 10769
+        },
+        {
+          "sample": 23,
+          "answer": false,
+          "observer_cursor_path": "10",
+          "observer_microticks": 3764,
+          "expanded_nodes": 10785
+        },
+        {
+          "sample": 24,
+          "answer": false,
+          "observer_cursor_path": "100",
+          "observer_microticks": 3136,
+          "expanded_nodes": 10883
+        },
+        {
+          "sample": 25,
+          "answer": false,
+          "observer_cursor_path": "10",
+          "observer_microticks": 3706,
+          "expanded_nodes": 10981
+        },
+        {
+          "sample": 26,
+          "answer": false,
+          "observer_cursor_path": "1010",
+          "observer_microticks": 10163,
+          "expanded_nodes": 11143
+        },
+        {
+          "sample": 27,
+          "answer": false,
+          "observer_cursor_path": "101",
+          "observer_microticks": 12628,
+          "expanded_nodes": 11241
+        },
+        {
+          "sample": 28,
+          "answer": false,
+          "observer_cursor_path": "10110",
+          "observer_microticks": 11272,
+          "expanded_nodes": 11403
+        },
+        {
+          "sample": 29,
+          "answer": false,
+          "observer_cursor_path": "10110",
+          "observer_microticks": 15371,
+          "expanded_nodes": 11501
+        },
+        {
+          "sample": 30,
+          "answer": false,
+          "observer_cursor_path": "1011",
+          "observer_microticks": 18212,
+          "expanded_nodes": 11603
+        },
+        {
+          "sample": 31,
+          "answer": false,
+          "observer_cursor_path": "10110",
+          "observer_microticks": 19750,
+          "expanded_nodes": 11765
+        },
+        {
+          "sample": 32,
+          "answer": false,
+          "observer_cursor_path": "1011",
+          "observer_microticks": 17632,
+          "expanded_nodes": 11927
+        },
+        {
+          "sample": 33,
+          "answer": false,
+          "observer_cursor_path": "101",
+          "observer_microticks": 27866,
+          "expanded_nodes": 12293
+        },
+        {
+          "sample": 34,
+          "answer": false,
+          "observer_cursor_path": "1010",
+          "observer_microticks": 2047,
+          "expanded_nodes": 13455
+        },
+        {
+          "sample": 35,
+          "answer": false,
+          "observer_cursor_path": "10100",
+          "observer_microticks": 2249,
+          "expanded_nodes": 14617
+        },
+        {
+          "sample": 36,
+          "answer": false,
+          "observer_cursor_path": "101001",
+          "observer_microticks": 8418,
+          "expanded_nodes": 15779
+        },
+        {
+          "sample": 37,
+          "answer": false,
+          "observer_cursor_path": "1010011",
+          "observer_microticks": 8766,
+          "expanded_nodes": 16941
+        },
+        {
+          "sample": 38,
+          "answer": false,
+          "observer_cursor_path": "10100110",
+          "observer_microticks": 9920,
+          "expanded_nodes": 18103
+        },
+        {
+          "sample": 39,
+          "answer": false,
+          "observer_cursor_path": "101001101",
+          "observer_microticks": 8979,
+          "expanded_nodes": 19265
+        },
+        {
+          "sample": 40,
+          "answer": false,
+          "observer_cursor_path": "1010011010",
+          "observer_microticks": 9133,
+          "expanded_nodes": 20427
+        },
+        {
+          "sample": 41,
+          "answer": true,
+          "observer_cursor_path": "101000",
+          "observer_microticks": 8837,
+          "expanded_nodes": 21589
+        },
+        {
+          "sample": 42,
+          "answer": false,
+          "observer_cursor_path": "10",
+          "observer_microticks": 12234,
+          "expanded_nodes": 22751
+        },
+        {
+          "sample": 43,
+          "answer": false,
+          "observer_cursor_path": "100",
+          "observer_microticks": 1999,
+          "expanded_nodes": 34635
+        },
+        {
+          "sample": 44,
+          "answer": false,
+          "observer_cursor_path": "1000",
+          "observer_microticks": 2361,
+          "expanded_nodes": 46519
+        },
+        {
+          "sample": 45,
+          "answer": false,
+          "observer_cursor_path": "10001",
+          "observer_microticks": 4522,
+          "expanded_nodes": 58403
+        },
+        {
+          "sample": 46,
+          "answer": false,
+          "observer_cursor_path": "100011",
+          "observer_microticks": 4870,
+          "expanded_nodes": 70287
+        },
+        {
+          "sample": 47,
+          "answer": false,
+          "observer_cursor_path": "1000111",
+          "observer_microticks": 6024,
+          "expanded_nodes": 82171
+        },
+        {
+          "sample": 48,
+          "answer": false,
+          "observer_cursor_path": "10001111",
+          "observer_microticks": 6388,
+          "expanded_nodes": 94055
+        },
+        {
+          "sample": 49,
+          "answer": false,
+          "observer_cursor_path": "100011110",
+          "observer_microticks": 6688,
+          "expanded_nodes": 105939
+        },
+        {
+          "sample": 50,
+          "answer": true,
+          "observer_cursor_path": "10000",
+          "observer_microticks": 8059,
+          "expanded_nodes": 117823
+        },
+        {
+          "sample": 51,
+          "answer": false,
+          "observer_cursor_path": "1010",
+          "observer_microticks": 5291,
+          "expanded_nodes": 129707
+        },
+        {
+          "sample": 52,
+          "answer": false,
+          "observer_cursor_path": "10100",
+          "observer_microticks": 4696,
+          "expanded_nodes": 129805
+        },
+        {
+          "sample": 53,
+          "answer": false,
+          "observer_cursor_path": "1010",
+          "observer_microticks": 5236,
+          "expanded_nodes": 129903
+        },
+        {
+          "sample": 54,
+          "answer": false,
+          "observer_cursor_path": "101010",
+          "observer_microticks": 11723,
+          "expanded_nodes": 130045
+        },
+        {
+          "sample": 55,
+          "answer": false,
+          "observer_cursor_path": "10101",
+          "observer_microticks": 14158,
+          "expanded_nodes": 130143
+        },
+        {
+          "sample": 56,
+          "answer": false,
+          "observer_cursor_path": "1010110",
+          "observer_microticks": 12832,
+          "expanded_nodes": 130285
+        },
+        {
+          "sample": 57,
+          "answer": false,
+          "observer_cursor_path": "1010110",
+          "observer_microticks": 16931,
+          "expanded_nodes": 130383
+        },
+        {
+          "sample": 58,
+          "answer": false,
+          "observer_cursor_path": "101011",
+          "observer_microticks": 19742,
+          "expanded_nodes": 130485
+        },
+        {
+          "sample": 59,
+          "answer": false,
+          "observer_cursor_path": "1010110",
+          "observer_microticks": 21298,
+          "expanded_nodes": 130627
+        },
+        {
+          "sample": 60,
+          "answer": false,
+          "observer_cursor_path": "101011",
+          "observer_microticks": 19162,
+          "expanded_nodes": 130769
+        },
+        {
+          "sample": 61,
+          "answer": false,
+          "observer_cursor_path": "10101",
+          "observer_microticks": 29355,
+          "expanded_nodes": 131115
+        },
+        {
+          "sample": 62,
+          "answer": false,
+          "observer_cursor_path": "101010",
+          "observer_microticks": 3607,
+          "expanded_nodes": 132197
+        },
+        {
+          "sample": 63,
+          "answer": false,
+          "observer_cursor_path": "1010100",
+          "observer_microticks": 3809,
+          "expanded_nodes": 133279
+        },
+        {
+          "sample": 64,
+          "answer": false,
+          "observer_cursor_path": "10101001",
+          "observer_microticks": 9898,
+          "expanded_nodes": 134361
+        },
+        {
+          "sample": 65,
+          "answer": false,
+          "observer_cursor_path": "101010011",
+          "observer_microticks": 10246,
+          "expanded_nodes": 135443
+        },
+        {
+          "sample": 66,
+          "answer": false,
+          "observer_cursor_path": "1010100110",
+          "observer_microticks": 11400,
+          "expanded_nodes": 136525
+        },
+        {
+          "sample": 67,
+          "answer": false,
+          "observer_cursor_path": "10101001101",
+          "observer_microticks": 10459,
+          "expanded_nodes": 137607
+        },
+        {
+          "sample": 68,
+          "answer": false,
+          "observer_cursor_path": "101010011010",
+          "observer_microticks": 10613,
+          "expanded_nodes": 138689
+        },
+        {
+          "sample": 69,
+          "answer": true,
+          "observer_cursor_path": "10101000",
+          "observer_microticks": 9257,
+          "expanded_nodes": 139771
+        },
+        {
+          "sample": 70,
+          "answer": false,
+          "observer_cursor_path": "1010",
+          "observer_microticks": 12920,
+          "expanded_nodes": 140853
+        },
+        {
+          "sample": 71,
+          "answer": false,
+          "observer_cursor_path": "10100",
+          "observer_microticks": 3559,
+          "expanded_nodes": 151917
+        },
+        {
+          "sample": 72,
+          "answer": false,
+          "observer_cursor_path": "101000",
+          "observer_microticks": 3921,
+          "expanded_nodes": 162981
+        },
+        {
+          "sample": 73,
+          "answer": false,
+          "observer_cursor_path": "1010001",
+          "observer_microticks": 6082,
+          "expanded_nodes": 174045
+        },
+        {
+          "sample": 74,
+          "answer": false,
+          "observer_cursor_path": "10100011",
+          "observer_microticks": 6430,
+          "expanded_nodes": 185109
+        },
+        {
+          "sample": 75,
+          "answer": false,
+          "observer_cursor_path": "101000111",
+          "observer_microticks": 7584,
+          "expanded_nodes": 196173
+        },
+        {
+          "sample": 76,
+          "answer": false,
+          "observer_cursor_path": "1010001111",
+          "observer_microticks": 7948,
+          "expanded_nodes": 207237
+        },
+        {
+          "sample": 77,
+          "answer": false,
+          "observer_cursor_path": "10100011110",
+          "observer_microticks": 8248,
+          "expanded_nodes": 218301
+        },
+        {
+          "sample": 78,
+          "answer": true,
+          "observer_cursor_path": "1010000",
+          "observer_microticks": 8479,
+          "expanded_nodes": 229365
+        },
+        {
+          "sample": 79,
+          "answer": false,
+          "observer_cursor_path": "1010100",
+          "observer_microticks": 5953,
+          "expanded_nodes": 240429
+        },
+        {
+          "sample": 80,
+          "answer": false,
+          "observer_cursor_path": "10101001",
+          "observer_microticks": 6811,
+          "expanded_nodes": 240449
+        },
+        {
+          "sample": 81,
+          "answer": false,
+          "observer_cursor_path": "101010011",
+          "observer_microticks": 6854,
+          "expanded_nodes": 240469
+        },
+        {
+          "sample": 82,
+          "answer": false,
+          "observer_cursor_path": "1010100111",
+          "observer_microticks": 6882,
+          "expanded_nodes": 240489
+        },
+        {
+          "sample": 83,
+          "answer": false,
+          "observer_cursor_path": "101010",
+          "observer_microticks": 6847,
+          "expanded_nodes": 240509
+        },
+        {
+          "sample": 84,
+          "answer": false,
+          "observer_cursor_path": "1010100",
+          "observer_microticks": 6134,
+          "expanded_nodes": 240607
+        },
+        {
+          "sample": 85,
+          "answer": false,
+          "observer_cursor_path": "101010",
+          "observer_microticks": 6704,
+          "expanded_nodes": 240705
+        },
+        {
+          "sample": 86,
+          "answer": false,
+          "observer_cursor_path": "10101010",
+          "observer_microticks": 13164,
+          "expanded_nodes": 240903
+        },
+        {
+          "sample": 87,
+          "answer": false,
+          "observer_cursor_path": "1010101",
+          "observer_microticks": 15623,
+          "expanded_nodes": 241001
+        },
+        {
+          "sample": 88,
+          "answer": false,
+          "observer_cursor_path": "101010110",
+          "observer_microticks": 15188,
+          "expanded_nodes": 241199
+        },
+        {
+          "sample": 89,
+          "answer": false,
+          "observer_cursor_path": "10101011",
+          "observer_microticks": 17653,
+          "expanded_nodes": 241297
+        },
+        {
+          "sample": 90,
+          "answer": false,
+          "observer_cursor_path": "1010101110",
+          "observer_microticks": 16297,
+          "expanded_nodes": 241495
+        },
+        {
+          "sample": 91,
+          "answer": false,
+          "observer_cursor_path": "1010101110",
+          "observer_microticks": 20396,
+          "expanded_nodes": 241593
+        },
+        {
+          "sample": 92,
+          "answer": false,
+          "observer_cursor_path": "101010111",
+          "observer_microticks": 23237,
+          "expanded_nodes": 241695
+        },
+        {
+          "sample": 93,
+          "answer": false,
+          "observer_cursor_path": "1010101110",
+          "observer_microticks": 24775,
+          "expanded_nodes": 241893
+        },
+        {
+          "sample": 94,
+          "answer": false,
+          "observer_cursor_path": "101010111",
+          "observer_microticks": 22657,
+          "expanded_nodes": 242091
+        },
+        {
+          "sample": 95,
+          "answer": false,
+          "observer_cursor_path": "10101011",
+          "observer_microticks": 32723,
+          "expanded_nodes": 242493
+        },
+        {
+          "sample": 96,
+          "answer": false,
+          "observer_cursor_path": "101010110",
+          "observer_microticks": 5185,
+          "expanded_nodes": 243799
+        },
+        {
+          "sample": 97,
+          "answer": false,
+          "observer_cursor_path": "1010101100",
+          "observer_microticks": 5387,
+          "expanded_nodes": 245105
+        },
+        {
+          "sample": 98,
+          "answer": false,
+          "observer_cursor_path": "10101011001",
+          "observer_microticks": 13407,
+          "expanded_nodes": 246411
+        },
+        {
+          "sample": 99,
+          "answer": false,
+          "observer_cursor_path": "101010110011",
+          "observer_microticks": 13755,
+          "expanded_nodes": 247717
+        },
+        {
+          "sample": 100,
+          "answer": false,
+          "observer_cursor_path": "1010101100110",
+          "observer_microticks": 14909,
+          "expanded_nodes": 249023
+        }
+      ],
+      "native_selections": [
+        {
+          "sample": 0,
+          "selected_cursor_path": "0",
+          "selection_microticks": 1498
+        },
+        {
+          "sample": 1,
+          "selected_cursor_path": "0",
+          "selection_microticks": 1488
+        },
+        {
+          "sample": 2,
+          "selected_cursor_path": "01",
+          "selection_microticks": 2301
+        },
+        {
+          "sample": 3,
+          "selected_cursor_path": "",
+          "selection_microticks": 2289
+        },
+        {
+          "sample": 4,
+          "selected_cursor_path": "0",
+          "selection_microticks": 1669
+        },
+        {
+          "sample": 5,
+          "selected_cursor_path": "",
+          "selection_microticks": 2295
+        },
+        {
+          "sample": 6,
+          "selected_cursor_path": "10",
+          "selection_microticks": 7861
+        },
+        {
+          "sample": 7,
+          "selected_cursor_path": "10",
+          "selection_microticks": 11954
+        },
+        {
+          "sample": 8,
+          "selected_cursor_path": "1",
+          "selection_microticks": 14771
+        },
+        {
+          "sample": 9,
+          "selected_cursor_path": "10",
+          "selection_microticks": 16321
+        },
+        {
+          "sample": 10,
+          "selected_cursor_path": "1",
+          "selection_microticks": 14191
+        },
+        {
+          "sample": 11,
+          "selected_cursor_path": "",
+          "selection_microticks": 23963
+        },
+        {
+          "sample": 12,
+          "selected_cursor_path": "0",
+          "selection_microticks": 559
+        },
+        {
+          "sample": 13,
+          "selected_cursor_path": "00",
+          "selection_microticks": 929
+        },
+        {
+          "sample": 14,
+          "selected_cursor_path": "001",
+          "selection_microticks": 4467
+        },
+        {
+          "sample": 15,
+          "selected_cursor_path": "0011",
+          "selection_microticks": 4827
+        },
+        {
+          "sample": 16,
+          "selected_cursor_path": "00110",
+          "selection_microticks": 5969
+        },
+        {
+          "sample": 17,
+          "selected_cursor_path": "001101",
+          "selection_microticks": 5040
+        },
+        {
+          "sample": 18,
+          "selected_cursor_path": "0011010",
+          "selection_microticks": 5188
+        },
+        {
+          "sample": 19,
+          "selected_cursor_path": "000",
+          "selection_microticks": 5409
+        },
+        {
+          "sample": 20,
+          "selected_cursor_path": "100",
+          "selection_microticks": 2927
+        },
+        {
+          "sample": 21,
+          "selected_cursor_path": "1001",
+          "selection_microticks": 3727
+        },
+        {
+          "sample": 22,
+          "selected_cursor_path": "10011",
+          "selection_microticks": 3773
+        },
+        {
+          "sample": 23,
+          "selected_cursor_path": "10",
+          "selection_microticks": 3751
+        },
+        {
+          "sample": 24,
+          "selected_cursor_path": "100",
+          "selection_microticks": 3108
+        },
+        {
+          "sample": 25,
+          "selected_cursor_path": "10",
+          "selection_microticks": 3693
+        },
+        {
+          "sample": 26,
+          "selected_cursor_path": "1010",
+          "selection_microticks": 10138
+        },
+        {
+          "sample": 27,
+          "selected_cursor_path": "101",
+          "selection_microticks": 12615
+        },
+        {
+          "sample": 28,
+          "selected_cursor_path": "10110",
+          "selection_microticks": 11259
+        },
+        {
+          "sample": 29,
+          "selected_cursor_path": "10110",
+          "selection_microticks": 15352
+        },
+        {
+          "sample": 30,
+          "selected_cursor_path": "1011",
+          "selection_microticks": 18199
+        },
+        {
+          "sample": 31,
+          "selected_cursor_path": "10110",
+          "selection_microticks": 19731
+        },
+        {
+          "sample": 32,
+          "selected_cursor_path": "1011",
+          "selection_microticks": 17619
+        },
+        {
+          "sample": 33,
+          "selected_cursor_path": "101",
+          "selection_microticks": 27853
+        },
+        {
+          "sample": 34,
+          "selected_cursor_path": "1010",
+          "selection_microticks": 2034
+        },
+        {
+          "sample": 35,
+          "selected_cursor_path": "10100",
+          "selection_microticks": 2236
+        },
+        {
+          "sample": 36,
+          "selected_cursor_path": "101001",
+          "selection_microticks": 8393
+        },
+        {
+          "sample": 37,
+          "selected_cursor_path": "1010011",
+          "selection_microticks": 8753
+        },
+        {
+          "sample": 38,
+          "selected_cursor_path": "10100110",
+          "selection_microticks": 9895
+        },
+        {
+          "sample": 39,
+          "selected_cursor_path": "101001101",
+          "selection_microticks": 8966
+        },
+        {
+          "sample": 40,
+          "selected_cursor_path": "1010011010",
+          "selection_microticks": 9114
+        },
+        {
+          "sample": 41,
+          "selected_cursor_path": "101000",
+          "selection_microticks": 8807
+        },
+        {
+          "sample": 42,
+          "selected_cursor_path": "10",
+          "selection_microticks": 12221
+        },
+        {
+          "sample": 43,
+          "selected_cursor_path": "100",
+          "selection_microticks": 1986
+        },
+        {
+          "sample": 44,
+          "selected_cursor_path": "1000",
+          "selection_microticks": 2348
+        },
+        {
+          "sample": 45,
+          "selected_cursor_path": "10001",
+          "selection_microticks": 4497
+        },
+        {
+          "sample": 46,
+          "selected_cursor_path": "100011",
+          "selection_microticks": 4857
+        },
+        {
+          "sample": 47,
+          "selected_cursor_path": "1000111",
+          "selection_microticks": 5999
+        },
+        {
+          "sample": 48,
+          "selected_cursor_path": "10001111",
+          "selection_microticks": 6375
+        },
+        {
+          "sample": 49,
+          "selected_cursor_path": "100011110",
+          "selection_microticks": 6669
+        },
+        {
+          "sample": 50,
+          "selected_cursor_path": "10000",
+          "selection_microticks": 8029
+        },
+        {
+          "sample": 51,
+          "selected_cursor_path": "1010",
+          "selection_microticks": 5278
+        },
+        {
+          "sample": 52,
+          "selected_cursor_path": "10100",
+          "selection_microticks": 4668
+        },
+        {
+          "sample": 53,
+          "selected_cursor_path": "1010",
+          "selection_microticks": 5223
+        },
+        {
+          "sample": 54,
+          "selected_cursor_path": "101010",
+          "selection_microticks": 11698
+        },
+        {
+          "sample": 55,
+          "selected_cursor_path": "10101",
+          "selection_microticks": 14145
+        },
+        {
+          "sample": 56,
+          "selected_cursor_path": "1010110",
+          "selection_microticks": 12819
+        },
+        {
+          "sample": 57,
+          "selected_cursor_path": "1010110",
+          "selection_microticks": 16912
+        },
+        {
+          "sample": 58,
+          "selected_cursor_path": "101011",
+          "selection_microticks": 19729
+        },
+        {
+          "sample": 59,
+          "selected_cursor_path": "1010110",
+          "selection_microticks": 21279
+        },
+        {
+          "sample": 60,
+          "selected_cursor_path": "101011",
+          "selection_microticks": 19149
+        },
+        {
+          "sample": 61,
+          "selected_cursor_path": "10101",
+          "selection_microticks": 29342
+        },
+        {
+          "sample": 62,
+          "selected_cursor_path": "101010",
+          "selection_microticks": 3594
+        },
+        {
+          "sample": 63,
+          "selected_cursor_path": "1010100",
+          "selection_microticks": 3796
+        },
+        {
+          "sample": 64,
+          "selected_cursor_path": "10101001",
+          "selection_microticks": 9873
+        },
+        {
+          "sample": 65,
+          "selected_cursor_path": "101010011",
+          "selection_microticks": 10233
+        },
+        {
+          "sample": 66,
+          "selected_cursor_path": "1010100110",
+          "selection_microticks": 11375
+        },
+        {
+          "sample": 67,
+          "selected_cursor_path": "10101001101",
+          "selection_microticks": 10446
+        },
+        {
+          "sample": 68,
+          "selected_cursor_path": "101010011010",
+          "selection_microticks": 10594
+        },
+        {
+          "sample": 69,
+          "selected_cursor_path": "10101000",
+          "selection_microticks": 9227
+        },
+        {
+          "sample": 70,
+          "selected_cursor_path": "1010",
+          "selection_microticks": 12907
+        },
+        {
+          "sample": 71,
+          "selected_cursor_path": "10100",
+          "selection_microticks": 3546
+        },
+        {
+          "sample": 72,
+          "selected_cursor_path": "101000",
+          "selection_microticks": 3908
+        },
+        {
+          "sample": 73,
+          "selected_cursor_path": "1010001",
+          "selection_microticks": 6057
+        },
+        {
+          "sample": 74,
+          "selected_cursor_path": "10100011",
+          "selection_microticks": 6417
+        },
+        {
+          "sample": 75,
+          "selected_cursor_path": "101000111",
+          "selection_microticks": 7559
+        },
+        {
+          "sample": 76,
+          "selected_cursor_path": "1010001111",
+          "selection_microticks": 7935
+        },
+        {
+          "sample": 77,
+          "selected_cursor_path": "10100011110",
+          "selection_microticks": 8229
+        },
+        {
+          "sample": 78,
+          "selected_cursor_path": "1010000",
+          "selection_microticks": 8449
+        },
+        {
+          "sample": 79,
+          "selected_cursor_path": "1010100",
+          "selection_microticks": 5925
+        },
+        {
+          "sample": 80,
+          "selected_cursor_path": "10101001",
+          "selection_microticks": 6783
+        },
+        {
+          "sample": 81,
+          "selected_cursor_path": "101010011",
+          "selection_microticks": 6829
+        },
+        {
+          "sample": 82,
+          "selected_cursor_path": "1010100111",
+          "selection_microticks": 6869
+        },
+        {
+          "sample": 83,
+          "selected_cursor_path": "101010",
+          "selection_microticks": 6834
+        },
+        {
+          "sample": 84,
+          "selected_cursor_path": "1010100",
+          "selection_microticks": 6106
+        },
+        {
+          "sample": 85,
+          "selected_cursor_path": "101010",
+          "selection_microticks": 6691
+        },
+        {
+          "sample": 86,
+          "selected_cursor_path": "10101010",
+          "selection_microticks": 13136
+        },
+        {
+          "sample": 87,
+          "selected_cursor_path": "1010101",
+          "selection_microticks": 15610
+        },
+        {
+          "sample": 88,
+          "selected_cursor_path": "101010110",
+          "selection_microticks": 15163
+        },
+        {
+          "sample": 89,
+          "selected_cursor_path": "10101011",
+          "selection_microticks": 17640
+        },
+        {
+          "sample": 90,
+          "selected_cursor_path": "1010101110",
+          "selection_microticks": 16284
+        },
+        {
+          "sample": 91,
+          "selected_cursor_path": "1010101110",
+          "selection_microticks": 20377
+        },
+        {
+          "sample": 92,
+          "selected_cursor_path": "101010111",
+          "selection_microticks": 23224
+        },
+        {
+          "sample": 93,
+          "selected_cursor_path": "1010101110",
+          "selection_microticks": 24756
+        },
+        {
+          "sample": 94,
+          "selected_cursor_path": "101010111",
+          "selection_microticks": 22644
+        },
+        {
+          "sample": 95,
+          "selected_cursor_path": "10101011",
+          "selection_microticks": 32710
+        },
+        {
+          "sample": 96,
+          "selected_cursor_path": "101010110",
+          "selection_microticks": 5172
+        },
+        {
+          "sample": 97,
+          "selected_cursor_path": "1010101100",
+          "selection_microticks": 5374
+        },
+        {
+          "sample": 98,
+          "selected_cursor_path": "10101011001",
+          "selection_microticks": 13382
+        },
+        {
+          "sample": 99,
+          "selected_cursor_path": "101010110011",
+          "selection_microticks": 13742
+        }
+      ]
+    }
+  ]
+}

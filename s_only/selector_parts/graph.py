@@ -14,6 +14,10 @@ class Command:
     command: str
     next_state: int | None = None
 
+    def __post_init__(self):
+        if type(self.command) is not str:
+            raise ValueError('primitive command must be a plain string')
+
 
 class GraphBuilder:
     def __init__(self):

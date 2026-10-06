@@ -32,6 +32,8 @@ class Instruction:
     next_state: int | None = None
 
     def __post_init__(self):
+        if type(self.command) is not str:
+            raise ValueError("read-only command must be a plain string")
         if self.command not in ("stay", "L", "R", "U", "true", "false"):
             raise ValueError("unknown read-only command")
         if self.command in ("true", "false"):

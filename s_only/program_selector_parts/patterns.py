@@ -1,4 +1,4 @@
-"""Immutable compile-time row families for any fixed two-phase CTS program.
+"""Immutable compile-time row families for a fixed positive-period CTS program.
 
 The input-independent definitions transcribe the pinned completed-Local,
 carrier, fuel, dispatcher and selected-appender rows. Every wildcard is
@@ -89,25 +89,47 @@ def _dispatch(compiled):
         fork = App(App(encoding.S, left.code), right.code)
         return Dispatch(App(encoding.B, fork), left, right)
 
-    return branch(branch(*leaves[:2]), branch(*leaves[2:]))
+    # Match encoding.compile_program exactly: pair adjacent trees and carry
+    # an odd final tree unchanged. Repeated code still has distinct labels.
+    forest = leaves
+    while len(forest) > 1:
+        following = tuple(branch(forest[index], forest[index + 1])
+                          for index in range(0, len(forest) - 1, 2))
+        forest = following + (forest[-1:] if len(forest) % 2 else ())
+    return forest[0]
 
 
 @dataclass(frozen=True, slots=True)
 class PatternFamily:
     """Static program parameter, discarded when the primitive table is built."""
     program: Program
+    required_period: int | None = field(default=2, kw_only=True)
     compiled: encoding.CompiledProgram = field(init=False)
     dispatch: Dispatch = field(init=False)
+    routes: tuple[tuple[int, ...], ...] = field(init=False)
     act: Pattern = field(init=False)
 
     def __post_init__(self):
         if not isinstance(self.program, Program):
             raise TypeError('program must be s_only.cts.Program')
-        if len(self.program.appendants) != 2:
-            raise ValueError('this compiler supports exactly two CTS phases')
+        if self.required_period is not None:
+            if type(self.required_period) is not int or self.required_period < 1:
+                raise ValueError('required_period must be a positive integer or None')
+            if len(self.program.appendants) != self.required_period:
+                description = 'two' if self.required_period == 2 else str(self.required_period)
+                raise ValueError(f'this compiler supports exactly {description} CTS phases')
         compiled = encoding.compile_program(self.program)
         object.__setattr__(self, 'compiled', compiled)
-        object.__setattr__(self, 'dispatch', _dispatch(compiled))
+        dispatch = _dispatch(compiled)
+        object.__setattr__(self, 'dispatch', dispatch)
+        routes, stack = [], [(dispatch, ())]
+        while stack:
+            spec, route = stack.pop()
+            if spec.label is not None:
+                routes.append(route)
+            else:
+                stack.extend(((spec.right, route + (1,)), (spec.left, route + (0,))))
+        object.__setattr__(self, 'routes', tuple(routes))
         object.__setattr__(self, 'act', literal(compiled.act))
 
     def environment_pattern(self):
@@ -220,9 +242,17 @@ class PatternFamily:
 
     def phase_labels(self):
         return ((0, self.base_pattern()),) + tuple(
-            ((label[0] + 1) % 2, self.local_pattern(status, pattern))
+            ((label[0] + 1) % len(self.program.appendants), self.local_pattern(status, pattern))
             for status in ('fresh', 'marked')
             for pattern, _, label in self.dispatch_records())
+
+    def route_for(self, label):
+        """Recover the static route of a label, never identify leaves by code."""
+        phase, bit = label
+        if (type(phase) is not int or not 0 <= phase < len(self.program.appendants)
+                or type(bit) is not int or bit not in (0, 1)):
+            raise ValueError('label must contain an in-range phase and binary bit')
+        return self.routes[2 * phase + bit]
 
     def dispatcher_rows(self, label):
         """Initial call and fixed exposed/forked rows for the recovered label."""
@@ -242,7 +272,7 @@ class PatternFamily:
                 nested = tuple((chosen_pattern((call_pattern(left.code), p)), (1, 1) + a)
                                for p, a in visit(right, rest))
             return head + nested
-        rows = ((call_pattern(self.compiled.actions), ()),) + visit(self.dispatch, label)
+        rows = ((call_pattern(self.compiled.actions), ()),) + visit(self.dispatch, self.route_for(label))
         return tuple((self.local_pattern('fresh', pattern), SHELL_ADDRESS + address)
                      for pattern, address in rows)
 
