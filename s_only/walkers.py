@@ -43,6 +43,8 @@ class WalkerTable:
                 raise ValueError("each state needs six immutable observation entries")
             if any(type(entry) is not Instruction for entry in row):
                 raise ValueError("table entries must be Instructions")
+            for entry in row:
+                Instruction.__post_init__(entry)
             if state == self.feedback:
                 if any(entry != Instruction("stay", self.start) for entry in row):
                     raise ValueError("feedback must stay and return to start")

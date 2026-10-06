@@ -38,6 +38,10 @@ class ObserverTable:
                     raise ValueError('invalid instruction')
                 if type(entry.command) is not str:
                     raise ValueError('read-only command must be a plain string')
+                if entry.next_state is not None and type(entry.next_state) is not int:
+                    raise ValueError('instruction targets must be plain integers or None')
+        for row in self.states:
+            for entry in row:
                 if entry.command in ('true', 'false'):
                     if any(other != entry for other in row) or entry.next_state is not None:
                         raise ValueError('terminal must be uniform and absorbing')

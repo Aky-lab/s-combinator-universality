@@ -13,10 +13,10 @@ A different construction can share control before materialization, so this
 count describes the present allocation strategy rather than the intrinsic
 complexity of the selection behavior.
 
-The [succinct probe prototype](succinct-probes.md) already represents a
-single restoring matcher through exactly indexed transition lookup, without
-enumerating its controls. Extending that representation to row composition
-and complete controllers is the next construction step.
+The [succinct selector prototype](succinct-selector.md) now composes exactly
+indexed probes, prioritized rows and walkers without enumerating their
+controls. Small complete controllers preserve the original graph. Larger
+programs still require work on repeated pattern construction and code sharing.
 
 ## Scope and attribution
 

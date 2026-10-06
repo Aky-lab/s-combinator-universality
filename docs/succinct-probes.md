@@ -4,9 +4,10 @@
 single-pattern table emitted by `s_only.probes.compile_pattern`. It addresses
 up-front graph materialization: a shared pattern DAG can describe an enormous
 finite table without allocating one Python row per control. Exact control
-indices and primitive traces are preserved. This standalone entry point
-compiles one pattern; prioritized rows and full controllers require further
-composition.
+indices and primitive traces are preserved. This entry point compiles one
+pattern; [prioritized rows](succinct-rows.md), [spine walkers](succinct-walkers.md)
+and the [interval-coded selector](succinct-selector.md) compose the code into
+larger fixed graphs.
 
 The code retains fixed immutable pattern metadata. This is a distinct
 **succinct-code representation**, unlike the original materialized table which

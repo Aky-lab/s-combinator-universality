@@ -68,6 +68,8 @@ class ProbeTable:
                 raise ValueError("each state needs six immutable observation entries")
             if any(type(entry) is not Instruction for entry in row):
                 raise ValueError("table entries must be Instructions")
+            for entry in row:
+                Instruction.__post_init__(entry)
             terminal = row[0].command in ("true", "false")
             for entry in row:
                 if terminal:

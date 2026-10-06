@@ -1,0 +1,822 @@
+{
+  "schema": "s-only-succinct-selector-v1",
+  "appendants": [
+    "1",
+    ""
+  ],
+  "seed": "101",
+  "scope": "exact legacy graph and archived 85-contraction trajectory",
+  "runtime": "unchanged root_selector.step/erase; fresh fixed control and root per invocation",
+  "comparison_method": "one materialized program_selector reference plus one succinct table; serial runs",
+  "memory_caveat": "This checker retains a materialized reference and does not demonstrate low peak RSS.",
+  "metadata_count_definition": "referenced record slots, counted separately per embed; not bytes or integer bit lengths",
+  "finite_control_states": 257299,
+  "start": 227379,
+  "intervals": 370,
+  "referenced_metadata_records": 33040,
+  "observations_per_state": 6,
+  "control_table_sha256": "bb4c1f981a8dba4fb14d7f93f55d6f6927c460ebc8263037643903ddec291924",
+  "entries_checked": 1543794,
+  "statuses_checked": 257299,
+  "status_counts": {
+    "read_only": 257296,
+    "normal": 1,
+    "contracted": 1,
+    "Rdx": 1
+  },
+  "graph_digest_format": "control:observation-index:command:next-state followed by LF; None is literal",
+  "trace_digest_format": "control:node-kind:incoming-side:binary-address followed by LF; includes initial and selected configurations",
+  "fixture_sha256": "96e89c35519bac214e7be15f5bd7e8020459641fcd4725c64457047f7f715fe4",
+  "external_bounds": {
+    "comparison_states": 300000,
+    "total_appendant_bits": 8,
+    "metadata_records": 100000,
+    "soft_compile_seconds": 10,
+    "native_contractions_per_run": 85,
+    "selection_microticks_per_invocation": 100000,
+    "selection_microticks_per_run": 2000000,
+    "expanded_nodes": 400000,
+    "soft_wall_seconds": 120
+  },
+  "external_process_envelope": {
+    "hard_timeout_seconds": 180,
+    "address_space_limit_kib": 1048576,
+    "enforcement": "external launcher, not the Python report",
+    "reproduction_command": "timeout 180s sh -c 'ulimit -v 1048576; exec python -m tools.succinct_selector_report --deterministic --output results/succinct_selector.json'"
+  },
+  "serial_runs_checked": 2,
+  "native_contractions_checked_across_both_runs": 170,
+  "selection_microticks_checked_across_both_runs": 2630468,
+  "reference_and_succinct_trace_digests_match": true,
+  "native_contractions_checked": 85,
+  "total_selection_microticks": 1315234,
+  "max_selection_microticks": 41917,
+  "peak_expanded_nodes": 339285,
+  "fixture_selections": [
+    {
+      "contraction": 1,
+      "address": "0",
+      "selection_microticks": 1498,
+      "native_contractions": 1,
+      "after_nodes": 179,
+      "after_sha256": "8cb9e1790ff250f5317dc1ee4633109216f34b75f48d72bc99a4709b82780015",
+      "selection_trace_sha256": "4a586c6b8e0074fcf5aa9cf4c46df2d65cc7a4e0fc6a9e1be9b57747da250d07"
+    },
+    {
+      "contraction": 2,
+      "address": "0",
+      "selection_microticks": 1488,
+      "native_contractions": 1,
+      "after_nodes": 191,
+      "after_sha256": "eb3f6921ea44c4b7d651019b06c9eba2d2200107e138eda9ed5a3038ca3e7076",
+      "selection_trace_sha256": "b9f6d094bf3cb4d9a2be051c9c1547da9e1689bcdf492cba5615d708455970bb"
+    },
+    {
+      "contraction": 3,
+      "address": "01",
+      "selection_microticks": 2301,
+      "native_contractions": 1,
+      "after_nodes": 203,
+      "after_sha256": "b7fa1be18c67f5c9e37bcf89a320d4b8399a909214ddc1c26f052769bd2703be",
+      "selection_trace_sha256": "ada1e57bd5e1f82423434fdbf8aa8a6fa8667c79f19982e3c6f3f54e1fbb2da5"
+    },
+    {
+      "contraction": 4,
+      "address": "",
+      "selection_microticks": 2289,
+      "native_contractions": 1,
+      "after_nodes": 353,
+      "after_sha256": "b08016d1aaab6e8e112e62f220cddfbdd8e1804a14d460ea2de4d23c5693b8dd",
+      "selection_trace_sha256": "1d754a2404e6f3051fefe2539a06043a5d4fa01b30642f9688eb7223832154f0"
+    },
+    {
+      "contraction": 5,
+      "address": "0",
+      "selection_microticks": 1669,
+      "native_contractions": 1,
+      "after_nodes": 503,
+      "after_sha256": "bb8a55d68288f0fda9096b8381f3e244e0cc5ab78fd3ed960193e5b2bdb6efcb",
+      "selection_trace_sha256": "d94916b0dfb376d26c34529c6b1a95127a3e866e29a03bf321576b89df5989f0"
+    },
+    {
+      "contraction": 6,
+      "address": "",
+      "selection_microticks": 2295,
+      "native_contractions": 1,
+      "after_nodes": 689,
+      "after_sha256": "153d35abdd957b1e17eaedc61627035fa66c895bc24d864484200473d77f9fc0",
+      "selection_trace_sha256": "4459169d9ad25a88cb601c202de1a647e5d7412f869daea1b16a3944257c9bd0"
+    },
+    {
+      "contraction": 7,
+      "address": "10",
+      "selection_microticks": 7861,
+      "native_contractions": 1,
+      "after_nodes": 839,
+      "after_sha256": "9d835616fd83731e5b8b29f0caa7a71c583cb3e41c7e8cbb8393a8845d5ee7d1",
+      "selection_trace_sha256": "effbc35f2c72e1c1932a55ce94311a0e13c243bddb26543b840050428d757242"
+    },
+    {
+      "contraction": 8,
+      "address": "10",
+      "selection_microticks": 11954,
+      "native_contractions": 1,
+      "after_nodes": 993,
+      "after_sha256": "acb8136a0e9ca55a16a59018a62261370470ddea904b66b42da39226dfc72a25",
+      "selection_trace_sha256": "1d80c262a9d7593372d42144f5f4c1d2a808a07f90001f160d5e7092a50a2e3e"
+    },
+    {
+      "contraction": 9,
+      "address": "1",
+      "selection_microticks": 14771,
+      "native_contractions": 1,
+      "after_nodes": 1179,
+      "after_sha256": "26935a73893a9c0b474faa8a50329000b130cfac7fb5e57739357ea7f49bc695",
+      "selection_trace_sha256": "e76ef0c034043c4088cd20fdd8712b681065ddd8bf5d03af547bb765a5cd3a37"
+    },
+    {
+      "contraction": 10,
+      "address": "10",
+      "selection_microticks": 16321,
+      "native_contractions": 1,
+      "after_nodes": 1365,
+      "after_sha256": "eac7fa6fdb92029e65109f5eee64ec1ed66a1418b59d351436421315084aaeb6",
+      "selection_trace_sha256": "f2883e1fc4fa379258fc3284fd486f038089f2d92f147ed9a158fc5b95411b9b"
+    },
+    {
+      "contraction": 11,
+      "address": "1",
+      "selection_microticks": 14191,
+      "native_contractions": 1,
+      "after_nodes": 1859,
+      "after_sha256": "d83db18ba5c217cf334358104b527410d314d2839f383159e85ff2bcd911e964",
+      "selection_trace_sha256": "e5ede223a842ac75bf6f3d4a2c5949c6bc2caf2f3ba6874ab270c58186e518e2"
+    },
+    {
+      "contraction": 12,
+      "address": "1010011111",
+      "selection_microticks": 25290,
+      "native_contractions": 1,
+      "after_nodes": 1859,
+      "after_sha256": "d3d932bd6a88f6567723323c1b4d9b567807362d06b0e1521088a8030e2df0e8",
+      "selection_trace_sha256": "cbfd8640b6fbb93b91cd5fc5573b6741b0876a7d5699e78dc945bd8ca37c5bf8"
+    },
+    {
+      "contraction": 13,
+      "address": "",
+      "selection_microticks": 23849,
+      "native_contractions": 1,
+      "after_nodes": 3377,
+      "after_sha256": "ba2fdfbe646b51c3c7144e224de38ff8c9827bcf44f656ef7c76d078e2174694",
+      "selection_trace_sha256": "e4b49a031da471ae6b1e2ed935d83fe13385ce7cea6dda150d035f823740c566"
+    },
+    {
+      "contraction": 14,
+      "address": "0",
+      "selection_microticks": 559,
+      "native_contractions": 1,
+      "after_nodes": 4895,
+      "after_sha256": "131015785a614c6d2a33ca9b2d46e13a786a362d84d3822d9e45aa2dbf7df637",
+      "selection_trace_sha256": "0657e2724bad366eaabad837a2f4c4b5a219c49e7485d96ff27f7e275ae6f2da"
+    },
+    {
+      "contraction": 15,
+      "address": "00",
+      "selection_microticks": 929,
+      "native_contractions": 1,
+      "after_nodes": 6413,
+      "after_sha256": "7fe3ea80a39f1fc22f10739628e07da188cbb51b3ebbb4078872231e09af8b13",
+      "selection_trace_sha256": "484aa2a9dbb673ccae6626f3ff5da7a409411979c92fa4ff7a8a019e839c8eaa"
+    },
+    {
+      "contraction": 16,
+      "address": "001",
+      "selection_microticks": 5211,
+      "native_contractions": 1,
+      "after_nodes": 7931,
+      "after_sha256": "a5587fc3973482813f2243086cfa93c02470c15e5df0aee77c3b81ca41cc8c91",
+      "selection_trace_sha256": "df02754bfca94d5570074eef2f10a5d6423220f7731301da4c0a9b98eda7264a"
+    },
+    {
+      "contraction": 17,
+      "address": "0011",
+      "selection_microticks": 5571,
+      "native_contractions": 1,
+      "after_nodes": 9449,
+      "after_sha256": "3c5ddedd1e81227731887153b97a77be7068df239f0e848a4263c90e1be92cd8",
+      "selection_trace_sha256": "5f1966b1de9a4a1d1c94a9047525a4a8d0b9e0aad35b97d94c70ea459c76b758"
+    },
+    {
+      "contraction": 18,
+      "address": "00110",
+      "selection_microticks": 6713,
+      "native_contractions": 1,
+      "after_nodes": 10967,
+      "after_sha256": "068603f7a3766d6e7ac4165890ab672c3b06f9c712b12286b5d75bb149a95f17",
+      "selection_trace_sha256": "902a6fa23074ee1acc93a813765a053d507ed0fe5c479b11ce8950364b39ef44"
+    },
+    {
+      "contraction": 19,
+      "address": "001101",
+      "selection_microticks": 5784,
+      "native_contractions": 1,
+      "after_nodes": 12485,
+      "after_sha256": "f087cbbc89b1ae13301e89bebfe3c157edb8bf9169be39e6233087ac9e5653ad",
+      "selection_trace_sha256": "bb3658bd47e64f3e30385e596b4e1fc5e37da8552c43bbf8931f956526816ab6"
+    },
+    {
+      "contraction": 20,
+      "address": "0011011",
+      "selection_microticks": 5932,
+      "native_contractions": 1,
+      "after_nodes": 14003,
+      "after_sha256": "3da64936b1433140c6839fb8046f1efe2703314c1d398ac97a8317381b077769",
+      "selection_trace_sha256": "2d7fe3c7ba0ce392f2784bcb969b711bdd675c0e06312ba71d63bb57ca3a5055"
+    },
+    {
+      "contraction": 21,
+      "address": "00110111",
+      "selection_microticks": 6132,
+      "native_contractions": 1,
+      "after_nodes": 15521,
+      "after_sha256": "401f1c9fb314a1f1206ee0e8762ed15f68b41cac7a46ca48535de1ce21465f18",
+      "selection_trace_sha256": "9dbb3b5668125f72e1d0c865afbf1c52d1bb7b20ffe444b20a405183eb1bd0cd"
+    },
+    {
+      "contraction": 22,
+      "address": "00110111",
+      "selection_microticks": 6268,
+      "native_contractions": 1,
+      "after_nodes": 17057,
+      "after_sha256": "8de1b75dcacef7b2641823be685aea431a05e74e47c2c1dbf43406c8b6676798",
+      "selection_trace_sha256": "9ff7db5fb973fa4e5a6a76e4099a5f00db7b268073cf4389347bf7894cfa6a65"
+    },
+    {
+      "contraction": 23,
+      "address": "100",
+      "selection_microticks": 7565,
+      "native_contractions": 1,
+      "after_nodes": 17073,
+      "after_sha256": "96f6e8b69f6716be77ca075c66c95e691ea2c9fa76595452768f3d5b23649cb1",
+      "selection_trace_sha256": "8dd27071246e5a4fa61eb05af3b59275094594f0f02e00f17d829896880d52a0"
+    },
+    {
+      "contraction": 24,
+      "address": "1001",
+      "selection_microticks": 8365,
+      "native_contractions": 1,
+      "after_nodes": 17089,
+      "after_sha256": "0df48657f8cf95bcfd561aa59add924c13394333339136fbbb2e21fb676f013f",
+      "selection_trace_sha256": "ab90fb002697e98ae6a39eca100a01a40279125ff0cef62bee2ec2f1c427fd84"
+    },
+    {
+      "contraction": 25,
+      "address": "10011",
+      "selection_microticks": 8411,
+      "native_contractions": 1,
+      "after_nodes": 17105,
+      "after_sha256": "a12c7d0ef27b86f94cdf805e91709b75babef147a59a824316120ec74e4a32d9",
+      "selection_trace_sha256": "60defaf7073d20d2c9f33594d04a4c2c82b25f1fa0aad92c968026e578cb8779"
+    },
+    {
+      "contraction": 26,
+      "address": "10",
+      "selection_microticks": 8389,
+      "native_contractions": 1,
+      "after_nodes": 17255,
+      "after_sha256": "be27dabe5abc7a5b31cb2f3d567f0c51d8717d185d9834c16ee29a82bb39bf82",
+      "selection_trace_sha256": "49aa9bf981b9d04f5bb4bd5997d97910a2fbbe6c1074d8c3c0cd6c635cfa4e41"
+    },
+    {
+      "contraction": 27,
+      "address": "100",
+      "selection_microticks": 7746,
+      "native_contractions": 1,
+      "after_nodes": 17405,
+      "after_sha256": "8edb19fc19b5609b1843b41f4ce88a44f204e54a1375a51baa649bfe42fc29cf",
+      "selection_trace_sha256": "8b97be647e58af60c74eda075a5aaf45d2dd373ebccdec9272301075ee846df3"
+    },
+    {
+      "contraction": 28,
+      "address": "10",
+      "selection_microticks": 8331,
+      "native_contractions": 1,
+      "after_nodes": 17619,
+      "after_sha256": "d6d877aa1cbea6c141b76e8bd5901ae377ee0c99326b0d3366e34764ba584520",
+      "selection_trace_sha256": "48d530f3a8c1135e79be078fe7a9c289927703f51fbd926c7b08c200a48d242c"
+    },
+    {
+      "contraction": 29,
+      "address": "1010",
+      "selection_microticks": 14776,
+      "native_contractions": 1,
+      "after_nodes": 17769,
+      "after_sha256": "be913e08b35d2184106c9f430231c33a908bf7028794553d759c3a0213e0a3da",
+      "selection_trace_sha256": "c950394b09911423af99dd03088db7b213877318b919ccb6fe974dbd1111cd8a"
+    },
+    {
+      "contraction": 30,
+      "address": "101",
+      "selection_microticks": 17253,
+      "native_contractions": 1,
+      "after_nodes": 17983,
+      "after_sha256": "a4e64b5f0c84221a015a490c41650a4595cc3296181da3288e1b6b246fa6b228",
+      "selection_trace_sha256": "1bc74e3ab95c12f710acbf64b7388043b673f0d113ded206fcd5fbd84915821c"
+    },
+    {
+      "contraction": 31,
+      "address": "10110",
+      "selection_microticks": 15897,
+      "native_contractions": 1,
+      "after_nodes": 18133,
+      "after_sha256": "0b24942afe5de612818b98d39a798b71393ec9f0f1e64af50c8b49c07146ec0b",
+      "selection_trace_sha256": "12c750456a2df3be7bf1dbdad9380fc7c501a309ab1480ec45e76076de378f2b"
+    },
+    {
+      "contraction": 32,
+      "address": "10110",
+      "selection_microticks": 19990,
+      "native_contractions": 1,
+      "after_nodes": 18287,
+      "after_sha256": "456117966b22d49d06015eaec6ed06e5ac23aeb36829cc798133a3a12347ca30",
+      "selection_trace_sha256": "957ef3d398d3bed8df2f19bf66332cd7a4478f83695f342e1243a46713be9581"
+    },
+    {
+      "contraction": 33,
+      "address": "1011",
+      "selection_microticks": 22837,
+      "native_contractions": 1,
+      "after_nodes": 18501,
+      "after_sha256": "fda29c42405af59bf0ce067eca5f604655138883212887c73cc4e2e4a3f95530",
+      "selection_trace_sha256": "2ce9db096d5393c125d610b87dc5f3688bcb972c0d95e0ecdc98322738a5d075"
+    },
+    {
+      "contraction": 34,
+      "address": "10110",
+      "selection_microticks": 24369,
+      "native_contractions": 1,
+      "after_nodes": 18715,
+      "after_sha256": "176a51d7d4f610ac955efbba138e2403a5d7d67a8e0bdda6084f9084d9311516",
+      "selection_trace_sha256": "1b0817e7028e17a07ba3a8441ed3f96c7d72206bb16387eaaf33cd4ebd4ff32f"
+    },
+    {
+      "contraction": 35,
+      "address": "1011",
+      "selection_microticks": 22257,
+      "native_contractions": 1,
+      "after_nodes": 19237,
+      "after_sha256": "f9b253666c85f637e14b5464b30f63c3abed8cacc52e9dd9720801191d7f18c4",
+      "selection_trace_sha256": "23190e17f738f6a8f84aff89d6365414755d9d7fa31370e23e475d55a77f89cf"
+    },
+    {
+      "contraction": 36,
+      "address": "1011010011111",
+      "selection_microticks": 33773,
+      "native_contractions": 1,
+      "after_nodes": 19237,
+      "after_sha256": "49cfe8480cecf6a4406cf024f21983a057b643c182dba4f5aae4a3fda9dd6fa9",
+      "selection_trace_sha256": "03e2611df4b313c4fc40c6d398fc3d105576c1609d74b63e5a1d3f289fd55783"
+    },
+    {
+      "contraction": 37,
+      "address": "101",
+      "selection_microticks": 32332,
+      "native_contractions": 1,
+      "after_nodes": 20867,
+      "after_sha256": "e0f31e212599e4a52b3f8ce5377fe9052127ac02932d7c572ecc2e97e2d02ca6",
+      "selection_trace_sha256": "544fd700658713354792b143912fac1dcab71ef44e126790707cdf474cc82080"
+    },
+    {
+      "contraction": 38,
+      "address": "1010",
+      "selection_microticks": 6672,
+      "native_contractions": 1,
+      "after_nodes": 22497,
+      "after_sha256": "01b99e2cf40041a2d9165e689955aad94948c6846896df98b5289af468e902a3",
+      "selection_trace_sha256": "e16ca689cf96ca0c0981cf8ef74e5405ff151f04d3df6cac277ff960780a0d2c"
+    },
+    {
+      "contraction": 39,
+      "address": "10100",
+      "selection_microticks": 6874,
+      "native_contractions": 1,
+      "after_nodes": 24127,
+      "after_sha256": "d2dfead1211fccde3bad1a3a306dce8738458df17ae1c8f078109976e5dc7f8a",
+      "selection_trace_sha256": "ae43944624e4547ef5099d483f41adff85b19387c9bc62b190395e6ea49f3ea9"
+    },
+    {
+      "contraction": 40,
+      "address": "101001",
+      "selection_microticks": 13775,
+      "native_contractions": 1,
+      "after_nodes": 25757,
+      "after_sha256": "640933dadd5f0f919341a88e91ba1a7f37d0b4822ac57b3b455b4a934338615e",
+      "selection_trace_sha256": "2efdcd3bb50931f589ed20153da51a414274512fe67497f636b4c7674ac53b59"
+    },
+    {
+      "contraction": 41,
+      "address": "1010011",
+      "selection_microticks": 14135,
+      "native_contractions": 1,
+      "after_nodes": 27387,
+      "after_sha256": "d7f2d440bfe10df4d75c7666d9da8fe55dfd93c438678087be258e390b6f225e",
+      "selection_trace_sha256": "8a5f310c90f0f65f07aaee281239507c4bfb1bbfda4a65811bfe9639a8ea73d3"
+    },
+    {
+      "contraction": 42,
+      "address": "10100110",
+      "selection_microticks": 15277,
+      "native_contractions": 1,
+      "after_nodes": 29017,
+      "after_sha256": "380f24a0d0c8a3cf534b4344fa05cfeac1595db0945d370a01fa9d5a3ed84128",
+      "selection_trace_sha256": "b2498e10d4748d70fbd99ec87caea68d9955faa36cab1be75e44df02e6e217a3"
+    },
+    {
+      "contraction": 43,
+      "address": "101001101",
+      "selection_microticks": 14348,
+      "native_contractions": 1,
+      "after_nodes": 30647,
+      "after_sha256": "638cdbddc54bb36a07691765764c3b84991ffbe877de23a73d9b98ed7785d0d8",
+      "selection_trace_sha256": "d8de2aab730ca0ba48177a1b5f980cfdd8b99937c51f0ef870049f43f4a41e19"
+    },
+    {
+      "contraction": 44,
+      "address": "1010011011",
+      "selection_microticks": 14496,
+      "native_contractions": 1,
+      "after_nodes": 32277,
+      "after_sha256": "0c494a9889fa9b16f9e19b3f61212dd376b6f8447ba8284a0e154979b3865abf",
+      "selection_trace_sha256": "5ef8df87fe4f281df9c8e73991b5d0d160cfbcbf4967025f3e6906cbf6f1ed65"
+    },
+    {
+      "contraction": 45,
+      "address": "10100110111",
+      "selection_microticks": 14696,
+      "native_contractions": 1,
+      "after_nodes": 33907,
+      "after_sha256": "6487596a2aa04d6e8cc3243089d0d661c30729ee7968984f0dee512360176dc4",
+      "selection_trace_sha256": "3c475993900039d464166383d7ab6090860f2f52506438a6ce129b8323c3f54e"
+    },
+    {
+      "contraction": 46,
+      "address": "10100110111",
+      "selection_microticks": 14832,
+      "native_contractions": 1,
+      "after_nodes": 35555,
+      "after_sha256": "13139b1ef953f6cb2cdab6f7871fe17439c6d36f296d050c3af67130aab085a9",
+      "selection_trace_sha256": "6382e12cb35bd79072ecef23c1564df3815fc8fbb2a7d24bdff052c1d50f7936"
+    },
+    {
+      "contraction": 47,
+      "address": "1010011011101101001111",
+      "selection_microticks": 12730,
+      "native_contractions": 1,
+      "after_nodes": 35573,
+      "after_sha256": "60807d5b1e2ac53b5a54aa6fc99de845afcc32bcbb583c160722ab6eeebf3473",
+      "selection_trace_sha256": "0176dd85434ccd3d1fc291490c534f369ed4460a3d8e7b243a3d1ab7d36b6eb1"
+    },
+    {
+      "contraction": 48,
+      "address": "10",
+      "selection_microticks": 10685,
+      "native_contractions": 1,
+      "after_nodes": 53907,
+      "after_sha256": "a3224f8499caf6b90801a0939d99c79070eae85135d11a9af5ae4d6aaae46ece",
+      "selection_trace_sha256": "2146337d8a79388a2a0f727b09e46afe74cf10871085a3cbcb435b390064e4d1"
+    },
+    {
+      "contraction": 49,
+      "address": "100",
+      "selection_microticks": 6624,
+      "native_contractions": 1,
+      "after_nodes": 72241,
+      "after_sha256": "d3a3d140988da6000188101bae92ed2283e37514eb571120b6220318d7653877",
+      "selection_trace_sha256": "78becbd719d451edcc73e243cc545fd537b1e5d5b035475928f482c5b6b1632e"
+    },
+    {
+      "contraction": 50,
+      "address": "1000",
+      "selection_microticks": 6986,
+      "native_contractions": 1,
+      "after_nodes": 90575,
+      "after_sha256": "917a4bd49d0ff4d5eee25a159f712b7030b90b32d1f8071f9e5d08f0327dca8f",
+      "selection_trace_sha256": "e7d64552ffb3a02f9d16fb4687676d83114687f0862a907d3fe6d75ac74ed657"
+    },
+    {
+      "contraction": 51,
+      "address": "10001",
+      "selection_microticks": 11619,
+      "native_contractions": 1,
+      "after_nodes": 108909,
+      "after_sha256": "e81419456cef8059a6e86cefc8fe1e6baea32df87ab11549ed3421fa94a4497f",
+      "selection_trace_sha256": "776e44f65068a1eb267ddb11737e708e6c4f37eccbe54901c9883ad7b90c9dba"
+    },
+    {
+      "contraction": 52,
+      "address": "100011",
+      "selection_microticks": 11979,
+      "native_contractions": 1,
+      "after_nodes": 127243,
+      "after_sha256": "d6205fdeb1a0f92a4e6c44a322336cb9e99c359e943bc9ea7185ea573a84d4f8",
+      "selection_trace_sha256": "3129444476a6cecbd39f19d84fda522c64dd880360206da6f0280ff492e7b277"
+    },
+    {
+      "contraction": 53,
+      "address": "1000111",
+      "selection_microticks": 13121,
+      "native_contractions": 1,
+      "after_nodes": 145577,
+      "after_sha256": "5bcb8d34b63fa0e09572039e0d021a5caecfb3239583f7691fb8a129964fe5ef",
+      "selection_trace_sha256": "e201517963425543ad6fa68cb550799add5f9619d07c2c3cc49001db61e89b40"
+    },
+    {
+      "contraction": 54,
+      "address": "10001111",
+      "selection_microticks": 13497,
+      "native_contractions": 1,
+      "after_nodes": 163911,
+      "after_sha256": "8bcd83f5fbd63907953df2de8099727ac486f142c55f2c0f8f3566881dae6469",
+      "selection_trace_sha256": "ca901aae3124998f265a50a7cdc2bd9142cafa07b4e3cf4c7bddb5fa429ea6c3"
+    },
+    {
+      "contraction": 55,
+      "address": "100011110",
+      "selection_microticks": 13791,
+      "native_contractions": 1,
+      "after_nodes": 182245,
+      "after_sha256": "d2973d992a3091e4a35a203eb6dfc3593fb235255ccfd474d3f8af512fe3beab",
+      "selection_trace_sha256": "392fd6320d1fa6b0ad1b45281ddaf9eb051280ef536e1246e8ac244bd9fd65b8"
+    },
+    {
+      "contraction": 56,
+      "address": "1010",
+      "selection_microticks": 16583,
+      "native_contractions": 1,
+      "after_nodes": 182395,
+      "after_sha256": "9e9b9e888e0500a5d04e75c4c4e5bdd8f86680f0da4a81c85566d9f39128b30b",
+      "selection_trace_sha256": "a9fef5bab85b201585b170dabe673e8ef3e464ecb8f48299eaf38b9cc12b2626"
+    },
+    {
+      "contraction": 57,
+      "address": "10100",
+      "selection_microticks": 15973,
+      "native_contractions": 1,
+      "after_nodes": 182545,
+      "after_sha256": "5ad11cbc1fde97a70578c196513eb006f827538deab814d9e7b4270fe0691805",
+      "selection_trace_sha256": "d42cd79599f4fdd224e6ec1b036b1762859f05018be1688052f705f1f42f4533"
+    },
+    {
+      "contraction": 58,
+      "address": "1010",
+      "selection_microticks": 16528,
+      "native_contractions": 1,
+      "after_nodes": 182739,
+      "after_sha256": "2d0e7f93bafe4826abc71d5a63c8c85367e02d2dfa2555e542e4716dcadfc627",
+      "selection_trace_sha256": "c83b477b824d7927cec87cb07e22130697cf394330f5751769d0c0e06ce563bc"
+    },
+    {
+      "contraction": 59,
+      "address": "101010",
+      "selection_microticks": 23003,
+      "native_contractions": 1,
+      "after_nodes": 182889,
+      "after_sha256": "312892ac938463b2c18b36af3b21cabd387de3bd4a525c5786465aa5baace8ed",
+      "selection_trace_sha256": "878cc9141a02fdec9d5e32aa42cb2a039f50f7cbd5f65f1684faa9d8eb2171e2"
+    },
+    {
+      "contraction": 60,
+      "address": "10101",
+      "selection_microticks": 25450,
+      "native_contractions": 1,
+      "after_nodes": 183083,
+      "after_sha256": "a0fb38949da9e1fb2a0b74800261af4458d8e9b3a8b9c37af533751b8eaa1d4f",
+      "selection_trace_sha256": "f2b2e931e7819e5bca7aadcffce165c0ba8b40c8e27ee6971fd1f449a4ed0ec3"
+    },
+    {
+      "contraction": 61,
+      "address": "1010110",
+      "selection_microticks": 24124,
+      "native_contractions": 1,
+      "after_nodes": 183233,
+      "after_sha256": "1a35619b9092af944912cb75335fe8f055016c1afe69ff74ae9cf72c72aa9152",
+      "selection_trace_sha256": "dae66ff7dfbbb67d6aca04ea45e1dc15aa29eff05b4dab3e8bdccd0bc69fcea1"
+    },
+    {
+      "contraction": 62,
+      "address": "1010110",
+      "selection_microticks": 28217,
+      "native_contractions": 1,
+      "after_nodes": 183387,
+      "after_sha256": "2dc16ad418141dda9dc4449018be7bdf35bcff246db19b9fb8d70e6b1a5db3de",
+      "selection_trace_sha256": "c633567da7dd4e6c5d6eec0886f2b17abeca6844a3c0a0f3f071b595f2b16814"
+    },
+    {
+      "contraction": 63,
+      "address": "101011",
+      "selection_microticks": 31034,
+      "native_contractions": 1,
+      "after_nodes": 183581,
+      "after_sha256": "5ebe5b70fddd31dd15cbdc2a99fa4b25223b364bc0a176735bcc547e2456d54d",
+      "selection_trace_sha256": "e42daf6321f89945a67be82990f79c33d23b5ef24be6d6b59da0d5cd4f271470"
+    },
+    {
+      "contraction": 64,
+      "address": "1010110",
+      "selection_microticks": 32584,
+      "native_contractions": 1,
+      "after_nodes": 183775,
+      "after_sha256": "c004458033c4a102bd43ec224da91d0820e1a9a2d9829355c5185d7dd2a9c23f",
+      "selection_trace_sha256": "ae3290bc6f98db2d02d44e25f1192dde33c486ab2ab68b6531f03774e0ea36ff"
+    },
+    {
+      "contraction": 65,
+      "address": "101011",
+      "selection_microticks": 30454,
+      "native_contractions": 1,
+      "after_nodes": 184277,
+      "after_sha256": "21561d61ea25765f6d5ef53e2dd9686f0e7e1a487df8e63c61aef24367fff522",
+      "selection_trace_sha256": "f3a50f4186a7f459c751f83a8e520896e72ce31a532e4e23356e16da13591b18"
+    },
+    {
+      "contraction": 66,
+      "address": "101011010011111",
+      "selection_microticks": 41917,
+      "native_contractions": 1,
+      "after_nodes": 184277,
+      "after_sha256": "0e320aa92a1a79ab7398b05d271ef5fed92b6ec4bd5def81a21bdb756d0befb9",
+      "selection_trace_sha256": "54f95df63b20a8e46972a7e7cc045fa866ad1ed330a4248d1c2e721a10e92c00"
+    },
+    {
+      "contraction": 67,
+      "address": "10101",
+      "selection_microticks": 40476,
+      "native_contractions": 1,
+      "after_nodes": 185827,
+      "after_sha256": "62ed86b230098f8982915efe91bcac8e8c6d5071c5b47a0445d928e3053239d0",
+      "selection_trace_sha256": "c438ce95298cd4b6638dbabe4eae502b899844a902ea821fb8bdd53276a32ebf"
+    },
+    {
+      "contraction": 68,
+      "address": "101010",
+      "selection_microticks": 14899,
+      "native_contractions": 1,
+      "after_nodes": 187377,
+      "after_sha256": "a614c92870a9efeadc4b9fd6f1ac9c987c10faf3a7ec19197399e4204d2b05cb",
+      "selection_trace_sha256": "5e7bf7f18609f8dbcac1693acf32a5916205d460a3ddd0186bea97f3bca1b5ad"
+    },
+    {
+      "contraction": 69,
+      "address": "1010100",
+      "selection_microticks": 15101,
+      "native_contractions": 1,
+      "after_nodes": 188927,
+      "after_sha256": "a1308c074c4a6b2a5d9c883342bb2092593f6a571c33c31bd081cfd1f5a326bb",
+      "selection_trace_sha256": "3c73a0c0bf662932b9628032f2ce475a80cb519a76e527275b02d4ced235914b"
+    },
+    {
+      "contraction": 70,
+      "address": "10101001",
+      "selection_microticks": 21922,
+      "native_contractions": 1,
+      "after_nodes": 190477,
+      "after_sha256": "4e08f570409283927602c93f9c452d6de811db4247c9e75a99195917c3356ff5",
+      "selection_trace_sha256": "c31a915b864c5f3b68670b5d96272973d67bf31a9ca1a888a90ce7481c08bce8"
+    },
+    {
+      "contraction": 71,
+      "address": "101010011",
+      "selection_microticks": 22282,
+      "native_contractions": 1,
+      "after_nodes": 192027,
+      "after_sha256": "74157f799eca5c7bddb9460fe290e3a7853b342fb2b6001d88407b2751139a92",
+      "selection_trace_sha256": "e012b4af35fc91dbd509c8498ee0ecb88f4303e9a83c9c36c04d928b210506d6"
+    },
+    {
+      "contraction": 72,
+      "address": "1010100110",
+      "selection_microticks": 23424,
+      "native_contractions": 1,
+      "after_nodes": 193577,
+      "after_sha256": "f629641ebf52ccbf0dd48bb59e763a9b23b138dccc7c8b0c7e35be1e8806f091",
+      "selection_trace_sha256": "dc55602cddc4dad486bcaa2415850b0c0e6e0dae6576094ec57d9164f303aa16"
+    },
+    {
+      "contraction": 73,
+      "address": "10101001101",
+      "selection_microticks": 22495,
+      "native_contractions": 1,
+      "after_nodes": 195127,
+      "after_sha256": "430f3ec3092f4e6feca59f212de83bc5a86128370ecc65d16988ad9ef6aabd1b",
+      "selection_trace_sha256": "2349274d805007eb82dabeb114640580544af1ec38ccf3aad511d80de0493898"
+    },
+    {
+      "contraction": 74,
+      "address": "101010011011",
+      "selection_microticks": 22643,
+      "native_contractions": 1,
+      "after_nodes": 196677,
+      "after_sha256": "0ecbe1900448ce81a9776550a3d066a041c2e8150bb9072cbc9f56d18acc7556",
+      "selection_trace_sha256": "522b732a762fc97e55e7bf3ea7559bde62c540700acc4fcf184b781d3baf8460"
+    },
+    {
+      "contraction": 75,
+      "address": "1010100110111",
+      "selection_microticks": 22843,
+      "native_contractions": 1,
+      "after_nodes": 198227,
+      "after_sha256": "60ac277f0250adc260a63e8fe152bb5c1e997b2d16781268f08730b7c3ab2b01",
+      "selection_trace_sha256": "3f229c6f30e212b9787951257a7a4d4b756c9f78f240072e0e1f639b0780c91b"
+    },
+    {
+      "contraction": 76,
+      "address": "1010100110111",
+      "selection_microticks": 22979,
+      "native_contractions": 1,
+      "after_nodes": 199795,
+      "after_sha256": "b388684e79f54bd0db73ce0cdc10707d75d414e2121193155ee4b309d1f98a1d",
+      "selection_trace_sha256": "2bc1757918eeac77695b5bb90bf99b10f6ed294bed191db527cdc8f4575cfef1"
+    },
+    {
+      "contraction": 77,
+      "address": "101010011011101101001111",
+      "selection_microticks": 14919,
+      "native_contractions": 1,
+      "after_nodes": 199813,
+      "after_sha256": "c0a375bda3591df496bae132f85f0ccf83c4b757c5c5f4c0092601bb58b49ee0",
+      "selection_trace_sha256": "150a59d313643ccb786ec14789fe40f890bc69766d0f5d7e587c9b10bb5c5ed5"
+    },
+    {
+      "contraction": 78,
+      "address": "1010",
+      "selection_microticks": 12874,
+      "native_contractions": 1,
+      "after_nodes": 217247,
+      "after_sha256": "77a8332e9d9e9d410f0bc15a9c6a3b2f239fe81c961d4a7c629a3bda12fe37a3",
+      "selection_trace_sha256": "cbad8bd7e6a55620e289afc3d7f67b0e33eccf725a0f7d048e46103ea16f997a"
+    },
+    {
+      "contraction": 79,
+      "address": "10100",
+      "selection_microticks": 14851,
+      "native_contractions": 1,
+      "after_nodes": 234681,
+      "after_sha256": "13fcd10d2d894842ca2d92320ee0566737a784bd3b3b906d4f6ef9ecb258396b",
+      "selection_trace_sha256": "054daff4dcd7ba2ab7ed90adff999a3e53fab5a83f98a1f3e37c1f459baf3d93"
+    },
+    {
+      "contraction": 80,
+      "address": "101000",
+      "selection_microticks": 15213,
+      "native_contractions": 1,
+      "after_nodes": 252115,
+      "after_sha256": "2579da0beee0bbe024b0589b4ca02e5f1360e65da40f11e5cc44feaeda1f9217",
+      "selection_trace_sha256": "ba99922e008dc97b767d937a9532fdc4924251a235750fb42522d29b04289544"
+    },
+    {
+      "contraction": 81,
+      "address": "1010001",
+      "selection_microticks": 19846,
+      "native_contractions": 1,
+      "after_nodes": 269549,
+      "after_sha256": "db482003389348e5c41026ae1d6d2e914d3383b3c22386cc00f72229411ad284",
+      "selection_trace_sha256": "1dbdedff6631342c25be72e670a137429ea7c6f5c7e6d61be2a9f02c3e7ef0a6"
+    },
+    {
+      "contraction": 82,
+      "address": "10100011",
+      "selection_microticks": 20206,
+      "native_contractions": 1,
+      "after_nodes": 286983,
+      "after_sha256": "7b4e829d325815d9a8cad7286beb8eb258a3245bcc6ed7bbb3ecce05a22921e1",
+      "selection_trace_sha256": "cc7daeac1ce7b886205db211090cf03bcf1b08f684484cfc383a5adb4cc1d7d6"
+    },
+    {
+      "contraction": 83,
+      "address": "101000111",
+      "selection_microticks": 21348,
+      "native_contractions": 1,
+      "after_nodes": 304417,
+      "after_sha256": "198d35a162f8e7eb116c372c1c162e01344018af34686901ae7e4d6a15d48d9e",
+      "selection_trace_sha256": "c08449069473cbffe2db2edf120b5adc5de853abee5c8d28e001b84268c33fb1"
+    },
+    {
+      "contraction": 84,
+      "address": "1010001111",
+      "selection_microticks": 21724,
+      "native_contractions": 1,
+      "after_nodes": 321851,
+      "after_sha256": "8b023c5067844a7bb6e0615b575a7fc4464499034241a175fa727f2b7dc9ad5e",
+      "selection_trace_sha256": "d76ea0dedcb1dce87207109e58e372a4156002c616505e6611f08ece948d706b"
+    },
+    {
+      "contraction": 85,
+      "address": "10100011110",
+      "selection_microticks": 22018,
+      "native_contractions": 1,
+      "after_nodes": 339285,
+      "after_sha256": "b00d252f18fc7a4036938b2145ce579f3f537c7df614aeb88e872212e21657ca",
+      "selection_trace_sha256": "936741540e7a84282cb68220098b2429db70b6c4c0da83b24952706e5691cf80"
+    }
+  ]
+}

@@ -46,7 +46,7 @@ def _small_terms(max_leaves):
 def report(max_ticks=2_000_000, max_seconds=120, malformed_leaves=8):
     if type(max_ticks) is not int or max_ticks < 1:
         raise ValueError('max_ticks must be a positive integer')
-    if type(max_seconds) not in (int, float) or not math.isfinite(max_seconds) or max_seconds <= 0:
+    if (type(max_seconds) is not int and type(max_seconds) is not float) or not math.isfinite(max_seconds) or max_seconds <= 0:
         raise ValueError('max_seconds must be finite and positive')
     if type(malformed_leaves) is not int or malformed_leaves < 1:
         raise ValueError('malformed_leaves must be a positive integer')

@@ -4,6 +4,7 @@ import unittest
 from s_only.probes import Instruction, ProbeTable
 from s_only.root_selector import SelectorTable
 from s_only.selector_parts.graph import Command
+from s_only.walkers import WalkerTable
 
 
 class MutableName:
@@ -44,6 +45,24 @@ class InstructionTypeTests(unittest.TestCase):
                                   (Command('contracted'),) * 6), 0)
         self.assertEqual(selector.status(0), 'normal')
         self.assertEqual(selector.status(1), 'contracted')
+
+    def test_readonly_tables_revalidate_forged_instruction_fields_before_comparing(self):
+        class Poison:
+            def __eq__(self, other):
+                raise AssertionError('malformed target equality was invoked')
+
+            def __ne__(self, other):
+                raise AssertionError('malformed target inequality was invoked')
+
+        forged = object.__new__(Instruction)
+        object.__setattr__(forged, 'command', 'false')
+        object.__setattr__(forged, 'next_state', Poison())
+        row = (Instruction('false'), forged) + (Instruction('false'),) * 4
+        with self.assertRaises(ValueError):
+            ProbeTable((row,), 0)
+        with self.assertRaises(ValueError):
+            WalkerTable((row, (Instruction('stay', 2),) * 6,
+                         (Instruction('stay', 0),) * 6), 2, 1)
 
 
 if __name__ == '__main__':

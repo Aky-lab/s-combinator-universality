@@ -33,6 +33,11 @@ class SelectorTable:
                     raise ValueError('invalid instruction')
                 if type(entry.command) is not str:
                     raise ValueError('primitive command must be a plain string')
+                if entry.next_state is not None and type(entry.next_state) is not int:
+                    raise ValueError('instruction targets must be plain integers or None')
+        # Uniformity and cross-row checks only compare prevalidated plain data.
+        for row in self.states:
+            for entry in row:
                 if entry.command in ('normal', 'contracted'):
                     if any(other != entry for other in row) or entry.next_state is not None:
                         raise ValueError('terminal must be uniform and absorbing')

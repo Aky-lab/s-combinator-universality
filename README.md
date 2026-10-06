@@ -13,6 +13,7 @@ Application associates to the left. A native step contracts one occurrence in a 
 
 - [S-only queue computation](docs/queue-replication.md): `101 → 011 → 11` across 85 native contractions, with all 86 structural readout decisions checked independently
 - [Independent root-reset controller](docs/root-selector.md): all 85 addresses selected from current trees by a fixed 257,299-state graph
+- [Interval-coded controller](docs/succinct-selector.md): the identical graph represented by 370 intervals, with every transition and the full 85-step microtick trace checked
 - [Program-static two-phase controllers](docs/two-phase-programs.md): 20 runs across five programs and four seeds, with 1,725 native contractions and 60 checked checkpoints
 - [Positive-period controllers](docs/periodic-controllers.md): periods 1, 3, 4 and 5, with 1,150 native contractions and 36 checked checkpoints across 12 runs
 - [Structural CTS reader](docs/cts-reader.md): program-parameterized decoding of current S trees, including unbalanced dispatchers and multi-bit actions
@@ -34,6 +35,7 @@ python -m s_only reduce 'S (S S) S S' --certificate trace.json
 python -m s_only verify trace.json
 python -m tools.replicate_queue
 python -m tools.root_selector_report --deterministic --output /tmp/root-selector.json
+python -m tools.succinct_selector_report --deterministic --output /tmp/succinct-selector.json
 python -m tools.program_selector_report --deterministic --output /tmp/two-phase-programs.json
 python -m tools.periodic_selector_report --deterministic --output /tmp/positive-period-programs.json
 python -m tools.marker_observer_report --deterministic --output /tmp/marker-observer.json
@@ -52,6 +54,7 @@ include explicit process and memory limits.
 - [General appender lemma](docs/appender-gadget.md): an exact `2m`-contraction derivation with arbitrary closed parameters and retained-history order
 - [Restoring probes](docs/probe-compiler.md): finite six-observation transition tables with a general restoring proof
 - [Succinct probe tables](docs/succinct-probes.md): exact indexed transition lookup from compact immutable code, including 4,097 descriptors for `7·2^4096−4` virtual states
+- [Succinct prioritized rows](docs/succinct-rows.md) and [spine walkers](docs/succinct-walkers.md): index-preserving composition, restoration and feedback
 - [Spine walkers](docs/spine-walkers.md): bounded descent, restoring ancestor tests and explicit reconstruction conditions
 - [Fuel endpoints](docs/fuel-probe.md): seven concrete rows recovering 25 local selections in the recorded queue path
 - [Exact control minimization](docs/control-minimization.md): finite quotient witnesses reduce the legacy controller to 218,111 states while preserving every primitive tick
