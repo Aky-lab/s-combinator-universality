@@ -1,6 +1,6 @@
 # Research map
 
-Reviewed 6 October 2026. The immediate target is a reproducible implementation of native S rewriting, followed by independent checks of a concrete encoded computation.
+Reviewed 6 October 2026. The project studies native S rewriting, fixed reduction controllers, source compilers, and structural observation interfaces.
 
 ## The computation interface
 
@@ -62,10 +62,23 @@ The highest-value first replication target is the small queue trace. It checks c
 
 ## Replication checkpoints
 
-The independent reducer, exhaustive small-term checks and closed gadgets are implemented. The [85-contraction two-phase queue replication](queue-replication.md) reproduces every published literal contractum and all 86 checkpoint decisions. The [controller interface audit](controller-audit.md) identifies finite-selector recovery as the next executable check.
+The independent reducer, exhaustive small-term checks and closed gadgets are implemented. The [85-contraction two-phase queue replication](queue-replication.md) reproduces every published literal contractum and all 86 checkpoint decisions. The [controller interface audit](controller-audit.md) records the finite-selector model and theorem dependencies.
 
 The finite restoring-pattern compiler is implemented with an explicit six-observation transition table and a general restoring proof. The seven [fuel endpoint rows](fuel-probe.md) recover 25 local selections in the recorded trace. [Standard-selector comparisons](strategy-comparison.md) locate the first departure from that trajectory at contraction 3 for normal/head order and 4 for applicative order.
 
 The [compact source fixture](neary-fixture.md) now materializes a 482-phase CTS and verifies both two-state write-and-halt cases. Its [generic S initial encoding](cts-encoding.md) has exactly 1,342,619 expanded nodes. [Spine-walker components](spine-walkers.md) add descending and restoring ancestor queries to the finite-controller toolkit. The [event-composition lemma](event-composition.md) isolates how a distinguished CTS production event can be observed through exact S readout.
 
 The fixed two-phase [root-reset selector](root-selector.md) is reconstructed as a 257,299-state primitive control graph. It independently chooses all 85 published addresses. A separate model review disables source/fixture access during execution and tests 6,918 small trees plus 500 adversarial contexts. The next formal stage is a fresh, pinned headline build and official kernel replay, with theorem meaning and execution scope reviewed separately.
+
+The [succinct positive-period controllers](succinct-periodic.md) reproduce the
+same indexed graphs through period five. [Construction-time code sharing](pooled-selector.md)
+preserves their immutable values while reducing repeated descriptor storage.
+
+The [compact-source survey](compact-universal-programs.md) identifies ais523's
+UT19 as an explicit 38-phase ordinary CTS endpoint. Its
+[source fixtures](ut19-fixtures.md), [one-hot translation](alternating-tag.md),
+[memory lemma](running-xor-memory.md), and
+[counter/clock simulation proof](ut19-simulation-invariants.md) specify the
+unpadded BP2 interface, exact first selected-18 event, and preserved results.
+S-level event observation and output composition are the corresponding next
+integration targets.

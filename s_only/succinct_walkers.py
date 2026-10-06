@@ -224,7 +224,7 @@ class SuccinctWalkerTable:
         return Instruction("stay", self.start) if control == self.feedback else instruction
 
 
-def compile_inverse_rows(rows: Iterable[tuple[Pattern, Address]]) -> SuccinctInverseRowsTable:
+def compile_inverse_rows(rows: Iterable[tuple[Pattern, Address]], *, _factory=None) -> SuccinctInverseRowsTable:
     """Recognize prioritized ancestor candidates with exact failure restoration.
 
     This duplicates the forward compiler's syntax and scope checks using DAG
@@ -241,7 +241,7 @@ def compile_inverse_rows(rows: Iterable[tuple[Pattern, Address]]) -> SuccinctInv
         pattern, address = row
         identity = id(pattern)
         if identity not in identities:
-            probe = compile_pattern(pattern)
+            probe = compile_pattern(pattern, _factory=_factory)
             identities[identity] = len(patterns)
             patterns.append(_PatternCode(probe, _failure_ticks(probe)))
         index = identities[identity]
@@ -262,15 +262,15 @@ def compile_inverse_rows(rows: Iterable[tuple[Pattern, Address]]) -> SuccinctInv
     return SuccinctInverseRowsTable(tuple(patterns), tuple(blocks), remaining, bound)
 
 
-def compile_descent(rows: Iterable[tuple[Pattern, Address]]) -> SuccinctWalkerTable:
+def compile_descent(rows: Iterable[tuple[Pattern, Address]], *, _factory=None) -> SuccinctWalkerTable:
     """Repeat prioritized strict-child selection, exactly as the original table."""
     prepared = tuple(rows)
-    forward = compile_rows(prepared)
+    forward = compile_rows(prepared, _factory=_factory)
     if any(not address for _, address in prepared):
         raise ValueError("spine feedback requires nonempty child addresses")
     return SuccinctWalkerTable(forward)
 
 
-def compile_ascent(rows: Iterable[tuple[Pattern, Address]]) -> SuccinctWalkerTable:
+def compile_ascent(rows: Iterable[tuple[Pattern, Address]], *, _factory=None) -> SuccinctWalkerTable:
     """Repeat ancestor recognition; reconstruction still needs coherence premises."""
-    return SuccinctWalkerTable(compile_inverse_rows(rows))
+    return SuccinctWalkerTable(compile_inverse_rows(rows, _factory=_factory))

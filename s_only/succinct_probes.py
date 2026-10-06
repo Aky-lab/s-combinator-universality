@@ -150,12 +150,13 @@ class SuccinctProbeTable:
             return Instruction("stay", no if kind == "S" else left_move)
 
 
-def compile_pattern(pattern: Pattern) -> SuccinctProbeTable:
+def compile_pattern(pattern: Pattern, *, _factory=None) -> SuccinctProbeTable:
     """Validate and count a shared pattern DAG without occurrence expansion.
 
     Identity maps and the explicit DFS stack exist only during compilation.
     Pattern tuples are never structurally compared or hashed.  Only plain
     strings and exact length-two tuples are accepted, as in the original syntax.
+    A private compile-only factory may share validated immutable code values.
     """
     nodes: list[_Descriptor] = []
     leaves: dict[str, int] = {}
@@ -175,7 +176,8 @@ def compile_pattern(pattern: Pattern) -> SuccinctProbeTable:
                 raise ValueError("a pattern is '_', 'S', or a pair of patterns")
             if node not in leaves:
                 leaves[node] = len(nodes)
-                nodes.append(_leaf(node))
+                value = _leaf(node)
+                nodes.append(value if _factory is None else _factory.descriptor(value))
             continue
         if type(node) is not tuple or len(node) != 2:
             raise ValueError("a pattern is '_', 'S', or a pair of patterns")
@@ -183,7 +185,8 @@ def compile_pattern(pattern: Pattern) -> SuccinctProbeTable:
         if exiting:
             left, right = child_index(node[0]), child_index(node[1])
             completed[identity] = len(nodes)
-            nodes.append(_pair(left, right, nodes))
+            value = _pair(left, right, nodes)
+            nodes.append(value if _factory is None else _factory.descriptor(value))
             active.remove(identity)
         elif identity in active:
             raise ValueError("a pattern DAG must be acyclic")
@@ -193,4 +196,5 @@ def compile_pattern(pattern: Pattern) -> SuccinctProbeTable:
             # order is separately decoded and is right-before-left.
             pending.extend(((node, True), (node[1], False), (node[0], False)))
 
-    return SuccinctProbeTable(tuple(nodes), child_index(pattern))
+    table = SuccinctProbeTable(tuple(nodes), child_index(pattern))
+    return table if _factory is None else _factory.probe(table)

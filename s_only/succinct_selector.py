@@ -359,7 +359,7 @@ def compile_table(program, *, max_appendant_bits=8,
                              max_compile_seconds=max_compile_seconds)
 
 
-def _assemble_program(program, *, max_metadata_records, max_compile_seconds):
+def _assemble_program(program, *, max_metadata_records, max_compile_seconds, _builder=None):
     """Shared original-order composition, after an entry point checks its scope.
 
     This compile-only helper deliberately does not relax either public API's
@@ -368,8 +368,9 @@ def _assemble_program(program, *, max_metadata_records, max_compile_seconds):
     from .program_selector_parts.patterns import PatternFamily
     from .program_selector_parts.active import compile_active
     from .program_selector_parts.priority import compile_fresh, compile_marked
-    builder = SuccinctGraphBuilder(max_metadata_records=max_metadata_records,
-                                   max_compile_seconds=max_compile_seconds)
+    builder = (_builder if _builder is not None else
+               SuccinctGraphBuilder(max_metadata_records=max_metadata_records,
+                                    max_compile_seconds=max_compile_seconds))
     normal = builder.uniform('normal')
     contracted = builder.uniform('contracted')
     selected = builder.uniform('Rdx', contracted)

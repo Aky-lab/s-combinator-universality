@@ -1,0 +1,712 @@
+{
+  "bounds": {
+    "max_counter_value": 1024,
+    "max_cts_steps": 100000,
+    "max_queue_symbols": 1000,
+    "max_seen_symbols": 2000000,
+    "max_source_steps": 128,
+    "max_tag_steps": 5000,
+    "max_word_bits": 20000
+  },
+  "cleanup_padding_included": false,
+  "digest_conventions": {
+    "boundary_trace": "SHA256 of concatenated raw tag-configuration SHA256 digests, one per prestate; endpoint excluded",
+    "configuration": "SHA256 of sorted-key compact ASCII JSON; tag labels are 1-based",
+    "seed": "SHA256 of ASCII binary word, no newline"
+  },
+  "encoding_limits": {
+    "max_commands": 256,
+    "max_counters": 256,
+    "max_memory_entries": 300000,
+    "max_seed_bits": 19000000,
+    "max_seed_symbols": 1000000
+  },
+  "fixed_program": {
+    "appendant_bits": 760,
+    "appendant_ones": 40,
+    "cts_appendants": [
+      "01000000000000000000010000000000000000",
+      "00010000000000000000001000000000000000",
+      "00000000000000000100001000000000000000",
+      "100000000000000000010000000000000000000000000000000000001",
+      "00000010000000000000000000010000000000",
+      "00000001000000000000000000010000000000",
+      "00000000010000000000000000001000000000",
+      "00000000001000000000000000001000000000",
+      "00000000000000000100000000001000000000",
+      "00001000000000000000000010000000000000",
+      "000001000000000000000001000000000000000000000000000000001",
+      "0000000000000100000000000000000010000000000000000001000000000000000000100000",
+      "0000000000000010000",
+      "00000000000000010000000000000000001000",
+      "00000000000000010000000000000000000100",
+      "00000000000100000000000000000001000000",
+      "0000000000010000000000000000001000000000000000000100000000000000000010000000",
+      "0000000000000000010",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "maximum_appendant_bits": 76,
+    "nonempty_appendants": 18,
+    "phases": 38,
+    "tag_productions_one_based": [
+      [
+        2,
+        3
+      ],
+      [
+        4,
+        4
+      ],
+      [
+        18,
+        4
+      ],
+      [
+        1,
+        1,
+        19
+      ],
+      [
+        7,
+        9
+      ],
+      [
+        8,
+        9
+      ],
+      [
+        10,
+        10
+      ],
+      [
+        11,
+        10
+      ],
+      [
+        18,
+        10
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        6,
+        5,
+        19
+      ],
+      [
+        14,
+        14,
+        14,
+        14
+      ],
+      [
+        15
+      ],
+      [
+        16,
+        16
+      ],
+      [
+        16,
+        17
+      ],
+      [
+        12,
+        13
+      ],
+      [
+        12,
+        12,
+        12,
+        12
+      ],
+      [
+        18
+      ],
+      []
+    ]
+  },
+  "fixtures": [
+    {
+      "encoding": {
+        "expanded_commands": 4,
+        "memory_blocks": [
+          {
+            "desired_widths": "00001000",
+            "initial_bits": "10001000",
+            "position": 1
+          },
+          {
+            "desired_widths": "00010100",
+            "initial_bits": "00111100",
+            "position": 2
+          },
+          {
+            "desired_widths": "10011000",
+            "initial_bits": "11111000",
+            "position": 3
+          }
+        ],
+        "seed_bit_sha256": "b8fb1a29238d02cbe5249637205fe999646ec54f918418f158d279977f983155",
+        "seed_bits": 1710,
+        "seed_symbols": 90,
+        "source_counters": 1,
+        "variant": "compact_unpadded"
+      },
+      "source_execution": {
+        "commands_executed": 1,
+        "counter_values_are_independently_evaluated_not_decoded_from_ut19": true,
+        "final_configuration": {
+          "counters": [
+            1
+          ],
+          "pc": 1
+        },
+        "outcome": "fallthrough_halt",
+        "recurrence": null,
+        "restarts": 0
+      },
+      "source_program": "+1",
+      "tag_and_cts_execution": {
+        "cts_prestates_checked_for_event": 28670,
+        "end": {
+          "cts_completed_steps": 28669,
+          "cts_configuration_sha256": "9b5fd8f3bf9f049f8cf3ee8e7709a5c0f4543f3207294fea934a66315839f377",
+          "cts_head_bit": "1",
+          "cts_logged_step_if_executed": 28670,
+          "cts_phase": 17,
+          "cts_word_bits": 1617,
+          "decoded_cts_counters": [
+            1
+          ],
+          "decoded_tag_counters": [
+            1
+          ],
+          "earlier_cts_event_count": 0,
+          "observed_before_transition": true,
+          "outcome": "designated_event",
+          "tag_block_boundary_cts_step": 28652,
+          "tag_completed_steps": 1508,
+          "tag_configuration": {
+            "phase": "take",
+            "queue": [
+              18,
+              10,
+              18,
+              4,
+              18,
+              10,
+              18,
+              10,
+              18,
+              10,
+              18,
+              10,
+              18,
+              4,
+              18,
+              10,
+              18,
+              10,
+              18,
+              10,
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              16,
+              18,
+              10,
+              18,
+              10,
+              18,
+              10,
+              18,
+              4,
+              18,
+              10,
+              18,
+              4,
+              18,
+              10,
+              18,
+              4,
+              18,
+              10,
+              18,
+              4,
+              18,
+              10,
+              18,
+              10,
+              10,
+              10,
+              4,
+              4,
+              10,
+              10,
+              4,
+              4,
+              10,
+              10,
+              4,
+              4,
+              10,
+              10,
+              4,
+              4,
+              10,
+              10,
+              4,
+              4,
+              11,
+              10,
+              11,
+              10,
+              11,
+              10
+            ]
+          },
+          "tag_configuration_sha256": "37d906c83e95836f8d93d0ea95393da6f0117af33d45a8e2ab685ef996de0117",
+          "tag_head_label": 18,
+          "tag_phase": "take"
+        },
+        "full_boundaries_checked": 1509,
+        "peak_cts_queue_bits": 2124,
+        "peak_tag_queue_symbols": 111,
+        "recurrence": null,
+        "stored_recurrence_symbols": 135394
+      }
+    },
+    {
+      "encoding": {
+        "expanded_commands": 4,
+        "memory_blocks": [
+          {
+            "desired_widths": "00111000",
+            "initial_bits": "11011000",
+            "position": 1
+          },
+          {
+            "desired_widths": "00010100",
+            "initial_bits": "00111100",
+            "position": 2
+          },
+          {
+            "desired_widths": "10101000",
+            "initial_bits": "10101000",
+            "position": 3
+          }
+        ],
+        "seed_bit_sha256": "e9453275c3991d8687f8027a4d12d18e8a1b97fa16ae3b954e9e6f9dc67e5283",
+        "seed_bits": 1710,
+        "seed_symbols": 90,
+        "source_counters": 1,
+        "variant": "compact_unpadded"
+      },
+      "source_execution": {
+        "commands_executed": 2,
+        "counter_values_are_independently_evaluated_not_decoded_from_ut19": true,
+        "final_configuration": {
+          "counters": [
+            0
+          ],
+          "pc": 1
+        },
+        "outcome": "fallthrough_halt",
+        "recurrence": null,
+        "restarts": 1
+      },
+      "source_program": "-1",
+      "tag_and_cts_execution": {
+        "cts_prestates_checked_for_event": 47062,
+        "end": {
+          "cts_completed_steps": 47061,
+          "cts_configuration_sha256": "a125543d5934c3dc9f0cd16212c7ce0eab9c7eeafe06ce7adf0d6edd8e5dacd7",
+          "cts_head_bit": "1",
+          "cts_logged_step_if_executed": 47062,
+          "cts_phase": 17,
+          "cts_word_bits": 1389,
+          "decoded_cts_counters": [
+            0
+          ],
+          "decoded_tag_counters": [
+            0
+          ],
+          "earlier_cts_event_count": 0,
+          "observed_before_transition": true,
+          "outcome": "designated_event",
+          "tag_block_boundary_cts_step": 47044,
+          "tag_completed_steps": 2476,
+          "tag_configuration": {
+            "phase": "take",
+            "queue": [
+              18,
+              10,
+              18,
+              4,
+              18,
+              10,
+              18,
+              4,
+              18,
+              10,
+              18,
+              10,
+              18,
+              4,
+              18,
+              10,
+              18,
+              4,
+              18,
+              10,
+              18,
+              10,
+              18,
+              10,
+              16,
+              16,
+              16,
+              16,
+              18,
+              10,
+              18,
+              10,
+              18,
+              10,
+              18,
+              4,
+              18,
+              10,
+              18,
+              4,
+              18,
+              10,
+              18,
+              4,
+              18,
+              10,
+              18,
+              4,
+              18,
+              10,
+              18,
+              10,
+              10,
+              10,
+              4,
+              4,
+              11,
+              10,
+              10,
+              10,
+              4,
+              4,
+              11,
+              10,
+              10,
+              10,
+              4,
+              4,
+              11,
+              10,
+              11,
+              10,
+              11,
+              10
+            ]
+          },
+          "tag_configuration_sha256": "f4c8d309d2d0f904a98202e0356aebade669a2f9685cb74eed35ec4baa258081",
+          "tag_head_label": 18,
+          "tag_phase": "take"
+        },
+        "full_boundaries_checked": 2477,
+        "peak_cts_queue_bits": 2124,
+        "peak_tag_queue_symbols": 111,
+        "recurrence": null,
+        "stored_recurrence_symbols": 213002
+      }
+    },
+    {
+      "encoding": {
+        "expanded_commands": 8,
+        "memory_blocks": [
+          {
+            "desired_widths": "0011111000101010",
+            "initial_bits": "0011110010000010",
+            "position": 1
+          },
+          {
+            "desired_widths": "0001010100000000",
+            "initial_bits": "1100001100000000",
+            "position": 2
+          },
+          {
+            "desired_widths": "1010101000101010",
+            "initial_bits": "1000000010000010",
+            "position": 3
+          }
+        ],
+        "seed_bit_sha256": "546d054d7fa2ed0688b4e9224f7f8d8b9461eaf5bcc8da1f87393cad3680622c",
+        "seed_bits": 2736,
+        "seed_symbols": 144,
+        "source_counters": 1,
+        "variant": "compact_unpadded"
+      },
+      "source_execution": {
+        "commands_executed": 3,
+        "counter_values_are_independently_evaluated_not_decoded_from_ut19": true,
+        "final_configuration": {
+          "counters": [
+            1
+          ],
+          "pc": 0
+        },
+        "outcome": "exact_recurrence",
+        "recurrence": {
+          "configuration": {
+            "counters": [
+              1
+            ],
+            "pc": 0
+          },
+          "first_step": 1,
+          "period_steps": 2,
+          "repeated_step": 3
+        },
+        "restarts": 2
+      },
+      "source_program": "-1 -1",
+      "tag_and_cts_execution": {
+        "cts_prestates_checked_for_event": 78356,
+        "end": {
+          "cts_completed_steps": 78356,
+          "cts_phase": 0,
+          "cts_word_bits": 2508,
+          "observed_before_transition": true,
+          "outcome": "exact_event_free_recurrence",
+          "tag_completed_steps": 4124
+        },
+        "full_boundaries_checked": 4125,
+        "peak_cts_queue_bits": 3340,
+        "peak_tag_queue_symbols": 175,
+        "recurrence": {
+          "conclusion": "This deterministic fixture runs forever without the designated event or empty queue.",
+          "configuration": {
+            "phase": "take",
+            "queue": [
+              10,
+              11,
+              10,
+              4,
+              4,
+              11,
+              10,
+              16,
+              17,
+              18,
+              10,
+              18,
+              4,
+              18,
+              10,
+              18,
+              4,
+              18,
+              10,
+              18,
+              10,
+              18,
+              10,
+              18,
+              10,
+              18,
+              10,
+              18,
+              4,
+              18,
+              10,
+              18,
+              4,
+              18,
+              10,
+              18,
+              10,
+              18,
+              10,
+              18,
+              10,
+              18,
+              10,
+              18,
+              10,
+              18,
+              10,
+              18,
+              10,
+              16,
+              16,
+              16,
+              16,
+              18,
+              10,
+              18,
+              4,
+              18,
+              10,
+              18,
+              10,
+              18,
+              10,
+              18,
+              10,
+              18,
+              10,
+              18,
+              10,
+              18,
+              10,
+              18,
+              10,
+              18,
+              4,
+              18,
+              10,
+              18,
+              10,
+              18,
+              10,
+              18,
+              10,
+              18,
+              10,
+              18,
+              10,
+              18,
+              4,
+              18,
+              10,
+              5,
+              6,
+              5,
+              6,
+              5,
+              6,
+              1,
+              1,
+              19,
+              5,
+              6,
+              1,
+              1,
+              19,
+              5,
+              6,
+              1,
+              1,
+              19,
+              5,
+              6,
+              1,
+              1,
+              19,
+              5,
+              6,
+              5,
+              6,
+              5,
+              6,
+              1,
+              1,
+              19,
+              5,
+              6,
+              5,
+              6,
+              5,
+              6,
+              5,
+              6
+            ]
+          },
+          "cycle_boundary_digest_sha256": "8342002bf4ccd91b6643cfa7aa01c8816b55d76f29fd225a0390b34a75a2f1b0",
+          "cycle_cts_prestate_checks": 48678,
+          "cycle_nonempty": true,
+          "cycle_selected_event_count": 0,
+          "cycle_tag_prestate_checks": 2562,
+          "exact_full_state_equality_checked": true,
+          "first_cts_configuration_sha256": "a73af680d95363b7a081d87b39936e94bddc14067d10880c7617f1d00864f6fc",
+          "first_cts_step": 29678,
+          "first_tag_configuration_sha256": "3d39058c4321b474650dc1e3ed30f318ada549387bf9fe5a71590606c7627482",
+          "first_tag_step": 1562,
+          "period_cts_steps": 48678,
+          "period_tag_steps": 2562,
+          "prefix_boundary_digest_sha256": "d5c27ee078c5e5f9fe64719422b8e7ad0928a736fbf90636b5a3a824ce341510",
+          "prefix_cts_prestate_checks": 29678,
+          "prefix_nonempty": true,
+          "prefix_selected_event_count": 0,
+          "prefix_tag_prestate_checks": 1562,
+          "repeated_cts_configuration_sha256": "a73af680d95363b7a081d87b39936e94bddc14067d10880c7617f1d00864f6fc",
+          "repeated_cts_step": 78356,
+          "repeated_tag_configuration_sha256": "3d39058c4321b474650dc1e3ed30f318ada549387bf9fe5a71590606c7627482",
+          "repeated_tag_step": 4124
+        },
+        "stored_recurrence_symbols": 583510
+      }
+    }
+  ],
+  "native_s_reductions_performed": 0,
+  "native_s_terms_constructed": false,
+  "provenance": {
+    "brainpocalypse_ii": "https://esolangs.org/w/index.php?title=Brainpocalypse_II&oldid=172507",
+    "license": "CC0 wiki construction; independent implementation; external Perl compiler not used",
+    "ut19": "https://esolangs.org/w/index.php?title=UT19&oldid=154545"
+  },
+  "readout_limits": {
+    "max_counters": 256,
+    "max_output_bits": 2816,
+    "max_queue_symbols": 1000,
+    "max_word_bits": 20000
+  },
+  "result_counter_decoder_implemented": true,
+  "schema": "ut19-source-fixtures-v1",
+  "scope": "bounded BP2, alternating-tag and ordinary CTS fixtures only",
+  "source_simulation_argument": {
+    "kind": "independently reviewed written proof",
+    "path": "docs/ut19-simulation-invariants.md",
+    "scope": "nonempty dense-label BP2 programs from all-zero counters; first selected-18 event and result grammar"
+  }
+}

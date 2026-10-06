@@ -196,7 +196,7 @@ class SuccinctRowsTable:
         return Instruction(instruction.command, target)
 
 
-def compile_rows(rows: Iterable[tuple[Pattern, Address]]) -> SuccinctRowsTable:
+def compile_rows(rows: Iterable[tuple[Pattern, Address]], *, _factory=None) -> SuccinctRowsTable:
     """Compile original row indices without unfolding shared pattern occurrences.
 
     Identity caches exist only here.  The prepared source keeps root objects
@@ -213,7 +213,7 @@ def compile_rows(rows: Iterable[tuple[Pattern, Address]]) -> SuccinctRowsTable:
         pattern, address = row
         identity = id(pattern)
         if identity not in identities:
-            probe = compile_pattern(pattern)
+            probe = compile_pattern(pattern, _factory=_factory)
             identities[identity] = len(patterns)
             patterns.append(_PatternCode(probe, _failure_ticks(probe)))
         index = identities[identity]
