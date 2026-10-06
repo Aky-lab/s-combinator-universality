@@ -59,3 +59,7 @@ Iwami and Nakano's [2026 journal paper](https://doi.org/10.2197/ipsjjip.34.39), 
 7. Trace the encoder, source simulation, sample chronology and readout theorems end to end. Extend practical tests to tiny Boolean-tape programs once the queue layer agrees.
 
 The highest-value first replication target is the small queue trace. It checks concrete native semantics and occurrence identity before the substantially larger compiler and formal verification surface.
+
+## Replication checkpoints
+
+The independent reducer, exhaustive small-term checks and closed gadgets are implemented. The [85-contraction two-phase queue replication](queue-replication.md) reproduces every published literal contractum and all 86 checkpoint decisions. The [controller interface audit](controller-audit.md) identifies finite-selector recovery as the next executable check.

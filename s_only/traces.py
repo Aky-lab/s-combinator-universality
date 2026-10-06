@@ -153,3 +153,27 @@ def verify_certificate(data):
     if data["status"] != expected_status:
         raise ValueError("stopping status mismatch")
     return _display(current, end)
+
+
+def verify_path_certificate(data):
+    """Replay a prescribed occurrence path, without claiming a selector chose it.
+
+    The s-only-path-v1 schema contains initial_prefix and step records only.
+    Its scope is finite native reachability; there is no terminal-state claim.
+    Return the final fully parenthesized tree after checking every record.
+    """
+    if (not isinstance(data, dict) or set(data) != {"schema", "initial_prefix", "steps"}
+            or data["schema"] != "s-only-path-v1" or not isinstance(data["steps"], list)):
+        raise ValueError("invalid path certificate schema")
+    current = data["initial_prefix"]
+    end = _spans(current)
+    for ordinal, record in enumerate(data["steps"]):
+        if not isinstance(record, dict) or set(record) != {"path", "nodes", "after_sha256"}:
+            raise ValueError(f"invalid path record {ordinal}")
+        current = _rewrite(current, end, record["path"])
+        end = _spans(current)
+        if type(record["nodes"]) is not int or record["nodes"] != len(current):
+            raise ValueError(f"node count mismatch at path step {ordinal}")
+        if record["after_sha256"] != _digest(current):
+            raise ValueError(f"digest mismatch at path step {ordinal}")
+    return _display(current, end)

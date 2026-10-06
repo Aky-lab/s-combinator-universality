@@ -1,0 +1,14 @@
+{
+  "upstream_repository": "cstrawberry/predictive-universe",
+  "upstream_commit": "85a867988442fc423279341200f81634a1e65582",
+  "source_path": "docs/paper/related/pure_s_universality/evidence/formal/headline-complete/067-worked-trace.log.gz",
+  "source_url": "https://github.com/cstrawberry/predictive-universe/blob/85a867988442fc423279341200f81634a1e65582/docs/paper/related/pure_s_universality/evidence/formal/headline-complete/067-worked-trace.log.gz",
+  "compressed_git_blob_sha1": "d7bd32e7a8e6043264e141232f92e9c92089cbb7",
+  "compressed_sha256": "bf9dec9f9ab5daa2f9b9339ffb0af5a94d883350c14ad6090cd484b405a06f4f",
+  "uncompressed_sha256": "b3f796ea5b7dfcc92e51a687117d286e242443cd00d1a14cb2927886f61f2f8a",
+  "uncompressed_bytes": 8947156,
+  "contraction_records": 85,
+  "derived_fixture": "queue_101_path.json",
+  "derivation": "Reconstruct Appendix E.1's initial term, compare it with the initial record, translate L/R addresses to 0/1, replay every contraction with object-tree and prefix-string reducers, and record each verified target's node count and SHA-256. All 85 targets were also compared byte-for-byte with the upstream target strings.",
+  "license_notice": "../third_party/cinematic-strawberry-MIT.txt"
+}

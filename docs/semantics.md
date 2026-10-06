@@ -49,6 +49,8 @@ The verifier reads prefix spans and performs string-range replacements. It uses 
 
 The finite test oracle adds a third representation: nested Python tuples and the string `S`. It exhaustively constructs all 626 closed trees through eight leaves and examines every existing subtree occurrence.
 
+A separate `s-only-path-v1` certificate contains `initial_prefix` and the same step-record format, without a selector or stopping claim. `verify_path_certificate` checks each prescribed native rewrite. It is used for reproducing a published address sequence.
+
 ## Cost model
 
 The implementation favors transparent semantics. It retains immutable subtree sharing but traverses expanded occurrences for formatting and certificate hashing. Node limits bound a single expanded term; they do not bound cumulative trace memory or total CPU work. Path tuples may have length proportional to tree depth. The implementation is intended for bounded experiments and exact small-case replication.

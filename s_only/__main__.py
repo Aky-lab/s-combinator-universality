@@ -5,7 +5,7 @@ from pathlib import Path
 
 from .reduction import reduce
 from .terms import format_term, nodes, parse
-from .traces import certificate, verify_certificate
+from .traces import certificate, verify_certificate, verify_path_certificate
 
 
 def main():
@@ -19,9 +19,17 @@ def main():
     run.add_argument("--certificate", type=Path)
     check = sub.add_parser("verify")
     check.add_argument("file", type=Path)
+    path_check = sub.add_parser("verify-path")
+    path_check.add_argument("file", type=Path)
     args = parser.parse_args()
     try:
-        if args.command == "verify":
+        if args.command == "verify-path":
+            data = json.loads(args.file.read_text())
+            verify_path_certificate(data)
+            count = data["steps"][-1]["nodes"] if data["steps"] else len(data["initial_prefix"])
+            print(json.dumps({"verified": True, "steps": len(data["steps"]),
+                              "scope": "prescribed native path", "final_nodes": count}, indent=2))
+        elif args.command == "verify":
             data = json.loads(args.file.read_text())
             final = verify_certificate(data)
             print(json.dumps({"verified": True, "steps": len(data["steps"]),
