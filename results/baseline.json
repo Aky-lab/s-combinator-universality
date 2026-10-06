@@ -1,0 +1,318 @@
+{
+  "schema": "s-only-baseline-v1",
+  "bounds": {
+    "max_leaves": 8,
+    "max_steps": 100,
+    "max_nodes": 10001
+  },
+  "census": [
+    {
+      "leaves": 1,
+      "strategy": "normal",
+      "terms": 1,
+      "outcomes": {
+        "normal_form": 1
+      },
+      "max_steps_observed": 0,
+      "max_final_nodes": 1
+    },
+    {
+      "leaves": 1,
+      "strategy": "applicative",
+      "terms": 1,
+      "outcomes": {
+        "normal_form": 1
+      },
+      "max_steps_observed": 0,
+      "max_final_nodes": 1
+    },
+    {
+      "leaves": 1,
+      "strategy": "head",
+      "terms": 1,
+      "outcomes": {
+        "normal_form": 1
+      },
+      "max_steps_observed": 0,
+      "max_final_nodes": 1
+    },
+    {
+      "leaves": 2,
+      "strategy": "normal",
+      "terms": 1,
+      "outcomes": {
+        "normal_form": 1
+      },
+      "max_steps_observed": 0,
+      "max_final_nodes": 3
+    },
+    {
+      "leaves": 2,
+      "strategy": "applicative",
+      "terms": 1,
+      "outcomes": {
+        "normal_form": 1
+      },
+      "max_steps_observed": 0,
+      "max_final_nodes": 3
+    },
+    {
+      "leaves": 2,
+      "strategy": "head",
+      "terms": 1,
+      "outcomes": {
+        "normal_form": 1
+      },
+      "max_steps_observed": 0,
+      "max_final_nodes": 3
+    },
+    {
+      "leaves": 3,
+      "strategy": "normal",
+      "terms": 2,
+      "outcomes": {
+        "normal_form": 2
+      },
+      "max_steps_observed": 0,
+      "max_final_nodes": 5
+    },
+    {
+      "leaves": 3,
+      "strategy": "applicative",
+      "terms": 2,
+      "outcomes": {
+        "normal_form": 2
+      },
+      "max_steps_observed": 0,
+      "max_final_nodes": 5
+    },
+    {
+      "leaves": 3,
+      "strategy": "head",
+      "terms": 2,
+      "outcomes": {
+        "normal_form": 2
+      },
+      "max_steps_observed": 0,
+      "max_final_nodes": 5
+    },
+    {
+      "leaves": 4,
+      "strategy": "normal",
+      "terms": 5,
+      "outcomes": {
+        "normal_form": 5
+      },
+      "max_steps_observed": 1,
+      "max_final_nodes": 7
+    },
+    {
+      "leaves": 4,
+      "strategy": "applicative",
+      "terms": 5,
+      "outcomes": {
+        "normal_form": 5
+      },
+      "max_steps_observed": 1,
+      "max_final_nodes": 7
+    },
+    {
+      "leaves": 4,
+      "strategy": "head",
+      "terms": 5,
+      "outcomes": {
+        "normal_form": 5
+      },
+      "max_steps_observed": 1,
+      "max_final_nodes": 7
+    },
+    {
+      "leaves": 5,
+      "strategy": "normal",
+      "terms": 14,
+      "outcomes": {
+        "normal_form": 14
+      },
+      "max_steps_observed": 2,
+      "max_final_nodes": 11
+    },
+    {
+      "leaves": 5,
+      "strategy": "applicative",
+      "terms": 14,
+      "outcomes": {
+        "normal_form": 14
+      },
+      "max_steps_observed": 2,
+      "max_final_nodes": 11
+    },
+    {
+      "leaves": 5,
+      "strategy": "head",
+      "terms": 14,
+      "outcomes": {
+        "head_normal_form": 1,
+        "normal_form": 13
+      },
+      "max_steps_observed": 2,
+      "max_final_nodes": 11
+    },
+    {
+      "leaves": 6,
+      "strategy": "normal",
+      "terms": 42,
+      "outcomes": {
+        "normal_form": 42
+      },
+      "max_steps_observed": 4,
+      "max_final_nodes": 19
+    },
+    {
+      "leaves": 6,
+      "strategy": "applicative",
+      "terms": 42,
+      "outcomes": {
+        "normal_form": 42
+      },
+      "max_steps_observed": 4,
+      "max_final_nodes": 19
+    },
+    {
+      "leaves": 6,
+      "strategy": "head",
+      "terms": 42,
+      "outcomes": {
+        "head_normal_form": 10,
+        "normal_form": 32
+      },
+      "max_steps_observed": 4,
+      "max_final_nodes": 19
+    },
+    {
+      "leaves": 7,
+      "strategy": "normal",
+      "terms": 132,
+      "outcomes": {
+        "node_limit": 2,
+        "normal_form": 130
+      },
+      "max_steps_observed": 82,
+      "max_final_nodes": 9889
+    },
+    {
+      "leaves": 7,
+      "strategy": "applicative",
+      "terms": 132,
+      "outcomes": {
+        "node_limit": 2,
+        "normal_form": 130
+      },
+      "max_steps_observed": 57,
+      "max_final_nodes": 9411
+    },
+    {
+      "leaves": 7,
+      "strategy": "head",
+      "terms": 132,
+      "outcomes": {
+        "head_normal_form": 57,
+        "normal_form": 75
+      },
+      "max_steps_observed": 9,
+      "max_final_nodes": 49
+    },
+    {
+      "leaves": 8,
+      "strategy": "normal",
+      "terms": 429,
+      "outcomes": {
+        "node_limit": 12,
+        "normal_form": 388,
+        "step_limit": 29
+      },
+      "max_steps_observed": 100,
+      "max_final_nodes": 9941
+    },
+    {
+      "leaves": 8,
+      "strategy": "applicative",
+      "terms": 429,
+      "outcomes": {
+        "node_limit": 22,
+        "normal_form": 388,
+        "step_limit": 19
+      },
+      "max_steps_observed": 100,
+      "max_final_nodes": 9939
+    },
+    {
+      "leaves": 8,
+      "strategy": "head",
+      "terms": 429,
+      "outcomes": {
+        "head_normal_form": 252,
+        "node_limit": 6,
+        "normal_form": 162,
+        "step_limit": 9
+      },
+      "max_steps_observed": 100,
+      "max_final_nodes": 9835
+    }
+  ],
+  "examples": [
+    {
+      "name": "fork_atom",
+      "source": "S S S S",
+      "strategy": "normal",
+      "steps": 1,
+      "status": "normal_form",
+      "initial_nodes": 7,
+      "final_nodes": 7
+    },
+    {
+      "name": "fork_pair",
+      "source": "S S S (S S)",
+      "strategy": "normal",
+      "steps": 1,
+      "status": "normal_form",
+      "initial_nodes": 9,
+      "final_nodes": 11
+    },
+    {
+      "name": "two_stage_fork",
+      "source": "S (S S) S S",
+      "strategy": "normal",
+      "steps": 2,
+      "status": "normal_form",
+      "initial_nodes": 9,
+      "final_nodes": 11
+    },
+    {
+      "name": "inner_normal",
+      "source": "S (S S S S)",
+      "strategy": "normal",
+      "steps": 1,
+      "status": "normal_form",
+      "initial_nodes": 9,
+      "final_nodes": 9
+    },
+    {
+      "name": "inner_head",
+      "source": "S (S S S S)",
+      "strategy": "head",
+      "steps": 0,
+      "status": "head_normal_form",
+      "initial_nodes": 9,
+      "final_nodes": 9
+    },
+    {
+      "name": "growing_carrier",
+      "source": "S S S (S S S) (S S S)",
+      "strategy": "normal",
+      "steps": 12,
+      "status": "step_limit",
+      "initial_nodes": 17,
+      "final_nodes": 231
+    }
+  ]
+}

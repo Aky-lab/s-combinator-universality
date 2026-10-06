@@ -1,0 +1,10 @@
+{
+  "schema": "s-only-trace-v1",
+  "initial_prefix": "ASAAASSSS",
+  "final_prefix": "ASAAASSSS",
+  "strategy": "head",
+  "max_steps": 20,
+  "max_nodes": 10001,
+  "status": "head_normal_form",
+  "steps": []
+}

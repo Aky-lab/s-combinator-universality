@@ -1,0 +1,16 @@
+{
+  "schema": "s-only-trace-v1",
+  "initial_prefix": "AAASSSS",
+  "final_prefix": "AASSASS",
+  "strategy": "normal",
+  "max_steps": 20,
+  "max_nodes": 10001,
+  "status": "normal_form",
+  "steps": [
+    {
+      "path": "",
+      "after_sha256": "99eb2f0cbbb087717996ce078b152c2fefe01c66614a822930c607378e6b0c40",
+      "nodes": 7
+    }
+  ]
+}

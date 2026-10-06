@@ -1,0 +1,71 @@
+{
+  "schema": "s-only-trace-v1",
+  "initial_prefix": "AAAASSSAASSSAASSS",
+  "final_prefix": "AAAAAAASSSAASAASSSAASAASSSAASSSAAASAASSSAASSSAAASSSAASAASSSAASAASSSAASSSAASAAASSSAASAASSSAASAASSSAASSSAAASAASSSAASSSAAASSSAASAASSSAASAASSSAASSSAASAASAASSSAASAASSSAASSSAAASSSAASAASSSAASAASSSAASSSAASAASAASSSAASSSAASAASSSAASAASSSAASSS",
+  "strategy": "normal",
+  "max_steps": 12,
+  "max_nodes": 10001,
+  "status": "step_limit",
+  "steps": [
+    {
+      "path": "0",
+      "after_sha256": "1ba8cc557a62552218939b714013b34e7be38e8c758ed58ddc2b9d329d324a79",
+      "nodes": 21
+    },
+    {
+      "path": "",
+      "after_sha256": "fd2e3fbb0a7469b98f5c6020a2a7b728943ef80209e97a28d184c62c52f9381a",
+      "nodes": 25
+    },
+    {
+      "path": "0",
+      "after_sha256": "f0cd1e456843326160982d9adf3365984d1e0bb1f45e13bf37f7cb885131d033",
+      "nodes": 29
+    },
+    {
+      "path": "",
+      "after_sha256": "6a02a54eae7ee72f580975e5cd3ef30750297a685aed26f833522de43d931767",
+      "nodes": 41
+    },
+    {
+      "path": "0",
+      "after_sha256": "ffbdf9f1c6e76af87c1dcd3b007eab2f44c7145080a7cb0eef9d25ea366165f0",
+      "nodes": 53
+    },
+    {
+      "path": "",
+      "after_sha256": "af5d3f2ab30c75456eda0faec96c6aa65badec5bbf63a7a07e35919488dbb1bf",
+      "nodes": 73
+    },
+    {
+      "path": "0",
+      "after_sha256": "e48275f105f2868e9cf8148138a9d8b4ac09ac36e889cd8e830d25ebe31c7400",
+      "nodes": 93
+    },
+    {
+      "path": "00",
+      "after_sha256": "264419690eae2909d89b2fe78d809bb720b34128a9e4366c58fb4f39ecb54f66",
+      "nodes": 113
+    },
+    {
+      "path": "0",
+      "after_sha256": "a8ae16084d047f0f1264c9780918c3e226a0fbedd8993dbebced634ce1c7b589",
+      "nodes": 139
+    },
+    {
+      "path": "00",
+      "after_sha256": "ba1c532150e7288f5ef539477ac88c847bab698ffc2b4bdeb4bea10ab51110df",
+      "nodes": 165
+    },
+    {
+      "path": "000",
+      "after_sha256": "3391486ad1d1e125e1a91cdb5c3e1c8d82fbd9dc8c087422b604dd69d9984342",
+      "nodes": 191
+    },
+    {
+      "path": "00",
+      "after_sha256": "59c0a02beed37b2026f4879f8de16951d9025deee93d9d9282c3fed706e2f1ec",
+      "nodes": 231
+    }
+  ]
+}
