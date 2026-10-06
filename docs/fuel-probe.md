@@ -38,7 +38,7 @@ On the certified 85-step queue path, these rows recover the specified local cont
 - Contractions 27–35
 - Contractions 57–65
 
-The exact origins, chosen addresses and measured microticks are in the report. Each local probe is started at the candidate fuel occurrence supplied by the test harness. Discovering that occurrence from the root, and applying the earlier response/dispatcher priorities, belongs to the enclosing controller.
+The exact origins, chosen addresses and measured microticks are in the report. Each local probe is started at the candidate fuel occurrence supplied by the test harness. The [root-reset selector](root-selector.md) supplies active-occurrence discovery and the earlier response/dispatcher priorities for the full two-phase fixture.
 
 ## Sources
 

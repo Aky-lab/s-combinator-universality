@@ -33,7 +33,7 @@ Every recorded occurrence is replayed through two different native kernels:
 
 Both kernels agree with all 85 literal target strings in the pinned upstream trace. The checked-in compact fixture preserves their digests and sizes. Reproduction checks both kernels again and compares their complete final trees.
 
-The native-path format has no implicit reduction strategy: its address sequence is explicit input. Agreement of a reconstructed root-reset selector with those addresses is the next audit target.
+The native-path format has no implicit reduction strategy: its address sequence is explicit input. The [independent root-reset selector](root-selector.md) now computes all those addresses from fresh roots.
 
 ## Provenance
 

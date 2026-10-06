@@ -28,10 +28,10 @@ The [all-input agreement bridge](https://github.com/cstrawberry/predictive-unive
 
 The inspected definitions expose finite control, root reset, exact mutation count and selected-trajectory scope clearly. No concrete mismatch was found among these interfaces. This review inspects declarations and their intended meaning; independent kernel replay is recorded separately when executed.
 
-The next concrete test is to reconstruct the small fixture's selector and compare its chosen occurrence at all 85 contractions. Empty input, priority declines and return-to-root behavior need separate cases. The [native queue replication](queue-replication.md) already supplies a checked term sequence against which those selections can be tested.
+The [independent selector reconstruction](root-selector.md) now recovers all 85 chosen occurrences from current bare trees. Separate cases cover empty/nonempty seeds, scope guards, malformed terms and fresh-root runtime isolation. Its finite graph and bounded tests are independently reviewed; the all-input port argument remains unmechanized.
 
 ## Implemented components
 
-The [restoring pattern compiler](probe-compiler.md) now produces immutable finite tables, with independent exhaustive tests and explicit state/microtick accounting. The [seven fuel endpoint rows](fuel-probe.md) have been transcribed into this model and recover 25 local recorded selections. Active-context traversal and whole-selector priority assembly remain the next integration layer.
+The [restoring pattern compiler](probe-compiler.md) now produces immutable finite tables, with independent exhaustive tests and explicit state/microtick accounting. The [seven fuel endpoint rows](fuel-probe.md) have been transcribed into this model and recover 25 local recorded selections. These components now feed the fixed two-phase root-selector assembly.
 
-Finite [spine walkers](spine-walkers.md) now support strict-child descent and restoring ancestor queries with explicit termination bounds. General ancestor recognition is broader than inverse descent; reconstruction requires the documented uniqueness and boundary conditions. The remaining integration must preserve the source construction's scope guards and priority ordering.
+Finite [spine walkers](spine-walkers.md) now support strict-child descent and restoring ancestor queries with explicit termination bounds. General ancestor recognition is broader than inverse descent; reconstruction requires the documented uniqueness and boundary conditions. The reconstructed selector preserves those scope guards and the fresh/marked/endpoint priority ordering.

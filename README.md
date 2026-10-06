@@ -12,10 +12,11 @@ Application associates to the left. A native step contracts one occurrence in a 
 ## Reproduced computations
 
 - [S-only queue computation](docs/queue-replication.md): `101 → 011 → 11` across 85 native contractions, with all 86 structural readout decisions checked independently
+- [Independent root-reset controller](docs/root-selector.md): all 85 addresses selected from current trees by a fixed 257,299-state graph
 - [Compact binary-machine fixture](docs/neary-fixture.md): two write-and-halt cases compiled to a 482-phase cyclic tag system, starting from 3,374 bits and peaking at 5,187 queued bits
 - [Generic initial S encoding](docs/cts-encoding.md): the compact fixture produces 1,342,619-node initial trees, represented by 27,547 shared immutable objects with reproducible prefix hashes
 
-The native S queue run and the ordinary CTS source-machine runs have separate execution records. The generic encoder constructs the corresponding initial S syntax; controller integration is the next stage.
+The native S queue run and the ordinary CTS source-machine runs have separate execution records. The generic encoder constructs the corresponding initial S syntax; the two-phase controller and the larger compact-source controller have separate integration scopes.
 
 ## Run
 
@@ -26,6 +27,7 @@ python -m unittest discover -s tests -v
 python -m s_only reduce 'S (S S) S S' --certificate trace.json
 python -m s_only verify trace.json
 python -m tools.replicate_queue
+python -m tools.root_selector_report --deterministic --output /tmp/root-selector.json
 python -m tools.neary_fixture --output-dir /tmp/neary-left-toggle
 python -m tools.inspect_cts_encoding --program artifacts/neary-left-toggle/program.json --word-file artifacts/neary-left-toggle/seed-b.txt --sha256
 ```
@@ -47,4 +49,4 @@ python -m tools.inspect_cts_encoding --program artifacts/neary-left-toggle/progr
 - [Event-composition lemma](docs/event-composition.md): transferring a distinguished CTS halt event through exact S readout
 - [Generated source artifacts](artifacts/neary-left-toggle/) and [experiment reports](results/)
 
-Current work focuses on assembling the active-context and response/dispatcher passes, then connecting the compact source compiler to independently verified native S execution and readout.
+Current work focuses on extending the reconstructed controller to the compact source program, strengthening the source-to-S readout bridge, and independently checking the pinned formal theorem.
