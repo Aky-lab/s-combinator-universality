@@ -13,6 +13,11 @@ A different construction can share control before materialization, so this
 count describes the present allocation strategy rather than the intrinsic
 complexity of the selection behavior.
 
+The [succinct probe prototype](succinct-probes.md) already represents a
+single restoring matcher through exactly indexed transition lookup, without
+enumerating its controls. Extending that representation to row composition
+and complete controllers is the next construction step.
+
 ## Scope and attribution
 
 The mathematical restoring matcher and selected-appender row construction remain

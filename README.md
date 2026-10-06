@@ -51,6 +51,7 @@ include explicit process and memory limits.
 - [Baseline experiments](docs/baseline.md): exhaustive small terms and checked gadgets
 - [General appender lemma](docs/appender-gadget.md): an exact `2m`-contraction derivation with arbitrary closed parameters and retained-history order
 - [Restoring probes](docs/probe-compiler.md): finite six-observation transition tables with a general restoring proof
+- [Succinct probe tables](docs/succinct-probes.md): exact indexed transition lookup from compact immutable code, including 4,097 descriptors for `7·2^4096−4` virtual states
 - [Spine walkers](docs/spine-walkers.md): bounded descent, restoring ancestor tests and explicit reconstruction conditions
 - [Fuel endpoints](docs/fuel-probe.md): seven concrete rows recovering 25 local selections in the recorded queue path
 - [Exact control minimization](docs/control-minimization.md): finite quotient witnesses reduce the legacy controller to 218,111 states while preserving every primitive tick
