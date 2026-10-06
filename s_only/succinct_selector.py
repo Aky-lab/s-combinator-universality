@@ -254,11 +254,18 @@ class SuccinctGraphBuilder(GraphBuilder):
     """
     def __init__(self, *, max_metadata_records=100_000, max_compile_seconds=10):
         _positive_int(max_metadata_records, 'max_metadata_records')
-        if ((type(max_compile_seconds) is not int and type(max_compile_seconds) is not float) or
-                not math.isfinite(max_compile_seconds) or max_compile_seconds <= 0):
+        if type(max_compile_seconds) is not int and type(max_compile_seconds) is not float:
+            raise ValueError('max_compile_seconds must be finite and positive')
+        try:
+            seconds = float(max_compile_seconds)
+        except OverflowError as exc:
+            raise ValueError('max_compile_seconds must fit a finite clock value') from exc
+        if not math.isfinite(seconds) or seconds <= 0:
             raise ValueError('max_compile_seconds must be finite and positive')
         self._limit = max_metadata_records
-        self._deadline = time.monotonic() + max_compile_seconds
+        self._deadline = time.monotonic() + seconds
+        if not math.isfinite(self._deadline):
+            raise ValueError('max_compile_seconds must produce a finite deadline')
         self._records = 0
         self._count = 0
         self._pieces = []
@@ -348,6 +355,16 @@ def compile_table(program, *, max_appendant_bits=8,
         raise ValueError('appendants must be plain binary strings')
     if sum(map(len, program.appendants)) > max_appendant_bits:
         raise CompilationLimit(f'program exceeds {max_appendant_bits} total appendant bits')
+    return _assemble_program(program, max_metadata_records=max_metadata_records,
+                             max_compile_seconds=max_compile_seconds)
+
+
+def _assemble_program(program, *, max_metadata_records, max_compile_seconds):
+    """Shared original-order composition, after an entry point checks its scope.
+
+    This compile-only helper deliberately does not relax either public API's
+    syntax caps or retain the source program in the finished interval code.
+    """
     from .program_selector_parts.patterns import PatternFamily
     from .program_selector_parts.active import compile_active
     from .program_selector_parts.priority import compile_fresh, compile_marked
