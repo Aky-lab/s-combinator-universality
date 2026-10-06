@@ -13,6 +13,8 @@ Application associates to the left. A native step contracts one occurrence in a 
 
 - [S-only queue computation](docs/queue-replication.md): `101 → 011 → 11` across 85 native contractions, with all 86 structural readout decisions checked independently
 - [Independent root-reset controller](docs/root-selector.md): all 85 addresses selected from current trees by a fixed 257,299-state graph
+- [Program-static two-phase controllers](docs/two-phase-programs.md): 20 runs across five programs and four seeds, with 1,725 native contractions and 60 checked checkpoints
+- [Structural CTS reader](docs/cts-reader.md): program-parameterized decoding of current S trees, including unbalanced dispatchers and multi-bit actions
 - [Compact binary-machine fixture](docs/neary-fixture.md): two write-and-halt cases compiled to a 482-phase cyclic tag system, starting from 3,374 bits and peaking at 5,187 queued bits
 - [Generic initial S encoding](docs/cts-encoding.md): the compact fixture produces 1,342,619-node initial trees, represented by 27,547 shared immutable objects with reproducible prefix hashes
 
@@ -28,6 +30,7 @@ python -m s_only reduce 'S (S S) S S' --certificate trace.json
 python -m s_only verify trace.json
 python -m tools.replicate_queue
 python -m tools.root_selector_report --deterministic --output /tmp/root-selector.json
+python -m tools.program_selector_report --deterministic --output /tmp/two-phase-programs.json
 python -m tools.neary_fixture --output-dir /tmp/neary-left-toggle
 python -m tools.inspect_cts_encoding --program artifacts/neary-left-toggle/program.json --word-file artifacts/neary-left-toggle/seed-b.txt --sha256
 ```
