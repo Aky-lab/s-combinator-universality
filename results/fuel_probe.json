@@ -1,0 +1,162 @@
+{
+  "schema": "s-only-fuel-probe-v1",
+  "pattern_rows": 7,
+  "finite_control_states": 4727,
+  "observations_per_state": 6,
+  "static_microtick_bound": 4020,
+  "matching_local_occurrences": 25,
+  "max_microticks_among_matches": 1308,
+  "coverage": [
+    {
+      "contraction": 5,
+      "origin": "",
+      "selected": "0",
+      "microticks": 333
+    },
+    {
+      "contraction": 6,
+      "origin": "",
+      "selected": "",
+      "microticks": 629
+    },
+    {
+      "contraction": 7,
+      "origin": "1",
+      "selected": "10",
+      "microticks": 330
+    },
+    {
+      "contraction": 8,
+      "origin": "1",
+      "selected": "10",
+      "microticks": 673
+    },
+    {
+      "contraction": 9,
+      "origin": "1",
+      "selected": "1",
+      "microticks": 973
+    },
+    {
+      "contraction": 10,
+      "origin": "1",
+      "selected": "10",
+      "microticks": 1308
+    },
+    {
+      "contraction": 11,
+      "origin": "1",
+      "selected": "1",
+      "microticks": 390
+    },
+    {
+      "contraction": 27,
+      "origin": "10",
+      "selected": "100",
+      "microticks": 333
+    },
+    {
+      "contraction": 28,
+      "origin": "10",
+      "selected": "10",
+      "microticks": 629
+    },
+    {
+      "contraction": 29,
+      "origin": "101",
+      "selected": "1010",
+      "microticks": 333
+    },
+    {
+      "contraction": 30,
+      "origin": "101",
+      "selected": "101",
+      "microticks": 629
+    },
+    {
+      "contraction": 31,
+      "origin": "1011",
+      "selected": "10110",
+      "microticks": 330
+    },
+    {
+      "contraction": 32,
+      "origin": "1011",
+      "selected": "10110",
+      "microticks": 673
+    },
+    {
+      "contraction": 33,
+      "origin": "1011",
+      "selected": "1011",
+      "microticks": 973
+    },
+    {
+      "contraction": 34,
+      "origin": "1011",
+      "selected": "10110",
+      "microticks": 1308
+    },
+    {
+      "contraction": 35,
+      "origin": "1011",
+      "selected": "1011",
+      "microticks": 390
+    },
+    {
+      "contraction": 57,
+      "origin": "1010",
+      "selected": "10100",
+      "microticks": 333
+    },
+    {
+      "contraction": 58,
+      "origin": "1010",
+      "selected": "1010",
+      "microticks": 629
+    },
+    {
+      "contraction": 59,
+      "origin": "10101",
+      "selected": "101010",
+      "microticks": 333
+    },
+    {
+      "contraction": 60,
+      "origin": "10101",
+      "selected": "10101",
+      "microticks": 629
+    },
+    {
+      "contraction": 61,
+      "origin": "101011",
+      "selected": "1010110",
+      "microticks": 330
+    },
+    {
+      "contraction": 62,
+      "origin": "101011",
+      "selected": "1010110",
+      "microticks": 673
+    },
+    {
+      "contraction": 63,
+      "origin": "101011",
+      "selected": "101011",
+      "microticks": 973
+    },
+    {
+      "contraction": 64,
+      "origin": "101011",
+      "selected": "1010110",
+      "microticks": 1308
+    },
+    {
+      "contraction": 65,
+      "origin": "101011",
+      "selected": "101011",
+      "microticks": 390
+    }
+  ],
+  "scope": "local fuel selection from the supplied occurrence; active-context discovery is separate"
+}

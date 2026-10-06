@@ -1,0 +1,78 @@
+{
+  "schema": "s-only-strategy-comparison-v1",
+  "common_trajectory_steps": 85,
+  "choices_on_common_trajectory": {
+    "normal": {
+      "matching_choices": 8,
+      "first_difference": {
+        "contraction": 3,
+        "recorded_path": "01",
+        "strategy_path": ""
+      }
+    },
+    "applicative": {
+      "matching_choices": 3,
+      "first_difference": {
+        "contraction": 4,
+        "recorded_path": "",
+        "strategy_path": "01"
+      }
+    },
+    "head": {
+      "matching_choices": 8,
+      "first_difference": {
+        "contraction": 3,
+        "recorded_path": "01",
+        "strategy_path": ""
+      }
+    }
+  },
+  "separate_run_bounds": {
+    "max_steps": 100,
+    "max_nodes": 100001
+  },
+  "separate_runs": [
+    {
+      "strategy": "normal",
+      "steps": 100,
+      "status": "step_limit",
+      "final_nodes": 26101,
+      "observations": [
+        {
+          "contraction": 0,
+          "horizon": 0,
+          "phase": 0,
+          "data": "101"
+        }
+      ]
+    },
+    {
+      "strategy": "applicative",
+      "steps": 100,
+      "status": "step_limit",
+      "final_nodes": 4351,
+      "observations": [
+        {
+          "contraction": 0,
+          "horizon": 0,
+          "phase": 0,
+          "data": "101"
+        }
+      ]
+    },
+    {
+      "strategy": "head",
+      "steps": 100,
+      "status": "step_limit",
+      "final_nodes": 26101,
+      "observations": [
+        {
+          "contraction": 0,
+          "horizon": 0,
+          "phase": 0,
+          "data": "101"
+        }
+      ]
+    }
+  ]
+}

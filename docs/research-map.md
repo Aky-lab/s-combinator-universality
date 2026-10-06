@@ -63,3 +63,5 @@ The highest-value first replication target is the small queue trace. It checks c
 ## Replication checkpoints
 
 The independent reducer, exhaustive small-term checks and closed gadgets are implemented. The [85-contraction two-phase queue replication](queue-replication.md) reproduces every published literal contractum and all 86 checkpoint decisions. The [controller interface audit](controller-audit.md) identifies finite-selector recovery as the next executable check.
+
+The finite restoring-pattern compiler is implemented with an explicit six-observation transition table and a general restoring proof. The seven [fuel endpoint rows](fuel-probe.md) recover 25 local selections in the recorded trace. [Standard-selector comparisons](strategy-comparison.md) locate the first departure from that trajectory at contraction 3 for normal/head order and 4 for applicative order.

@@ -19,6 +19,8 @@ python -m s_only reduce 'S (S S) S S' --certificate trace.json
 python -m s_only verify trace.json
 python -m tools.baseline
 python -m tools.replicate_queue
+python -m tools.compare_strategies
+python -m tools.fuel_probe_report
 ```
 
 The reducer provides leftmost-outermost (`normal`), leftmost-innermost (`applicative`) and left-spine (`head`) selection. Every run has explicit step and expanded-tree-size limits. Certificates record the selected occurrence, size and SHA-256 of each resulting tree; a separate prefix-string verifier replays the native rewrites and checks the strategy and stopping condition.
@@ -30,6 +32,8 @@ The reducer provides leftmost-outermost (`normal`), leftmost-innermost (`applica
 - [Baseline experiments](docs/baseline.md): closed gadgets and exhaustive bounded census
 - [Two-phase queue replication](docs/queue-replication.md): 85 native contractions and all 86 checkpoint decisions independently reproduced
 - [Controller interface audit](docs/controller-audit.md)
+- [Restoring finite-state probes](docs/probe-compiler.md) and [fuel endpoints](docs/fuel-probe.md)
+- [Selector comparison](docs/strategy-comparison.md): where standard strategies leave the encoded trajectory
 - [Machine-readable census](results/baseline.json)
 - [Checked example traces](examples/)
 
