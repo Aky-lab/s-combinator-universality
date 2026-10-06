@@ -42,6 +42,7 @@ python -m tools.inspect_cts_encoding --program artifacts/neary-left-toggle/progr
 - [Restoring probes](docs/probe-compiler.md): finite six-observation transition tables with a general restoring proof
 - [Spine walkers](docs/spine-walkers.md): bounded descent, restoring ancestor tests and explicit reconstruction conditions
 - [Fuel endpoints](docs/fuel-probe.md): seven concrete rows recovering 25 local selections in the recorded queue path
+- [Exact control minimization](docs/control-minimization.md): finite quotient witnesses reduce the legacy controller to 218,111 states while preserving every primitive tick
 - [Strategy comparison](docs/strategy-comparison.md): where standard selectors depart from the encoded trajectory
 
 ## Research

@@ -1,0 +1,13 @@
+{
+  "all_states_witness_verified": true,
+  "appendants": null,
+  "compiler": "root_selector",
+  "original_graph_sha256": "b10fd32748054717357a5e1ec9b1769012f45b57d6bfd9d76db046dfc175fc49",
+  "original_states": 257299,
+  "quotient_graph_sha256": "05b60fefc35ffb45f257eacaa501aa6a55852997dba7ec08cd6f28e162271cc8",
+  "quotient_states": 218111,
+  "removed_states": 39188,
+  "schema": "selector-exact-mealy-quotient-v1",
+  "state_map_sha256": "7a0acbb5d30921b3cdabb9d54b3b400c3ac25cac39d7c20854fa59dee526fac6",
+  "verified_observation_entries": 1543794
+}
