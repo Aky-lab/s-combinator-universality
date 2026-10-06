@@ -1,0 +1,208 @@
+{
+  "schema": "s-only-first-event-source-inspection-v1",
+  "repository": "cstrawberry/predictive-universe",
+  "commit": "85a867988442fc423279341200f81634a1e65582",
+  "path_prefix": "docs/paper/related/pure_s_universality/formalization/PureSFormal",
+  "scope": "Supplemental source texts inspected for the labelled nonempty-prefix and first-event transfer proof",
+  "verification": "Pinned Git blob identities checked on original source bytes; source text inspection only",
+  "files": [
+    {
+      "path": "PureS/ActionTree.lean",
+      "git_blob_sha1": "f5518ecb5b73e81a5895a6398ed69422270d0b1a",
+      "sha256": "af7e657bb9923404983decbabb913265cd091e00201b248cb7753d8aa4399707",
+      "bytes": 11038
+    },
+    {
+      "path": "PureS/BalancedActionTree.lean",
+      "git_blob_sha1": "c86bde36b7478f5069c1f5d3e3f5c4e24a57ecb4",
+      "sha256": "e46ef0db23b608ffec876bed8a155cdee40b523b67b6bc7a8014c9a3252a544a",
+      "bytes": 16925
+    },
+    {
+      "path": "PureS/CarrierDecoder.lean",
+      "git_blob_sha1": "2b11598eaeafb893378631a1570c65fa6236452c",
+      "sha256": "2c9b1a691bc203004ad52c1da5a57e02f867060e8f12cdcca8611ece6b3d3823",
+      "bytes": 35071
+    },
+    {
+      "path": "PureS/CheckpointDecoder.lean",
+      "git_blob_sha1": "29f13313089ba8d39e5611f6a741cc50c7f60b1d",
+      "sha256": "9c02fc52f3abf525ed03bd766d9cb5c3d8515d007b03dd7e01650b015838aa72",
+      "bytes": 59743
+    },
+    {
+      "path": "PureS/CheckpointRun.lean",
+      "git_blob_sha1": "05b08ad1acbc3660885044d7cb49bf2f705646d9",
+      "sha256": "a11469aa9e1491608fe6dc4b762764aafa9ae5a5f7940dea3fb168141224e9a3",
+      "bytes": 48617
+    },
+    {
+      "path": "PureS/ControllerProjection.lean",
+      "git_blob_sha1": "3a1b9130a560d0d8c2ec686d0b7f6122cfba3bed",
+      "sha256": "f1abaa7b53bf2de899cf815ca4c54529a10f325a219bf2da99b048b332f0ff38",
+      "bytes": 4777
+    },
+    {
+      "path": "PureS/ControllerTrajectory.lean",
+      "git_blob_sha1": "5567b92501f3cdf53ef371bfa6a235518843f354",
+      "sha256": "3101095aa11a8dc4afdf4bc359736358c47b8e4848d4e8b19559aed76077a2be",
+      "bytes": 22846
+    },
+    {
+      "path": "PureS/EncoderSize.lean",
+      "git_blob_sha1": "c426f7a3d4707c8b808627fd3b2be757372956d8",
+      "sha256": "1500a751318f982a4ef962433d8faf4fb7afaa35ebc8e547f3f7ffa17bebf09c",
+      "bytes": 8922
+    },
+    {
+      "path": "PureS/ExactCheckpointRun.lean",
+      "git_blob_sha1": "b5eff891351c6d3997ccb1ce951b402778040271",
+      "sha256": "e5e8cc54e693b25aeb2e0a5078ad356d701d1a3b38fe02e0fd635ed600d3759a",
+      "bytes": 21549
+    },
+    {
+      "path": "PureS/PhysicalMarkerGlobalSoundness.lean",
+      "git_blob_sha1": "90895bd2c37c48228c9ad4d1f1d1c0754a9ec4bf",
+      "sha256": "6b0017207bd7f2e8f93143687a25100a11ab8d819758088245df71e31807c3a3",
+      "bytes": 9496
+    },
+    {
+      "path": "PureS/PhysicalMarkerStages.lean",
+      "git_blob_sha1": "15f378ba0339704f865190c86d2d626346bea07a",
+      "sha256": "23dcb6e9c8df97c9f003071632bf58e5c361ef71e09f24c58579292f7efbc70f",
+      "bytes": 13736
+    },
+    {
+      "path": "PureS/SchedulerAllStages.lean",
+      "git_blob_sha1": "8cf9de8dca889e51dec97f34f9e722ce86452dc2",
+      "sha256": "8d696a5b0b546272d1e5262d7228c7bd5a2e5e5d547b789bc9c5e6de917b40b6",
+      "bytes": 26914
+    },
+    {
+      "path": "PureS/SchedulerContinuation.lean",
+      "git_blob_sha1": "f7e97462b2a97a591e2c9c740a7d8092499e9007",
+      "sha256": "ff741a4d194f3640df9eb29ccbecd2f73f5571cb1cfdb89c28d6ecf67fd774de",
+      "bytes": 23610
+    },
+    {
+      "path": "PureS/SchedulerDecoder.lean",
+      "git_blob_sha1": "fdc2c2721f96ce2b1857348f3d10dbeab682399d",
+      "sha256": "2331607ddaa7508aba32e2017c9e43f7395ec7e6ca03d2eee758aea8c6e85572",
+      "bytes": 7066
+    },
+    {
+      "path": "PureS/SchedulerJobHandoff.lean",
+      "git_blob_sha1": "9258896d5a04e3963f593dcc3e2d910af3f618ec",
+      "sha256": "86c661dff1d4ad2c2328eeb92d49eb75c1e32ab7a6496eefb4c2e175c9915cd7",
+      "bytes": 14730
+    },
+    {
+      "path": "PureS/SchedulerNestedPhase.lean",
+      "git_blob_sha1": "1759508741f2c0988212c2e82ea6232a3f134311",
+      "sha256": "23791f057db724df775d563ebb6d1d08974efb98f2de2de5b90ec8b77cba7e53",
+      "bytes": 70733
+    },
+    {
+      "path": "PureS/SchedulerNestedResponse.lean",
+      "git_blob_sha1": "89bf418539cdfa112b7b6314903bee6bfee0eac5",
+      "sha256": "23409ca07f997ebda3245aa76239d1a425e477e2374b0c389404051f5cfb259b",
+      "bytes": 180621
+    },
+    {
+      "path": "PureS/SchedulerNonfinalJobs.lean",
+      "git_blob_sha1": "b0894442371fcfe47680b1c48b4138a31cd1c9fd",
+      "sha256": "526d5180734051905f0b3f6128ceda77c147746bf68e6bf7a4382ed7d780df7b",
+      "bytes": 7003
+    },
+    {
+      "path": "PureS/SchedulerRecurrence.lean",
+      "git_blob_sha1": "fafa0d46052659ef3408670ccbd848277e3abcc6",
+      "sha256": "ef7cea9902d77a55e6cd4593ac19c3c9d808e0dcb3f355d0adc6abda848d4b81",
+      "bytes": 65644
+    },
+    {
+      "path": "PureS/SchedulerRootContinuation.lean",
+      "git_blob_sha1": "7fb0ed79c524a6be4bd9be6ea7fbe4bf7e7c9b19",
+      "sha256": "cf15a8c00dd9e4ef4955b7ea7d4ee672493a0fe22330fb886c2adf59d1d825c1",
+      "bytes": 55180
+    },
+    {
+      "path": "PureS/SchedulerStageAssembly.lean",
+      "git_blob_sha1": "8119f02e616a180e80c47f30c3ddd169edd87f62",
+      "sha256": "0629f13375a8928e7cca338fe8705acdddae211a063af8e77b0b072d50a7b11b",
+      "bytes": 45669
+    },
+    {
+      "path": "PureS/SchedulerStageCases.lean",
+      "git_blob_sha1": "fa7e6be45d1c2351a20243318e829ec34188b8aa",
+      "sha256": "5f35195c5d62cf3d99caeb210a4e01f40dfe7583b3132f1cc25ce1c6f3fa986b",
+      "bytes": 5462
+    },
+    {
+      "path": "PureS/SchedulerTraceAlgebra.lean",
+      "git_blob_sha1": "5203110621404009f7a2a6f7898efc3b51db68e8",
+      "sha256": "733a2ebcdb3e005e3b2567bdd65ab92d04cda2a4990a11b9bfc25516ad9ba865",
+      "bytes": 8604
+    },
+    {
+      "path": "PureS/Term.lean",
+      "git_blob_sha1": "ab2c9e64b17c0435d974d8ae05874657a0debc45",
+      "sha256": "18dcbc4b3ead2a66ceadb280f1c1a05161de89183d6b7ae07ee381651c0857f7",
+      "bytes": 7656
+    },
+    {
+      "path": "Research/RootResetContractProjection.lean",
+      "git_blob_sha1": "c42cb476b42559747b758a16f925d28a18d88359",
+      "sha256": "6b7a597bbebdc856fff4786ef8b7b21dfee045c83aca747bf8f32734e66c1728",
+      "bytes": 6727
+    },
+    {
+      "path": "Research/RootResetFinitePrioritySelector.lean",
+      "git_blob_sha1": "7b5289284f2f7237a431e74b152d8fe077a43765",
+      "sha256": "f3bf2ed73ea41425c251f53e788a5882c2416714417021466c2bbc8f2f6fcf8b",
+      "bytes": 3436
+    },
+    {
+      "path": "Research/RootResetParametricNonemptyTraceAgreement.lean",
+      "git_blob_sha1": "60d67c391437b32f03ed634c12c1c72548dae475",
+      "sha256": "616587c05e7b3ff7daf6062d8c3230ff5a4a63d1da801c567e40ffecaac6df33",
+      "bytes": 4959
+    },
+    {
+      "path": "Research/RootResetReadonlySelector.lean",
+      "git_blob_sha1": "dc2d3d16e483fe72063358eb8a838877930444a4",
+      "sha256": "e71b291aed2e6b2438a7d6844ca39f642896431b517b56f1cc88f7680a1b2101",
+      "bytes": 24060
+    },
+    {
+      "path": "Research/RootResetSelectorContract.lean",
+      "git_blob_sha1": "b8a38857944fca1c489ba9633c2c4ac00b9cbc63",
+      "sha256": "72e623bb59e0cf8230994362d4aabb8a86e0d1625e8ec7438cb27726d4647427",
+      "bytes": 26359
+    },
+    {
+      "path": "Research/RootResetStageSelectionLaws.lean",
+      "git_blob_sha1": "19cbc184f05362e32e0f1fc74d1176f73b00763d",
+      "sha256": "e84fbc45a2735eadf44bde30dcbff91b12fc2c7368288cc529ecdb4ce5a50370",
+      "bytes": 3315
+    },
+    {
+      "path": "Research/RootResetTermOnlyTransfer.lean",
+      "git_blob_sha1": "3b093d9a732d5146eb4780f8ad4094d84c5f06f8",
+      "sha256": "f0cdba91bc2a667f63f5a5098d322e44747ae5079c34669f4c31ed0a2d5b6b10",
+      "bytes": 4852
+    },
+    {
+      "path": "WeakPath/Interface.lean",
+      "git_blob_sha1": "cd1b7219f15a8416136571007b4ef9b908593163",
+      "sha256": "b74a9ce3e9542b56f2a88a756c3520217feebf2581299924d50b2eb0313bad78",
+      "bytes": 6432
+    },
+    {
+      "path": "WeakPathUniversality.lean",
+      "git_blob_sha1": "d8b0942b392389554e0ba3652b6fb07ccbf4e31a",
+      "sha256": "18149251e7e2c29a0392685ccc006fbd23d8f981f3a4bac47d23529f2605d831",
+      "bytes": 21036
+    }
+  ]
+}

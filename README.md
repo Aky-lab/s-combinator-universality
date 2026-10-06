@@ -1,6 +1,8 @@
 # S-combinator universality
 
-Exact S-only rewriting, replicated encoded computations, and finite-controller tools.
+A constructive route from finite counter machines to S-only computation, with
+explicit encoders, native reduction controllers, structural output readers,
+and independently checked proof steps.
 
 ```text
 term ::= S | (term term)
@@ -8,6 +10,28 @@ S x y z -> x z (y z)
 ```
 
 Application associates to the left. A native step contracts one occurrence in a finite application tree.
+
+## Proof route
+
+The [consolidated theorem](docs/universality-theorem.md) gives the fixed-controller
+construction. The [proof roadmap](docs/proof-dependencies.md) identifies its
+component proofs, source attribution, and verification status:
+
+```text
+register machine + input → BP2 → UT19 → 38-phase CTS → native S trajectory
+```
+
+- [Uniform machine-to-BP2 reduction](docs/universal-bp2-front-end.md): arbitrary finite inputs, restart-safe initialization, exact compiler size, and fixed numerical output
+- [Compact source simulation](docs/ut19-simulation-invariants.md): first-event halting equivalence and preserved counters under one fixed UT19 program
+- [Local-event provenance](docs/local-event-provenance.md): origin of the completed response marker and preservation of its frozen output audit
+- [Regular event language](docs/pattern-automaton.md): a finite bottom-up observer for the fixed phase-17 response
+- [Exact first-event transfer](docs/cts-event-transfer.md): ordered native-stage coverage, first acceptance, and seed-free frozen-audit decoding
+- [Bounded current-S output reader](docs/s-event-readout.md): explicit polynomial work, current-tree-only decoding, and adversarial independent review
+
+The written first-event composition has independent review. Fresh formal replay
+and mechanization of the new bridge are the next validation steps. The S
+protocol is attributed to Cinematic Strawberry; source provenance is linked in
+the component proofs.
 
 ## Reproduced computations
 
@@ -59,6 +83,7 @@ include explicit process and memory limits.
 - [Restoring probes](docs/probe-compiler.md): finite six-observation transition tables with a general restoring proof
 - [Succinct probe tables](docs/succinct-probes.md): exact indexed transition lookup from compact immutable code, including 4,097 descriptors for `7·2^4096−4` virtual states
 - [Succinct prioritized rows](docs/succinct-rows.md) and [spine walkers](docs/succinct-walkers.md): index-preserving composition, restoration and feedback
+- [Whole-controller preflight](docs/controller-size.md): exact count of 2,122,868,774 controls for the fixed UT19 endpoint, without allocating its transition table
 - [Compile-only code sharing](docs/pooled-selector.md): equal immutable controller values share storage while preserving every indexed primitive transition
 - [Spine walkers](docs/spine-walkers.md): bounded descent, restoring ancestor tests and explicit reconstruction conditions
 - [Fuel endpoints](docs/fuel-probe.md): seven concrete rows recovering 25 local selections in the recorded queue path
@@ -76,5 +101,5 @@ include explicit process and memory limits.
 - [Structural UT19 result reader](docs/ut19-readout.md): current-state Reset grammar and the exact 17-bit CTS event offset
 - [Generated source artifacts](artifacts/neary-left-toggle/) and [experiment reports](results/)
 
-Current work focuses on compact representations of the finite controller,
-the source-to-S readout bridge, and independent checking of the pinned formal theorem.
+Current work focuses on fresh checking of the pinned formal dependency closure
+and mechanizing the new first-event composition.

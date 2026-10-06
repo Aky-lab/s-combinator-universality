@@ -1,0 +1,94 @@
+{
+  "complete": true,
+  "direct_states": 416,
+  "fragments": [
+    {
+      "calls": 1568,
+      "kind": "match",
+      "state_count": 83251537
+    },
+    {
+      "calls": 142,
+      "kind": "rows",
+      "state_count": 422823536
+    },
+    {
+      "calls": 12,
+      "kind": "inverse_rows",
+      "state_count": 79310739
+    },
+    {
+      "calls": 57,
+      "kind": "descent",
+      "state_count": 435835147
+    },
+    {
+      "calls": 191,
+      "kind": "ascent",
+      "state_count": 1101647399
+    }
+  ],
+  "pattern_nodes": 76092787,
+  "pattern_work": 229204100,
+  "phase_count": 38,
+  "schema": "s-only-controller-size-v1",
+  "stages": [
+    {
+      "first_state": 0,
+      "name": "normal",
+      "start": 0,
+      "state_count": 1
+    },
+    {
+      "first_state": 1,
+      "name": "contracted",
+      "start": 1,
+      "state_count": 1
+    },
+    {
+      "first_state": 2,
+      "name": "selected",
+      "start": 2,
+      "state_count": 1
+    },
+    {
+      "first_state": 3,
+      "name": "fallback",
+      "start": 27,
+      "state_count": 25
+    },
+    {
+      "first_state": 28,
+      "name": "active",
+      "start": 1785263626,
+      "state_count": 1843629910
+    },
+    {
+      "first_state": 1843629938,
+      "name": "root_active",
+      "start": 1843629938,
+      "state_count": 1
+    },
+    {
+      "first_state": 1843629939,
+      "name": "marked",
+      "start": 1848029472,
+      "state_count": 62765845
+    },
+    {
+      "first_state": 1906395784,
+      "name": "root_marked",
+      "start": 1906395784,
+      "state_count": 1
+    },
+    {
+      "first_state": 1906395785,
+      "name": "fresh",
+      "start": 2064502462,
+      "state_count": 216472989
+    }
+  ],
+  "start": 2064502462,
+  "state_count": 2122868774,
+  "total_appendant_bits": 760
+}

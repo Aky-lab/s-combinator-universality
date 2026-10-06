@@ -1,0 +1,134 @@
+{
+  "atomic_negative": {
+    "descendant_match": false
+  },
+  "automaton": {
+    "canonical_subpatterns": 1750,
+    "minimality_claim": false,
+    "state_bits": 1751,
+    "state_count_bound": "2^1751",
+    "state_space_materialized": false
+  },
+  "bounds": {
+    "max_descriptors": 10000,
+    "max_pattern_nodes": 100000,
+    "max_seconds_per_operation": 10,
+    "max_term_nodes_per_sample": 100000
+  },
+  "event_label": [
+    17,
+    1
+  ],
+  "fabricated_positive": {
+    "descendant_match": true,
+    "root_match": true
+  },
+  "history_arguments": 19,
+  "independent_dispatch_record_equality": true,
+  "provenance": {
+    "constructors_commit": "85a867988442fc423279341200f81634a1e65582",
+    "constructors_license_notice": "third_party/cinematic-strawberry-MIT.txt",
+    "ut19_license": "CC0",
+    "ut19_table": "https://esolangs.org/w/index.php?title=UT19&oldid=154545"
+  },
+  "remaining_obligation": "Generated-occurrence provenance and source-event coverage.",
+  "replay": {
+    "addresses": [
+      "0",
+      "0",
+      "01",
+      "",
+      "0",
+      "",
+      "10",
+      "10"
+    ],
+    "input_sha256": "32c8910479f0139b0a0069a6fb2020428dc8abbd329dd1f291ece93034ab1f1a",
+    "native_contractions_replayed": 8,
+    "reported_selector_state_count": 2122868774,
+    "selector_reexecuted": false
+  },
+  "route": "0100011",
+  "samples": [
+    {
+      "descendant_match": false,
+      "distinct_nodes": 3491,
+      "expanded_nodes": 44069,
+      "maximum_head_arity": 4,
+      "native_step": 0,
+      "root_match": false
+    },
+    {
+      "descendant_match": false,
+      "distinct_nodes": 3493,
+      "expanded_nodes": 44077,
+      "maximum_head_arity": 4,
+      "native_step": 1,
+      "root_match": false
+    },
+    {
+      "descendant_match": false,
+      "distinct_nodes": 3494,
+      "expanded_nodes": 44089,
+      "maximum_head_arity": 3,
+      "native_step": 2,
+      "root_match": false
+    },
+    {
+      "descendant_match": false,
+      "distinct_nodes": 3496,
+      "expanded_nodes": 44101,
+      "maximum_head_arity": 3,
+      "native_step": 3,
+      "root_match": false
+    },
+    {
+      "descendant_match": false,
+      "distinct_nodes": 3496,
+      "expanded_nodes": 88149,
+      "maximum_head_arity": 4,
+      "native_step": 4,
+      "root_match": false
+    },
+    {
+      "descendant_match": false,
+      "distinct_nodes": 3498,
+      "expanded_nodes": 132197,
+      "maximum_head_arity": 4,
+      "native_step": 5,
+      "root_match": false
+    },
+    {
+      "descendant_match": false,
+      "distinct_nodes": 3498,
+      "expanded_nodes": 176281,
+      "maximum_head_arity": 4,
+      "native_step": 6,
+      "root_match": false
+    },
+    {
+      "descendant_match": false,
+      "distinct_nodes": 3500,
+      "expanded_nodes": 220329,
+      "maximum_head_arity": 4,
+      "native_step": 7,
+      "root_match": false
+    },
+    {
+      "descendant_match": false,
+      "distinct_nodes": 3501,
+      "expanded_nodes": 264381,
+      "maximum_head_arity": 4,
+      "native_step": 8,
+      "root_match": false
+    }
+  ],
+  "schema": "ut19-event-language-v1",
+  "scope": "Syntax membership only; no source-event or reachability theorem.",
+  "seed": {
+    "bits": 1710,
+    "sha256": "b8fb1a29238d02cbe5249637205fe999646ec54f918418f158d279977f983155",
+    "source": "+1"
+  },
+  "status": "fresh"
+}
