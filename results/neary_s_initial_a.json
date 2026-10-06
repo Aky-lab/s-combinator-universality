@@ -1,0 +1,20 @@
+{
+  "constructed": true,
+  "dispatcher_layout": "bottom-up-adjacent-pairs-no-padding",
+  "dispatcher_nodes": 1288577,
+  "format": "cts-s-initial-inspection-v1",
+  "initial_nodes": 1342619,
+  "initial_phase": 0,
+  "initial_prefix_sha256": "885d301dafa776825385fbe833c1a7c0fe0e7c0a7c5917a7aa0ad7229737752b",
+  "initial_s_leaves": 671310,
+  "nonempty_appendant_count": 126,
+  "phase_count": 482,
+  "scope": "initial closed-S syntax only; no reductions or simulation",
+  "source_data_bits": 3374,
+  "source_data_ones": 9,
+  "total_appendant_bits": 63644,
+  "total_appendant_ones": 140,
+  "unique_appendant_count": 41,
+  "unique_objects": 27547,
+  "word_nodes": 54003
+}

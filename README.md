@@ -1,13 +1,21 @@
 # S-combinator universality
 
-Research on computation in the S-only combinator calculus, with an exact reducer, independently checked traces, and reproducible experiments.
+Exact S-only rewriting, replicated encoded computations, and finite-controller tools.
 
 ```text
 term ::= S | (term term)
 S x y z -> x z (y z)
 ```
 
-Application associates to the left. Each reduction contracts one occurrence in a finite application tree.
+Application associates to the left. A native step contracts one occurrence in a finite application tree.
+
+## Reproduced computations
+
+- [S-only queue computation](docs/queue-replication.md): `101 → 011 → 11` across 85 native contractions, with all 86 structural readout decisions checked independently
+- [Compact binary-machine fixture](docs/neary-fixture.md): two write-and-halt cases compiled to a 482-phase cyclic tag system, starting from 3,374 bits and peaking at 5,187 queued bits
+- [Generic initial S encoding](docs/cts-encoding.md): the compact fixture produces 1,342,619-node initial trees, represented by 27,547 shared immutable objects with reproducible prefix hashes
+
+The native S queue run and the ordinary CTS source-machine runs have separate execution records. The generic encoder constructs the corresponding initial S syntax; controller integration is the next stage.
 
 ## Run
 
@@ -17,24 +25,26 @@ Python 3.10 or later; standard library only. From the repository root:
 python -m unittest discover -s tests -v
 python -m s_only reduce 'S (S S) S S' --certificate trace.json
 python -m s_only verify trace.json
-python -m tools.baseline
 python -m tools.replicate_queue
-python -m tools.compare_strategies
-python -m tools.fuel_probe_report
+python -m tools.neary_fixture --output-dir /tmp/neary-left-toggle
+python -m tools.inspect_cts_encoding --program artifacts/neary-left-toggle/program.json --word-file artifacts/neary-left-toggle/seed-b.txt --sha256
 ```
 
-The reducer provides leftmost-outermost (`normal`), leftmost-innermost (`applicative`) and left-spine (`head`) selection. Every run has explicit step and expanded-tree-size limits. Certificates record the selected occurrence, size and SHA-256 of each resulting tree; a separate prefix-string verifier replays the native rewrites and checks the strategy and stopping condition.
+## Reducer and controller tools
 
-## Results and research
+- [Executable semantics](docs/semantics.md): immutable occurrence trees, normal/applicative/head strategies, resource bounds and independent trace verification
+- [Baseline experiments](docs/baseline.md): exhaustive small terms and checked gadgets
+- [Restoring probes](docs/probe-compiler.md): finite six-observation transition tables with a general restoring proof
+- [Spine walkers](docs/spine-walkers.md): bounded descent, restoring ancestor tests and explicit reconstruction conditions
+- [Fuel endpoints](docs/fuel-probe.md): seven concrete rows recovering 25 local selections in the recorded queue path
+- [Strategy comparison](docs/strategy-comparison.md): where standard selectors depart from the encoded trajectory
 
-- [Research map](docs/research-map.md): primary literature through October 2026, precise simulation interfaces and the current replication target
-- [Semantics](docs/semantics.md): syntax, occurrence identity, resource accounting and certificate format
-- [Baseline experiments](docs/baseline.md): closed gadgets and exhaustive bounded census
-- [Two-phase queue replication](docs/queue-replication.md): 85 native contractions and all 86 checkpoint decisions independently reproduced
-- [Controller interface audit](docs/controller-audit.md)
-- [Restoring finite-state probes](docs/probe-compiler.md) and [fuel endpoints](docs/fuel-probe.md)
-- [Selector comparison](docs/strategy-comparison.md): where standard strategies leave the encoded trajectory
-- [Machine-readable census](results/baseline.json)
-- [Checked example traces](examples/)
+## Research
 
-The current source audit targets the September 2026 root-restarted finite-controller construction, with its small cyclic-tag queue example reproduced and selector recovery next. The research map records the exact upstream commit, attribution and verification plan.
+- [Research map](docs/research-map.md): primary literature, exact interfaces and pinned constructions
+- [Controller audit](docs/controller-audit.md): finite control, root reset, readout and proof dependencies
+- [Compact encoding route](docs/compact-encoding.md): direct source compilation and its size model
+- [Event-composition lemma](docs/event-composition.md): transferring a distinguished CTS halt event through exact S readout
+- [Generated source artifacts](artifacts/neary-left-toggle/) and [experiment reports](results/)
+
+Current work focuses on assembling the active-context and response/dispatcher passes, then connecting the compact source compiler to independently verified native S execution and readout.

@@ -33,3 +33,5 @@ The next concrete test is to reconstruct the small fixture's selector and compar
 ## Implemented components
 
 The [restoring pattern compiler](probe-compiler.md) now produces immutable finite tables, with independent exhaustive tests and explicit state/microtick accounting. The [seven fuel endpoint rows](fuel-probe.md) have been transcribed into this model and recover 25 local recorded selections. Active-context traversal and whole-selector priority assembly remain the next integration layer.
+
+Finite [spine walkers](spine-walkers.md) now support strict-child descent and restoring ancestor queries with explicit termination bounds. General ancestor recognition is broader than inverse descent; reconstruction requires the documented uniqueness and boundary conditions. The remaining integration must preserve the source construction's scope guards and priority ordering.

@@ -1,0 +1,352 @@
+{
+  "format": "neary-left-toggle-audit-v1",
+  "runs": [
+    {
+      "consumed_one_events": 139,
+      "consumed_zero_events": 60111,
+      "cts_steps": 60250,
+      "distinct_phases_consuming_zero": 482,
+      "distinct_phases_visited": 482,
+      "format": "neary-left-toggle-run-v1",
+      "macro_boundaries": [
+        {
+          "counter_objects": [
+            "mu",
+            "mu",
+            "mu",
+            "mu"
+          ],
+          "cts_step": 0,
+          "phase": 0,
+          "source": {
+            "head": 1,
+            "state": 1,
+            "tape": "ba"
+          },
+          "word_bits": 3374,
+          "word_sha256": "909ba195acdc3915c5d0e63ec23cdaaba5a1a63190d2a11d70728901a3cc0a7c"
+        },
+        {
+          "counter_objects": [
+            "mu/",
+            "mup",
+            "mu/",
+            "mup"
+          ],
+          "cts_step": 55912,
+          "phase": 0,
+          "source": {
+            "head": 0,
+            "state": 2,
+            "tape": "bb"
+          },
+          "word_bits": 4338,
+          "word_sha256": "2b3410efbdccdb162d3804a4d5757a78688ff08b5dbb6a853f3cf7381c53b3d3"
+        },
+        {
+          "counter_objects": [
+            "mu/",
+            "mup",
+            "mu/",
+            "mup"
+          ],
+          "cts_step": 60250,
+          "phase": 0,
+          "source": {
+            "head": 0,
+            "state": 2,
+            "tape": "bb"
+          },
+          "word_bits": 4338,
+          "word_sha256": "2b3410efbdccdb162d3804a4d5757a78688ff08b5dbb6a853f3cf7381c53b3d3"
+        }
+      ],
+      "max_steps": 100000,
+      "max_word_bits": 16384,
+      "ordinary_cts_observation": "repeated_nonempty_configuration",
+      "peak_word_bits": 5187,
+      "program_sha256": "aa28952e044bc498b505f9720e6208400865f97d87ca80a2baf875d8232bb865",
+      "read_symbol": "a",
+      "recurrence": {
+        "first_step": 55912,
+        "period_steps": 4338,
+        "repeated_step": 60250,
+        "word_bits": 4338,
+        "word_sha256": "2b3410efbdccdb162d3804a4d5757a78688ff08b5dbb6a853f3cf7381c53b3d3"
+      },
+      "s_reductions_performed": 0,
+      "seed_bits": 3374,
+      "seed_sha256": "909ba195acdc3915c5d0e63ec23cdaaba5a1a63190d2a11d70728901a3cc0a7c",
+      "selected_appendant_indices": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11,
+        12,
+        13,
+        15,
+        16,
+        18,
+        19,
+        26,
+        28,
+        29,
+        31,
+        32,
+        36,
+        38,
+        39,
+        41,
+        42,
+        43,
+        45,
+        48,
+        49,
+        50,
+        52,
+        53,
+        110,
+        111,
+        112,
+        113,
+        114,
+        121,
+        125,
+        126,
+        129,
+        170,
+        242,
+        246,
+        247,
+        248,
+        250,
+        252,
+        256,
+        257,
+        260,
+        266,
+        269,
+        270,
+        271,
+        273,
+        276,
+        279,
+        280,
+        281,
+        283,
+        287,
+        289,
+        290,
+        292,
+        293,
+        294,
+        352,
+        355
+      ],
+      "selected_unspecified_appendant_events": 0,
+      "source_decoded": {
+        "head": 0,
+        "state": 2,
+        "tape": "bb"
+      },
+      "source_expected": {
+        "head": 0,
+        "state": 2,
+        "tape": "bb"
+      },
+      "source_halt_event": {
+        "appended_bits": 482,
+        "appended_sha256": "df97aed6b0bb87b45e31aa52c37a864cdaec0f7903d8a5b225573583a6018976",
+        "cts_step": 56083,
+        "deleted": "1",
+        "phase_before": 170,
+        "word_bits_after": 4649
+      },
+      "source_initial": {
+        "head": 1,
+        "state": 1,
+        "tape": "ba"
+      },
+      "source_transition_boundary_step": 55912,
+      "table_4_3_7_exercised": false
+    },
+    {
+      "consumed_one_events": 139,
+      "consumed_zero_events": 60111,
+      "cts_steps": 60250,
+      "distinct_phases_consuming_zero": 482,
+      "distinct_phases_visited": 482,
+      "format": "neary-left-toggle-run-v1",
+      "macro_boundaries": [
+        {
+          "counter_objects": [
+            "mu",
+            "mu",
+            "mu",
+            "mu"
+          ],
+          "cts_step": 0,
+          "phase": 0,
+          "source": {
+            "head": 1,
+            "state": 1,
+            "tape": "bb"
+          },
+          "word_bits": 3374,
+          "word_sha256": "0e5e14f2577232d416db387de45280b61e03e1df49e748713c50a8ad6ef463c1"
+        },
+        {
+          "counter_objects": [
+            "mu/",
+            "mup",
+            "mu/",
+            "mup"
+          ],
+          "cts_step": 55912,
+          "phase": 0,
+          "source": {
+            "head": 0,
+            "state": 2,
+            "tape": "ba"
+          },
+          "word_bits": 4338,
+          "word_sha256": "85e9d7a9fa2d45275f8151da18fc16b9718b3571df95c1c40f559f4f2d3dbfac"
+        },
+        {
+          "counter_objects": [
+            "mu/",
+            "mup",
+            "mu/",
+            "mup"
+          ],
+          "cts_step": 60250,
+          "phase": 0,
+          "source": {
+            "head": 0,
+            "state": 2,
+            "tape": "ba"
+          },
+          "word_bits": 4338,
+          "word_sha256": "85e9d7a9fa2d45275f8151da18fc16b9718b3571df95c1c40f559f4f2d3dbfac"
+        }
+      ],
+      "max_steps": 100000,
+      "max_word_bits": 16384,
+      "ordinary_cts_observation": "repeated_nonempty_configuration",
+      "peak_word_bits": 5187,
+      "program_sha256": "aa28952e044bc498b505f9720e6208400865f97d87ca80a2baf875d8232bb865",
+      "read_symbol": "b",
+      "recurrence": {
+        "first_step": 55912,
+        "period_steps": 4338,
+        "repeated_step": 60250,
+        "word_bits": 4338,
+        "word_sha256": "85e9d7a9fa2d45275f8151da18fc16b9718b3571df95c1c40f559f4f2d3dbfac"
+      },
+      "s_reductions_performed": 0,
+      "seed_bits": 3374,
+      "seed_sha256": "0e5e14f2577232d416db387de45280b61e03e1df49e748713c50a8ad6ef463c1",
+      "selected_appendant_indices": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9,
+        12,
+        13,
+        15,
+        16,
+        18,
+        19,
+        26,
+        28,
+        29,
+        31,
+        32,
+        36,
+        38,
+        39,
+        41,
+        42,
+        43,
+        45,
+        48,
+        49,
+        51,
+        52,
+        53,
+        110,
+        111,
+        112,
+        113,
+        114,
+        122,
+        125,
+        126,
+        129,
+        170,
+        243,
+        246,
+        247,
+        248,
+        250,
+        253,
+        256,
+        257,
+        260,
+        266,
+        269,
+        270,
+        272,
+        273,
+        276,
+        279,
+        280,
+        282,
+        283,
+        287,
+        289,
+        290,
+        292,
+        293,
+        294,
+        352,
+        355
+      ],
+      "selected_unspecified_appendant_events": 0,
+      "source_decoded": {
+        "head": 0,
+        "state": 2,
+        "tape": "ba"
+      },
+      "source_expected": {
+        "head": 0,
+        "state": 2,
+        "tape": "ba"
+      },
+      "source_halt_event": {
+        "appended_bits": 482,
+        "appended_sha256": "df97aed6b0bb87b45e31aa52c37a864cdaec0f7903d8a5b225573583a6018976",
+        "cts_step": 56083,
+        "deleted": "1",
+        "phase_before": 170,
+        "word_bits_after": 4649
+      },
+      "source_initial": {
+        "head": 1,
+        "state": 1,
+        "tape": "bb"
+      },
+      "source_transition_boundary_step": 55912,
+      "table_4_3_7_exercised": false
+    }
+  ]
+}

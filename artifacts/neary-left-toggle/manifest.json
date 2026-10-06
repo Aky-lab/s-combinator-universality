@@ -1,0 +1,22 @@
+{
+  "files": {
+    "program.json": {
+      "bytes": 86207,
+      "sha256": "aa28952e044bc498b505f9720e6208400865f97d87ca80a2baf875d8232bb865"
+    },
+    "runs.json": {
+      "bytes": 7615,
+      "sha256": "885526f08578594c112286354b61516a79a9141bdbb657c82ba7ac08c8f1d0c2"
+    },
+    "seed-a.txt": {
+      "bytes": 3375,
+      "sha256": "8cddac13c38beca71bda136bfa9feeca901469bbf1ce5024133bc4502fd5938c"
+    },
+    "seed-b.txt": {
+      "bytes": 3375,
+      "sha256": "e458871d38a5e96bfea3f142495edcc7854fb1dc73a50cc51810f99f6b84f462"
+    }
+  },
+  "format": "neary-left-toggle-artifacts-v1",
+  "scope": "fixed two-state left-moving TM; ordinary CTS only; no S reductions"
+}
