@@ -117,6 +117,3 @@ include explicit process and memory limits.
 - [Compact source simulation proof](docs/ut19-simulation-invariants.md): running-XOR memory, counter restarts, first-event equivalence, and preserved output tuples
 - [Structural UT19 result reader](docs/ut19-readout.md): current-state Reset grammar and the exact 17-bit CTS event offset
 - [Generated source artifacts](artifacts/neary-left-toggle/) and [experiment reports](results/)
-
-Current work focuses on mechanizing the Local-event and source/output
-composition on top of the checked 38-phase instance.
