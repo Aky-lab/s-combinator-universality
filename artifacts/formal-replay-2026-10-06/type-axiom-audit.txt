@@ -1,0 +1,256 @@
+PureSFormal.Research.RootResetFiniteAllInputsTraceAgreement.selectsEveryContractionRun
+  (program : PureSFormal.CTS.Program) (layout : PureSFormal.PureS.ActionDispatcher program) (bits : List.{0} Bool)
+  (index : Nat) :
+  have system :=
+    PureSFormal.PureS.SchedulerInvariant.SampledGood.productiveSystem program layout bits
+      (PureSFormal.PureS.SchedulerBound.bound program layout)
+      (PureSFormal.PureS.SchedulerControl.initialConfiguration program layout bits) ⋯;
+  Eq.{1}
+    (PureSFormal.Research.RootResetFinitePrioritySelector.selectStep? program layout
+      (system.contractionRun index).cursor.erase)
+    (some.{0} (system.contractionRun (HAdd.hAdd.{0, 0, 0} index 1)).cursor.erase)
+'PureSFormal.Research.RootResetFiniteAllInputsTraceAgreement.selectsEveryContractionRun' depends on axioms: [propext,
+ Quot.sound.{u}]
+PureSFormal.Research.RootResetFiniteAllInputsTraceAgreement.termOnlyPath_eq_persistentPath
+  (program : PureSFormal.CTS.Program) (bits : List.{0} Bool) (index : Nat) :
+  Eq.{1}
+    (PureSFormal.Research.RootResetTermOnlyTransfer.run
+      (PureSFormal.Research.RootResetFiniteAllInputsTraceAgreement.selector program) index
+      (PureSFormal.WeakPath.UniformRealizes.encode.{0}
+        (PureSFormal.WeakPathUniversality.finiteCTSWeakPathUniversality program) bits))
+    ((PureSFormal.WeakPath.UniformRealizes.path.{0}
+          (PureSFormal.WeakPathUniversality.finiteCTSWeakPathUniversality program) bits).term
+      index)
+'PureSFormal.Research.RootResetFiniteAllInputsTraceAgreement.termOnlyPath_eq_persistentPath' depends on axioms: [propext,
+ Quot.sound.{u}]
+PureSFormal.Research.RootResetFinitePrioritySelector.selectorContract (program : PureSFormal.CTS.Program)
+  (layout : PureSFormal.PureS.ActionDispatcher program) : PureSFormal.Research.RootResetSelectorContract.Contract
+'PureSFormal.Research.RootResetFinitePrioritySelector.selectorContract' depends on axioms: [propext, Quot.sound.{u}]
+PureSFormal.Research.RootResetFinitePrioritySelector.all_input_linear (program : PureSFormal.CTS.Program)
+  (layout : PureSFormal.PureS.ActionDispatcher program) (source : PureSFormal.PureS.Term) :
+  LE.le.{0} ((PureSFormal.Research.RootResetFinitePrioritySelector.selectorContract program layout).stoppingTime source)
+    (HMul.hMul.{0, 0, 0}
+      (PureSFormal.Research.RootResetFinitePrioritySelector.selectorContract program layout).coefficient
+      (HAdd.hAdd.{0, 0, 0} source.size 1))
+'PureSFormal.Research.RootResetFinitePrioritySelector.all_input_linear' depends on axioms: [propext, Quot.sound.{u}]
+PureSFormal.Research.RootResetFinitePrioritySelector.all_input_terminal (program : PureSFormal.CTS.Program)
+  (layout : PureSFormal.PureS.ActionDispatcher program) (source : PureSFormal.PureS.Term) :
+  Eq.{1}
+    (Option.isSome.{0}
+      (PureSFormal.Research.RootResetSelectorContract.runtimeHaltKind
+        (PureSFormal.Research.RootResetFinitePrioritySelector.selectorContract program layout).haltKind
+        (PureSFormal.PureS.FiniteController.run
+            (PureSFormal.Research.RootResetFinitePrioritySelector.selectorContract program layout).machine
+            ((PureSFormal.Research.RootResetFinitePrioritySelector.selectorContract program layout).stoppingTime source)
+            ((PureSFormal.Research.RootResetFinitePrioritySelector.selectorContract program layout).initial
+              source)).control))
+    true
+'PureSFormal.Research.RootResetFinitePrioritySelector.all_input_terminal' depends on axioms: [propext, Quot.sound.{u}]
+PureSFormal.Research.RootResetSelectorContract.Contract.InterInvocationState
+  (_contract : PureSFormal.Research.RootResetSelectorContract.Contract) : Type
+'PureSFormal.Research.RootResetSelectorContract.Contract.InterInvocationState' depends on axioms: [propext]
+PureSFormal.Research.RootResetContractProjection.some_result
+  (contract : PureSFormal.Research.RootResetSelectorContract.Contract) (boundary : contract.InterInvocationState)
+  (source target : PureSFormal.PureS.Term)
+  (selected :
+    Eq.{1} (PureSFormal.Research.RootResetContractProjection.projectedStep? contract source) (some.{0} target)) :
+  have final := contract.invokeRun boundary source;
+  Eq.{1} (PureSFormal.Research.RootResetSelectorContract.runtimeHaltKind contract.haltKind final.control)
+      (some.{0} PureSFormal.Research.RootResetSelectorContract.HaltKind.redex) ∧
+    Eq.{1} final.cursor.erase target ∧
+      Eq.{1}
+          (PureSFormal.PureS.FiniteController.runMutationCount contract.machine (contract.stoppingTime source)
+            (contract.initial source))
+          1 ∧
+        Eq.{1} (source.contractAt? (PureSFormal.Research.RootResetSelectorContract.cursorAddress final.cursor))
+          (some.{0} target)
+'PureSFormal.Research.RootResetContractProjection.some_result' depends on axioms: [propext]
+PureSFormal.Research.RootResetContractProjection.none_result
+  (contract : PureSFormal.Research.RootResetSelectorContract.Contract) (boundary : contract.InterInvocationState)
+  (source : PureSFormal.PureS.Term)
+  (selected : Eq.{1} (PureSFormal.Research.RootResetContractProjection.projectedStep? contract source) none.{0}) :
+  have final := contract.invokeRun boundary source;
+  Eq.{1} (PureSFormal.Research.RootResetSelectorContract.runtimeHaltKind contract.haltKind final.control)
+      (some.{0} PureSFormal.Research.RootResetSelectorContract.HaltKind.nf) ∧
+    PureSFormal.Research.RootResetSelectorContract.AddressNormal source ∧
+      Eq.{1} final.cursor.erase source ∧
+        Eq.{1}
+          (PureSFormal.PureS.FiniteController.runMutationCount contract.machine (contract.stoppingTime source)
+            (contract.initial source))
+          0
+'PureSFormal.Research.RootResetContractProjection.none_result' depends on axioms: [propext]
+PureSFormal.Research.RootResetContractProjection.invocation_bound
+  (contract : PureSFormal.Research.RootResetSelectorContract.Contract) (source : PureSFormal.PureS.Term) :
+  Eq.{1} (contract.initial source)
+      { control := some.{0} contract.start, cursor := PureSFormal.PureS.Cursor.atRoot source } ∧
+    (∀ (state : PureSFormal.PureS.FiniteController.RuntimeControl contract.Control),
+        Membership.mem.{0, 0} (PureSFormal.PureS.FiniteController.runtimeStates contract.machine) state) ∧
+      LE.le.{0}
+          (PureSFormal.Research.RootResetSelectorContract.runSuccessfulEdgeMoveCount contract.machine
+            (contract.stoppingTime source) (contract.initial source))
+          (PureSFormal.Research.RootResetSelectorContract.runMoveCount contract.machine (contract.stoppingTime source)
+            (contract.initial source)) ∧
+        LE.le.{0}
+            (PureSFormal.Research.RootResetSelectorContract.runMoveCount contract.machine (contract.stoppingTime source)
+              (contract.initial source))
+            (contract.stoppingTime source) ∧
+          LE.le.{0} (contract.stoppingTime source)
+            (HMul.hMul.{0, 0, 0} contract.coefficient (HAdd.hAdd.{0, 0, 0} source.size 1))
+'PureSFormal.Research.RootResetContractProjection.invocation_bound' depends on axioms: [propext, Quot.sound.{u}]
+PureSFormal.PureS.SchedulerStageAssembly.allNonemptyRawAt (program : PureSFormal.CTS.Program)
+  (dispatcher : PureSFormal.PureS.ActionDispatcher program) (bit : Bool) (suffix : List.{0} Bool)
+  (fuel sampleIndex : Nat) (parents : List.{0} PureSFormal.PureS.ParentFrame)
+  (outer :
+    PureSFormal.PureS.SchedulerCompletedContext.CompletedParents program dispatcher parents
+      (PureSFormal.PureS.CheckpointRun.cumulativeLayers fuel))
+  (allNonempty :
+    ∀ (index : Nat),
+      LE.le.{0} index (HAdd.hAdd.{0, 0, 0} fuel 1) →
+        Ne.{1} (PureSFormal.CTS.iterate program index (PureSFormal.CTS.initial program (List.cons.{0} bit suffix))).data
+          List.nil.{0})
+  (indexEq :
+    Eq.{1}
+      (HAdd.hAdd.{0, 0, 0} sampleIndex
+        (PureSFormal.PureS.ExactCheckpointRun.stageCost program dispatcher (List.cons.{0} bit suffix)
+          (HAdd.hAdd.{0, 0, 0} fuel 1)))
+      (PureSFormal.PureS.ExactCheckpointRun.checkpointTime program dispatcher (List.cons.{0} bit suffix)
+        (HAdd.hAdd.{0, 0, 0} fuel 1))) :
+  Exists.{1} fun nextParents =>
+    Exists.{1} fun configurations =>
+      Exists.{1} fun checkpoint =>
+        Exists.{1} fun semantic =>
+          PureSFormal.PureS.SchedulerStageAssembly.RawStageSegment program dispatcher (List.cons.{0} bit suffix)
+            (HAdd.hAdd.{0, 0, 0} fuel 1) sampleIndex parents (PureSFormal.PureS.CheckpointRun.cumulativeLayers fuel)
+            nextParents configurations checkpoint semantic
+'PureSFormal.PureS.SchedulerStageAssembly.allNonemptyRawAt' depends on axioms: [propext, Quot.sound.{u}]
+PureSFormal.PureS.SchedulerRecurrence.positiveStages (program : PureSFormal.CTS.Program)
+  (dispatcher : PureSFormal.PureS.ActionDispatcher program) (bits : List.{0} Bool) (offset : Nat) :
+  Nonempty.{1}
+    (PureSFormal.PureS.SchedulerRecurrence.PositiveStages program dispatcher bits (HAdd.hAdd.{0, 0, 0} offset 1))
+'PureSFormal.PureS.SchedulerRecurrence.positiveStages' depends on axioms: [propext, Quot.sound.{u}]
+PureSFormal.PureS.SchedulerRecurrence.initialGood (program : PureSFormal.CTS.Program)
+  (dispatcher : PureSFormal.PureS.ActionDispatcher program) (bits : List.{0} Bool) :
+  PureSFormal.PureS.SchedulerInvariant.SampledGood program dispatcher bits 0
+    (PureSFormal.PureS.SchedulerBound.bound program dispatcher)
+    (PureSFormal.PureS.SchedulerControl.initialConfiguration program dispatcher bits)
+'PureSFormal.PureS.SchedulerRecurrence.initialGood' depends on axioms: [propext, Quot.sound.{u}]
+PureSFormal.PureS.SchedulerRecurrence.exactCheckpoint (program : PureSFormal.CTS.Program)
+  (dispatcher : PureSFormal.PureS.ActionDispatcher program) (bits : List.{0} Bool) (horizon : Nat) :
+  have system :=
+    PureSFormal.PureS.SchedulerInvariant.SampledGood.productiveSystem program dispatcher bits
+      (PureSFormal.PureS.SchedulerBound.bound program dispatcher)
+      (PureSFormal.PureS.SchedulerControl.initialConfiguration program dispatcher bits) ⋯;
+  Eq.{1}
+    (PureSFormal.PureS.PublicDecoder.decode program dispatcher.tree
+      (system.contractionRun
+            (PureSFormal.PureS.ExactCheckpointRun.checkpointTime program dispatcher bits horizon)).cursor.erase)
+    (some.{0} (Prod.mk.{0, 0} horizon (PureSFormal.CTS.iterate program horizon (PureSFormal.CTS.initial program bits))))
+'PureSFormal.PureS.SchedulerRecurrence.exactCheckpoint' depends on axioms: [propext, Quot.sound.{u}]
+PureSFormal.PureS.SchedulerCycle.SelectedResponseTrace (program : PureSFormal.CTS.Program)
+  (dispatcher : PureSFormal.PureS.ActionDispatcher program) (seedBits : List.{0} Bool)
+  (continuation source : PureSFormal.PureS.Term) (admissible : PureSFormal.PureS.Carrier.Admissible continuation)
+  (registers : PureSFormal.PureS.SchedulerControl.Registers program) (bit : Bool) (suffix : List.{0} Bool)
+  (outerContext fullContext innerContext targetContext : PureSFormal.PureS.Context)
+  (parents : List.{0} PureSFormal.PureS.ParentFrame) (ticks : Nat) : Prop
+'PureSFormal.PureS.SchedulerCycle.SelectedResponseTrace' depends on axioms: [propext]
+PureSFormal.PureS.SchedulerCycle.normalResponse_exactPositionedMutationChain (program : PureSFormal.CTS.Program)
+  (dispatcher : PureSFormal.PureS.ActionDispatcher program)
+  (registers : PureSFormal.PureS.SchedulerControl.Registers program) (bit : Bool) (bits : List.{0} Bool)
+  (continuation carrier : PureSFormal.PureS.Term) (parents : List.{0} PureSFormal.PureS.ParentFrame) :
+  Exists.{1} fun configurationSamples =>
+    PureSFormal.PureS.SchedulerResponseInvariant.ExactMutationChain
+        (PureSFormal.PureS.SchedulerControl.machine program dispatcher)
+        (PureSFormal.PureS.SchedulerResponse.returnConfiguration program dispatcher registers bit bits continuation
+          carrier parents)
+        (PureSFormal.PureS.SchedulerResponse.responseStartConfiguration program dispatcher registers bit bits
+          continuation carrier parents)
+        configurationSamples ∧
+      PureSFormal.PureS.SchedulerCycle.PositionedSamples program dispatcher
+          (PureSFormal.PureS.SchedulerControl.ScriptJob.normalResponse (Prod.mk.{0, 0} registers.phase bit)) registers
+          configurationSamples ∧
+        Eq.{1} (List.map.{0, 0} (fun configuration => configuration.cursor.erase) configurationSamples)
+          (List.map.{0, 0} (fun entry => PureSFormal.PureS.Cursor.rebuild parents (Prod.snd.{0, 0} entry))
+            (PureSFormal.PureS.SchedulerResponseInvariant.responseEntries program ⋯ bits continuation carrier))
+'PureSFormal.PureS.SchedulerCycle.normalResponse_exactPositionedMutationChain' depends on axioms: [propext]
+PureSFormal.PureS.SchedulerCycle.normalResponse_exactPairedMutationChain (program : PureSFormal.CTS.Program)
+  (dispatcher : PureSFormal.PureS.ActionDispatcher program)
+  (registers : PureSFormal.PureS.SchedulerControl.Registers program) (bit : Bool) (bits : List.{0} Bool)
+  (continuation carrier : PureSFormal.PureS.Term) (parents : List.{0} PureSFormal.PureS.ParentFrame) :
+  Exists.{1} fun configurationSamples =>
+    PureSFormal.PureS.SchedulerResponseInvariant.ExactMutationChain
+        (PureSFormal.PureS.SchedulerControl.machine program dispatcher)
+        (PureSFormal.PureS.SchedulerResponse.returnConfiguration program dispatcher registers bit bits continuation
+          carrier parents)
+        (PureSFormal.PureS.SchedulerResponse.responseStartConfiguration program dispatcher registers bit bits
+          continuation carrier parents)
+        configurationSamples ∧
+      PureSFormal.PureS.SchedulerCycle.ResponseSamplePairs program dispatcher registers bit bits continuation carrier
+        parents configurationSamples
+        (PureSFormal.PureS.SchedulerResponseInvariant.responseEntries program ⋯ bits continuation carrier)
+'PureSFormal.PureS.SchedulerCycle.normalResponse_exactPairedMutationChain' depends on axioms: [propext]
+PureSFormal.PureS.SchedulerResponseInvariant.responseEntries_spec (program : PureSFormal.CTS.Program)
+  {tree : PureSFormal.PureS.Dispatcher.Tree.{0} (PureSFormal.PureS.ActionLabel program)}
+  {route : PureSFormal.PureS.Dispatcher.Route} {label : PureSFormal.PureS.ActionLabel program}
+  (path : PureSFormal.PureS.Dispatcher.HasRoute.{0} tree route label) (bits : List.{0} Bool)
+  (continuation carrier : PureSFormal.PureS.Term) {done : Bool} {term : PureSFormal.PureS.Term}
+  (member :
+    Membership.mem.{0, 0}
+      (PureSFormal.PureS.SchedulerResponseInvariant.responseEntries program path bits continuation carrier)
+      (Prod.mk.{0, 0} done term)) :
+  PureSFormal.PureS.SchedulerResponseInvariant.ResponseRootMutation program tree path bits continuation carrier done
+    term
+'PureSFormal.PureS.SchedulerResponseInvariant.responseEntries_spec' depends on axioms: [propext]
+PureSFormal.PureS.CheckpointRun.decodeCarrier?_of_decode (program : PureSFormal.CTS.Program)
+  (tree : PureSFormal.PureS.Dispatcher.Tree.{0} (PureSFormal.PureS.ActionLabel program)) (bits : List.{0} Bool)
+  (continuation : PureSFormal.PureS.Term) (hadmissible : PureSFormal.PureS.Carrier.Admissible continuation)
+  {term : PureSFormal.PureS.Term} {decoded : List.{0} Bool}
+  (h :
+    Eq.{1} (PureSFormal.PureS.CarrierDecoder.decode? program tree bits continuation hadmissible term)
+      (some.{0} decoded)) :
+  Eq.{1} (PureSFormal.PureS.CheckpointDecoder.decodeCarrier? program tree term) (some.{0} decoded)
+'PureSFormal.PureS.CheckpointRun.decodeCarrier?_of_decode' depends on axioms: [propext, Quot.sound.{u}]
+PureSFormal.PureS.generator_size_counts_exact (actions : PureSFormal.PureS.Term) (bits : List.{0} Bool) :
+  Eq.{1} (PureSFormal.PureS.generator actions bits).size
+    (HAdd.hAdd.{0, 0, 0} (PureSFormal.PureS.encoderConstant actions)
+      (HAdd.hAdd.{0, 0, 0} (HMul.hMul.{0, 0, 0} 16 (PureSFormal.PureS.zeroCount bits))
+        (HMul.hMul.{0, 0, 0} 18 (PureSFormal.PureS.oneCount bits))))
+'PureSFormal.PureS.generator_size_counts_exact' depends on axioms: [propext]
+PureSFormal.PureS.BalancedActionTree.dispatcher (program : PureSFormal.CTS.Program) :
+  PureSFormal.PureS.ActionDispatcher program
+'PureSFormal.PureS.BalancedActionTree.dispatcher' depends on axioms: [propext]
+PureSFormal.WeakPathUniversality.canonicalDispatcher (program : PureSFormal.CTS.Program) :
+  PureSFormal.PureS.ActionDispatcher program
+'PureSFormal.WeakPathUniversality.canonicalDispatcher' depends on axioms: [propext]
+PureSFormal.WeakPathUniversality.finiteCTSWeakPathUniversality (program : PureSFormal.CTS.Program) :
+  PureSFormal.WeakPath.UniformRealizes.{0} program
+    (PureSFormal.PureS.ControllerProjection.Projects
+      (PureSFormal.PureS.SchedulerControl.initialControl program
+        (PureSFormal.WeakPathUniversality.canonicalDispatcher program))
+      (PureSFormal.PureS.SchedulerControl.machine program
+        (PureSFormal.WeakPathUniversality.canonicalDispatcher program)))
+    (PureSFormal.PureS.SchedulerControl.machine program (PureSFormal.WeakPathUniversality.canonicalDispatcher program))
+    (PureSFormal.PureS.PublicDecoder.decode program (PureSFormal.WeakPathUniversality.canonicalDispatcher program).tree)
+'PureSFormal.WeakPathUniversality.finiteCTSWeakPathUniversality' depends on axioms: [propext, Quot.sound.{u}]
+PureSFormal.Research.RootResetContractProjection.none_iff_normal
+  (contract : PureSFormal.Research.RootResetSelectorContract.Contract) (source : PureSFormal.PureS.Term) :
+  Eq.{1} (PureSFormal.Research.RootResetContractProjection.projectedStep? contract source) none.{0} ↔
+    PureSFormal.Research.RootResetSelectorContract.AddressNormal source
+'PureSFormal.Research.RootResetContractProjection.none_iff_normal' depends on axioms: [propext]
+PureSFormal.PureS.SchedulerCycle.SelectedResponseTrace.targetDecode {program : PureSFormal.CTS.Program}
+  {dispatcher : PureSFormal.PureS.ActionDispatcher program} {seedBits : List.{0} Bool}
+  {continuation source : PureSFormal.PureS.Term} {admissible : PureSFormal.PureS.Carrier.Admissible continuation}
+  {registers : PureSFormal.PureS.SchedulerControl.Registers program} {bit : Bool} {suffix : List.{0} Bool}
+  {outerContext fullContext innerContext targetContext : PureSFormal.PureS.Context}
+  {parents : List.{0} PureSFormal.PureS.ParentFrame} {ticks : Nat}
+  (self :
+    PureSFormal.PureS.SchedulerCycle.SelectedResponseTrace program dispatcher seedBits continuation source admissible
+      registers bit suffix outerContext fullContext innerContext targetContext parents ticks) :
+  Eq.{1}
+    (PureSFormal.PureS.CarrierDecoder.decode? program dispatcher.tree seedBits continuation admissible
+      (PureSFormal.PureS.SchedulerCycle.deletedCarrier bit outerContext innerContext))
+    (some.{0} suffix)
+'PureSFormal.PureS.SchedulerCycle.SelectedResponseTrace.targetDecode' depends on axioms: [propext]
+@[reducible] def PureSFormal.Research.RootResetSelectorContract.Contract.InterInvocationState : PureSFormal.Research.RootResetSelectorContract.Contract →
+  Type :=
+fun _contract => Unit
+RESOURCE_GUARD {"command": ["/opt/lean/bin/lean", "-j2", "-M3072", "/work/SOnlyTypeAudit.lean"], "exit_code": 0, "stop_reason": null, "elapsed_seconds": 0.4075557019968983, "sampled_peak_namespace_rss_bytes": 1111416832, "sampled_peak_namespace_virtual_bytes": 6798557184, "sampled_namespace_rss_cap_bytes": 4294967296, "sample_interval_seconds": 0.05}

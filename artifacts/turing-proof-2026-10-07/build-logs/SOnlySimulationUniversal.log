@@ -1,0 +1,3 @@
+'SOnlySimulation.machine_halting_iff_cts_event' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SOnlySimulation.machine_noPrematureEmpty' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SOnlySimulation.machine_first_cts_result' depends on axioms: [propext, Classical.choice, Quot.sound]

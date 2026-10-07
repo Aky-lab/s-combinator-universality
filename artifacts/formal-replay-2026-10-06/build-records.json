@@ -1,0 +1,2627 @@
+{
+  "completed": 423,
+  "total": 423,
+  "elapsed_seconds": 388.38382843999716,
+  "last": {
+    "module": "PureSFormal.Research.RootResetFiniteAllInputsTraceAgreement",
+    "exit_code": 0,
+    "seconds": 0.46540329499111976,
+    "timed_out": false
+  },
+  "records": [
+    {
+      "module": "PureSFormal.CTS.Core",
+      "exit_code": 0,
+      "seconds": 0.5157416169968201,
+      "timed_out": false,
+      "reused_fresh_attempt_1": true,
+      "olean_sha256_before_resume": "03095f0f8bc600c73ea1270f61a5c518c61e5b58400a784cbf102d4737848a62"
+    },
+    {
+      "module": "PureSFormal.PureS.Term",
+      "exit_code": 0,
+      "seconds": 0.715704974005348,
+      "timed_out": false,
+      "reused_fresh_attempt_1": true,
+      "olean_sha256_before_resume": "492c72aee0d3ad936f4d45eb4cfb9adad95323bab95a82c69a43e0f6939883bc"
+    },
+    {
+      "module": "PureSFormal.PureS.Reduction",
+      "exit_code": 0,
+      "seconds": 0.4149357330024941,
+      "timed_out": false,
+      "reused_fresh_attempt_1": true,
+      "olean_sha256_before_resume": "f750b49d05b04bdc346bb03f77bc8d5f1eaa04b57acbf9a0f461c3b226c05314"
+    },
+    {
+      "module": "PureSFormal.PureS.CountedReduction",
+      "exit_code": 0,
+      "seconds": 0.36487217601097655,
+      "timed_out": false,
+      "reused_fresh_attempt_1": true,
+      "olean_sha256_before_resume": "d8b474972e514aed6b80b73c680bb40fb45eab07e11016ac9582533636d62364"
+    },
+    {
+      "module": "PureSFormal.PureS.ClosedTerms",
+      "exit_code": 0,
+      "seconds": 0.465130857002805,
+      "timed_out": false,
+      "reused_fresh_attempt_1": true,
+      "olean_sha256_before_resume": "a7218845dad3cef76b06fdafae17f21e5a16fd510f5086be931a7aeab4e9e313"
+    },
+    {
+      "module": "PureSFormal.PureS.Appender",
+      "exit_code": 0,
+      "seconds": 0.5169686599983834,
+      "timed_out": false,
+      "reused_fresh_attempt_1": true,
+      "olean_sha256_before_resume": "43ec3c795e16ab3a8600d795ee11c328b912778990edbf092f4d539bfce02d0f"
+    },
+    {
+      "module": "PureSFormal.PureS.Dispatcher",
+      "exit_code": 0,
+      "seconds": 0.6243260759947589,
+      "timed_out": false,
+      "reused_fresh_attempt_1": true,
+      "olean_sha256_before_resume": "4b8f4fde60c164143d73613631194bf6efd137895a90e6b678f6d35b34c8963f"
+    },
+    {
+      "module": "PureSFormal.PureS.Activation",
+      "exit_code": 0,
+      "seconds": 0.3649687370052561,
+      "timed_out": false,
+      "reused_fresh_attempt_1": true,
+      "olean_sha256_before_resume": "e73595978a5cde2776ee22b7e2adae09566723e47b1b361af4b741e713263b75"
+    },
+    {
+      "module": "PureSFormal.PureS.Actions",
+      "exit_code": 0,
+      "seconds": 0.3667112149996683,
+      "timed_out": false,
+      "reused_fresh_attempt_1": true,
+      "olean_sha256_before_resume": "5214cf91963bb335faff9ef0ba7dafe0903ac2eb7aab727b33ece3ddaf40a1e6"
+    },
+    {
+      "module": "PureSFormal.PureS.Arity",
+      "exit_code": 0,
+      "seconds": 0.36478385201189667,
+      "timed_out": false,
+      "reused_fresh_attempt_1": true,
+      "olean_sha256_before_resume": "9213d2461f81a417a2201cc9db109cfd080cbcf612235bbeb647075a745810ba"
+    },
+    {
+      "module": "PureSFormal.PureS.Frame",
+      "exit_code": 0,
+      "seconds": 0.41505197100923397,
+      "timed_out": false,
+      "reused_fresh_attempt_1": true,
+      "olean_sha256_before_resume": "b05479e3075c5448f1c744f6f434741c863277ab9b8b14ed9acfcc382cec1d7f"
+    },
+    {
+      "module": "PureSFormal.PureS.Clock",
+      "exit_code": 0,
+      "seconds": 0.3649926090001827,
+      "timed_out": false,
+      "reused_fresh_attempt_1": true,
+      "olean_sha256_before_resume": "a93fe49d173a3188bee093170b5078eb3d91242520feb4a2d2043db82ca9862f"
+    },
+    {
+      "module": "PureSFormal.PureS.EncoderSize",
+      "exit_code": 0,
+      "seconds": 0.7156585280026775,
+      "timed_out": false,
+      "reused_fresh_attempt_1": true,
+      "olean_sha256_before_resume": "81df86c6f922ca80f1292fea65e3884e707408580c3bd5ddd34ce9393cafb3a2"
+    },
+    {
+      "module": "PureSFormal.PureS.ActionParser",
+      "exit_code": 0,
+      "seconds": 0.5153579300094862,
+      "timed_out": false,
+      "reused_fresh_attempt_1": true,
+      "olean_sha256_before_resume": "cecd311071f86f7598b01031b2d30933de154e0ccf852229076704573aea25d6"
+    },
+    {
+      "module": "PureSFormal.PureS.Carrier",
+      "exit_code": 0,
+      "seconds": 0.5155130390048726,
+      "timed_out": false,
+      "reused_fresh_attempt_1": true,
+      "olean_sha256_before_resume": "19192bd4e6f029e9d3d297224a0c19a042ca1c3b0fcdb7de64f17bee5839e622"
+    },
+    {
+      "module": "PureSFormal.PureS.Pattern",
+      "exit_code": 0,
+      "seconds": 0.5656063720089151,
+      "timed_out": false,
+      "reused_fresh_attempt_1": true,
+      "olean_sha256_before_resume": "f247bea6029f96b85f90df7419743c6f7435e5e7c534c51e41729087621ace20"
+    },
+    {
+      "module": "PureSFormal.PureS.RouteGrammar",
+      "exit_code": 0,
+      "seconds": 0.365056991999154,
+      "timed_out": false,
+      "reused_fresh_attempt_1": true,
+      "olean_sha256_before_resume": "60ac047117ba8886f7eddea4598c9eb3bf1f4834031842e0eea12f635baa2e97"
+    },
+    {
+      "module": "PureSFormal.PureS.RouteParser",
+      "exit_code": 0,
+      "seconds": 0.7162369490106357,
+      "timed_out": false,
+      "reused_fresh_attempt_1": true,
+      "olean_sha256_before_resume": "1c8bc7de6545c0f25f39093aa13cc64f46c06d6d854d125d5725fdf1412ebde7"
+    },
+    {
+      "module": "PureSFormal.PureS.DispatchParser",
+      "exit_code": 0,
+      "seconds": 0.5151452129939571,
+      "timed_out": false,
+      "reused_fresh_attempt_1": true,
+      "olean_sha256_before_resume": "cd7c262121f5b9367730a66a6ccfe712895a31241f7764eb002dccb9cd79749c"
+    },
+    {
+      "module": "PureSFormal.PureS.CellSpine",
+      "exit_code": 0,
+      "seconds": 0.515464972006157,
+      "timed_out": false,
+      "reused_fresh_attempt_1": true,
+      "olean_sha256_before_resume": "ab3a5e521cd763834adea56d1e82610d2310488fd65d160677c80e61b46c8a06"
+    },
+    {
+      "module": "PureSFormal.PureS.BasePath",
+      "exit_code": 0,
+      "seconds": 0.46583594199910294,
+      "timed_out": false,
+      "reused_fresh_attempt_1": true,
+      "olean_sha256_before_resume": "5c36e36fbad6b98622fd5631928cdaa40432357b58ab7d60fdbaddbeadecce89"
+    },
+    {
+      "module": "PureSFormal.PureS.MutableBase",
+      "exit_code": 0,
+      "seconds": 0.6656548570026644,
+      "timed_out": false,
+      "reused_fresh_attempt_1": true,
+      "olean_sha256_before_resume": "6111108490ae4ed9323f479b03bcb72aeea63407199a96399d5e3ab182fde464"
+    },
+    {
+      "module": "PureSFormal.PureS.CanonicalStep",
+      "exit_code": 0,
+      "seconds": 0.8162199240032351,
+      "timed_out": false,
+      "reused_fresh_attempt_1": true,
+      "olean_sha256_before_resume": "b505ad476ba8d53616c164640be805e034268ff05c4391bb6adbacb43fda4c66"
+    },
+    {
+      "module": "PureSFormal.PureS.CellDeletion",
+      "exit_code": 0,
+      "seconds": 0.46527918899664655,
+      "timed_out": false,
+      "reused_fresh_attempt_1": true,
+      "olean_sha256_before_resume": "11aee399493bb1a0fde0d2a6fc1dd0616555400955ac55ef2fd0075a7c392114"
+    },
+    {
+      "module": "PureSFormal.PureS.RouteExecution",
+      "exit_code": 0,
+      "seconds": 0.3648202229960589,
+      "timed_out": false,
+      "reused_fresh_attempt_1": true,
+      "olean_sha256_before_resume": "5a2e3aedf693e5a2c09bd28e6f9e0e6d0218badb22d56e34b5c2c75ecc8acb92"
+    },
+    {
+      "module": "PureSFormal.PureS.RouteAction",
+      "exit_code": 0,
+      "seconds": 0.3646757379901828,
+      "timed_out": false,
+      "reused_fresh_attempt_1": true,
+      "olean_sha256_before_resume": "ca069a5f18370e550991612602b3399d856a6f491ea8531fa99eb6134428c191"
+    },
+    {
+      "module": "PureSFormal.PureS.LocalResponse",
+      "exit_code": 0,
+      "seconds": 0.36481370399997104,
+      "timed_out": false,
+      "reused_fresh_attempt_1": true,
+      "olean_sha256_before_resume": "6eaa4d432cdc99fae86e65957f0281b512d79ec0db9bd95d043c72aedbf1b5e6"
+    },
+    {
+      "module": "PureSFormal.PureS.RootPath",
+      "exit_code": 0,
+      "seconds": 0.3649015889968723,
+      "timed_out": false,
+      "reused_fresh_attempt_1": true,
+      "olean_sha256_before_resume": "076885f58ffa0656a67420d018387077ed66b18742c477211559353ccf6f19a1"
+    },
+    {
+      "module": "PureSFormal.PureS.CarrierDecoder",
+      "exit_code": 0,
+      "seconds": 0.6153529360017274,
+      "timed_out": false,
+      "reused_fresh_attempt_1": true,
+      "olean_sha256_before_resume": "f7b351fc979f3e49ea2deba93915889753eb3eecebaea4cd3b16cd7dcb17bcd3"
+    },
+    {
+      "module": "PureSFormal.PureS.Cursor",
+      "exit_code": 0,
+      "seconds": 0.5151652790082153,
+      "timed_out": false,
+      "reused_fresh_attempt_1": true,
+      "olean_sha256_before_resume": "1381a90b16307b4226b72d1bfdf0d2d14ff7ffa996b1d6f35c06898d911fe72e"
+    },
+    {
+      "module": "PureSFormal.PureS.Probe",
+      "exit_code": 0,
+      "seconds": 0.5656990889983717,
+      "timed_out": false,
+      "reused_fresh_attempt_1": true,
+      "olean_sha256_before_resume": "44ae9d9cf58ee40c13735ed658765e98c22e53c5e7046a2263178195edb4bcd8"
+    },
+    {
+      "module": "PureSFormal.PureS.Script",
+      "exit_code": 0,
+      "seconds": 0.4663876779959537,
+      "timed_out": false,
+      "reused_fresh_attempt_1": true,
+      "olean_sha256_before_resume": "a7473b564268a1359d4b682444a995b3723e653550a194086d06317dcf20eebe"
+    },
+    {
+      "module": "PureSFormal.WeakPath.Interface",
+      "exit_code": 0,
+      "seconds": 0.4150316729937913,
+      "timed_out": false,
+      "reused_fresh_attempt_1": true,
+      "olean_sha256_before_resume": "ddeb6d52219b774e6a9b4e1b82a5e948a71f3061d8a23e70fa4f9c18946e5513"
+    },
+    {
+      "module": "PureSFormal.PureS.FiniteController",
+      "exit_code": 0,
+      "seconds": 0.6158265840058448,
+      "timed_out": false,
+      "reused_fresh_attempt_1": true,
+      "olean_sha256_before_resume": "ad2546bf59e34d8508b405a5f3b2de131b8f1aeca469fd2629ad0045509f0a85"
+    },
+    {
+      "module": "PureSFormal.Research.RootResetSelectorContract",
+      "exit_code": 0,
+      "seconds": 0.7668579160090303,
+      "timed_out": false,
+      "reused_fresh_attempt_1": true,
+      "olean_sha256_before_resume": "c583fba91eab36886087b9df3e55c36ffbb667d5ed317aea14d46a2ac2e0cbe0"
+    },
+    {
+      "module": "PureSFormal.Research.RootResetContractProjection",
+      "exit_code": 0,
+      "seconds": 0.3648199849994853,
+      "timed_out": false,
+      "reused_fresh_attempt_1": true,
+      "olean_sha256_before_resume": "3dd78062da34782c6a80a64c526adce45520ab72c6b56fc0d23bc07794df2be4"
+    },
+    {
+      "module": "PureSFormal.PureS.PendingFrame",
+      "exit_code": 0,
+      "seconds": 0.5153073139954358,
+      "timed_out": false,
+      "reused_fresh_attempt_1": true,
+      "olean_sha256_before_resume": "ffbd677addc18f374a57be1c5a6cb6ae161284fd606d5ee9eb7c5351a662c971"
+    },
+    {
+      "module": "PureSFormal.PureS.ReachableAudit",
+      "exit_code": 0,
+      "seconds": 0.5150846159958746,
+      "timed_out": false,
+      "reused_fresh_attempt_1": true,
+      "olean_sha256_before_resume": "9b211635f9fa18205c3b0fa9265a5537e75f241419ac52b0109c6f652e3766c8"
+    },
+    {
+      "module": "PureSFormal.PureS.CanonicalTraversal",
+      "exit_code": 0,
+      "seconds": 1.8699815959989792,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.ActionDecode",
+      "exit_code": 0,
+      "seconds": 0.36479572700045537,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.ActionTree",
+      "exit_code": 0,
+      "seconds": 0.5158351680001942,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.CompleteLayer",
+      "exit_code": 0,
+      "seconds": 0.3647413150029024,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.CarrierActionDecode",
+      "exit_code": 0,
+      "seconds": 0.3649433009995846,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.LocalTransition",
+      "exit_code": 0,
+      "seconds": 0.36473441500857007,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.CheckedTransition",
+      "exit_code": 0,
+      "seconds": 0.5659005190100288,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.BoundedJob",
+      "exit_code": 0,
+      "seconds": 0.4154300219961442,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.Dovetail",
+      "exit_code": 0,
+      "seconds": 0.4149619829986477,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.CheckpointDecoder",
+      "exit_code": 0,
+      "seconds": 1.974050831006025,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.CheckpointConstructors",
+      "exit_code": 0,
+      "seconds": 0.4651365239988081,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.StageRun",
+      "exit_code": 0,
+      "seconds": 0.4151433529914357,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.DovetailRun",
+      "exit_code": 0,
+      "seconds": 0.4150721249898197,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.CheckpointRun",
+      "exit_code": 0,
+      "seconds": 0.766060184003436,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.PrimitiveScripts",
+      "exit_code": 0,
+      "seconds": 0.5655745489930268,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.ContextCursor",
+      "exit_code": 0,
+      "seconds": 0.46581492500263266,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.PrimitiveClock",
+      "exit_code": 0,
+      "seconds": 0.4149866310035577,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.PrimitiveFuel",
+      "exit_code": 0,
+      "seconds": 0.36498074499832,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.PrimitiveRoute",
+      "exit_code": 0,
+      "seconds": 0.7183009349973872,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.PrimitiveLocalResponse",
+      "exit_code": 0,
+      "seconds": 0.36497888299345504,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.ProbeCompiler",
+      "exit_code": 0,
+      "seconds": 1.6212489410099806,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.SchedulerControl",
+      "exit_code": 0,
+      "seconds": 4.426606602006359,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.CheckpointExclusion",
+      "exit_code": 0,
+      "seconds": 0.9165464919933584,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.PublicDecoder",
+      "exit_code": 0,
+      "seconds": 0.4150277380103944,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.SchedulerExecution",
+      "exit_code": 0,
+      "seconds": 1.067605646996526,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.SchedulerDescent",
+      "exit_code": 0,
+      "seconds": 1.1670111129933503,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.WeakPath.CheckpointTime",
+      "exit_code": 0,
+      "seconds": 0.3148791470011929,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.ExactCheckpointRun",
+      "exit_code": 0,
+      "seconds": 0.5651734010025393,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.SchedulerInvariant",
+      "exit_code": 0,
+      "seconds": 3.523328497001785,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.SchedulerAscent",
+      "exit_code": 0,
+      "seconds": 1.0165781200048514,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.SchedulerResponse",
+      "exit_code": 0,
+      "seconds": 0.6159616779914359,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.SchedulerContinuation",
+      "exit_code": 0,
+      "seconds": 0.4655956289934693,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.SchedulerEmpty",
+      "exit_code": 0,
+      "seconds": 0.46518118999665603,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.CursorPositions",
+      "exit_code": 0,
+      "seconds": 0.41528631100663915,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.FiniteControllerBound",
+      "exit_code": 0,
+      "seconds": 0.5658612200058997,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.SchedulerBound",
+      "exit_code": 0,
+      "seconds": 0.515378639989649,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.SchedulerProductivity",
+      "exit_code": 0,
+      "seconds": 0.3652136720047565,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.SchedulerResponseInvariant",
+      "exit_code": 0,
+      "seconds": 1.0715935649932362,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.SchedulerCycle",
+      "exit_code": 0,
+      "seconds": 2.0730553989997134,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.SchedulerResponseClassification",
+      "exit_code": 0,
+      "seconds": 0.36472287100332323,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.SchedulerRootContinuation",
+      "exit_code": 0,
+      "seconds": 0.8161541989975376,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.SchedulerCompletedContext",
+      "exit_code": 0,
+      "seconds": 0.4149023679929087,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.SchedulerRecurrence",
+      "exit_code": 0,
+      "seconds": 0.7176913709990913,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.SchedulerGlobalRecurrence",
+      "exit_code": 0,
+      "seconds": 0.715884830991854,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.SchedulerNestedPhase",
+      "exit_code": 0,
+      "seconds": 1.0672369090025313,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.SchedulerTraceAlgebra",
+      "exit_code": 0,
+      "seconds": 0.4149707570031751,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.SchedulerAllStages",
+      "exit_code": 0,
+      "seconds": 0.6160431850003079,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.SchedulerNestedResponse",
+      "exit_code": 0,
+      "seconds": 1.7724762050056597,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.SchedulerNestedEmpty",
+      "exit_code": 0,
+      "seconds": 1.370182662998559,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.SchedulerFirstEmpty",
+      "exit_code": 0,
+      "seconds": 1.4176214079925558,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.SchedulerJobHandoff",
+      "exit_code": 0,
+      "seconds": 0.41478536700014956,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.SchedulerMixedNonfinalJobs",
+      "exit_code": 0,
+      "seconds": 0.4654436349956086,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.SchedulerNonfinalEmptyJobs",
+      "exit_code": 0,
+      "seconds": 0.5177978349965997,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.SchedulerNonfinalJobs",
+      "exit_code": 0,
+      "seconds": 0.4650679059996037,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.SchedulerStageCases",
+      "exit_code": 0,
+      "seconds": 0.4149490790005075,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.SchedulerStageAssembly",
+      "exit_code": 0,
+      "seconds": 0.966362681996543,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetExactTraceAgreement",
+      "exit_code": 0,
+      "seconds": 0.464959943012218,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetEulerWalker",
+      "exit_code": 0,
+      "seconds": 6.935927359998459,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetDeletionGadget",
+      "exit_code": 0,
+      "seconds": 0.7157406170008471,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetProgressRoles",
+      "exit_code": 0,
+      "seconds": 0.5149683880008524,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetProgressSpine",
+      "exit_code": 0,
+      "seconds": 0.6153550659946632,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetAccumulatorClassifier",
+      "exit_code": 0,
+      "seconds": 0.76675939100096,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetStageRegistry",
+      "exit_code": 0,
+      "seconds": 1.2715316590038128,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetReachableStageGrammar",
+      "exit_code": 0,
+      "seconds": 0.9182477180002024,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetWholeStageClassifier",
+      "exit_code": 0,
+      "seconds": 1.1172204689937644,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetClockFuelStages",
+      "exit_code": 0,
+      "seconds": 2.5205717149947304,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetClockFuelCanonicalGrammar",
+      "exit_code": 0,
+      "seconds": 0.9662631520041032,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetAppenderStages",
+      "exit_code": 0,
+      "seconds": 0.8661134170106379,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetWholeAppenderStages",
+      "exit_code": 0,
+      "seconds": 1.0668732039921451,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetDispatcherNodeStages",
+      "exit_code": 0,
+      "seconds": 0.6659600090060849,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetWholeDispatcherStages",
+      "exit_code": 0,
+      "seconds": 1.317581916009658,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetResponseBoundaryStages",
+      "exit_code": 0,
+      "seconds": 1.4680239990120754,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetCompositeStageRegistry",
+      "exit_code": 0,
+      "seconds": 1.2171733699942706,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetPersistentFuelCarrier",
+      "exit_code": 0,
+      "seconds": 0.8161028530012118,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetReachableActiveContext",
+      "exit_code": 0,
+      "seconds": 0.5656635089981137,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetTwentySevenStageRegistry",
+      "exit_code": 0,
+      "seconds": 1.4678357480006525,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetPersistentRouteA",
+      "exit_code": 0,
+      "seconds": 0.8671064329973888,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetPersistentRouteAFuel",
+      "exit_code": 0,
+      "seconds": 0.5656772190122865,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetDispatcherSelectedHandoff",
+      "exit_code": 0,
+      "seconds": 0.4150219470029697,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetRuntimeContextBridge",
+      "exit_code": 0,
+      "seconds": 0.41512710599636193,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetPersistentSelectedAddressBridge",
+      "exit_code": 0,
+      "seconds": 0.36489663999236654,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetWholeDispatcherSelectedHandoff",
+      "exit_code": 0,
+      "seconds": 0.6656693510012701,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetResponseSampleParserBridge",
+      "exit_code": 0,
+      "seconds": 0.7155663190060295,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetPersistentCarrierTraversalAgreement",
+      "exit_code": 0,
+      "seconds": 0.515316081000492,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetSelectedFrontParserAgreement",
+      "exit_code": 0,
+      "seconds": 0.6656046630087076,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetPersistentResponseSelector",
+      "exit_code": 0,
+      "seconds": 1.0678381910111057,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetPersistentRouteAFuelSchedulerBridge",
+      "exit_code": 0,
+      "seconds": 0.6659065319981892,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetFirstResponseSelectorChain",
+      "exit_code": 0,
+      "seconds": 0.4152400809980463,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetPersistentInitialBridge",
+      "exit_code": 0,
+      "seconds": 0.5656354630045826,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetPersistentSelector",
+      "exit_code": 0,
+      "seconds": 0.3648782439995557,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetPersistentClockFuelAgreement",
+      "exit_code": 0,
+      "seconds": 1.5177971470111515,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetResponseSelectorInitialAgreement",
+      "exit_code": 0,
+      "seconds": 0.5653779640124412,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetTraversableCompletedParents",
+      "exit_code": 0,
+      "seconds": 0.5657810480042826,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetResponseClockFuelAgreement",
+      "exit_code": 0,
+      "seconds": 1.4681133260019124,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetTermOnlyTransfer",
+      "exit_code": 0,
+      "seconds": 0.364743964993977,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetInitialContractionPrefix",
+      "exit_code": 0,
+      "seconds": 0.387697288999334,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetFrameFirstSelectorProof",
+      "exit_code": 0,
+      "seconds": 0.7158629400073551,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetFrameSecondSelectorProof",
+      "exit_code": 0,
+      "seconds": 0.8664270750014111,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetNormalResponseSelectorChain",
+      "exit_code": 0,
+      "seconds": 0.36543047399027273,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetEmptyResponseSelectorChain",
+      "exit_code": 0,
+      "seconds": 0.5153264330001548,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetEmptyResponseCommit",
+      "exit_code": 0,
+      "seconds": 0.5153127509984188,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetWrappedFrameSelectorProof",
+      "exit_code": 0,
+      "seconds": 0.7157308160094544,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetMarkedFrameSelectorProof",
+      "exit_code": 0,
+      "seconds": 0.6675953889935045,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetEmptyRouteSelectorChain",
+      "exit_code": 0,
+      "seconds": 0.766065030999016,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetPendingResponseContext",
+      "exit_code": 0,
+      "seconds": 0.6155483740003547,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetWrappedEmptyRouteSelectorChain",
+      "exit_code": 0,
+      "seconds": 0.5656586230034009,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetWrappedEmptyCommit",
+      "exit_code": 0,
+      "seconds": 0.7658056780055631,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetEmptyHandoffContext",
+      "exit_code": 0,
+      "seconds": 0.565585813994403,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetEmptyPostMarkerHandoff",
+      "exit_code": 0,
+      "seconds": 0.866955808000057,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetEmptySweepSelectorChain",
+      "exit_code": 0,
+      "seconds": 0.46493521200318355,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetInitialEmptySweep",
+      "exit_code": 0,
+      "seconds": 0.515640812998754,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetEmptyTerminalResponse",
+      "exit_code": 0,
+      "seconds": 0.4150617299892474,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetEmptyContinuationSelector",
+      "exit_code": 0,
+      "seconds": 0.4150381250074133,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetEmptyContinuationChain",
+      "exit_code": 0,
+      "seconds": 0.4154663020017324,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetEmptyJobSelectorChain",
+      "exit_code": 0,
+      "seconds": 0.515984812998795,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetMarkedFuelSelectorChain",
+      "exit_code": 0,
+      "seconds": 0.5663155009970069,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetCompleteEmptyJob",
+      "exit_code": 0,
+      "seconds": 0.4151213610020932,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetEmptyJobsSelectorChain",
+      "exit_code": 0,
+      "seconds": 0.4149682590068551,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetMarkedClockSelectorChain",
+      "exit_code": 0,
+      "seconds": 0.5153973849955946,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetEmptyStagesSelectorChain",
+      "exit_code": 0,
+      "seconds": 0.46517368900822476,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetCompletedAppenderPriority",
+      "exit_code": 0,
+      "seconds": 0.4651034569978947,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetActivatedRouteExclusion",
+      "exit_code": 0,
+      "seconds": 0.4150286660005804,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetResponseCarrierChronology",
+      "exit_code": 0,
+      "seconds": 0.615661566000199,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetNonemptyAppenderSelector",
+      "exit_code": 0,
+      "seconds": 0.6658213250047993,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetAppenderSelectorChain",
+      "exit_code": 0,
+      "seconds": 0.46520416998828296,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetNormalResponseBodyChain",
+      "exit_code": 0,
+      "seconds": 0.5153054169932147,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetWrappedAppenderSelectorChain",
+      "exit_code": 0,
+      "seconds": 0.6656066750001628,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetNormalResponseContextChain",
+      "exit_code": 0,
+      "seconds": 0.4148290629964322,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetFirstNormalResponseChain",
+      "exit_code": 0,
+      "seconds": 0.41492986101366114,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetGeneratedTraversableParents",
+      "exit_code": 0,
+      "seconds": 0.4150638470018748,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetFreshClockSelectorChain",
+      "exit_code": 0,
+      "seconds": 0.8161304099921836,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetFreshFuelSelectorChain",
+      "exit_code": 0,
+      "seconds": 0.6659798730106559,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetFreshResponseSelectorChain",
+      "exit_code": 0,
+      "seconds": 0.8665079490019707,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetFreshAppenderSelectorChain",
+      "exit_code": 0,
+      "seconds": 0.676361370991799,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetCarrierChronologyPreservation",
+      "exit_code": 0,
+      "seconds": 0.618436409989954,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetCleanTraversableParents",
+      "exit_code": 0,
+      "seconds": 0.46613361898926087,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetFreshNormalResponseChain",
+      "exit_code": 0,
+      "seconds": 0.6160531979985535,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetMixedResponseContext",
+      "exit_code": 0,
+      "seconds": 1.1672784559923457,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetCleanParentPrefix",
+      "exit_code": 0,
+      "seconds": 0.4652203589939745,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetGeneratedFrontParserAgreement",
+      "exit_code": 0,
+      "seconds": 0.46520921000046656,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetPendingCompletedResponse",
+      "exit_code": 0,
+      "seconds": 0.720893737001461,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetMixedEmptyCommit",
+      "exit_code": 0,
+      "seconds": 0.8665166639984818,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetPendingDeletedResponse",
+      "exit_code": 0,
+      "seconds": 0.6657743510004366,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetPendingResponseFrontHandoff",
+      "exit_code": 0,
+      "seconds": 0.7161260489956476,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetCompletedFrontPreservation",
+      "exit_code": 0,
+      "seconds": 0.46528409598977305,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetMixedCompletedFrontHandoff",
+      "exit_code": 0,
+      "seconds": 1.1174101820070064,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetMixedClockFuelSelectorChain",
+      "exit_code": 0,
+      "seconds": 0.4659813110047253,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetFrontNonemptyAgreement",
+      "exit_code": 0,
+      "seconds": 0.41521164400910493,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetOrderedCarrier",
+      "exit_code": 0,
+      "seconds": 0.7158576989895664,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetMixedNormalResponseChain",
+      "exit_code": 0,
+      "seconds": 0.8184435100120027,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetMixedEmptyResponseChain",
+      "exit_code": 0,
+      "seconds": 0.5153830029885285,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetMixedMarkedHandoff",
+      "exit_code": 0,
+      "seconds": 0.8665732109948294,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetMixedEmptySweep",
+      "exit_code": 0,
+      "seconds": 0.5150475510017714,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetGeneratedJobTraversability",
+      "exit_code": 0,
+      "seconds": 1.016527756000869,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetMixedNonemptySweep",
+      "exit_code": 0,
+      "seconds": 0.7156816999922739,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetMixedFirstEmptyJob",
+      "exit_code": 0,
+      "seconds": 0.7157529760006582,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetMixedBitConsJob",
+      "exit_code": 0,
+      "seconds": 0.414928439000505,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetCertifiedStageAssembly",
+      "exit_code": 0,
+      "seconds": 0.41511997900670394,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetGeneratedEmptyTraversability",
+      "exit_code": 0,
+      "seconds": 1.1166757820028579,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetGeneratedStageTraversability",
+      "exit_code": 0,
+      "seconds": 0.9662008689920185,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetMixedStagePhaseSelectorChain",
+      "exit_code": 0,
+      "seconds": 0.6153544660046464,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetMixedJobHandoff",
+      "exit_code": 0,
+      "seconds": 0.4152576940105064,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetMixedNonemptyStages",
+      "exit_code": 0,
+      "seconds": 0.7160831789951771,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetMixedFirstEmptyStages",
+      "exit_code": 0,
+      "seconds": 0.7664293389971135,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Computation.Enumerable",
+      "exit_code": 0,
+      "seconds": 1.0167175099923043,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Computation.StandardMachine",
+      "exit_code": 0,
+      "seconds": 0.6157179280126002,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Computation.CounterMachine",
+      "exit_code": 0,
+      "seconds": 0.9661093479953706,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Rogozhin.Table",
+      "exit_code": 0,
+      "seconds": 0.7697004900110187,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Rogozhin.Machine",
+      "exit_code": 0,
+      "seconds": 0.46785901600378565,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Computation.RogozhinTagInput",
+      "exit_code": 0,
+      "seconds": 0.5654397990001598,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Computation.RogozhinT2Semantics",
+      "exit_code": 0,
+      "seconds": 0.41487305000191554,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Computation.DeletionTwoT2Normalizer",
+      "exit_code": 0,
+      "seconds": 1.869270636991132,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Computation.CounterMachineTag",
+      "exit_code": 0,
+      "seconds": 12.299923079990549,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Computation.RogozhinT2Simulation",
+      "exit_code": 0,
+      "seconds": 19.021960483994917,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Computation.RogozhinT2Iteration",
+      "exit_code": 0,
+      "seconds": 0.465103160997387,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Computation.RogozhinT2Halt",
+      "exit_code": 0,
+      "seconds": 0.5654637300031027,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Computation.RogozhinT2Correctness",
+      "exit_code": 0,
+      "seconds": 0.36474310301127844,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Cook.Tag",
+      "exit_code": 0,
+      "seconds": 11.299734975997126,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Cook.CTS",
+      "exit_code": 0,
+      "seconds": 2.7755097140034195,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Cook.Macroperiod",
+      "exit_code": 0,
+      "seconds": 2.7207005779928295,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Cook.HaltCleanup",
+      "exit_code": 0,
+      "seconds": 0.8660276570008136,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Cook.HaltCleanupFirstEmpty",
+      "exit_code": 0,
+      "seconds": 0.3649095959990518,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Cook.TagTrajectory",
+      "exit_code": 0,
+      "seconds": 0.3647415120067308,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Cook.PassClassification",
+      "exit_code": 0,
+      "seconds": 10.494868248002604,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Computation.RogozhinT2Cook",
+      "exit_code": 0,
+      "seconds": 0.36476994599797763,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Computation.SigmaOne",
+      "exit_code": 0,
+      "seconds": 0.6658061180060031,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Computation.SigmaOneEvent",
+      "exit_code": 0,
+      "seconds": 0.31483276799554005,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Computation.CounterMachineCook",
+      "exit_code": 0,
+      "seconds": 0.3149004909937503,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.ControllerTrajectory",
+      "exit_code": 0,
+      "seconds": 0.5654410620045383,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.ControllerProjection",
+      "exit_code": 0,
+      "seconds": 0.41501617900212295,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.SchedulerDecoder",
+      "exit_code": 0,
+      "seconds": 0.4651155320025282,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.TermEvent",
+      "exit_code": 0,
+      "seconds": 0.4650593989936169,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Computation.PureSEvent",
+      "exit_code": 0,
+      "seconds": 0.36508180599776097,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.BalancedActionTree",
+      "exit_code": 0,
+      "seconds": 0.6661629070003983,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Computation.CounterMachinePureS",
+      "exit_code": 0,
+      "seconds": 0.36490124800184276,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.ProtectedTrieAlgebra",
+      "exit_code": 0,
+      "seconds": 0.41494334500748664,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.ProtectedTrieParser",
+      "exit_code": 0,
+      "seconds": 0.6154935780068627,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.ProtectedTrieSeed",
+      "exit_code": 0,
+      "seconds": 0.46507840098638553,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.ProtectedTrieEncoderSize",
+      "exit_code": 0,
+      "seconds": 0.3650210089981556,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.ProtectedTrieEnumeration",
+      "exit_code": 0,
+      "seconds": 0.46518633399682585,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.ProtectedTrieSingleOpening",
+      "exit_code": 0,
+      "seconds": 1.4178453659988008,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.ProtectedTrieBuild",
+      "exit_code": 0,
+      "seconds": 0.5154286169999978,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.ProtectedTrieCertificates",
+      "exit_code": 0,
+      "seconds": 0.41503162898879964,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.ProtectedTrieFinitePrefix",
+      "exit_code": 0,
+      "seconds": 0.4649956280045444,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.ProtectedTriePrefixBuild",
+      "exit_code": 0,
+      "seconds": 0.46488603099714965,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.ProtectedTrieConfluence",
+      "exit_code": 0,
+      "seconds": 0.465200136997737,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.ProtectedTrieMachine",
+      "exit_code": 0,
+      "seconds": 0.6660274549940368,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.ProtectedTrieTableau",
+      "exit_code": 0,
+      "seconds": 0.6656688619987108,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.ProtectedTrieMachineCode",
+      "exit_code": 0,
+      "seconds": 0.5655220920016291,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.ProtectedTrieMonotoneBuild",
+      "exit_code": 0,
+      "seconds": 0.365358181996271,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.ProtectedTrieProjection",
+      "exit_code": 0,
+      "seconds": 1.0164943729905644,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.ProtectedTrieSubdivisionMeasure",
+      "exit_code": 0,
+      "seconds": 0.41525854798965156,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.ProtectedTrieStrong",
+      "exit_code": 0,
+      "seconds": 0.6156374690035591,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.ProtectedTrieTableauLabel",
+      "exit_code": 0,
+      "seconds": 0.46527518999937456,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.ProtectedTrieLabelledObserver",
+      "exit_code": 0,
+      "seconds": 0.6156551339954603,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.ProtectedTrieMachineAgreement",
+      "exit_code": 0,
+      "seconds": 0.46520021800824907,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.ProtectedTrieSubdivision",
+      "exit_code": 0,
+      "seconds": 2.369880383994314,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.ProtectedTrieSimplePath",
+      "exit_code": 0,
+      "seconds": 0.6154085700109135,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.ProtectedTrieTableauExactCost",
+      "exit_code": 0,
+      "seconds": 1.9193391729932046,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.ProtectedTrieTableauExactResource",
+      "exit_code": 0,
+      "seconds": 4.174630210996838,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.ProtectedTrieWholeObserverExactCost",
+      "exit_code": 0,
+      "seconds": 5.785543265010347,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.ProtectedTrieStrongTheorem",
+      "exit_code": 0,
+      "seconds": 0.6164962750044651,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.ProtectedTrieLabelSemantics",
+      "exit_code": 0,
+      "seconds": 0.5151463689981028,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.ProtectedTrieStrongCompleteness",
+      "exit_code": 0,
+      "seconds": 0.6177042179915588,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.ProtectedTrieDeterministicCompiler",
+      "exit_code": 0,
+      "seconds": 0.6186998920020415,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Computation.DeterministicTapeCounterCompiler",
+      "exit_code": 0,
+      "seconds": 0.8665881820052164,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Computation.ThreeCounter",
+      "exit_code": 0,
+      "seconds": 0.46529772999929264,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Computation.DeterministicTapeThreeCounterCompiler",
+      "exit_code": 0,
+      "seconds": 2.7763404559955234,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Computation.ThreeCounterTag",
+      "exit_code": 0,
+      "seconds": 3.2229611549992114,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Computation.DeterministicTapeCook",
+      "exit_code": 0,
+      "seconds": 0.3649758899991866,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Computation.DeterministicTapePureS",
+      "exit_code": 0,
+      "seconds": 0.41554906500095967,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Computation.EncodedSigmaOneTermEvent",
+      "exit_code": 0,
+      "seconds": 0.3649540100013837,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.TermNatCode",
+      "exit_code": 0,
+      "seconds": 0.5664461269916501,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Computation.EncodedSigmaOneNatEvent",
+      "exit_code": 0,
+      "seconds": 0.364792230000603,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Cook.PassDecoder",
+      "exit_code": 0,
+      "seconds": 0.9162852389999898,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.CheckpointTime",
+      "exit_code": 0,
+      "seconds": 0.5655198049935279,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.TermGrowth",
+      "exit_code": 0,
+      "seconds": 0.4651175949984463,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.WeakPathUniversality",
+      "exit_code": 0,
+      "seconds": 0.41548412399424706,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetTermOnlyUniversalityTransfer",
+      "exit_code": 0,
+      "seconds": 0.5148870779958088,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetAllInputsTraceAgreement",
+      "exit_code": 0,
+      "seconds": 0.4650680310005555,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetPatternFragment",
+      "exit_code": 0,
+      "seconds": 0.5654005289979978,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetLocalContinuationFragment",
+      "exit_code": 0,
+      "seconds": 0.5163846909999847,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetCompletedLocalPatterns",
+      "exit_code": 0,
+      "seconds": 0.5155820280051557,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetCarrierEdgePatterns",
+      "exit_code": 0,
+      "seconds": 0.5658573450054973,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetCarrierImmediateLive",
+      "exit_code": 0,
+      "seconds": 0.41479219000029843,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetCompletedLocalFragment",
+      "exit_code": 0,
+      "seconds": 0.5152449980087113,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetEdgeFragment",
+      "exit_code": 0,
+      "seconds": 0.666251017988543,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetEdgeSpine",
+      "exit_code": 0,
+      "seconds": 0.5179377309978008,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetCarrierNonemptyRows",
+      "exit_code": 0,
+      "seconds": 0.5151276110118488,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetCarrierNonemptyAgreement",
+      "exit_code": 0,
+      "seconds": 0.5692379090032773,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetInverseEdgeFragment",
+      "exit_code": 0,
+      "seconds": 0.7662858279945794,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetInverseEdgeSpine",
+      "exit_code": 0,
+      "seconds": 0.6655232789926231,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetProgressWalker",
+      "exit_code": 0,
+      "seconds": 0.8160105879942421,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetProgressCompleteness",
+      "exit_code": 0,
+      "seconds": 2.570103542006109,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetProgressTotality",
+      "exit_code": 0,
+      "seconds": 13.852948163010296,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetCarrierNonemptyProbe",
+      "exit_code": 0,
+      "seconds": 0.8657699480099836,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetCarrierScanParentBoundary",
+      "exit_code": 0,
+      "seconds": 0.36469691700767726,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetCarrierInverseBoundary",
+      "exit_code": 0,
+      "seconds": 0.41506504399876576,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetCarrierInverseUnique",
+      "exit_code": 0,
+      "seconds": 0.7657603160041617,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetMixedLocalFragment",
+      "exit_code": 0,
+      "seconds": 0.8677422089967877,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetDecodedCarrierNonemptyAgreement",
+      "exit_code": 0,
+      "seconds": 0.4652417139877798,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetFrameSpineWalker",
+      "exit_code": 0,
+      "seconds": 5.328110660004313,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetFrameCarrierGuard",
+      "exit_code": 0,
+      "seconds": 0.46532376200775616,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetNestedFramePatterns",
+      "exit_code": 0,
+      "seconds": 0.4652631110075163,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetNestedFrameProbe",
+      "exit_code": 0,
+      "seconds": 0.7674414249922847,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetNestedFrameAgreement",
+      "exit_code": 0,
+      "seconds": 0.515097848008736,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetNestedFrameCost",
+      "exit_code": 0,
+      "seconds": 0.5154037390020676,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetCarrierProbeLocalBound",
+      "exit_code": 0,
+      "seconds": 0.8172164720017463,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetMixedLocalAmortized",
+      "exit_code": 0,
+      "seconds": 0.5153639839991229,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetMixedContinuationSpine",
+      "exit_code": 0,
+      "seconds": 0.4650606649956899,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetPendingAdmissionFuelPatterns",
+      "exit_code": 0,
+      "seconds": 0.4649840199999744,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetPendingAdmissionPatterns",
+      "exit_code": 0,
+      "seconds": 0.4150062130065635,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetPendingAdmissionFragment",
+      "exit_code": 0,
+      "seconds": 0.7158662139991065,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetPendingAdmissionInterleaved",
+      "exit_code": 0,
+      "seconds": 0.8660656260035466,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetPendingAdmissionSegment",
+      "exit_code": 0,
+      "seconds": 0.4648981649952475,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetPendingAdmissionFrameBridge",
+      "exit_code": 0,
+      "seconds": 0.3648529019992566,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetActiveMarkedFrontend",
+      "exit_code": 0,
+      "seconds": 1.3680787259945646,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetActiveCleanParentsAgreement",
+      "exit_code": 0,
+      "seconds": 0.4655395150039112,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetActivePendingAgreement",
+      "exit_code": 0,
+      "seconds": 0.4652421140053775,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetLabelledPatternFragment",
+      "exit_code": 0,
+      "seconds": 0.866633441997692,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetLabelledEdgeProbe",
+      "exit_code": 0,
+      "seconds": 0.7163620400096988,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetCellSpineRows",
+      "exit_code": 0,
+      "seconds": 0.4654348060139455,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetCompleteCarrierRows",
+      "exit_code": 0,
+      "seconds": 0.46536018200276885,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetCarrierOldestLiveProbe",
+      "exit_code": 0,
+      "seconds": 1.0164655730040977,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetCarrierOldestLiveAgreement",
+      "exit_code": 0,
+      "seconds": 0.6156948019925039,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetCarrierParityProbe",
+      "exit_code": 0,
+      "seconds": 0.9666338019887917,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetCarrierParityAgreement",
+      "exit_code": 0,
+      "seconds": 0.6692573040054413,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetProbeSequence",
+      "exit_code": 0,
+      "seconds": 0.6656371419958305,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetCompletedResponseAtoms",
+      "exit_code": 0,
+      "seconds": 0.4697398099960992,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetProbeBranch",
+      "exit_code": 0,
+      "seconds": 0.7659173260035459,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetCompletedResponseProbe",
+      "exit_code": 0,
+      "seconds": 0.5657186949974857,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetBaseQueueProbe",
+      "exit_code": 0,
+      "seconds": 0.415657416000613,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetCompletedResponseAgreement",
+      "exit_code": 0,
+      "seconds": 0.5651086299913004,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetBaseQueueAgreement",
+      "exit_code": 0,
+      "seconds": 0.5151787420036271,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetPendingAdmissionCarrierRejection",
+      "exit_code": 0,
+      "seconds": 0.6154241279873531,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetPendingParentProbe",
+      "exit_code": 0,
+      "seconds": 0.6658345850009937,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetScopedCarrierWorker",
+      "exit_code": 0,
+      "seconds": 0.9688157269993098,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetPendingBaseProbe",
+      "exit_code": 0,
+      "seconds": 0.7156223539932398,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetActiveBaseAgreement",
+      "exit_code": 0,
+      "seconds": 0.4149327519990038,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetProgressEulerSelector",
+      "exit_code": 0,
+      "seconds": 15.704282266000519,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetProgressEulerTotality",
+      "exit_code": 0,
+      "seconds": 7.935024124002666,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetProgressEulerContract",
+      "exit_code": 0,
+      "seconds": 5.785167441004887,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetReadonlySelector",
+      "exit_code": 0,
+      "seconds": 0.8668618119991152,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetCarrierPhaseProbe",
+      "exit_code": 0,
+      "seconds": 0.5161671560053946,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetDeletedBitRows",
+      "exit_code": 0,
+      "seconds": 0.5152793250017567,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetDeletedBitAgreement",
+      "exit_code": 0,
+      "seconds": 0.4674247600050876,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetEmptyOriginProbe",
+      "exit_code": 0,
+      "seconds": 0.5153150749974884,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetEmptyAwareResponseProbe",
+      "exit_code": 0,
+      "seconds": 0.4147947680030484,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetAppenderFiniteRows",
+      "exit_code": 0,
+      "seconds": 0.6152894069964532,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetAppenderRouteRows",
+      "exit_code": 0,
+      "seconds": 0.5653952610009583,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetDispatcherStageRows",
+      "exit_code": 0,
+      "seconds": 0.7158907979901414,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetDispatcherLocalRows",
+      "exit_code": 0,
+      "seconds": 0.41485235399159137,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetResponseBitFiniteValue",
+      "exit_code": 0,
+      "seconds": 0.41493046800314914,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetFrontBitProbe",
+      "exit_code": 0,
+      "seconds": 0.7157055720017524,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetLocalDispatcherProbe",
+      "exit_code": 0,
+      "seconds": 1.1701174500049092,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetClockGrowthWalker",
+      "exit_code": 0,
+      "seconds": 1.41892193100648,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetClockParityWalker",
+      "exit_code": 0,
+      "seconds": 7.382891343993833,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetNestedClockPatterns",
+      "exit_code": 0,
+      "seconds": 0.4148857050022343,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetNestedClockCoreProbe",
+      "exit_code": 0,
+      "seconds": 0.7658232810063055,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetNestedClockGrowthProbe",
+      "exit_code": 0,
+      "seconds": 0.5655172920087352,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetNestedUnaryScan",
+      "exit_code": 0,
+      "seconds": 0.6155515659920638,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetNestedUnaryParity",
+      "exit_code": 0,
+      "seconds": 1.4180550609889906,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetNestedClockFirstPass",
+      "exit_code": 0,
+      "seconds": 0.6653863270039437,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetNestedClockGrowthAgreement",
+      "exit_code": 0,
+      "seconds": 0.41482975299004465,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetNestedClockSecondPass",
+      "exit_code": 0,
+      "seconds": 1.7182563829992432,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetNestedClockProbe",
+      "exit_code": 0,
+      "seconds": 0.76657908600464,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetSelectedActionRows",
+      "exit_code": 0,
+      "seconds": 0.565287998993881,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetEndpointPipeline",
+      "exit_code": 0,
+      "seconds": 0.4649417360051302,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetGeneratedCarrierLabels",
+      "exit_code": 0,
+      "seconds": 0.3648420450044796,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetNestedClockProbeAgreement",
+      "exit_code": 0,
+      "seconds": 0.41499889999977313,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetEndpointGeneratedMisses",
+      "exit_code": 0,
+      "seconds": 0.5152848459983943,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetFuelFiniteRows",
+      "exit_code": 0,
+      "seconds": 0.565272494990495,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetFuelClockExclusion",
+      "exit_code": 0,
+      "seconds": 1.918704017996788,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetFuelEndpointPipeline",
+      "exit_code": 0,
+      "seconds": 0.4648322349967202,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetScopedResponseProbes",
+      "exit_code": 0,
+      "seconds": 0.36469033900357317,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetActiveEndpointProbe",
+      "exit_code": 0,
+      "seconds": 0.46502721100114286,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetActiveFuelEndpointAgreement",
+      "exit_code": 0,
+      "seconds": 0.46495252300519496,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetFreshAncestorProbe",
+      "exit_code": 0,
+      "seconds": 0.6654872889921535,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetFreshAncestorExitAgreement",
+      "exit_code": 0,
+      "seconds": 0.5655935690010665,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetActiveClockEndpointAgreement",
+      "exit_code": 0,
+      "seconds": 0.41489333000208717,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetScopedBaseMisses",
+      "exit_code": 0,
+      "seconds": 0.5153816560050473,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetActiveEndpointExecution",
+      "exit_code": 0,
+      "seconds": 0.4648843350005336,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetBaseEndpointExecution",
+      "exit_code": 0,
+      "seconds": 0.6156492270092713,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetResponseCandidateProbe",
+      "exit_code": 0,
+      "seconds": 0.5154181959951529,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetFreshResponsePass",
+      "exit_code": 0,
+      "seconds": 0.5153146639931947,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetMarkedAncestorProbe",
+      "exit_code": 0,
+      "seconds": 0.7671658969920827,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetMarkedCandidateProbe",
+      "exit_code": 0,
+      "seconds": 0.5152379339997424,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetPendingAncestorProbe",
+      "exit_code": 0,
+      "seconds": 0.7163870799995493,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetMarkedHandoffPass",
+      "exit_code": 0,
+      "seconds": 0.5182042289961828,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetReplayProbe",
+      "exit_code": 0,
+      "seconds": 0.619059146993095,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetPriorityReplay",
+      "exit_code": 0,
+      "seconds": 0.5656656069913879,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetFinitePrioritySelector",
+      "exit_code": 0,
+      "seconds": 0.4670119770016754,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetFinitePriorityExecution",
+      "exit_code": 0,
+      "seconds": 0.5160446590016363,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetMarkedHandoffAgreement",
+      "exit_code": 0,
+      "seconds": 0.6671690350049175,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetFreshHistoryRejection",
+      "exit_code": 0,
+      "seconds": 0.6658276439993642,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetFinitePriorityAgreement",
+      "exit_code": 0,
+      "seconds": 0.46867169499455485,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetHistoricalPriorityRejection",
+      "exit_code": 0,
+      "seconds": 0.4650595849961974,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetFiniteBaseAgreement",
+      "exit_code": 0,
+      "seconds": 0.7659558119921712,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetAppenderMutationFiniteRows",
+      "exit_code": 0,
+      "seconds": 0.3650655730016297,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetFiniteResponseEndpointAgreement",
+      "exit_code": 0,
+      "seconds": 0.5151785070047481,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetFiniteFrameAgreement",
+      "exit_code": 0,
+      "seconds": 0.46534531300130766,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetFiniteNormalResponseChain",
+      "exit_code": 0,
+      "seconds": 0.5655550339870388,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetFiniteEmptyResponseChain",
+      "exit_code": 0,
+      "seconds": 0.41490597200754564,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetEmptyAwareResponseAgreement",
+      "exit_code": 0,
+      "seconds": 0.4154723389947321,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetFreshResponseExecution",
+      "exit_code": 0,
+      "seconds": 0.4148233540036017,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetNormalCarrierEmptyExclusion",
+      "exit_code": 0,
+      "seconds": 0.4651994789892342,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetGeneratedFreshResponseExecution",
+      "exit_code": 0,
+      "seconds": 0.8664208469999721,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetInitialEmptyCommitAgreement",
+      "exit_code": 0,
+      "seconds": 0.41526923699711915,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetFiniteEmptySweep",
+      "exit_code": 0,
+      "seconds": 0.5152215480047744,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetPhasePriorityClear",
+      "exit_code": 0,
+      "seconds": 3.1215060359972995,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetFiniteClockFuelSelection",
+      "exit_code": 0,
+      "seconds": 0.4652611460041953,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetFiniteStagePhaseSelectorChain",
+      "exit_code": 0,
+      "seconds": 0.6154999480058905,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetFiniteInitialPrelude",
+      "exit_code": 0,
+      "seconds": 0.41488984000170603,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetFiniteJobHandoff",
+      "exit_code": 0,
+      "seconds": 0.4153227899951162,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetFiniteInitialEmptyStages",
+      "exit_code": 0,
+      "seconds": 0.5651450820005266,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetFiniteCompletedBoundaries",
+      "exit_code": 0,
+      "seconds": 0.515053529990837,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetFiniteMixedNonemptySweep",
+      "exit_code": 0,
+      "seconds": 0.6156992399919545,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetFiniteFirstEmptyJob",
+      "exit_code": 0,
+      "seconds": 0.6153828459937358,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetFiniteBitConsJob",
+      "exit_code": 0,
+      "seconds": 0.41518251699744724,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetStageSelectionLaws",
+      "exit_code": 0,
+      "seconds": 0.3649827750050463,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetParametricNonemptyStages",
+      "exit_code": 0,
+      "seconds": 0.6656382119981572,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetParametricFirstEmptyStages",
+      "exit_code": 0,
+      "seconds": 0.76569172499876,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetParametricNonemptyTraceAgreement",
+      "exit_code": 0,
+      "seconds": 0.4154659339983482,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetFiniteStageLaws",
+      "exit_code": 0,
+      "seconds": 0.3646934529970167,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetFiniteAllInputsTraceAgreement",
+      "exit_code": 0,
+      "seconds": 0.46540329499111976,
+      "timed_out": false
+    }
+  ]
+}

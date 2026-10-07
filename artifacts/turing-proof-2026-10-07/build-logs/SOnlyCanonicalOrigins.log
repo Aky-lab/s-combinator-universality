@@ -1,0 +1,4 @@
+'SOnlyCanonicalOrigins.local_route_action_preserves' depends on axioms: [propext, Quot.sound]
+'SOnlyCanonicalOrigins.selectedFront_context_preserves' depends on axioms: [propext, Quot.sound]
+'SOnlyCanonicalOrigins.selectedFront_delete_licensed' depends on axioms: [propext, Quot.sound]
+'SOnlyCanonicalOrigins.selectedResponse_deleted_licensed' depends on axioms: [propext, Quot.sound]

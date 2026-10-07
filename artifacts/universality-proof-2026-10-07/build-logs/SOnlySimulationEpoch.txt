@@ -1,0 +1,4 @@
+'SOnlySimulation.indexed_normal_run' depends on axioms: [propext, Quot.sound]
+'SOnlySimulation.epoch_normal_run' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SOnlySimulation.epoch_reset' depends on axioms: [propext, Quot.sound]
+'SOnlySimulation.epoch_horizon' depends on axioms: [propext, Quot.sound]

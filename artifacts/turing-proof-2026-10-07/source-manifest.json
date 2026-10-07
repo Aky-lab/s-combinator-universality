@@ -1,0 +1,489 @@
+{
+  "modules": [
+    {
+      "module": "SOnly38",
+      "path": "SOnly38.lean",
+      "bytes": 11616,
+      "sha256": "3fb5944191b4a22c7152f2594b2b8e3d97579da1b4f86081bd046f4993ee9128"
+    },
+    {
+      "module": "SOnlyProvenance",
+      "path": "SOnlyProvenance.lean",
+      "bytes": 20278,
+      "sha256": "a209f5fc1e2ff0f6bbf1ecacc5844520f9ac2d47d4d1c3da93382c571a654ac2"
+    },
+    {
+      "module": "SOnlyProvenanceRows",
+      "path": "SOnlyProvenanceRows.lean",
+      "bytes": 24308,
+      "sha256": "3cd1130787f179b8e04468c0a294bf997713a8234a46de63e51c240ab4ce32de"
+    },
+    {
+      "module": "SOnlyEventPattern",
+      "path": "SOnlyEventPattern.lean",
+      "bytes": 9940,
+      "sha256": "080774e065a74cff4f451e17e453466ec804e403aaf7191b83812f866812154e"
+    },
+    {
+      "module": "SOnlyEventTransfer",
+      "path": "SOnlyEventTransfer.lean",
+      "bytes": 10286,
+      "sha256": "e9be6c2361c66e44560ced85b8fd7e263284ef82f7425b1c7e723074e586df17"
+    },
+    {
+      "module": "SOnlyGeneratedOrigins",
+      "path": "SOnlyGeneratedOrigins.lean",
+      "bytes": 10330,
+      "sha256": "ff41f07368ad9babd4b5af0a4f489ff786c17534dde76018c9b69b0602ef1938"
+    },
+    {
+      "module": "SOnlyCanonicalOrigins",
+      "path": "SOnlyCanonicalOrigins.lean",
+      "bytes": 12013,
+      "sha256": "622df279e0976ba015c151e193d4de8cc37f43fbf378560da2b42fe285ee9caa"
+    },
+    {
+      "module": "SOnlySource",
+      "path": "SOnlySource.lean",
+      "bytes": 12874,
+      "sha256": "fa747d52a40e8bc710a6e94154a46b89ca0142841a5b2988c28c76105b1ef01f"
+    },
+    {
+      "module": "SOnlyCounter",
+      "path": "SOnlyCounter.lean",
+      "bytes": 15364,
+      "sha256": "a89af07f7fdbb01b291218212892922d088932d654db30798a16f65a7eb7ca39"
+    },
+    {
+      "module": "SOnlyEventResponse",
+      "path": "SOnlyEventResponse.lean",
+      "bytes": 9899,
+      "sha256": "67814e9634aba7cfc1a9599b47ecde6db067658e5e99228653f945577471a702"
+    },
+    {
+      "module": "SOnlyObserver",
+      "path": "SOnlyObserver.lean",
+      "bytes": 10924,
+      "sha256": "0fa49468cdc43292debf9f36335733772089ebf8be867f3e0bde6b93eac8f58b"
+    },
+    {
+      "module": "SOnlyStageEvents",
+      "path": "SOnlyStageEvents.lean",
+      "bytes": 22433,
+      "sha256": "02b58639a6877f0b2017696c86791f8347466dd2046efd153114ea4fa6499ef5"
+    },
+    {
+      "module": "SOnlyResult",
+      "path": "SOnlyResult.lean",
+      "bytes": 5150,
+      "sha256": "18f61e394e4fa92842bfe40312f69daf4f2696dc8877f06aa399ad5c9e9f411e"
+    },
+    {
+      "module": "SOnlyResultBits",
+      "path": "SOnlyResultBits.lean",
+      "bytes": 4961,
+      "sha256": "aa2f8837595c518e98ae94918b2860b7674d4c86a4e1046e7515412a067b9819"
+    },
+    {
+      "module": "SOnlyWitnessResult",
+      "path": "SOnlyWitnessResult.lean",
+      "bytes": 2637,
+      "sha256": "0948ee049b7d95b93145954fe296b86a8330c93f836a7ba25b3fdccfe5733d6c"
+    },
+    {
+      "module": "SOnlyCurrentDecoder",
+      "path": "SOnlyCurrentDecoder.lean",
+      "bytes": 4941,
+      "sha256": "f383d408f68da089311b618eb9fdb22052fab3ae46c7fcbcffdc213aedc4bd2d"
+    },
+    {
+      "module": "SOnlyDecoderBound",
+      "path": "SOnlyDecoderBound.lean",
+      "bytes": 8923,
+      "sha256": "6f03d85c29bb417fabf725992dd8ceddc9860a58812c1e4cf9500b40c4df50f8"
+    },
+    {
+      "module": "SOnlyDecoderBoundCurrent",
+      "path": "SOnlyDecoderBoundCurrent.lean",
+      "bytes": 3580,
+      "sha256": "41eb6d506bd55ab52e3c713d4b77371cc18f2681bc6985795530e037d5d20ba4"
+    },
+    {
+      "module": "SOnlySchedulerOrigins",
+      "path": "SOnlySchedulerOrigins.lean",
+      "bytes": 15721,
+      "sha256": "1892ef1b3f991bf96daad831534a6bad697698e26455715c2e20d54ed00fb70f"
+    },
+    {
+      "module": "SOnlyResponseLabels",
+      "path": "SOnlyResponseLabels.lean",
+      "bytes": 73865,
+      "sha256": "67013f10f9d2ddcc6cb9068dd363d00598e3fd747cadf1101777cb7363e681ca"
+    },
+    {
+      "module": "SOnlyGlobalAncestors",
+      "path": "SOnlyGlobalAncestors.lean",
+      "bytes": 18309,
+      "sha256": "50e1181dd68037cca249884de2ce816b642fd6a5ef310ebd557e2a082fb01b08"
+    },
+    {
+      "module": "SOnlyGlobalOrigins",
+      "path": "SOnlyGlobalOrigins.lean",
+      "bytes": 53247,
+      "sha256": "fd99b090daff3c2ad231e7c11155876a4193634e8028ebcd14271cd65c23e533"
+    },
+    {
+      "module": "SOnlyGlobalTerminal",
+      "path": "SOnlyGlobalTerminal.lean",
+      "bytes": 18168,
+      "sha256": "62c5f83b7ec995e995cebd70449786aabb3aa4aa8b26033d83b8440bd6562a5e"
+    },
+    {
+      "module": "SOnlyFirstEventOrigins",
+      "path": "SOnlyFirstEventOrigins.lean",
+      "bytes": 10091,
+      "sha256": "09f32a93879238598c9acaae743eb961982b62abad663ade8bf461eeb3a83796"
+    },
+    {
+      "module": "SOnlyGlobalStages",
+      "path": "SOnlyGlobalStages.lean",
+      "bytes": 22098,
+      "sha256": "75ad031ae7bcb49cbd19ae1d9065917b3b26c5d7fc49de4d0e5421b2d1898c29"
+    },
+    {
+      "module": "SOnlyEventEquivalence",
+      "path": "SOnlyEventEquivalence.lean",
+      "bytes": 2439,
+      "sha256": "7abd9ec5badda95f9bd07b1a9e6e729e894d1a589900280f92ae6d7e86570a42"
+    },
+    {
+      "module": "SOnlyFirstEventResponse",
+      "path": "SOnlyFirstEventResponse.lean",
+      "bytes": 16459,
+      "sha256": "b5fcf6150c3f8701170f3f473e048fc3765aa59355865981929623c74d5dace1"
+    },
+    {
+      "module": "SOnlyGlobalFirstPrefix",
+      "path": "SOnlyGlobalFirstPrefix.lean",
+      "bytes": 9795,
+      "sha256": "b800db617055560af48997a2250990cf4c4c18effd0da2f610436809e8840a63"
+    },
+    {
+      "module": "SOnlyGlobalFirstEvent",
+      "path": "SOnlyGlobalFirstEvent.lean",
+      "bytes": 12210,
+      "sha256": "017b7d798805202928dcfac54896489b5a1009253996bc7c822fa450b031afd7"
+    },
+    {
+      "module": "SOnlyGlobalFirstStructure",
+      "path": "SOnlyGlobalFirstStructure.lean",
+      "bytes": 17782,
+      "sha256": "5b77ea98386d79f8af0698c147ac13c1072c220b915524b49e0f6ecee2b0c376"
+    },
+    {
+      "module": "SOnlyInitial",
+      "path": "SOnlyInitial.lean",
+      "bytes": 4409,
+      "sha256": "94ab0d686ec3b74fddb7613dfdaedcf0e5ebde9969373379ce6a4eeb00f2965f"
+    },
+    {
+      "module": "SOnlyMachine",
+      "path": "SOnlyMachine.lean",
+      "bytes": 17180,
+      "sha256": "0eb311bdc5027162965d997da6fd836cb20219fd071a0932bad35203aaa53111"
+    },
+    {
+      "module": "SOnlyMachineBP2",
+      "path": "SOnlyMachineBP2.lean",
+      "bytes": 14668,
+      "sha256": "777003ce8282c326647355b0178d35807b4e6ded00df2efdd5db85518e42aca8"
+    },
+    {
+      "module": "SOnlyMachineWaterfallBP2",
+      "path": "SOnlyMachineWaterfallBP2.lean",
+      "bytes": 21412,
+      "sha256": "367c6f48e757e1c8b84730aabcbead183d36cb77590bd28ea268e06819e88d74"
+    },
+    {
+      "module": "SOnlyMachineClock",
+      "path": "SOnlyMachineClock.lean",
+      "bytes": 18382,
+      "sha256": "0839b0c1986bead56b8fdb585ff21e711a792232ca1a325db024b3acaf04ccc0"
+    },
+    {
+      "module": "SOnlyMachineFinite",
+      "path": "SOnlyMachineFinite.lean",
+      "bytes": 12720,
+      "sha256": "069937bb489c6964cf24a55ccf50827409324eeaa3a264a5ecc960566949e220"
+    },
+    {
+      "module": "SOnlyMachineNat",
+      "path": "SOnlyMachineNat.lean",
+      "bytes": 7233,
+      "sha256": "3fcb255e5e3bd786365bc70d256b8b01b9cb73a7002d3782fed1dd1ea67cbf6d"
+    },
+    {
+      "module": "SOnlyMachineBounds",
+      "path": "SOnlyMachineBounds.lean",
+      "bytes": 9140,
+      "sha256": "063c4896b275e70cdf4d4e87aca25617a4b76d76e429b753000c1cac1bdca059"
+    },
+    {
+      "module": "SOnlyMachineCorrectness",
+      "path": "SOnlyMachineCorrectness.lean",
+      "bytes": 4340,
+      "sha256": "4bc1e4de71e12fb0a7b07ec817647c84cbbb5575518aeeb08441fe032f77f6a1"
+    },
+    {
+      "module": "SOnlyMemory",
+      "path": "SOnlyMemory.lean",
+      "bytes": 14298,
+      "sha256": "9cd4b53fad2d3eed24e111cedebd3792e8067d89f5084897824061dd73acdf0e"
+    },
+    {
+      "module": "SOnlyTemporalMemory",
+      "path": "SOnlyTemporalMemory.lean",
+      "bytes": 31088,
+      "sha256": "bf8813a4598605c96917c2c187665c0f51293f2993bebcdd22475935f1c00cb3"
+    },
+    {
+      "module": "SOnlySimulation",
+      "path": "SOnlySimulation.lean",
+      "bytes": 9215,
+      "sha256": "53a28ca20e85e928fef40240c7af404c17c52030e6a525f4e8412882acdf65bc"
+    },
+    {
+      "module": "SOnlySimulationNormal",
+      "path": "SOnlySimulationNormal.lean",
+      "bytes": 9602,
+      "sha256": "e832f8e50504521e1282e89e98350175f65e0f2b3c8096dbbf554039fe823d65"
+    },
+    {
+      "module": "SOnlySimulationExceptional",
+      "path": "SOnlySimulationExceptional.lean",
+      "bytes": 11325,
+      "sha256": "6aa068e620bf5d855b1528f076fbb27eede2ef55d4405e81ec31c174e0dd2aff"
+    },
+    {
+      "module": "SOnlySimulationHalt",
+      "path": "SOnlySimulationHalt.lean",
+      "bytes": 6294,
+      "sha256": "29ae4730f0a634be82f59af281ac29a5cf10759e23fdce1cb8729bb33c1b811e"
+    },
+    {
+      "module": "SOnlySimulationEpoch",
+      "path": "SOnlySimulationEpoch.lean",
+      "bytes": 9259,
+      "sha256": "0f281646e85340d652769a1875d6d204736ea7d29f03ea7a41c015f0f63c5d7c"
+    },
+    {
+      "module": "SOnlySimulationSchedule",
+      "path": "SOnlySimulationSchedule.lean",
+      "bytes": 7871,
+      "sha256": "99e9546f6a5b28a9c77d89763566d526b36ecb3259317d9ce44269cacb6e21b5"
+    },
+    {
+      "module": "SOnlySimulationInstructions",
+      "path": "SOnlySimulationInstructions.lean",
+      "bytes": 7620,
+      "sha256": "824565b355c97eab1d8dd1946c0276f8bf9799fc9e8f115679afb56c9699bc81"
+    },
+    {
+      "module": "SOnlySimulationRestart",
+      "path": "SOnlySimulationRestart.lean",
+      "bytes": 11618,
+      "sha256": "25aec39114cc79302551d20ad1995118d8eadc77980b61e9d7e62e7d399e9a03"
+    },
+    {
+      "module": "SOnlySimulationComplete",
+      "path": "SOnlySimulationComplete.lean",
+      "bytes": 12789,
+      "sha256": "44429135c44491352de68784b739cde8ea8a9d5db05b47b49a3dbac4ca99ba77"
+    },
+    {
+      "module": "SOnlySimulationReadout",
+      "path": "SOnlySimulationReadout.lean",
+      "bytes": 7477,
+      "sha256": "99bd39c7937ff3c59dec84ca3c3010357c61edb9319091c354c8f164c041928c"
+    },
+    {
+      "module": "SOnlySimulationInterface",
+      "path": "SOnlySimulationInterface.lean",
+      "bytes": 8037,
+      "sha256": "0e6db5a89d7711732aca63f92d1e2e3bd14bf2d0becb43a0c6d2618bd16fd191"
+    },
+    {
+      "module": "SOnlySimulationUniversal",
+      "path": "SOnlySimulationUniversal.lean",
+      "bytes": 5424,
+      "sha256": "84de67a9891a7e1b8d9c67a91d5177b5aed84ba3c1f385cd89a7360687852844"
+    },
+    {
+      "module": "SOnlySimulationOutput",
+      "path": "SOnlySimulationOutput.lean",
+      "bytes": 4783,
+      "sha256": "3820e6a340d066a4d640e1584591f60ea58330a778526938a4bcd179dffe61f6"
+    },
+    {
+      "module": "SOnlySimulationPublished",
+      "path": "SOnlySimulationPublished.lean",
+      "bytes": 7866,
+      "sha256": "b025499704eb224bef0ce7993469bd58928881abe0b612fc71b56c839bab4692"
+    },
+    {
+      "module": "StackMacros",
+      "path": "StackMacros.lean",
+      "bytes": 14073,
+      "sha256": "204fb05fb17bcf2bace5eabbda7d713d50dd61cd2f81f0f3a2d31f3b7e6e1ec4"
+    },
+    {
+      "module": "SOnlyTapeStacks",
+      "path": "SOnlyTapeStacks.lean",
+      "bytes": 21307,
+      "sha256": "c97b5a56a7d4ee348631ee73175bbf111ddf764803304318d87650ed282ff49c"
+    },
+    {
+      "module": "SOnlyTapeCompilerCheckpoints",
+      "path": "SOnlyTapeCompilerCheckpoints.lean",
+      "bytes": 8797,
+      "sha256": "91777140bf2af2739112d18131797a8a876301b4b33f72ee0372f0b22a5a6ebd"
+    },
+    {
+      "module": "SOnlyTapeCompiler",
+      "path": "SOnlyTapeCompiler.lean",
+      "bytes": 22377,
+      "sha256": "d054db00cd2f726aa380cb7290abc012634a2f4e69d4dfebd7d4a901c58e912b"
+    },
+    {
+      "module": "SOnlyTapeCompilerAudit",
+      "path": "SOnlyTapeCompilerAudit.lean",
+      "bytes": 955,
+      "sha256": "a257a42e46bb6208b470a3026bd663eee0508a636dfa556112726c26d4c7e0c6"
+    },
+    {
+      "module": "SOnlyTapeStacksTests",
+      "path": "SOnlyTapeStacksTests.lean",
+      "bytes": 2457,
+      "sha256": "e47df747e68dfb63444284f7ad8f5b8cf99d4bb625e66a5f21c2f59042c313a9"
+    },
+    {
+      "module": "SOnlyUniversality",
+      "path": "SOnlyUniversality.lean",
+      "bytes": 8466,
+      "sha256": "0cfa1200ea02ebdb5e59df976c8d29301520ec3704c05853c7150684ae37374d"
+    },
+    {
+      "module": "SOnlyTuringUniversality",
+      "path": "SOnlyTuringUniversality.lean",
+      "bytes": 6309,
+      "sha256": "9a8b1e653f5e5f0c206a4be305deb24be51e7e1f7ae93e9e9a200862d02056a3"
+    },
+    {
+      "module": "StackMacroTime",
+      "path": "StackMacroTime.lean",
+      "bytes": 7693,
+      "sha256": "353ed6f35c0678a416e5d3460108a41b9cbe2a8e67590c2c1578058b32bb0781"
+    },
+    {
+      "module": "StackPushTable",
+      "path": "StackPushTable.lean",
+      "bytes": 5521,
+      "sha256": "255013e84400b19d1986b74c2c0135195ee2c4f1efd799e23f0c58406421a48f"
+    },
+    {
+      "module": "StackPopTable",
+      "path": "StackPopTable.lean",
+      "bytes": 4114,
+      "sha256": "8d9cec1d2bddee3392be01dd0a97919ab34753f09b4f85ca5f189dba331fe505"
+    },
+    {
+      "module": "StackMacroAudit",
+      "path": "StackMacroAudit.lean",
+      "bytes": 1862,
+      "sha256": "0fccc0e629810e59c6aaddc42d39eb128ba5d9eef289f82a09982418b1529f42"
+    }
+  ],
+  "order": [
+    "SOnly38",
+    "SOnlyProvenance",
+    "SOnlyProvenanceRows",
+    "SOnlyEventPattern",
+    "SOnlyEventTransfer",
+    "SOnlyGeneratedOrigins",
+    "SOnlyCanonicalOrigins",
+    "SOnlySource",
+    "SOnlyCounter",
+    "SOnlyEventResponse",
+    "SOnlyObserver",
+    "SOnlyStageEvents",
+    "SOnlyResult",
+    "SOnlyResultBits",
+    "SOnlyWitnessResult",
+    "SOnlyCurrentDecoder",
+    "SOnlyDecoderBound",
+    "SOnlyDecoderBoundCurrent",
+    "SOnlySchedulerOrigins",
+    "SOnlyResponseLabels",
+    "SOnlyGlobalAncestors",
+    "SOnlyGlobalOrigins",
+    "SOnlyGlobalTerminal",
+    "SOnlyFirstEventOrigins",
+    "SOnlyGlobalStages",
+    "SOnlyEventEquivalence",
+    "SOnlyFirstEventResponse",
+    "SOnlyGlobalFirstPrefix",
+    "SOnlyGlobalFirstEvent",
+    "SOnlyGlobalFirstStructure",
+    "SOnlyInitial",
+    "SOnlyMachine",
+    "SOnlyMachineBP2",
+    "SOnlyMachineWaterfallBP2",
+    "SOnlyMachineClock",
+    "SOnlyMachineFinite",
+    "SOnlyMachineNat",
+    "SOnlyMachineBounds",
+    "SOnlyMachineCorrectness",
+    "SOnlyMemory",
+    "SOnlyTemporalMemory",
+    "SOnlySimulation",
+    "SOnlySimulationNormal",
+    "SOnlySimulationExceptional",
+    "SOnlySimulationHalt",
+    "SOnlySimulationEpoch",
+    "SOnlySimulationSchedule",
+    "SOnlySimulationInstructions",
+    "SOnlySimulationRestart",
+    "SOnlySimulationComplete",
+    "SOnlySimulationReadout",
+    "SOnlySimulationInterface",
+    "SOnlySimulationUniversal",
+    "SOnlySimulationOutput",
+    "SOnlySimulationPublished",
+    "StackMacros",
+    "SOnlyTapeStacks",
+    "SOnlyTapeCompilerCheckpoints",
+    "SOnlyTapeCompiler",
+    "SOnlyTapeCompilerAudit",
+    "SOnlyTapeStacksTests",
+    "SOnlyUniversality",
+    "SOnlyTuringUniversality",
+    "StackMacroTime",
+    "StackPushTable",
+    "StackPopTable",
+    "StackMacroAudit"
+  ],
+  "base_modules": 56,
+  "extension_modules": [
+    "SOnlyTapeCompiler",
+    "SOnlyTapeCompilerAudit",
+    "SOnlyTapeCompilerCheckpoints",
+    "SOnlyTapeStacks",
+    "SOnlyTapeStacksTests",
+    "SOnlyTuringUniversality",
+    "StackMacroAudit",
+    "StackMacroTime",
+    "StackMacros",
+    "StackPopTable",
+    "StackPushTable"
+  ]
+}

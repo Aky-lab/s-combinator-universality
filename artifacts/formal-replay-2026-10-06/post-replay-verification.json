@@ -1,0 +1,16 @@
+{
+  "all_checks_passed": true,
+  "counts": {
+    "source_files": 426,
+    "output_files": 424,
+    "toolchain_files": 17505
+  },
+  "helpers": 3,
+  "outputs_unchanged": true,
+  "sources_unchanged": true,
+  "toolchain_unchanged": true,
+  "verification_seconds": 4.2437057069910225,
+  "output_manifest_sha256": "6973fcccc26c434d3d83d53b1e7d18297831a080450b525c3b1b4b445fdcbdcd",
+  "source_manifest_sha256": "c90a264962c28aa5cedf002f27945e00476f0cf586975ea6ad25036b94b5b301",
+  "toolchain_manifest_sha256": "63e9784560dabaca6ef9142ae500eff02959007fb4f96673532cc625979a1fc8"
+}

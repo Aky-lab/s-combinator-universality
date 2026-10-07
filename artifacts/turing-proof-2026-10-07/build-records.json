@@ -1,0 +1,342 @@
+[
+  {
+    "module": "SOnly38",
+    "exit_code": 0,
+    "seconds": 1.498972192988731
+  },
+  {
+    "module": "SOnlyProvenance",
+    "exit_code": 0,
+    "seconds": 1.4017082080099499
+  },
+  {
+    "module": "SOnlyProvenanceRows",
+    "exit_code": 0,
+    "seconds": 0.6150542969990056
+  },
+  {
+    "module": "SOnlyEventPattern",
+    "exit_code": 0,
+    "seconds": 0.6832950450043427
+  },
+  {
+    "module": "SOnlyEventTransfer",
+    "exit_code": 0,
+    "seconds": 0.54717875100323
+  },
+  {
+    "module": "SOnlyGeneratedOrigins",
+    "exit_code": 0,
+    "seconds": 0.779228946994408
+  },
+  {
+    "module": "SOnlyCanonicalOrigins",
+    "exit_code": 0,
+    "seconds": 0.5831200739921769
+  },
+  {
+    "module": "SOnlySource",
+    "exit_code": 0,
+    "seconds": 1.1252620370069053
+  },
+  {
+    "module": "SOnlyCounter",
+    "exit_code": 0,
+    "seconds": 1.0139312579995021
+  },
+  {
+    "module": "SOnlyEventResponse",
+    "exit_code": 0,
+    "seconds": 0.4531853549997322
+  },
+  {
+    "module": "SOnlyObserver",
+    "exit_code": 0,
+    "seconds": 0.701323699002387
+  },
+  {
+    "module": "SOnlyStageEvents",
+    "exit_code": 0,
+    "seconds": 0.6246555800025817
+  },
+  {
+    "module": "SOnlyResult",
+    "exit_code": 0,
+    "seconds": 0.7677129789954051
+  },
+  {
+    "module": "SOnlyResultBits",
+    "exit_code": 0,
+    "seconds": 0.5893350139958784
+  },
+  {
+    "module": "SOnlyWitnessResult",
+    "exit_code": 0,
+    "seconds": 0.44191286600835156
+  },
+  {
+    "module": "SOnlyCurrentDecoder",
+    "exit_code": 0,
+    "seconds": 0.4749711079930421
+  },
+  {
+    "module": "SOnlyDecoderBound",
+    "exit_code": 0,
+    "seconds": 0.6305684409890091
+  },
+  {
+    "module": "SOnlyDecoderBoundCurrent",
+    "exit_code": 0,
+    "seconds": 0.4877253149898024
+  },
+  {
+    "module": "SOnlySchedulerOrigins",
+    "exit_code": 0,
+    "seconds": 0.5713695400045253
+  },
+  {
+    "module": "SOnlyResponseLabels",
+    "exit_code": 0,
+    "seconds": 1.289532645008876
+  },
+  {
+    "module": "SOnlyGlobalAncestors",
+    "exit_code": 0,
+    "seconds": 0.4833457499917131
+  },
+  {
+    "module": "SOnlyGlobalOrigins",
+    "exit_code": 0,
+    "seconds": 1.0658168230002047
+  },
+  {
+    "module": "SOnlyGlobalTerminal",
+    "exit_code": 0,
+    "seconds": 0.748465702010435
+  },
+  {
+    "module": "SOnlyFirstEventOrigins",
+    "exit_code": 0,
+    "seconds": 0.47140576400852297
+  },
+  {
+    "module": "SOnlyGlobalStages",
+    "exit_code": 0,
+    "seconds": 0.8218314059922704
+  },
+  {
+    "module": "SOnlyEventEquivalence",
+    "exit_code": 0,
+    "seconds": 0.47959675001038704
+  },
+  {
+    "module": "SOnlyFirstEventResponse",
+    "exit_code": 0,
+    "seconds": 0.7308739230065839
+  },
+  {
+    "module": "SOnlyGlobalFirstPrefix",
+    "exit_code": 0,
+    "seconds": 0.601389827003004
+  },
+  {
+    "module": "SOnlyGlobalFirstEvent",
+    "exit_code": 0,
+    "seconds": 0.6554294030065648
+  },
+  {
+    "module": "SOnlyGlobalFirstStructure",
+    "exit_code": 0,
+    "seconds": 0.7253339019953273
+  },
+  {
+    "module": "SOnlyInitial",
+    "exit_code": 0,
+    "seconds": 0.5068938769982196
+  },
+  {
+    "module": "SOnlyMachine",
+    "exit_code": 0,
+    "seconds": 1.326675513992086
+  },
+  {
+    "module": "SOnlyMachineBP2",
+    "exit_code": 0,
+    "seconds": 1.194456626995816
+  },
+  {
+    "module": "SOnlyMachineWaterfallBP2",
+    "exit_code": 0,
+    "seconds": 5.447792630002368
+  },
+  {
+    "module": "SOnlyMachineClock",
+    "exit_code": 0,
+    "seconds": 1.9029052640107693
+  },
+  {
+    "module": "SOnlyMachineFinite",
+    "exit_code": 0,
+    "seconds": 0.7507686070021009
+  },
+  {
+    "module": "SOnlyMachineNat",
+    "exit_code": 0,
+    "seconds": 0.44199284599744715
+  },
+  {
+    "module": "SOnlyMachineBounds",
+    "exit_code": 0,
+    "seconds": 0.8435946279932978
+  },
+  {
+    "module": "SOnlyMachineCorrectness",
+    "exit_code": 0,
+    "seconds": 0.4086723309883382
+  },
+  {
+    "module": "SOnlyMemory",
+    "exit_code": 0,
+    "seconds": 0.9838678539963439
+  },
+  {
+    "module": "SOnlyTemporalMemory",
+    "exit_code": 0,
+    "seconds": 2.0670637279981747
+  },
+  {
+    "module": "SOnlySimulation",
+    "exit_code": 0,
+    "seconds": 0.6080912549950881
+  },
+  {
+    "module": "SOnlySimulationNormal",
+    "exit_code": 0,
+    "seconds": 0.7037455590034369
+  },
+  {
+    "module": "SOnlySimulationExceptional",
+    "exit_code": 0,
+    "seconds": 0.701960484002484
+  },
+  {
+    "module": "SOnlySimulationHalt",
+    "exit_code": 0,
+    "seconds": 0.7009149180084933
+  },
+  {
+    "module": "SOnlySimulationEpoch",
+    "exit_code": 0,
+    "seconds": 0.7732500980055192
+  },
+  {
+    "module": "SOnlySimulationSchedule",
+    "exit_code": 0,
+    "seconds": 0.8421776430041064
+  },
+  {
+    "module": "SOnlySimulationInstructions",
+    "exit_code": 0,
+    "seconds": 0.8221373760025017
+  },
+  {
+    "module": "SOnlySimulationRestart",
+    "exit_code": 0,
+    "seconds": 0.9124288479943061
+  },
+  {
+    "module": "SOnlySimulationComplete",
+    "exit_code": 0,
+    "seconds": 0.7993767120060511
+  },
+  {
+    "module": "SOnlySimulationReadout",
+    "exit_code": 0,
+    "seconds": 0.5936114610085497
+  },
+  {
+    "module": "SOnlySimulationInterface",
+    "exit_code": 0,
+    "seconds": 0.6011946509970585
+  },
+  {
+    "module": "SOnlySimulationUniversal",
+    "exit_code": 0,
+    "seconds": 0.5814799060026417
+  },
+  {
+    "module": "SOnlySimulationOutput",
+    "exit_code": 0,
+    "seconds": 0.501344099000562
+  },
+  {
+    "module": "SOnlySimulationPublished",
+    "exit_code": 0,
+    "seconds": 1.5976218730065739
+  },
+  {
+    "module": "StackMacros",
+    "exit_code": 0,
+    "seconds": 0.7371454259991879
+  },
+  {
+    "module": "SOnlyTapeStacks",
+    "exit_code": 0,
+    "seconds": 1.1226132479932858
+  },
+  {
+    "module": "SOnlyTapeCompilerCheckpoints",
+    "exit_code": 0,
+    "seconds": 0.44720141899597365
+  },
+  {
+    "module": "SOnlyTapeCompiler",
+    "exit_code": 0,
+    "seconds": 1.7052092289959546
+  },
+  {
+    "module": "SOnlyTapeCompilerAudit",
+    "exit_code": 0,
+    "seconds": 0.32079443700786214
+  },
+  {
+    "module": "SOnlyTapeStacksTests",
+    "exit_code": 0,
+    "seconds": 0.4132295029994566
+  },
+  {
+    "module": "SOnlyUniversality",
+    "exit_code": 0,
+    "seconds": 0.47302755300188437
+  },
+  {
+    "module": "SOnlyTuringUniversality",
+    "exit_code": 0,
+    "seconds": 0.45619998600159306
+  },
+  {
+    "module": "StackMacroTime",
+    "exit_code": 0,
+    "seconds": 0.5401555860007647
+  },
+  {
+    "module": "StackPushTable",
+    "exit_code": 0,
+    "seconds": 0.6289151630044216
+  },
+  {
+    "module": "StackPopTable",
+    "exit_code": 0,
+    "seconds": 0.6744008450041292
+  },
+  {
+    "module": "StackMacroAudit",
+    "exit_code": 0,
+    "seconds": 0.4658746439963579
+  },
+  {
+    "module": "SOnlyTuringUniversalityReplay",
+    "exit_code": 0,
+    "seconds": 0.4225570030102972
+  }
+]

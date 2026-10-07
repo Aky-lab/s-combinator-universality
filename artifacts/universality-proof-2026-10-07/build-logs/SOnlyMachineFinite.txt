@@ -1,0 +1,10 @@
+/work/universality-20261007T0209-src/SOnlyMachineFinite.lean:130:6: warning: Try `simp at hb` instead of `simpa using hb`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+/work/universality-20261007T0209-src/SOnlyMachineFinite.lean:244:21: warning: This simp argument is unused:
+  State.value
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [encode, unnumber_number]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

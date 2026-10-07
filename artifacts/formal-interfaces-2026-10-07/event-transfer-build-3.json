@@ -1,0 +1,17 @@
+{
+  "command": [
+    "/opt/lean/bin/lean",
+    "-j2",
+    "-M3072",
+    "-o",
+    "/work/event-build/SOnlyEventTransfer.olean",
+    "/work/SOnlyEventTransfer.lean"
+  ],
+  "exit_code": 0,
+  "stop_reason": null,
+  "elapsed_seconds": 0.763151631996152,
+  "sampled_peak_namespace_rss_bytes": 1131855872,
+  "sampled_peak_namespace_virtual_bytes": 7939411968,
+  "sampled_namespace_rss_cap_bytes": 4294967296,
+  "sample_interval_seconds": 0.05
+}

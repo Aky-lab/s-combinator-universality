@@ -1,0 +1,5 @@
+'SOnlyFirstEventOrigins.incomplete_response_licensed' depends on axioms: [propext, Quot.sound]
+'SOnlyFirstEventOrigins.response_licensed_add' depends on axioms: [propext, Quot.sound]
+'SOnlyFirstEventOrigins.event_false_of_excludes' depends on axioms: [propext, Quot.sound]
+'SOnlyFirstEventOrigins.all_target_audits' depends on axioms: [propext]
+'SOnlyFirstEventOrigins.current_read_of_added_origin' depends on axioms: [propext, Quot.sound]

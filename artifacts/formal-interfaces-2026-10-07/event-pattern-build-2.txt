@@ -1,0 +1,6 @@
+'SOnlyEventPattern.target_history_count' depends on axioms: [propext]
+'SOnlyEventPattern.routePattern_sound' depends on axioms: [propext]
+'SOnlyEventPattern.routePattern_matches' depends on axioms: [propext]
+'SOnlyEventPattern.targetPattern_iff' depends on axioms: [propext]
+'SOnlyEventPattern.completed_target_matches' depends on axioms: [propext]
+RESOURCE_GUARD {"command": ["/opt/lean/bin/lean", "-j2", "-M3072", "-o", "/work/event-build/SOnlyEventPattern.olean", "/work/SOnlyEventPattern.lean"], "exit_code": 0, "stop_reason": null, "elapsed_seconds": 0.6596351440093713, "sampled_peak_namespace_rss_bytes": 1129943040, "sampled_peak_namespace_virtual_bytes": 7939510272, "sampled_namespace_rss_cap_bytes": 4294967296, "sample_interval_seconds": 0.05}

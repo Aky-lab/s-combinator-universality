@@ -1,0 +1,207 @@
+[
+  {
+    "path": "BuildClosure-resumed.py",
+    "bytes": 2032,
+    "sha256": "f6af081406d3f6390d357021df1f824ae245b6d634a712937c275bdb3909c1b8"
+  },
+  {
+    "path": "README.md",
+    "bytes": 1669,
+    "sha256": "058f0de8c1a3888a6382e7d00c437829768a7dd74b922870adac079a5276cadc"
+  },
+  {
+    "path": "ResourceGuard.py",
+    "bytes": 1634,
+    "sha256": "aa89416bfd893d413326407263cce4f372edbcad9a7cd6f799daa47c2d7d57fe"
+  },
+  {
+    "path": "SOnlyGenericReplay.lean",
+    "bytes": 160,
+    "sha256": "d0f9b7e2596d32c4216bb61b78eb2a93de4ed1f958d0641ceb85216d26a6ce12"
+  },
+  {
+    "path": "SOnlyTypeAudit.lean",
+    "bytes": 5693,
+    "sha256": "5acf8fbd364abca0b9e66d444967caa279664955f6f9f0f0f2df363af4c406b9"
+  },
+  {
+    "path": "build-records-first-attempt.json",
+    "bytes": 5944,
+    "sha256": "1d0e6beeaece85eec696e2b14a54aa6ab536fe3e44add3c1bc6b9f2d657db24b"
+  },
+  {
+    "path": "build-records.json",
+    "bytes": 74374,
+    "sha256": "e2ae705b9ce9250ca96ec459bc60ec7fb0e87ee6564f541c807dba1b9a894491"
+  },
+  {
+    "path": "canary-invalid-proof-build-status.json",
+    "bytes": 644,
+    "sha256": "12d56fd58bc6e6e180e2d043d81a3a457d040ccb9b251aa0b4701031d1b6cbc5"
+  },
+  {
+    "path": "canary-invalid-proof-replay-status.json",
+    "bytes": 586,
+    "sha256": "5969980ae1f622e2e10ea0eb8dc02f79ce1728255a0f2dba333de90d3c7a609d"
+  },
+  {
+    "path": "canary-invalid-proof.txt",
+    "bytes": 207,
+    "sha256": "79c97369a54296e181986b3059c7c97e2af26a3e6918da780ac55b361734b124"
+  },
+  {
+    "path": "canary-invalid-source-status.json",
+    "bytes": 366,
+    "sha256": "d353312459e606cdc700e68a01894031a23fb02ca3e527c6ebddce5ce7cd3b02"
+  },
+  {
+    "path": "canary-invalid-source.txt",
+    "bytes": 117,
+    "sha256": "2d4f260d0105b7d20250b132cf8c40aa50f3ffabfffbae51b28baff05a49b219"
+  },
+  {
+    "path": "canary-isolation.txt",
+    "bytes": 90,
+    "sha256": "2710fe30e9d139ce07ce12bc3da090cd50c3bbcdf004afd4df5d3e8b3fa8e469"
+  },
+  {
+    "path": "canary-readonly.txt",
+    "bytes": 84,
+    "sha256": "0aedd0f52aba87a9e173c1dba5d0812fba9c0308a46726a802a93adcaff11a3f"
+  },
+  {
+    "path": "canary-valid-replay-status.json",
+    "bytes": 314,
+    "sha256": "edaa8379ce2974df6cdfe96719c02c3c379098381c44ce280541eb16ea0edb6c"
+  },
+  {
+    "path": "canary-valid-replay.txt",
+    "bytes": 35,
+    "sha256": "e39e31573f1306bf74c3a14b8617ded8608b1360bc046894df9b7c51b847763f"
+  },
+  {
+    "path": "fixed38-after-replay.json",
+    "bytes": 2550,
+    "sha256": "9c99f7c4feb160326d85c4c16173df0319bc1407ca6ec0e465e1ff7d7e3ef07b"
+  },
+  {
+    "path": "fixed38-attempt-1.txt",
+    "bytes": 2070,
+    "sha256": "88ddb0cd48fa4d1f5fab04f704c35797d7eff17de373e8c8e53c4dcb79138f15"
+  },
+  {
+    "path": "fixed38-attempt-2.txt",
+    "bytes": 401,
+    "sha256": "dbc835fcebf5033cbcc414d239ae016c0b0f24cd92ad6ff07f30c008c06b1369"
+  },
+  {
+    "path": "fixed38-attempt-3.txt",
+    "bytes": 402,
+    "sha256": "e8d2c14a61b839eb8d669bcc3913a8a1ba9223c74c831f50445488b9a3683283"
+  },
+  {
+    "path": "fixed38-before-replay.json",
+    "bytes": 264,
+    "sha256": "5e3673da88a12a0cfe82e55d16c0edc7c63019d8a4325acc97758b73f75c9caa"
+  },
+  {
+    "path": "fixed38-build.txt",
+    "bytes": 1287,
+    "sha256": "bcc5de3a0fb017a578b855af80b9dce7e4e0edba0c22197f47742710eb92cce4"
+  },
+  {
+    "path": "fixed38-fresh-replay.txt",
+    "bytes": 373,
+    "sha256": "8c8e84c387eb7087249c289a7a1c31e2380ca62ebbfc3ead1e0eb79a5c6a6340"
+  },
+  {
+    "path": "fresh-kernel-replay.txt",
+    "bytes": 395,
+    "sha256": "92713f787fad18bbfaefb837f27e42c7c0aba829c2d1f6fa941cde28742715ff"
+  },
+  {
+    "path": "guard-build.json",
+    "bytes": 346,
+    "sha256": "09e36c5186aeb5d505882cef77e2e5d3f4b29d88214cee9014e769703482994c"
+  },
+  {
+    "path": "guard-fixed38-build.json",
+    "bytes": 419,
+    "sha256": "c14b2ada67d8fb2838bceaefaf70ade2ced060bb8b43c23b502d4c9ae38500bf"
+  },
+  {
+    "path": "guard-fixed38-replay.json",
+    "bytes": 365,
+    "sha256": "d29a360d1921ef09813a54187993bf7f2ba5ddb341e3196051066920778ee9e9"
+  },
+  {
+    "path": "guard-refusal-canary.json",
+    "bytes": 368,
+    "sha256": "3aa2dc619713b8c54161d51deae9303494fea4c399b485abbcf13f8142efcdd2"
+  },
+  {
+    "path": "guard-replay.json",
+    "bytes": 376,
+    "sha256": "b92a3a04dbd44ed7ce2e847cd37f84918681c829936561a3dd386b2b03b53d1f"
+  },
+  {
+    "path": "helper-manifest.json",
+    "bytes": 283,
+    "sha256": "d1bb2e6a68027fea2389105ef755a47e15cf3f54e2094fa7f2f54134f5b51607"
+  },
+  {
+    "path": "lake-version.txt",
+    "bytes": 53,
+    "sha256": "e475ba02fef5717a6caa256e1e25ac50268497b7d1e36955357f37b4701ee4a0"
+  },
+  {
+    "path": "lean-version.txt",
+    "bytes": 106,
+    "sha256": "63f3e16bf0258e2cc0ab3010eb1830723df9bb85097b7b72b0137b9be25a78e9"
+  },
+  {
+    "path": "outputs-after-replay.json",
+    "bytes": 75626,
+    "sha256": "6973fcccc26c434d3d83d53b1e7d18297831a080450b525c3b1b4b445fdcbdcd"
+  },
+  {
+    "path": "outputs-before-replay.json",
+    "bytes": 75626,
+    "sha256": "6973fcccc26c434d3d83d53b1e7d18297831a080450b525c3b1b4b445fdcbdcd"
+  },
+  {
+    "path": "post-replay-verification.json",
+    "bytes": 572,
+    "sha256": "f8aaac5f420d468732e86ff4148670cd5d05e4170d268df0c0bde74d7ab206d3"
+  },
+  {
+    "path": "queried-axioms.json",
+    "bytes": 4001,
+    "sha256": "2ba15055b84790429e96863390c9923a4b2e03bf89503ee27c2c11c3eafee3a8"
+  },
+  {
+    "path": "run_isolated-fixed38.py",
+    "bytes": 5236,
+    "sha256": "37f689293772bac0b5e7a01cb4d6244ede29529d1d8bf97fe75f2804cfc8bd35"
+  },
+  {
+    "path": "run_isolated.py",
+    "bytes": 5020,
+    "sha256": "29de1128f93c891c485a7f2f0092864817e275963a5d6fda560384fb39ce8c71"
+  },
+  {
+    "path": "source-manifest.json",
+    "bytes": 102603,
+    "sha256": "c90a264962c28aa5cedf002f27945e00476f0cf586975ea6ad25036b94b5b301"
+  },
+  {
+    "path": "toolchain-manifest.json.gz",
+    "bytes": 852793,
+    "sha256": "5074a56afedfcf11ade053d85bc0a9c366cb68a9ad654eea4d8ad03d195b3be6"
+  },
+  {
+    "path": "type-axiom-audit.txt",
+    "bytes": 19317,
+    "sha256": "0bb776348f3d2029c5cde2e25dba44c5533e80c279f8a994f3e2ffb761a2ba32"
+  }
+]

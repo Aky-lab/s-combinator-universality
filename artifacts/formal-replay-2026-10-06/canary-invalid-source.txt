@@ -1,0 +1,6 @@
+/work/CanaryReject.lean:1:34: error: Type mismatch
+  True.intro
+has type
+  True
+but is expected to have type
+  False

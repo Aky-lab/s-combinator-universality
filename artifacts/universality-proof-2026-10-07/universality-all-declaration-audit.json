@@ -1,0 +1,17 @@
+{
+  "command": [
+    "/usr/bin/env",
+    "LEAN_PATH=/work/.lake/build/lib/lean:/work/universality-20261007T0209-build",
+    "/opt/lean/bin/lean",
+    "-j2",
+    "-M2048",
+    "/work/universality-20261007T0209-src/SOnlyUniversalityAudit.lean"
+  ],
+  "exit_code": 0,
+  "stop_reason": null,
+  "elapsed_seconds": 1.571915556996828,
+  "sampled_peak_namespace_rss_bytes": 1156845568,
+  "sampled_peak_namespace_virtual_bytes": 6824464384,
+  "sampled_namespace_rss_cap_bytes": 4294967296,
+  "sample_interval_seconds": 0.05
+}

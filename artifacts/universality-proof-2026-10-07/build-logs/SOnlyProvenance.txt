@@ -1,0 +1,8 @@
+'SOnlyProvenance.classify_h4_iff' depends on axioms: [propext, Quot.sound]
+'SOnlyProvenance.classify_compileActions' depends on axioms: [propext]
+'SOnlyProvenance.response_endpoint' depends on axioms: [propext]
+'SOnlyProvenance.Template.abstraction_exact' depends on axioms: [propext]
+'SOnlyProvenance.Template.h6_decomposition' depends on axioms: [propext]
+'SOnlyProvenance.Template.transfer' depends on axioms: [propext]
+'SOnlyProvenance.completed_outer_carries' depends on axioms: [propext]
+'SOnlyProvenance.rebuilt_outer_audit' depends on axioms: [propext]

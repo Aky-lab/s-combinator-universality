@@ -1,0 +1,6 @@
+{
+  "exit_code": 0,
+  "packet": "/workspace/shared/s-formal-replay/work/turing-portable-input-20261007T0310",
+  "scope": "fresh offline portable 490-module source build plus wrapper and kernel replay",
+  "network": "socket syscalls denied; read-only pinned toolchain/source/packet; no previous project or upstream outputs mounted"
+}

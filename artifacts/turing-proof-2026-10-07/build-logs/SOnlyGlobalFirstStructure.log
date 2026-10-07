@@ -1,0 +1,5 @@
+'SOnlyGlobalFirstStructure.sourceTarget_first_structure' depends on axioms: [propext, Quot.sound]
+'SOnlyGlobalFirstStructure.firstSourceEvent_structure' depends on axioms: [propext, Quot.sound]
+'SOnlyGlobalFirstStructure.firstSourceEvent_first_acceptance' depends on axioms: [propext, Quot.sound]
+'SOnlyGlobalFirstStructure.target_response_structure' depends on axioms: [propext, Quot.sound]
+'SOnlyGlobalFirstStructure.selectedTarget_response_structure' depends on axioms: [propext, Quot.sound]

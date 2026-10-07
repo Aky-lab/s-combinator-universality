@@ -1,0 +1,1467 @@
+{
+  "count": 242,
+  "observed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "declarations": [
+    {
+      "declaration": "SOnlySource.scan",
+      "axioms": []
+    },
+    {
+      "declaration": "SOnlySource.iteratePhase_next",
+      "axioms": []
+    },
+    {
+      "declaration": "SOnlySource.consume_prefix",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlySource.consume_partial",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlySource.ordinary_exists_in_prefix",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlySource.Symbol",
+      "axioms": []
+    },
+    {
+      "declaration": "SOnlySource.code",
+      "axioms": []
+    },
+    {
+      "declaration": "SOnlySource.encodeWord",
+      "axioms": []
+    },
+    {
+      "declaration": "SOnlySource.production",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "SOnlySource.production_matches_published",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "SOnlySource.Config",
+      "axioms": []
+    },
+    {
+      "declaration": "SOnlySource.step",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "SOnlySource.iterate",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "SOnlySource.boundaryPhase",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlySource.encode",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlySource.code_length",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "SOnlySource.encodeWord_nil",
+      "axioms": []
+    },
+    {
+      "declaration": "SOnlySource.encodeWord_cons",
+      "axioms": []
+    },
+    {
+      "declaration": "SOnlySource.encodeWord_append",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlySource.scan_code",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "SOnlySource.phase_block",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlySource.step_simulation",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "SOnlySource.trajectory_simulation",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "SOnlySource.ordinary_at_offset",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "SOnlySource.Selected",
+      "axioms": []
+    },
+    {
+      "declaration": "SOnlySource.Event",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlySource.phase_at_offset",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "SOnlySource.code_head_at_offset",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "SOnlySource.event_in_block",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "SOnlySource.event_at_time",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "SOnlySource.event_at_arbitrary_time",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "SOnlySource.event_exists_iff",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "SOnlySource.first_event_exact",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "SOnlyEventTransfer.exactChain_sample",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyEventTransfer.persistentSystem",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "SOnlyEventTransfer.trajectory_eq_contractionRun",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "SOnlyEventTransfer.exactChain_rootReset_sample",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "SOnlyEventTransfer.auditAddress",
+      "axioms": []
+    },
+    {
+      "declaration": "SOnlyEventTransfer.readAudit",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyEventTransfer.readPrestate",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyEventTransfer.freshShell_audit",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyEventTransfer.completed_audit",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyEventTransfer.freshLayer_audit",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyEventTransfer.completed_readPrestate",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "SOnlyEventTransfer.selectedResponse_readPrestate",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "SOnlyEventPattern.routePattern",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyEventPattern.targetPattern",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyEventPattern.target_history_count",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyEventPattern.routePattern_sound",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyEventPattern.routePattern_matches",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyEventPattern.localPattern_sound",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyEventPattern.localPattern_matches",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyEventPattern.targetPattern_iff",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyEventPattern.completed_target_matches",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyEventResponse.target_response_cost",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyEventResponse.response_final_sample",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "SOnlyEventResponse.target_final_sample",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "SOnlyEventResponse.target_completion_event_and_readout",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "SOnlyEventResponse.selectedTarget_event_and_readout",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "SOnlyObserver.Bits",
+      "axioms": []
+    },
+    {
+      "declaration": "SOnlyObserver.rootBit",
+      "axioms": []
+    },
+    {
+      "declaration": "SOnlyObserver.cover",
+      "axioms": []
+    },
+    {
+      "declaration": "SOnlyObserver.cover_complete",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "SOnlyObserver.cover_length",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "SOnlyObserver.leafBits",
+      "axioms": []
+    },
+    {
+      "declaration": "SOnlyObserver.joinBits",
+      "axioms": []
+    },
+    {
+      "declaration": "SOnlyObserver.specification",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyObserver.root_specification",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyObserver.leaf_specification",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyObserver.join_specification",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyObserver.State",
+      "axioms": []
+    },
+    {
+      "declaration": "SOnlyObserver.stateCover",
+      "axioms": []
+    },
+    {
+      "declaration": "SOnlyObserver.stateCover_complete",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "SOnlyObserver.stateCover_length",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "SOnlyObserver.leafState",
+      "axioms": []
+    },
+    {
+      "declaration": "SOnlyObserver.joinState",
+      "axioms": []
+    },
+    {
+      "declaration": "SOnlyObserver.run",
+      "axioms": []
+    },
+    {
+      "declaration": "SOnlyObserver.Occurs",
+      "axioms": []
+    },
+    {
+      "declaration": "SOnlyObserver.run_bits",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyObserver.accepts_iff_occurs",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyObserver.occurs_iff_subterm",
+      "axioms": []
+    },
+    {
+      "declaration": "SOnlyObserver.finite_observer_correct",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "SOnlyObserver.event",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyObserver.event_iff_matches",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "SOnlyObserver.event_iff",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyObserver.event_finite_cover",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "SOnlyInitial.Low",
+      "axioms": []
+    },
+    {
+      "declaration": "SOnlyInitial.Low.arity",
+      "axioms": []
+    },
+    {
+      "declaration": "SOnlyInitial.Low.subterm",
+      "axioms": []
+    },
+    {
+      "declaration": "SOnlyInitial.low_live",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyInitial.live_arity",
+      "axioms": []
+    },
+    {
+      "declaration": "SOnlyInitial.low_word",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyInitial.low_appender",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyInitial.low_action",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyInitial.low_compile",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyInitial.low_generator",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyInitial.initial_low",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyInitial.low_not_local",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "SOnlyInitial.initial_event_false",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "SOnlyCounter.pass",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "SOnlyCounter.phaseAfter",
+      "axioms": []
+    },
+    {
+      "declaration": "SOnlyCounter.iterate_add",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "SOnlyCounter.consume_source_prefix",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "SOnlyCounter.pass_append",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "SOnlyCounter.copies",
+      "axioms": []
+    },
+    {
+      "declaration": "SOnlyCounter.copies_zero",
+      "axioms": []
+    },
+    {
+      "declaration": "SOnlyCounter.copies_succ",
+      "axioms": []
+    },
+    {
+      "declaration": "SOnlyCounter.copies_one",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyCounter.copies_nil",
+      "axioms": []
+    },
+    {
+      "declaration": "SOnlyCounter.copies_add",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyCounter.copies_copies",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyCounter.copies_length",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyCounter.pass_pairs",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "SOnlyCounter.pass_constant_pairs",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "SOnlyCounter.production_12",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "SOnlyCounter.production_13",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "SOnlyCounter.production_14",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "SOnlyCounter.production_15",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "SOnlyCounter.production_16",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "SOnlyCounter.production_17",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "SOnlyCounter.C",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyCounter.T",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyCounter.D",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyCounter.halfcommand",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "SOnlyCounter.twice_pow",
+      "axioms": []
+    },
+    {
+      "declaration": "SOnlyCounter.two_copies",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyCounter.four_copies",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyCounter.protected_word",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyCounter.C_length",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyCounter.T_length",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyCounter.increment_command",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "SOnlyCounter.increment",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "SOnlyCounter.protected_command",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "SOnlyCounter.protected_increment",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "SOnlyCounter.decrement_command",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "SOnlyCounter.decrement_parity",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "SOnlyCounter.decrement_even_reset",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "SOnlyCounter.decrement_odd_reset",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "SOnlyCounter.zero_decrement_command",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "SOnlyCounter.zero_decrement_parity_even",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "SOnlyCounter.zero_decrement_parity_odd",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "SOnlyCounter.zero_decrement_saturates",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "SOnlyCounter.zero_decrement_protects",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "SOnlyCounter.zero_decrement_deletes",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "SOnlyCounter.protected_restart_first",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "SOnlyCounter.protected_restart_complete",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "SOnlyCounter.command_words_even",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyCounter.parity_word_parity",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "SOnlyCounter.protected_parity_even",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "SOnlyCounter.reset_word_even",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "SOnlyCounter.protected_reset_even",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "SOnlyCounter.CounterWord",
+      "axioms": []
+    },
+    {
+      "declaration": "SOnlyCounter.counter_productions_closed",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "SOnlyCounter.counterWord_append",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyCounter.counterWord_copies",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "SOnlyCounter.ordinary_counter_word",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "SOnlyCounter.protected_counter_word",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "SOnlyCounter.pass_counter_word",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "SOnlyCounter.counter_word_no_selected",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "SOnlyCounter.counter_stages_no_selected",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "SOnlyProvenance.State",
+      "axioms": []
+    },
+    {
+      "declaration": "SOnlyProvenance.delta",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyProvenance.classify",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyProvenance.delta_ne_s",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyProvenance.delta_b_iff",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyProvenance.delta_h_iff",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyProvenance.delta_h0_iff",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyProvenance.delta_h1_iff",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyProvenance.delta_h2_iff",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyProvenance.delta_h3_iff",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyProvenance.delta_h4_iff",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyProvenance.classify_s_iff",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyProvenance.classify_b_iff",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyProvenance.classify_h_iff",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyProvenance.classify_h0_iff",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyProvenance.classify_h1_iff",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "SOnlyProvenance.classify_h2_iff",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "SOnlyProvenance.classify_h3_iff",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "SOnlyProvenance.classify_h4_iff",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "SOnlyProvenance.extension_h6_iff",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyProvenance.safe_extension",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyProvenance.fresh_audit",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyProvenance.AllH6",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyProvenance.allH6_s",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyProvenance.app_no_new",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyProvenance.app_registered_root",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyProvenance.Endpoint",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyProvenance.endpoint_ne_h3",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyProvenance.endpoint_ne_s",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyProvenance.endpoint_extension",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyProvenance.applyArgs_other",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyProvenance.s_pair_carries",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyProvenance.s_one_carries",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyProvenance.chosen_other",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyProvenance.chosen_carries",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyProvenance.haltCode_carries",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyProvenance.h_prefix1_carries",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyProvenance.fresh_shell_carries",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyProvenance.completed_outer_carries",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyProvenance.rebuilt_outer_audit",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyProvenance.classify_p",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyProvenance.classify_push",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyProvenance.classify_appender",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyProvenance.classify_selectedAction",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyProvenance.classify_compileDispatcher",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyProvenance.classify_compileActions",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyProvenance.classify_C",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyProvenance.classify_valueTag",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyProvenance.classify_live",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyProvenance.classify_environment",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyProvenance.classify_act",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyProvenance.classify_dispatcher",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyProvenance.classify_clockWrappers",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyProvenance.classify_clockExit",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyProvenance.classify_base",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyProvenance.classify_frame",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyProvenance.classify_freshLocal",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyProvenance.classify_frameFirst",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyProvenance.classify_frameSecond",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyProvenance.classify_liveCell",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyProvenance.appenderAccumulator_endpoint",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyProvenance.response_endpoint",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyProvenance.Descendant",
+      "axioms": []
+    },
+    {
+      "declaration": "SOnlyProvenance.Descendant.app_cases",
+      "axioms": []
+    },
+    {
+      "declaration": "SOnlyProvenance.Descendant.s_eq",
+      "axioms": []
+    },
+    {
+      "declaration": "SOnlyProvenance.Template",
+      "axioms": []
+    },
+    {
+      "declaration": "SOnlyProvenance.Template.instantiate",
+      "axioms": []
+    },
+    {
+      "declaration": "SOnlyProvenance.Template.abstract",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyProvenance.Template.abstraction_exact",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyProvenance.Template.holes",
+      "axioms": []
+    },
+    {
+      "declaration": "SOnlyProvenance.Template.scaffold",
+      "axioms": []
+    },
+    {
+      "declaration": "SOnlyProvenance.Template.descendant_decomposition",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyProvenance.Template.h6_decomposition",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyProvenance.Template.transfer",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyStageEvents.selectedResponse_chain",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyStageEvents.stageStartTime",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyStageEvents.stageStart_prefix",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "SOnlyStageEvents.firstJobPreResponseTime",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyStageEvents.firstJob_response_prefix",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "SOnlyStageEvents.sourceTarget_witness_at",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "SOnlyStageEvents.nonempty_prefix_of_nonempty_iterate",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "SOnlyStageEvents.sourceEvent_reaches_observer",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    }
+  ]
+}

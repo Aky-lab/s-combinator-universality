@@ -1,0 +1,29 @@
+/src/SOnlyMachineWaterfallBP2.lean:209:30: warning: This simp argument is unused:
+  put
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [v, ready, store, hy]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/src/SOnlyMachineWaterfallBP2.lean:220:0: warning: automatically included section variable(s) unused in theorem `SOnlyMachineWaterfallBP2.split_at`:
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/src/SOnlyMachineWaterfallBP2.lean:240:6: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+/src/SOnlyMachineWaterfallBP2.lean:302:79: warning: This simp argument is unused:
+  hih
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [put, pending, ready, store, triggerWeight, hj]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/src/SOnlyMachineWaterfallBP2.lean:403:0: warning: automatically included section variable(s) unused in theorem `SOnlyMachineWaterfallBP2.final_output`:
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`

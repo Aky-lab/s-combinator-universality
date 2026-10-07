@@ -1,0 +1,15 @@
+{
+  "name": "canary-valid-replay-j2",
+  "command": [
+    "/opt/lean/bin/leanchecker",
+    "--fresh",
+    "-v",
+    "CanaryValid"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 52.31404188499437,
+  "child_max_rss_kib": 9984,
+  "timeout_seconds": 180,
+  "address_space_cap_bytes": 6442450944,
+  "lean_num_threads": 2
+}

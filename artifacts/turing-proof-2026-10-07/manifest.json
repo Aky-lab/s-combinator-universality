@@ -1,0 +1,462 @@
+[
+  {
+    "path": "BuildTuring.py",
+    "bytes": 724,
+    "sha256": "d328cb089d0336d75af0d59d8f4daf53de1f46787261bcf691d4bb72c26f2667"
+  },
+  {
+    "path": "README.md",
+    "bytes": 630,
+    "sha256": "ec0bb59ca6b633ea654ddf9bfd86be22786f53483703949b324d7f1f99731433"
+  },
+  {
+    "path": "ResourceGuard.py",
+    "bytes": 1634,
+    "sha256": "aa89416bfd893d413326407263cce4f372edbcad9a7cd6f799daa47c2d7d57fe"
+  },
+  {
+    "path": "SOnlyTuringUniversalityAudit.lean",
+    "bytes": 119894,
+    "sha256": "fcbe4b41cc5bb9965e8a0097b62d661dc622c3c38227979a4c56eeac73986f9d"
+  },
+  {
+    "path": "SOnlyTuringUniversalityReplay.lean",
+    "bytes": 1780,
+    "sha256": "3d01a62c9eb0659f55ca28460bd1e656a5d57e3907ac8d960b23585fedd2027f"
+  },
+  {
+    "path": "after-integrity.json",
+    "bytes": 304,
+    "sha256": "6a6b5064ea7af3b4c79a5da1eca02929dd5a4e282b6f7191b5a889131da3aef7"
+  },
+  {
+    "path": "audit-targets.json",
+    "bytes": 8326,
+    "sha256": "9278f5b6684c8023c51f67ae8b0683d95c334f6499fd8b52e52c47f5aea944f1"
+  },
+  {
+    "path": "before-integrity.json",
+    "bytes": 305,
+    "sha256": "99e38be007821266fc9483b682e9218117a4517638f5b9d0f45cfc499988890b"
+  },
+  {
+    "path": "build-logs/SOnly38.log",
+    "bytes": 899,
+    "sha256": "9ebf7ccc62c441fdf4e59e8e51cd1129d1bd9c0243aa6d1a2890622d13d7c912"
+  },
+  {
+    "path": "build-logs/SOnlyCanonicalOrigins.log",
+    "bytes": 385,
+    "sha256": "df2f80859c8fdbe2fcc501e21a51dba76a14ad2a07895cc36f42c768c198ed0a"
+  },
+  {
+    "path": "build-logs/SOnlyCounter.log",
+    "bytes": 1398,
+    "sha256": "81fa40ca961fd9ae55a9d84ae9f26004d350484640b377c27ccbbbf3fcb1e237"
+  },
+  {
+    "path": "build-logs/SOnlyCurrentDecoder.log",
+    "bytes": 231,
+    "sha256": "cf0bcdc582b784ea592225781e0289a6c554440673f058dba381df831198cf84"
+  },
+  {
+    "path": "build-logs/SOnlyDecoderBound.log",
+    "bytes": 402,
+    "sha256": "61e73def71cdfbed6ecf4b3d4ad7ed28edf553bec2e9183eb7171b22298bffe7"
+  },
+  {
+    "path": "build-logs/SOnlyDecoderBoundCurrent.log",
+    "bytes": 171,
+    "sha256": "c0ad824ead0136577f6f24ff07b8b3a515c769f24681882e31c998249327e691"
+  },
+  {
+    "path": "build-logs/SOnlyEventEquivalence.log",
+    "bytes": 100,
+    "sha256": "80484c4e6a4ee2d8968d3a024943535b967670a29a316165b80c2a623fedd024"
+  },
+  {
+    "path": "build-logs/SOnlyEventPattern.log",
+    "bytes": 349,
+    "sha256": "81ba1e5b0f46e26fd571ae1dcb97c3a4b7defeecd7d3626ac2aacba481443fd8"
+  },
+  {
+    "path": "build-logs/SOnlyEventResponse.log",
+    "bytes": 430,
+    "sha256": "467f06cae5b75bb5eb0464ea3ba3b126e187c47a31d37029bb6ce2375823eb9b"
+  },
+  {
+    "path": "build-logs/SOnlyEventTransfer.log",
+    "bytes": 560,
+    "sha256": "462c8c015b8f4355895df86ca7eb49a526ec9d0fe9acc904dd2f7748219461b6"
+  },
+  {
+    "path": "build-logs/SOnlyFirstEventOrigins.log",
+    "bytes": 440,
+    "sha256": "7e535095dfb7430d8c6bb2af78bc9a38f3d4f6c3595df30dea0dd80d48c39c87"
+  },
+  {
+    "path": "build-logs/SOnlyFirstEventResponse.log",
+    "bytes": 387,
+    "sha256": "736cc004f8721fcc46716bcd963a7a7a690c53ed50f4bad200a8802207ec1c6a"
+  },
+  {
+    "path": "build-logs/SOnlyGeneratedOrigins.log",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "build-logs/SOnlyGlobalAncestors.log",
+    "bytes": 791,
+    "sha256": "f8da02605910940c8d0de7b8f601f5e2fabff45d458cb3f475c5b210f18f17b6"
+  },
+  {
+    "path": "build-logs/SOnlyGlobalFirstEvent.log",
+    "bytes": 276,
+    "sha256": "67a708576576943ef8dacc4e5ec17698b3278ae586d0fa052086ce4a44c9e0e1"
+  },
+  {
+    "path": "build-logs/SOnlyGlobalFirstPrefix.log",
+    "bytes": 186,
+    "sha256": "f43b4ea151e06307871bca7dcc75bb3a6069e3670e8aeec8d3e48c43668cfe4d"
+  },
+  {
+    "path": "build-logs/SOnlyGlobalFirstStructure.log",
+    "bytes": 495,
+    "sha256": "425e711051accade3e3841e3c78fbb7f75cee55af4f8cfa69b65bd3474d09c42"
+  },
+  {
+    "path": "build-logs/SOnlyGlobalOrigins.log",
+    "bytes": 470,
+    "sha256": "a1cc960dec95123223694cd8517797c1e7bd2eefc5a1009b7496d9b619ab76e4"
+  },
+  {
+    "path": "build-logs/SOnlyGlobalStages.log",
+    "bytes": 435,
+    "sha256": "d59fa17953b316ac67fc30e7e7fc6be73f8a1deedb3c563450ed60e674a72955"
+  },
+  {
+    "path": "build-logs/SOnlyGlobalTerminal.log",
+    "bytes": 103,
+    "sha256": "eb0e7e3cab87c51d98c34507f574296fa35693d02fe6a2c7d570cc21dd6f6552"
+  },
+  {
+    "path": "build-logs/SOnlyInitial.log",
+    "bytes": 132,
+    "sha256": "f89930a876b9dcd1ed203472a83b4339f19f37ac36c019e8b1a6cb1e70fbc22e"
+  },
+  {
+    "path": "build-logs/SOnlyMachine.log",
+    "bytes": 1427,
+    "sha256": "caf0b73fdcdc1075bf85f0da3d928c61339b24dee133042b901afdf20025f96c"
+  },
+  {
+    "path": "build-logs/SOnlyMachineBP2.log",
+    "bytes": 1508,
+    "sha256": "24fce1db0c462246852f68589f38e227e78c6687bb71aab3e7e5bc9d3428e9af"
+  },
+  {
+    "path": "build-logs/SOnlyMachineBounds.log",
+    "bytes": 83,
+    "sha256": "2357c6011184c45e04a5dae7d7e325123222a7e1cfb6b17d8d406e166750d620"
+  },
+  {
+    "path": "build-logs/SOnlyMachineClock.log",
+    "bytes": 1944,
+    "sha256": "d98e147ee9caf99dc83420a43272fd3e50c2fc9f6a10c916708da9c582f9ee7b"
+  },
+  {
+    "path": "build-logs/SOnlyMachineCorrectness.log",
+    "bytes": 169,
+    "sha256": "16261ba59cc0ced61ca54986f9c50b52fa8b2791f4c1ee1d77e42e2c7db18830"
+  },
+  {
+    "path": "build-logs/SOnlyMachineFinite.log",
+    "bytes": 434,
+    "sha256": "9ae414bc9ac0945edcc79a508b89eb0b9c790c1dfeea29d468b8b37138ae4732"
+  },
+  {
+    "path": "build-logs/SOnlyMachineNat.log",
+    "bytes": 214,
+    "sha256": "9f06c903a325797cec05748d9c505ee646cfa87dfff221f33e8b772179599e7f"
+  },
+  {
+    "path": "build-logs/SOnlyMachineWaterfallBP2.log",
+    "bytes": 1508,
+    "sha256": "b53ffeac87ee2cc42a47f252b3b27d042cb89045ab572f66c6b7fd514ab71791"
+  },
+  {
+    "path": "build-logs/SOnlyMemory.log",
+    "bytes": 1034,
+    "sha256": "beed299fe556a6b5a59b4736a2745addaec964d9071744c0b122c36d9e514af3"
+  },
+  {
+    "path": "build-logs/SOnlyObserver.log",
+    "bytes": 287,
+    "sha256": "9a1baa7399a319c97bca8a2c6b9eeb028e71bdb853a3295a62214971cdb51451"
+  },
+  {
+    "path": "build-logs/SOnlyProvenance.log",
+    "bytes": 561,
+    "sha256": "a1f381d07f50fc96b8277f56b615d000ad3d88717d3cff107ada9e940b3fccf2"
+  },
+  {
+    "path": "build-logs/SOnlyProvenanceRows.log",
+    "bytes": 667,
+    "sha256": "0d9d31096e78ea91c57cdb7d1bc2b7a8ce684361f81d3b6297582addc34ad7cc"
+  },
+  {
+    "path": "build-logs/SOnlyResponseLabels.log",
+    "bytes": 1231,
+    "sha256": "241ea56de1c729ea84b55f4f74f865b2d9c1fc856d9daa2cc68965447296b6d3"
+  },
+  {
+    "path": "build-logs/SOnlyResult.log",
+    "bytes": 357,
+    "sha256": "67535a76cc4a47606eff323078abf5d063ca574faf7ec162e8eccfa17da65294"
+  },
+  {
+    "path": "build-logs/SOnlyResultBits.log",
+    "bytes": 329,
+    "sha256": "6a34941059d513e9a37e413bb4eb132890505cf737f4a347113a08931cef7fc0"
+  },
+  {
+    "path": "build-logs/SOnlySchedulerOrigins.log",
+    "bytes": 442,
+    "sha256": "d46e02417d4f5ac2a060db013156d58118f4dd9379ce81f56de3639ef22eee53"
+  },
+  {
+    "path": "build-logs/SOnlySimulation.log",
+    "bytes": 400,
+    "sha256": "5c5961e6026e40dc8423729f7bfa1a47ccdeeecaf36c877e65f86ffb2d791d53"
+  },
+  {
+    "path": "build-logs/SOnlySimulationComplete.log",
+    "bytes": 500,
+    "sha256": "ca79381e9cf086cb776acaf566ed7f8cf5bc6e1a3ad4148497b11a0dae8b745e"
+  },
+  {
+    "path": "build-logs/SOnlySimulationEpoch.log",
+    "bytes": 316,
+    "sha256": "ac1c17b245e384b4a3ef33c4a0556c94e60eec15e168ecfaff2a2f74bd92e5a1"
+  },
+  {
+    "path": "build-logs/SOnlySimulationExceptional.log",
+    "bytes": 158,
+    "sha256": "8f3d1c39c60714af3b21a599da6782785babf091ff0e27274481ebaeb9a7f862"
+  },
+  {
+    "path": "build-logs/SOnlySimulationHalt.log",
+    "bytes": 631,
+    "sha256": "0471b8d9e971f32b951785e10b5a69619cd00003d841f3f901718e236356d9f0"
+  },
+  {
+    "path": "build-logs/SOnlySimulationInstructions.log",
+    "bytes": 1057,
+    "sha256": "bf857fad409e45066e21cd04d139a8df5134f485f555d9b39ffa6fbb79fe6234"
+  },
+  {
+    "path": "build-logs/SOnlySimulationInterface.log",
+    "bytes": 496,
+    "sha256": "a722dcd77d3b75605eaa2b0ca01b9f71686781179a67400f5e742d7db9fdab2d"
+  },
+  {
+    "path": "build-logs/SOnlySimulationNormal.log",
+    "bytes": 225,
+    "sha256": "7e83afd3ff72647f3c38bdefa6401377d8d16393680ea358e5d41795fab4367e"
+  },
+  {
+    "path": "build-logs/SOnlySimulationOutput.log",
+    "bytes": 334,
+    "sha256": "a9178e4c004a834b46e32644ceffaf1f6b5e01806df8126c45116ee263bc8662"
+  },
+  {
+    "path": "build-logs/SOnlySimulationPublished.log",
+    "bytes": 214,
+    "sha256": "4cda784df08cee7a32a26d8c0030d92536e3641040539ff8df66f308077f3b8d"
+  },
+  {
+    "path": "build-logs/SOnlySimulationReadout.log",
+    "bytes": 851,
+    "sha256": "3f5d15b3ccfd29800d6a07ea507e2bdb90e2df04e12ddb793725a3be6143b0c5"
+  },
+  {
+    "path": "build-logs/SOnlySimulationRestart.log",
+    "bytes": 205,
+    "sha256": "5a70c90a24e33f0f1a44e7722717669a31367add2745bcecd9a2014e2de5bfc6"
+  },
+  {
+    "path": "build-logs/SOnlySimulationSchedule.log",
+    "bytes": 173,
+    "sha256": "dda63a718bf0e3338b25e104fc9916c31fc2b4137ee5042c6a818df6812903f2"
+  },
+  {
+    "path": "build-logs/SOnlySimulationUniversal.log",
+    "bytes": 311,
+    "sha256": "60b7a265b5fa263c7ced62b3689cce54f24384e2dd6eed01691672886a9fc8e8"
+  },
+  {
+    "path": "build-logs/SOnlySource.log",
+    "bytes": 1156,
+    "sha256": "950d8427eab63160d2b674c550b24efc4d013e07f921a73b926b18248d130b52"
+  },
+  {
+    "path": "build-logs/SOnlyStageEvents.log",
+    "bytes": 491,
+    "sha256": "2dc5957602455d19de085584daec31226eaa6af277ce38a6d67b11e016250aa6"
+  },
+  {
+    "path": "build-logs/SOnlyTapeCompiler.log",
+    "bytes": 819,
+    "sha256": "255c296a9c536ccd1a4eb104479d818ad95641febe751645ac80687ddd1e8012"
+  },
+  {
+    "path": "build-logs/SOnlyTapeCompilerAudit.log",
+    "bytes": 1338,
+    "sha256": "033b5b004f81f050eb309c03071af1e375f72cb6923048d56f83329f8f6c9965"
+  },
+  {
+    "path": "build-logs/SOnlyTapeCompilerCheckpoints.log",
+    "bytes": 528,
+    "sha256": "6767b6be7decf6b6c54970c028838ccf0e9138f92f9105985eb1ab70555b5e8a"
+  },
+  {
+    "path": "build-logs/SOnlyTapeStacks.log",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "build-logs/SOnlyTapeStacksTests.log",
+    "bytes": 707,
+    "sha256": "ac47ed9eef4140da397aaebf5b5e0e55f0648654e745219b84386529b7a59fb4"
+  },
+  {
+    "path": "build-logs/SOnlyTemporalMemory.log",
+    "bytes": 1836,
+    "sha256": "6936767c0948cbba6c7a7c316af20b540c2dec70047ef2e47917350e02ccb440"
+  },
+  {
+    "path": "build-logs/SOnlyTuringUniversality.log",
+    "bytes": 786,
+    "sha256": "a10d0806b0e38fba294ec331943b61c844ae66b50cfd297fa5f166c5c2b609aa"
+  },
+  {
+    "path": "build-logs/SOnlyTuringUniversalityReplay.log",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "build-logs/SOnlyUniversality.log",
+    "bytes": 812,
+    "sha256": "73c165c5c498e1134642456811b1d17093b755c9f16ca747f74f51aeb38d7f99"
+  },
+  {
+    "path": "build-logs/SOnlyWitnessResult.log",
+    "bytes": 98,
+    "sha256": "0b405ec1be1f7068cc144e1c1bf1ae92d7c2b4b86c140ac11e3fdd8f04d29cd8"
+  },
+  {
+    "path": "build-logs/StackMacroAudit.log",
+    "bytes": 589,
+    "sha256": "5a421b0c919beb449b04c945ab8652dfb32c0fae13cc9bae157e70859f26df68"
+  },
+  {
+    "path": "build-logs/StackMacroTime.log",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "build-logs/StackMacros.log",
+    "bytes": 267,
+    "sha256": "063e63f36f81aec3b37f72c4782913a7ac586dc9459c2938d99acd079f70d581"
+  },
+  {
+    "path": "build-logs/StackPopTable.log",
+    "bytes": 874,
+    "sha256": "e8d09555bc64f9ceed4b3c962635c7577dabb2fceb5a19213d8f4ae80a11b293"
+  },
+  {
+    "path": "build-logs/StackPushTable.log",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "build-records.json",
+    "bytes": 6779,
+    "sha256": "30735d1c7a5280329899d7caace1920e84b41a431ed9da879d084e1d8fb109b1"
+  },
+  {
+    "path": "check-integrity.py",
+    "bytes": 2092,
+    "sha256": "ecd7c52c6d00a2c2fe887b0772fb84b701116790102be1a9ef49c85081f70419"
+  },
+  {
+    "path": "declaration-axioms.json",
+    "bytes": 165858,
+    "sha256": "3bef387b8c39c3ffc6506d88082ae7303529a0b2ed30ac83be393db68816a42b"
+  },
+  {
+    "path": "guard-turing-audit.json",
+    "bytes": 389,
+    "sha256": "2966956fbb388a9156dd2537e91d6161d34843fce072e9e68ee03d3b0eb71462"
+  },
+  {
+    "path": "guard-turing-build.json",
+    "bytes": 343,
+    "sha256": "f662e6d9e37fa92f80156d7e7d84ea0a01d4359980848fee174537935667d53b"
+  },
+  {
+    "path": "guard-turing-replay.json",
+    "bytes": 387,
+    "sha256": "1c7aca756cc5769f4ef82a166add53cdf0ddc0cb7e165ccf4a962387deda545c"
+  },
+  {
+    "path": "main-theorem-types.txt",
+    "bytes": 4578,
+    "sha256": "05924149bc585bc0c38cd039b6b4042a17445f06e7c14f78243a89a2d253aea0"
+  },
+  {
+    "path": "run-isolated-turing.py",
+    "bytes": 2141,
+    "sha256": "916d025869e9cdef4466252bb2b9ae5641fecae6b9f59561eb694777e23f47c9"
+  },
+  {
+    "path": "source-manifest.json",
+    "bytes": 15390,
+    "sha256": "c076e3b047cbe8a953cbf690345109577bd3dfae1467f0a58e5378e9c198b9ec"
+  },
+  {
+    "path": "source-output-identity.json",
+    "bytes": 23453,
+    "sha256": "f09ad8722183a99cfd7765d4169e393488d221a949b1e72db99ed082e5a9ebac"
+  },
+  {
+    "path": "turing-audit-run.json",
+    "bytes": 157,
+    "sha256": "f96aa5a73ff802afe34f15794b021eaaaebb369dd33c29bc5161ed9500a98fe8"
+  },
+  {
+    "path": "turing-audit.txt",
+    "bytes": 507179,
+    "sha256": "2ca8957fcdaaff1055f8c414d6ef90895157b0f04b14d99651a413fb31bb5ad9"
+  },
+  {
+    "path": "turing-build-run.json",
+    "bytes": 111,
+    "sha256": "ec5d2262e72c3dcf8009741f7d3dc2a4f0a273f32527ea14cd8277323a7fd3d6"
+  },
+  {
+    "path": "turing-build.txt",
+    "bytes": 1805,
+    "sha256": "b41b4989473ab1f6078713ffc147cb11d25b70d7787a78e6a5e3a76fd28c6808"
+  },
+  {
+    "path": "turing-replay-run.json",
+    "bytes": 156,
+    "sha256": "9ba58e8d63e77bd547dc975a2f219d23b8f61691c807c676d0e94b49242bb21c"
+  },
+  {
+    "path": "turing-replay.txt",
+    "bytes": 417,
+    "sha256": "159155c9c3f88bcdf3f290507da528b3e8df2d25e597fa7d3481cb62a1a6b16e"
+  }
+]

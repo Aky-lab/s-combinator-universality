@@ -1,0 +1,26 @@
+test_all_import_forms_and_body_boundary (test_replay_formal.ReplayPreflightTests.test_all_import_forms_and_body_boundary) ... ok
+test_build_directory (test_replay_formal.ReplayPreflightTests.test_build_directory) ... ok
+test_comments_and_fake_imports (test_replay_formal.ReplayPreflightTests.test_comments_and_fake_imports) ... ok
+test_git_blob_identity_and_duplicate_source_paths (test_replay_formal.ReplayPreflightTests.test_git_blob_identity_and_duplicate_source_paths) ... ok
+test_identity_and_tampering (test_replay_formal.ReplayPreflightTests.test_identity_and_tampering) ... ok
+test_invalid_header (test_replay_formal.ReplayPreflightTests.test_invalid_header) ... ok
+test_manifest_identity_includes_exact_bytes (test_replay_formal.ReplayPreflightTests.test_manifest_identity_includes_exact_bytes) ... ok
+test_order_unknown_dependencies_and_cycles (test_replay_formal.ReplayPreflightTests.test_order_unknown_dependencies_and_cycles) ... ok
+test_paths (test_replay_formal.ReplayPreflightTests.test_paths) ... ok
+test_prelude (test_replay_formal.ReplayPreflightTests.test_prelude) ... ok
+test_source_symlink_cannot_escape_root (test_replay_formal.ReplayPreflightTests.test_source_symlink_cannot_escape_root) ... ok
+test_cli_requires_fresh_build_path (test_replay_formal.ReplayProfileTests.test_cli_requires_fresh_build_path) ... ok
+test_default_and_explicit_target_selection (test_replay_formal.ReplayProfileTests.test_default_and_explicit_target_selection) ... ok
+test_duplicate_reserved_and_wrapper_modules_are_rejected (test_replay_formal.ReplayProfileTests.test_duplicate_reserved_and_wrapper_modules_are_rejected) ... ok
+test_exact_profiles_and_module_counts (test_replay_formal.ReplayProfileTests.test_exact_profiles_and_module_counts) ... ok
+test_mocked_build_uses_selected_profile_and_only_fresh_outputs (test_replay_formal.ReplayProfileTests.test_mocked_build_uses_selected_profile_and_only_fresh_outputs)
+Exercise orchestration with a fake compiler, not proof verification. ... ok
+test_profile_counts_cannot_be_interchanged (test_replay_formal.ReplayProfileTests.test_profile_counts_cannot_be_interchanged) ... ok
+test_published_manifests_match_pinned_profile_identities (test_replay_formal.ReplayProfileTests.test_published_manifests_match_pinned_profile_identities) ... ok
+test_unpinned_profile_is_never_replayed (test_replay_formal.ReplayProfileTests.test_unpinned_profile_is_never_replayed) ... ok
+test_upstream_count_and_config_set_are_fixed (test_replay_formal.ReplayProfileTests.test_upstream_count_and_config_set_are_fixed) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 1.983s
+
+OK

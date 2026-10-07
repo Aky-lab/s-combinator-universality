@@ -1,0 +1,19 @@
+{
+  "command": [
+    "/usr/bin/python3",
+    "/packet/tools/replay_formal.py",
+    "--lean-bin",
+    "/opt/lean/bin",
+    "--upstream-source",
+    "/upstream",
+    "--build-dir",
+    "/work/fresh"
+  ],
+  "exit_code": 0,
+  "stop_reason": null,
+  "elapsed_seconds": 609.449450131011,
+  "sampled_peak_namespace_rss_bytes": 1506811904,
+  "sampled_peak_namespace_virtual_bytes": 18251436032,
+  "sampled_namespace_rss_cap_bytes": 4294967296,
+  "sample_interval_seconds": 0.05
+}

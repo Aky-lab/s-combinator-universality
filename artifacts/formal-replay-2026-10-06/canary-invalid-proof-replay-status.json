@@ -1,0 +1,21 @@
+{
+  "name": "invalid-proof-fresh-replay-v2",
+  "command": [
+    "/opt/lean/bin/leanchecker",
+    "--fresh",
+    "-v",
+    "InvalidProof"
+  ],
+  "exit_code": 1,
+  "stop_reason": null,
+  "elapsed_seconds": 95.55373198400775,
+  "sampled_peak_aggregate_rss_bytes": 10342400,
+  "sampled_peak_aggregate_virtual_bytes": 38342656,
+  "sampled_peak_threads": 1,
+  "sampled_peak_processes": 1,
+  "timeout_seconds": 600,
+  "per_process_address_space_cap_bytes": 34359738368,
+  "sampled_aggregate_rss_cap_bytes": 4294967296,
+  "monitor_interval_seconds": 0.05,
+  "lean_num_threads_environment": 2
+}

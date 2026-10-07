@@ -1,0 +1,3 @@
+Verified 56 project + 423 upstream Lean sources and 3 configs; Lean 4.33.1.
+External direct imports: Init, Init.Data.Nat.Power2.Lemmas, Std
+CHECK ONLY PASSED: hashes and dependency order verified; no compilation or kernel replay performed.

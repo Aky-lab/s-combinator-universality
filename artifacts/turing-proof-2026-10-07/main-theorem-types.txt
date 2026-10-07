@@ -1,0 +1,66 @@
+SOnlyTuringUniversality.encode {states symbols : Nat} (machine : SOnlyTuringUniversality.TapeMachine states symbols)
+  (input : List (Fin symbols)) : PureSFormal.PureS.Term
+'SOnlyTuringUniversality.encode' depends on axioms: [propext, Quot.sound]
+
+SOnlyTuringUniversality.starts_at_encoder {states symbols : Nat}
+  (machine : SOnlyTuringUniversality.TapeMachine states symbols) (input : List (Fin symbols)) :
+  SOnlyTuringUniversality.trajectory machine input 0 = SOnlyTuringUniversality.encode machine input
+'SOnlyTuringUniversality.starts_at_encoder' depends on axioms: [propext, Quot.sound]
+
+SOnlyTuringUniversality.root_reset (term : PureSFormal.PureS.Term) :
+  SOnlyTuringUniversality.controller.initial term =
+    { control := some SOnlyTuringUniversality.controller.start, cursor := PureSFormal.PureS.Cursor.atRoot term }
+'SOnlyTuringUniversality.root_reset' depends on axioms: [propext, Quot.sound]
+
+SOnlyTuringUniversality.no_interinvocation_state : SOnlyTuringUniversality.controller.InterInvocationState = Unit
+'SOnlyTuringUniversality.no_interinvocation_state' depends on axioms: [propext, Quot.sound]
+
+SOnlyTuringUniversality.all_input_linear (term : PureSFormal.PureS.Term) :
+  SOnlyTuringUniversality.controller.stoppingTime term ≤
+    SOnlyTuringUniversality.controller.coefficient * (term.size + 1)
+'SOnlyTuringUniversality.all_input_linear' depends on axioms: [propext, Quot.sound]
+
+SOnlyTuringUniversality.every_step_native {states symbols : Nat}
+  (machine : SOnlyTuringUniversality.TapeMachine states symbols) (input : List (Fin symbols)) (index : Nat) :
+  PureSFormal.PureS.Step (SOnlyTuringUniversality.trajectory machine input index)
+    (SOnlyTuringUniversality.trajectory machine input (index + 1))
+'SOnlyTuringUniversality.every_step_native' depends on axioms: [propext, Quot.sound]
+
+SOnlyTuringUniversality.selector_executes {states symbols : Nat}
+  (machine : SOnlyTuringUniversality.TapeMachine states symbols) (input : List (Fin symbols)) (index : Nat) :
+  SOnlyTuringUniversality.selector (SOnlyTuringUniversality.trajectory machine input index) =
+    some (SOnlyTuringUniversality.trajectory machine input (index + 1))
+'SOnlyTuringUniversality.selector_executes' depends on axioms: [propext, Quot.sound]
+
+SOnlyTuringUniversality.halting_iff_event {states symbols : Nat}
+  (machine : SOnlyTuringUniversality.TapeMachine states symbols) (input : List (Fin symbols)) :
+  SOnlyTuringUniversality.Halts machine input ↔
+    ∃ index, SOnlyTuringUniversality.event (SOnlyTuringUniversality.trajectory machine input index) = true
+'SOnlyTuringUniversality.halting_iff_event' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+SOnlyTuringUniversality.halting_iff_first_event {states symbols : Nat}
+  (machine : SOnlyTuringUniversality.TapeMachine states symbols) (input : List (Fin symbols)) :
+  SOnlyTuringUniversality.Halts machine input ↔ ∃ index, SOnlyTuringUniversality.FirstEvent machine input index
+'SOnlyTuringUniversality.halting_iff_first_event' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+SOnlyTuringUniversality.halting_first_result {states symbols : Nat}
+  (machine : SOnlyTuringUniversality.TapeMachine states symbols) (input : List (Fin symbols))
+  (halts : SOnlyTuringUniversality.Halts machine input) :
+  ∃ index value,
+    SOnlyTuringUniversality.FirstEvent machine input index ∧
+      SOnlyTuringUniversality.decode (SOnlyTuringUniversality.trajectory machine input index) = some value
+'SOnlyTuringUniversality.halting_first_result' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+SOnlyTuringUniversality.nonhalting_no_event {states symbols : Nat}
+  (machine : SOnlyTuringUniversality.TapeMachine states symbols) (input : List (Fin symbols))
+  (nonhalt : ¬SOnlyTuringUniversality.Halts machine input) (index : Nat) :
+  SOnlyTuringUniversality.event (SOnlyTuringUniversality.trajectory machine input index) = false
+'SOnlyTuringUniversality.nonhalting_no_event' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+SOnlyTuringUniversality.left_stack_result_iff_first_event {states symbols : Nat}
+  (machine : SOnlyTuringUniversality.TapeMachine states symbols) (input : List (Fin symbols)) (value : Nat) :
+  SOnlyTuringUniversality.LeftStackResult machine input value ↔
+    ∃ index,
+      SOnlyTuringUniversality.FirstEvent machine input index ∧
+        SOnlyTuringUniversality.decode (SOnlyTuringUniversality.trajectory machine input index) = some value
+'SOnlyTuringUniversality.left_stack_result_iff_first_event' depends on axioms: [propext, Classical.choice, Quot.sound]

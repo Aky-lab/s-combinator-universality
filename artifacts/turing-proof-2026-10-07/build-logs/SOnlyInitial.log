@@ -1,0 +1,2 @@
+'SOnlyInitial.initial_low' depends on axioms: [propext]
+'SOnlyInitial.initial_event_false' depends on axioms: [propext, Quot.sound]

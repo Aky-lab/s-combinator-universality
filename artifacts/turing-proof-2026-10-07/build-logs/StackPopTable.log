@@ -1,0 +1,21 @@
+/src/StackPopTable.lean:44:35: warning: This simp argument is unused:
+  Fin.val_mk
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [machine, transfer, hmin, hlt, hne, hle, ↓reduceIte, hsub]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/src/StackPopTable.lean:54:38: warning: This simp argument is unused:
+  Fin.val_mk
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [machine, transferAdd, hmin, hlt, hne, hnle, hle, ↓reduceIte, hsub]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/src/StackPopTable.lean:63:31: warning: This simp argument is unused:
+  Fin.val_mk
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [machine, done, hmin, hlt, hne, hnle, hnle', ↓reduceIte]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

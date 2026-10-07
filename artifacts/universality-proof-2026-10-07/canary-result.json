@@ -1,0 +1,55 @@
+{
+  "status": "passed",
+  "ordinary_invalid_source_exit": 1,
+  "valid_proof_fresh_replay_exit": 0,
+  "injected_invalidFalse_fresh_replay_exit": 1,
+  "canaries_separate_from_proof_search_path": true,
+  "readonly_canary_replay": true,
+  "files": [
+    {
+      "path": "CanaryReject.lean",
+      "bytes": 45,
+      "sha256": "a58f53d045b257785ae4633da30952fcb3b7cf75f202092ad7ea93311f367b36"
+    },
+    {
+      "path": "CanaryValid.lean",
+      "bytes": 52,
+      "sha256": "9dabff2145eb19442b881b3ea42a44f28aead7cdaed8d75f2953b235a918755d"
+    },
+    {
+      "path": "CanaryValid.olean",
+      "bytes": 5104,
+      "sha256": "0ed683348da9734743437260bf366ae439edfc325c13f9b6904c81b45d596853"
+    },
+    {
+      "path": "InvalidProof.ir",
+      "bytes": 20656,
+      "sha256": "149cf0d22edadac80c4f697ba103d258869f4d2b96c89d27b800c9bf79f4b975"
+    },
+    {
+      "path": "InvalidProof.ir.sig",
+      "bytes": 176,
+      "sha256": "8db6488a4307e4bc8532717a035e8a244b2c261a263b3828a63727246bb375e9"
+    },
+    {
+      "path": "InvalidProof.lean",
+      "bytes": 822,
+      "sha256": "fc02506efb0410266015aa6b1802f89ab91d85efc17399d20c847d859d32a10d"
+    },
+    {
+      "path": "InvalidProof.olean",
+      "bytes": 27040,
+      "sha256": "34c420d122ac08c8f93cf93f4b3191b2c40f97a09eba7a6f829058a142ab09ba"
+    },
+    {
+      "path": "InvalidProof.olean.private",
+      "bytes": 46208,
+      "sha256": "b457e006da74e1f0acf1407ae0b180be56794f59e5351f8e444b022f35da98bb"
+    },
+    {
+      "path": "InvalidProof.olean.server",
+      "bytes": 680,
+      "sha256": "0a7a0d8cba282ff461e85e2ec1d0dff909b18433fa222f2273c2aaf2fcb39dc0"
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+'SOnlyCurrentDecoder.findShell_sound' depends on axioms: [propext]
+'SOnlyCurrentDecoder.event_iff_found' depends on axioms: [propext, Quot.sound]
+'SOnlyCurrentDecoder.read_of_all_witnesses' depends on axioms: [propext, Quot.sound]

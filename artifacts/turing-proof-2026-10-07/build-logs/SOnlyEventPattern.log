@@ -1,0 +1,5 @@
+'SOnlyEventPattern.target_history_count' depends on axioms: [propext]
+'SOnlyEventPattern.routePattern_sound' depends on axioms: [propext]
+'SOnlyEventPattern.routePattern_matches' depends on axioms: [propext]
+'SOnlyEventPattern.targetPattern_iff' depends on axioms: [propext]
+'SOnlyEventPattern.completed_target_matches' depends on axioms: [propext]

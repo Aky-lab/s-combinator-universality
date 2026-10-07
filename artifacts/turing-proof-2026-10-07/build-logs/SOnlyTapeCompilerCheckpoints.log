@@ -1,0 +1,6 @@
+'SOnlyTapeCompilerCheckpoints.partial_run_cases' depends on axioms: [propext, Quot.sound]
+'SOnlyTapeCompilerCheckpoints.simulate_run' depends on axioms: [propext, Quot.sound]
+'SOnlyTapeCompilerCheckpoints.reflects_halt_bounded' depends on axioms: [propext, Quot.sound]
+'SOnlyTapeCompilerCheckpoints.halting_iff' depends on axioms: [propext, Quot.sound]
+'SOnlyTapeCompilerCheckpoints.reflects_halt_state' depends on axioms: [propext, Quot.sound]
+'SOnlyTapeCompilerCheckpoints.result_iff' depends on axioms: [propext, Quot.sound]

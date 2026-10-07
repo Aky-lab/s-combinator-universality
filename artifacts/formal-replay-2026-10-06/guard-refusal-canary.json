@@ -1,0 +1,13 @@
+{
+  "command": [
+    "/usr/bin/python3",
+    "/work/MemoryCanary.py"
+  ],
+  "exit_code": 124,
+  "stop_reason": "sampled aggregate RSS cap",
+  "elapsed_seconds": 0.054402458990807645,
+  "sampled_peak_namespace_rss_bytes": 150138880,
+  "sampled_peak_namespace_virtual_bytes": 170532864,
+  "sampled_namespace_rss_cap_bytes": 67108864,
+  "sample_interval_seconds": 0.05
+}

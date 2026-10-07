@@ -1,0 +1,5 @@
+'SOnlySimulation.safe_pass_run' depends on axioms: [propext, Quot.sound]
+'SOnlySimulation.assembled_command_safe' depends on axioms: [propext, Quot.sound]
+'SOnlySimulation.assembled_parity_safe' depends on axioms: [propext, Quot.sound]
+'SOnlySimulation.assembled_reset_even' depends on axioms: [propext, Quot.sound]
+'SOnlySimulation.assembled_odd_reset_safe' depends on axioms: [propext, Quot.sound]

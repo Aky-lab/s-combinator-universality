@@ -1,0 +1,42 @@
+/src/SOnlyMachine.lean:207:20: warning: This simp argument is unused:
+  Cell.data.injEq
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [put, reduceCtorEq, ↓reduceIte, normal_data]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/src/SOnlyMachine.lean:235:66: warning: This simp argument is unused:
+  normal
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [v, put]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/src/SOnlyMachine.lean:243:66: warning: This simp argument is unused:
+  normal
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [v, put]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/src/SOnlyMachine.lean:267:66: warning: This simp argument is unused:
+  normal
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [v, put]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/src/SOnlyMachine.lean:275:66: warning: This simp argument is unused:
+  normal
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [v, put]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/src/SOnlyMachine.lean:350:15: warning: This simp argument is unused:
+  State.action
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

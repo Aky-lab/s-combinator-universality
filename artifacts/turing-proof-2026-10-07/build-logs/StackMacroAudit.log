@@ -1,0 +1,8 @@
+'SOnlyStack.push_macro' depends on axioms: [propext, Quot.sound]
+'SOnlyStack.pop_macro_div_mod' depends on axioms: [propext, Quot.sound]
+'SOnlyStack.push_macro_exact' depends on axioms: [propext, Quot.sound]
+'SOnlyStack.pop_macro_exact' depends on axioms: [propext, Quot.sound]
+'SOnlyStack.push_macro_positive' depends on axioms: [propext, Quot.sound]
+'SOnlyStack.pop_macro_positive' depends on axioms: [propext, Quot.sound]
+'SOnlyStack.pushMachine_correct' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SOnlyStack.PopTable.executes' depends on axioms: [propext, Quot.sound]

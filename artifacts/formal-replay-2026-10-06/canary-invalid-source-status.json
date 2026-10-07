@@ -1,0 +1,16 @@
+{
+  "name": "canary-reject-build",
+  "command": [
+    "/opt/lean/bin/lean",
+    "-j2",
+    "-o",
+    "/work/.lake/build/lib/lean/CanaryReject.olean",
+    "/work/CanaryReject.lean"
+  ],
+  "exit_code": 1,
+  "elapsed_seconds": 0.21616080300009344,
+  "child_max_rss_kib": 6628,
+  "timeout_seconds": 60,
+  "address_space_cap_bytes": 6442450944,
+  "lean_num_threads": 2
+}

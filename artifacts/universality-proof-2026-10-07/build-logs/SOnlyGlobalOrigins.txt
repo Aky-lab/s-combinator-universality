@@ -1,0 +1,5 @@
+'SOnlyGlobalOrigins.responsePairs_licensed' depends on axioms: [propext, Quot.sound]
+'SOnlyGlobalOrigins.selectedResponse_licensed' depends on axioms: [propext, Quot.sound]
+'SOnlyGlobalOrigins.selectedNonemptyPendingPrefix_licensed' depends on axioms: [propext, Quot.sound]
+'SOnlyGlobalOrigins.selectedNonemptySweepToFreshCheck_licensed' depends on axioms: [propext, Quot.sound]
+'SOnlyGlobalOrigins.completeNonemptyJob_licensed' depends on axioms: [propext, Quot.sound]

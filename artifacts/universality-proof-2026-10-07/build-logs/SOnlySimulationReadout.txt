@@ -1,0 +1,17 @@
+/work/universality-20261007T0209-src/SOnlySimulationReadout.lean:44:28: warning: This simp argument is unused:
+  List.singleton_append
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [copies_succ, List.cons_append, List.nil_append, runLengthsAux, ite_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/work/universality-20261007T0209-src/SOnlySimulationReadout.lean:64:10: warning: This simp argument is unused:
+  hpower
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'SOnlySimulation.finalEvent_readout' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SOnlySimulation.first_event_exact' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SOnlySimulation.compact_source_halting_iff_event' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,4 @@
+'SOnlyObserver.finite_observer_correct' depends on axioms: [propext, Quot.sound]
+'SOnlyObserver.event_iff' depends on axioms: [propext]
+'SOnlyObserver.event_finite_cover' depends on axioms: [propext, Quot.sound]
+'SOnlyObserver.event_iff_matches' depends on axioms: [propext, Quot.sound]

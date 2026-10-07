@@ -1,0 +1,8 @@
+{
+  "exit_code": 0,
+  "stage": "build",
+  "command": [
+    "/usr/bin/python3",
+    "/src/BuildTuring.py"
+  ]
+}

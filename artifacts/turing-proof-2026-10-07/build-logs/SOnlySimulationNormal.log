@@ -1,0 +1,3 @@
+'SOnlySimulation.fits_global_phase' depends on axioms: [propext, Quot.sound]
+'SOnlySimulation.normal_halfcommand' depends on axioms: [propext, Quot.sound]
+'SOnlySimulation.normal_run' depends on axioms: [propext, Quot.sound]

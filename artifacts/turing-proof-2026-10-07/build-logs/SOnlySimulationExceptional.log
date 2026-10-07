@@ -1,0 +1,2 @@
+'SOnlySimulation.exceptional_reset' depends on axioms: [propext, Quot.sound]
+'SOnlySimulation.exceptional_reset_run' depends on axioms: [propext, Quot.sound]

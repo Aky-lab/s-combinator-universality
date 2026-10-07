@@ -1,0 +1,17 @@
+{
+  "command": [
+    "/usr/bin/env",
+    "LEAN_PATH=/work/final-canaries",
+    "/opt/lean/bin/leanchecker",
+    "--fresh",
+    "-v",
+    "InvalidProof"
+  ],
+  "exit_code": 1,
+  "stop_reason": null,
+  "elapsed_seconds": 95.79555536000407,
+  "sampled_peak_namespace_rss_bytes": 2098896896,
+  "sampled_peak_namespace_virtual_bytes": 5578649600,
+  "sampled_namespace_rss_cap_bytes": 4294967296,
+  "sample_interval_seconds": 0.05
+}

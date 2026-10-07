@@ -1,0 +1,13 @@
+test_all_import_forms_and_body_boundary (test_replay_formal.ReplayPreflightTests.test_all_import_forms_and_body_boundary) ... ok
+test_build_directory (test_replay_formal.ReplayPreflightTests.test_build_directory) ... ok
+test_comments_and_fake_imports (test_replay_formal.ReplayPreflightTests.test_comments_and_fake_imports) ... ok
+test_identity_and_tampering (test_replay_formal.ReplayPreflightTests.test_identity_and_tampering) ... ok
+test_invalid_header (test_replay_formal.ReplayPreflightTests.test_invalid_header) ... ok
+test_order_unknown_dependencies_and_cycles (test_replay_formal.ReplayPreflightTests.test_order_unknown_dependencies_and_cycles) ... ok
+test_paths (test_replay_formal.ReplayPreflightTests.test_paths) ... ok
+test_prelude (test_replay_formal.ReplayPreflightTests.test_prelude) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.001s
+
+OK

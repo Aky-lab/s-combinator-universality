@@ -1,0 +1,6 @@
+'SOnlySchedulerOrigins.positive_clock_licensed' depends on axioms: [propext]
+'SOnlySchedulerOrigins.fuel_rows_licensed' depends on axioms: [propext]
+'SOnlySchedulerOrigins.phase_list_licensed' depends on axioms: [propext]
+'SOnlySchedulerOrigins.handoff_list_licensed' depends on axioms: [propext]
+'SOnlySchedulerOrigins.initial_licensed' depends on axioms: [propext]
+'SOnlySchedulerOrigins.prelude_list_licensed' depends on axioms: [propext]

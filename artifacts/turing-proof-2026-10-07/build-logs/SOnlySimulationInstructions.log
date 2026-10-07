@@ -1,0 +1,18 @@
+/src/SOnlySimulationInstructions.lean:28:66: warning: This simp argument is unused:
+  decide_false
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [NormalAction.input, NormalAction.output, Piece.word, decide_true, Nat.zero_add] at h1 h2
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/src/SOnlySimulationInstructions.lean:28:80: warning: This simp argument is unused:
+  decide_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [NormalAction.input, NormalAction.output, Piece.word, decide_false, Nat.zero_add] at h1 h2
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'SOnlySimulation.dummy_run' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SOnlySimulation.protected_dummy_run' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SOnlySimulation.source_increment_run' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SOnlySimulation.source_positive_decrement_run' depends on axioms: [propext, Classical.choice, Quot.sound]

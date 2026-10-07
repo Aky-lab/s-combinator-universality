@@ -1,0 +1,15 @@
+{
+  "command": [
+    "lean",
+    "-o",
+    "/work/provenance-build/SOnlyProvenance.olean",
+    "/work/SOnlyProvenance.lean"
+  ],
+  "exit_code": 0,
+  "stop_reason": null,
+  "elapsed_seconds": 0.8690891369915335,
+  "sampled_peak_namespace_rss_bytes": 1020604416,
+  "sampled_peak_namespace_virtual_bytes": 28271001600,
+  "sampled_namespace_rss_cap_bytes": 2147483648,
+  "sample_interval_seconds": 0.05
+}

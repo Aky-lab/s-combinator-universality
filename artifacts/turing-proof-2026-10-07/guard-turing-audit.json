@@ -1,0 +1,15 @@
+{
+  "command": [
+    "/opt/lean/bin/lean",
+    "-j2",
+    "-M2048",
+    "/src/SOnlyTuringUniversalityAudit.lean"
+  ],
+  "exit_code": 0,
+  "stop_reason": null,
+  "elapsed_seconds": 1.6745593050000025,
+  "sampled_peak_namespace_rss_bytes": 1059147776,
+  "sampled_peak_namespace_virtual_bytes": 6829318144,
+  "sampled_namespace_rss_cap_bytes": 4294967296,
+  "sample_interval_seconds": 0.05
+}

@@ -1,0 +1,2 @@
+replaying SOnlyUniversalityReplay with --fresh
+RESOURCE_GUARD {"command": ["/usr/bin/env", "LEAN_PATH=/work/.lake/build/lib/lean:/work/universality-20261007T0209-build", "/opt/lean/bin/leanchecker", "--fresh", "-v", "SOnlyUniversalityReplay"], "exit_code": 0, "stop_reason": null, "elapsed_seconds": 127.48940555399167, "sampled_peak_namespace_rss_bytes": 1540689920, "sampled_peak_namespace_virtual_bytes": 4552966144, "sampled_namespace_rss_cap_bytes": 4294967296, "sample_interval_seconds": 0.05}

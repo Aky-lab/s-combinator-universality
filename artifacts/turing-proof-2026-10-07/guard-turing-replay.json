@@ -1,0 +1,15 @@
+{
+  "command": [
+    "/opt/lean/bin/leanchecker",
+    "--fresh",
+    "-v",
+    "SOnlyTuringUniversalityReplay"
+  ],
+  "exit_code": 0,
+  "stop_reason": null,
+  "elapsed_seconds": 125.01250288600568,
+  "sampled_peak_namespace_rss_bytes": 1475002368,
+  "sampled_peak_namespace_virtual_bytes": 4557799424,
+  "sampled_namespace_rss_cap_bytes": 4294967296,
+  "sample_interval_seconds": 0.05
+}

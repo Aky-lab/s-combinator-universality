@@ -1,0 +1,104 @@
+import PureSFormal.Research.RootResetFiniteAllInputsTraceAgreement
+import PureSFormal.Research.RootResetContractProjection
+import PureSFormal.PureS.EncoderSize
+
+set_option pp.universes true
+set_option pp.proofs false
+
+-- TARGET PureSFormal.Research.RootResetFiniteAllInputsTraceAgreement.selectsEveryContractionRun
+#check PureSFormal.Research.RootResetFiniteAllInputsTraceAgreement.selectsEveryContractionRun
+#print axioms PureSFormal.Research.RootResetFiniteAllInputsTraceAgreement.selectsEveryContractionRun
+
+-- TARGET PureSFormal.Research.RootResetFiniteAllInputsTraceAgreement.termOnlyPath_eq_persistentPath
+#check PureSFormal.Research.RootResetFiniteAllInputsTraceAgreement.termOnlyPath_eq_persistentPath
+#print axioms PureSFormal.Research.RootResetFiniteAllInputsTraceAgreement.termOnlyPath_eq_persistentPath
+
+-- TARGET PureSFormal.Research.RootResetFinitePrioritySelector.selectorContract
+#check PureSFormal.Research.RootResetFinitePrioritySelector.selectorContract
+#print axioms PureSFormal.Research.RootResetFinitePrioritySelector.selectorContract
+
+-- TARGET PureSFormal.Research.RootResetFinitePrioritySelector.all_input_linear
+#check PureSFormal.Research.RootResetFinitePrioritySelector.all_input_linear
+#print axioms PureSFormal.Research.RootResetFinitePrioritySelector.all_input_linear
+
+-- TARGET PureSFormal.Research.RootResetFinitePrioritySelector.all_input_terminal
+#check PureSFormal.Research.RootResetFinitePrioritySelector.all_input_terminal
+#print axioms PureSFormal.Research.RootResetFinitePrioritySelector.all_input_terminal
+
+-- TARGET PureSFormal.Research.RootResetSelectorContract.Contract.InterInvocationState
+#check PureSFormal.Research.RootResetSelectorContract.Contract.InterInvocationState
+#print axioms PureSFormal.Research.RootResetSelectorContract.Contract.InterInvocationState
+
+-- TARGET PureSFormal.Research.RootResetContractProjection.some_result
+#check PureSFormal.Research.RootResetContractProjection.some_result
+#print axioms PureSFormal.Research.RootResetContractProjection.some_result
+
+-- TARGET PureSFormal.Research.RootResetContractProjection.none_result
+#check PureSFormal.Research.RootResetContractProjection.none_result
+#print axioms PureSFormal.Research.RootResetContractProjection.none_result
+
+-- TARGET PureSFormal.Research.RootResetContractProjection.invocation_bound
+#check PureSFormal.Research.RootResetContractProjection.invocation_bound
+#print axioms PureSFormal.Research.RootResetContractProjection.invocation_bound
+
+-- TARGET PureSFormal.PureS.SchedulerStageAssembly.allNonemptyRawAt
+#check PureSFormal.PureS.SchedulerStageAssembly.allNonemptyRawAt
+#print axioms PureSFormal.PureS.SchedulerStageAssembly.allNonemptyRawAt
+
+-- TARGET PureSFormal.PureS.SchedulerRecurrence.positiveStages
+#check PureSFormal.PureS.SchedulerRecurrence.positiveStages
+#print axioms PureSFormal.PureS.SchedulerRecurrence.positiveStages
+
+-- TARGET PureSFormal.PureS.SchedulerRecurrence.initialGood
+#check PureSFormal.PureS.SchedulerRecurrence.initialGood
+#print axioms PureSFormal.PureS.SchedulerRecurrence.initialGood
+
+-- TARGET PureSFormal.PureS.SchedulerRecurrence.exactCheckpoint
+#check PureSFormal.PureS.SchedulerRecurrence.exactCheckpoint
+#print axioms PureSFormal.PureS.SchedulerRecurrence.exactCheckpoint
+
+-- TARGET PureSFormal.PureS.SchedulerCycle.SelectedResponseTrace
+#check PureSFormal.PureS.SchedulerCycle.SelectedResponseTrace
+#print axioms PureSFormal.PureS.SchedulerCycle.SelectedResponseTrace
+
+-- TARGET PureSFormal.PureS.SchedulerCycle.normalResponse_exactPositionedMutationChain
+#check PureSFormal.PureS.SchedulerCycle.normalResponse_exactPositionedMutationChain
+#print axioms PureSFormal.PureS.SchedulerCycle.normalResponse_exactPositionedMutationChain
+
+-- TARGET PureSFormal.PureS.SchedulerCycle.normalResponse_exactPairedMutationChain
+#check PureSFormal.PureS.SchedulerCycle.normalResponse_exactPairedMutationChain
+#print axioms PureSFormal.PureS.SchedulerCycle.normalResponse_exactPairedMutationChain
+
+-- TARGET PureSFormal.PureS.SchedulerResponseInvariant.responseEntries_spec
+#check PureSFormal.PureS.SchedulerResponseInvariant.responseEntries_spec
+#print axioms PureSFormal.PureS.SchedulerResponseInvariant.responseEntries_spec
+
+-- TARGET PureSFormal.PureS.CheckpointRun.decodeCarrier?_of_decode
+#check PureSFormal.PureS.CheckpointRun.decodeCarrier?_of_decode
+#print axioms PureSFormal.PureS.CheckpointRun.decodeCarrier?_of_decode
+
+-- TARGET PureSFormal.PureS.generator_size_counts_exact
+#check PureSFormal.PureS.generator_size_counts_exact
+#print axioms PureSFormal.PureS.generator_size_counts_exact
+
+-- TARGET PureSFormal.PureS.BalancedActionTree.dispatcher
+#check PureSFormal.PureS.BalancedActionTree.dispatcher
+#print axioms PureSFormal.PureS.BalancedActionTree.dispatcher
+
+-- TARGET PureSFormal.WeakPathUniversality.canonicalDispatcher
+#check PureSFormal.WeakPathUniversality.canonicalDispatcher
+#print axioms PureSFormal.WeakPathUniversality.canonicalDispatcher
+
+-- TARGET PureSFormal.WeakPathUniversality.finiteCTSWeakPathUniversality
+#check PureSFormal.WeakPathUniversality.finiteCTSWeakPathUniversality
+#print axioms PureSFormal.WeakPathUniversality.finiteCTSWeakPathUniversality
+
+-- TARGET PureSFormal.Research.RootResetContractProjection.none_iff_normal
+#check PureSFormal.Research.RootResetContractProjection.none_iff_normal
+#print axioms PureSFormal.Research.RootResetContractProjection.none_iff_normal
+
+-- TARGET PureSFormal.PureS.SchedulerCycle.SelectedResponseTrace.targetDecode
+#check PureSFormal.PureS.SchedulerCycle.SelectedResponseTrace.targetDecode
+#print axioms PureSFormal.PureS.SchedulerCycle.SelectedResponseTrace.targetDecode
+
+#print PureSFormal.Research.RootResetSelectorContract.Contract.InterInvocationState

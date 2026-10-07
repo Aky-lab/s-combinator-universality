@@ -1,0 +1,2 @@
+'SOnlySimulation.scheduled_zero_reset_run' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SOnlySimulation.source_zero_decrement_run' depends on axioms: [propext, Classical.choice, Quot.sound]

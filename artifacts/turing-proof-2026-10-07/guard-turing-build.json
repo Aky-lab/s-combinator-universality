@@ -1,0 +1,13 @@
+{
+  "command": [
+    "/usr/bin/python3",
+    "/src/BuildTuring.py"
+  ],
+  "exit_code": 0,
+  "stop_reason": null,
+  "elapsed_seconds": 57.16979645099491,
+  "sampled_peak_namespace_rss_bytes": 1134669824,
+  "sampled_peak_namespace_virtual_bytes": 18226311168,
+  "sampled_namespace_rss_cap_bytes": 4294967296,
+  "sample_interval_seconds": 0.05
+}

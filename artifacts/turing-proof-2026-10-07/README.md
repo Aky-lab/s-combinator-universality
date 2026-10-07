@@ -1,0 +1,3 @@
+# Conventional Turing-machine end-to-end proof
+
+All 67 project modules and the import-only wrapper were freshly built. Official Lean kernel replay passed; the explicit declaration audit queried 1,359 names. Source and output identities, exact public theorem types, build logs, guard receipts and post-replay integrity are preserved here. The input Turing machine has a genuine Int-indexed tape, finite states and alphabet, and an arbitrary finite initial word. The source encoder is executable and choice-free. See ../../docs/formal-turing-universality.md for the statement, proof map, result convention and verification details.

@@ -1,0 +1,57 @@
+SOnlyUniversality.halting_iff_event {d n : Nat} (machine : SOnlyMachine.Machine d n) (input : Fin (d + 1) → Nat) :
+  SOnlyUniversality.Halts machine input ↔
+    ∃ index, SOnlyUniversality.event (SOnlyUniversality.trajectory machine input index) = true
+'SOnlyUniversality.halting_iff_event' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+SOnlyUniversality.result_iff_first_event {d n : Nat} (machine : SOnlyMachine.Machine d n) (input : Fin (d + 1) → Nat)
+  (value : Nat) :
+  (∃ steps,
+      machine.instruction (SOnlyMachine.sourceRun machine steps (SOnlyMachine.initial machine input)).label =
+          SOnlyMachine.Instruction.halt ∧
+        (SOnlyMachine.sourceRun machine steps (SOnlyMachine.initial machine input)).value 0 = value) ↔
+    ∃ index,
+      SOnlyUniversality.FirstEvent machine input index ∧
+        SOnlyUniversality.decode (SOnlyUniversality.trajectory machine input index) = some value
+'SOnlyUniversality.result_iff_first_event' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+SOnlyUniversality.halting_first_result {d n : Nat} (machine : SOnlyMachine.Machine d n) (input : Fin (d + 1) → Nat)
+  (halts : SOnlyUniversality.Halts machine input) :
+  ∃ index steps,
+    machine.instruction (SOnlyMachine.sourceRun machine steps (SOnlyMachine.initial machine input)).label =
+        SOnlyMachine.Instruction.halt ∧
+      SOnlyUniversality.FirstEvent machine input index ∧
+        SOnlyUniversality.decode (SOnlyUniversality.trajectory machine input index) =
+          some ((SOnlyMachine.sourceRun machine steps (SOnlyMachine.initial machine input)).value 0)
+'SOnlyUniversality.halting_first_result' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+SOnlyUniversality.first_event_correct {d n : Nat} (machine : SOnlyMachine.Machine d n) (input : Fin (d + 1) → Nat)
+  (index : Nat) (first : SOnlyUniversality.FirstEvent machine input index) :
+  ∃ steps,
+    machine.instruction (SOnlyMachine.sourceRun machine steps (SOnlyMachine.initial machine input)).label =
+        SOnlyMachine.Instruction.halt ∧
+      SOnlyUniversality.decode (SOnlyUniversality.trajectory machine input index) =
+        some ((SOnlyMachine.sourceRun machine steps (SOnlyMachine.initial machine input)).value 0)
+'SOnlyUniversality.first_event_correct' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+SOnlyUniversality.nonhalting_no_event {d n : Nat} (machine : SOnlyMachine.Machine d n) (input : Fin (d + 1) → Nat)
+  (nonhalt : ¬SOnlyUniversality.Halts machine input) (index : Nat) :
+  SOnlyUniversality.event (SOnlyUniversality.trajectory machine input index) = false
+'SOnlyUniversality.nonhalting_no_event' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+SOnlyUniversality.root_reset (term : PureSFormal.PureS.Term) :
+  SOnlyUniversality.controller.initial term =
+    { control := some SOnlyUniversality.controller.start, cursor := PureSFormal.PureS.Cursor.atRoot term }
+'SOnlyUniversality.root_reset' depends on axioms: [propext, Quot.sound]
+
+SOnlyUniversality.no_interinvocation_state : SOnlyUniversality.controller.InterInvocationState = Unit
+'SOnlyUniversality.no_interinvocation_state' depends on axioms: [propext, Quot.sound]
+
+SOnlyUniversality.all_input_linear (term : PureSFormal.PureS.Term) :
+  SOnlyUniversality.controller.stoppingTime term ≤ SOnlyUniversality.controller.coefficient * (term.size + 1)
+'SOnlyUniversality.all_input_linear' depends on axioms: [propext, Quot.sound]
+
+SOnlyUniversality.every_step_native {d n : Nat} (machine : SOnlyMachine.Machine d n) (input : Fin (d + 1) → Nat)
+  (index : Nat) :
+  PureSFormal.PureS.Step (SOnlyUniversality.trajectory machine input index)
+    (SOnlyUniversality.trajectory machine input (index + 1))
+'SOnlyUniversality.every_step_native' depends on axioms: [propext, Quot.sound]

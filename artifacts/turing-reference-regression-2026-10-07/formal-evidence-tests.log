@@ -1,0 +1,34 @@
+test_module_does_not_declare_proof_escape_hatches (test_formal_cts_instance.FormalCTSInstanceTests.test_module_does_not_declare_proof_escape_hatches) ... ok
+test_one_hot_compilation_matches_the_formal_definition (test_formal_cts_instance.FormalCTSInstanceTests.test_one_hot_compilation_matches_the_formal_definition) ... ok
+test_production_literal_matches_python_source (test_formal_cts_instance.FormalCTSInstanceTests.test_production_literal_matches_python_source) ... ok
+test_all_recorded_axiom_queries_are_resolved (test_formal_event_interfaces.FormalEventInterfacesEvidence.test_all_recorded_axiom_queries_are_resolved) ... ok
+test_artifact_bytes_match_manifest (test_formal_event_interfaces.FormalEventInterfacesEvidence.test_artifact_bytes_match_manifest) ... ok
+test_complete_replay_and_integrity (test_formal_event_interfaces.FormalEventInterfacesEvidence.test_complete_replay_and_integrity) ... ok
+test_exact_module_sources_and_successful_builds (test_formal_event_interfaces.FormalEventInterfacesEvidence.test_exact_module_sources_and_successful_builds) ... ok
+test_replay_wrapper_has_only_the_frozen_roots (test_formal_event_interfaces.FormalEventInterfacesEvidence.test_replay_wrapper_has_only_the_frozen_roots) ... ok
+test_160_extension_axiom_queries (test_formal_extended_kernels.ExtendedKernelEvidence.test_160_extension_axiom_queries) ... ok
+test_artifact_manifest (test_formal_extended_kernels.ExtendedKernelEvidence.test_artifact_manifest) ... ok
+test_import_only_replay_wrapper (test_formal_extended_kernels.ExtendedKernelEvidence.test_import_only_replay_wrapper) ... ok
+test_sources_and_build_receipts_match (test_formal_extended_kernels.ExtendedKernelEvidence.test_sources_and_build_receipts_match) ... ok
+test_union_replay_is_successful (test_formal_extended_kernels.ExtendedKernelEvidence.test_union_replay_is_successful) ... ok
+test_67_source_identities_and_68_clean_builds (test_formal_turing_universality.ConventionalTuringProofEvidence.test_67_source_identities_and_68_clean_builds) ... ok
+test_all_1359_declared_queries (test_formal_turing_universality.ConventionalTuringProofEvidence.test_all_1359_declared_queries) ... ok
+test_complete_artifact_manifest (test_formal_turing_universality.ConventionalTuringProofEvidence.test_complete_artifact_manifest) ... ok
+test_conventional_tape_and_literal_compiler_interfaces (test_formal_turing_universality.ConventionalTuringProofEvidence.test_conventional_tape_and_literal_compiler_interfaces) ... ok
+test_executable_encoder_compiler_observer_decoder (test_formal_turing_universality.ConventionalTuringProofEvidence.test_executable_encoder_compiler_observer_decoder) ... ok
+test_fresh_replay_and_all_input_integrity (test_formal_turing_universality.ConventionalTuringProofEvidence.test_fresh_replay_and_all_input_integrity) ... ok
+test_same_checker_negative_controls_and_output_scope (test_formal_turing_universality.ConventionalTuringProofEvidence.test_same_checker_negative_controls_and_output_scope) ... ok
+test_wrapper_excludes_canaries_and_unused_experiment (test_formal_turing_universality.ConventionalTuringProofEvidence.test_wrapper_excludes_canaries_and_unused_experiment) ... ok
+test_all_1142_declared_queries (test_formal_universality.EndToEndProofEvidence.test_all_1142_declared_queries) ... ok
+test_all_56_sources_and_clean_builds (test_formal_universality.EndToEndProofEvidence.test_all_56_sources_and_clean_builds) ... ok
+test_computable_data_have_no_choice_axiom (test_formal_universality.EndToEndProofEvidence.test_computable_data_have_no_choice_axiom) ... ok
+test_every_preserved_artifact_matches (test_formal_universality.EndToEndProofEvidence.test_every_preserved_artifact_matches) ... ok
+test_fresh_replay_and_integrity (test_formal_universality.EndToEndProofEvidence.test_fresh_replay_and_integrity) ... ok
+test_main_certificate_interfaces_are_present (test_formal_universality.EndToEndProofEvidence.test_main_certificate_interfaces_are_present) ... ok
+test_positive_and_negative_controls (test_formal_universality.EndToEndProofEvidence.test_positive_and_negative_controls) ... ok
+test_proof_wrapper_excludes_canaries (test_formal_universality.EndToEndProofEvidence.test_proof_wrapper_excludes_canaries) ... ok
+
+----------------------------------------------------------------------
+Ran 29 tests in 0.087s
+
+OK

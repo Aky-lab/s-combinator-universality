@@ -1,0 +1,13 @@
+{
+  "all_checks_passed": true,
+  "counts": {
+    "pinned_sources": 426,
+    "pinned_dependency_outputs": 424,
+    "official_toolchain": 17505,
+    "project_sources": 67,
+    "live_base_sources": 56,
+    "live_extension_sources": 11,
+    "final_source_output_wrapper_files": 136
+  },
+  "phase": "before"
+}

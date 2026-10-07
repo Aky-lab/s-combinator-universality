@@ -1,0 +1,247 @@
+{
+  "completed": 39,
+  "total": 423,
+  "elapsed_seconds": 19.480768880006508,
+  "last": {
+    "module": "PureSFormal.PureS.CanonicalTraversal",
+    "exit_code": -6,
+    "seconds": 0.31470679699850734,
+    "timed_out": false
+  },
+  "records": [
+    {
+      "module": "PureSFormal.CTS.Core",
+      "exit_code": 0,
+      "seconds": 0.5157416169968201,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.Term",
+      "exit_code": 0,
+      "seconds": 0.715704974005348,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.Reduction",
+      "exit_code": 0,
+      "seconds": 0.4149357330024941,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.CountedReduction",
+      "exit_code": 0,
+      "seconds": 0.36487217601097655,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.ClosedTerms",
+      "exit_code": 0,
+      "seconds": 0.465130857002805,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.Appender",
+      "exit_code": 0,
+      "seconds": 0.5169686599983834,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.Dispatcher",
+      "exit_code": 0,
+      "seconds": 0.6243260759947589,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.Activation",
+      "exit_code": 0,
+      "seconds": 0.3649687370052561,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.Actions",
+      "exit_code": 0,
+      "seconds": 0.3667112149996683,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.Arity",
+      "exit_code": 0,
+      "seconds": 0.36478385201189667,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.Frame",
+      "exit_code": 0,
+      "seconds": 0.41505197100923397,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.Clock",
+      "exit_code": 0,
+      "seconds": 0.3649926090001827,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.EncoderSize",
+      "exit_code": 0,
+      "seconds": 0.7156585280026775,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.ActionParser",
+      "exit_code": 0,
+      "seconds": 0.5153579300094862,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.Carrier",
+      "exit_code": 0,
+      "seconds": 0.5155130390048726,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.Pattern",
+      "exit_code": 0,
+      "seconds": 0.5656063720089151,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.RouteGrammar",
+      "exit_code": 0,
+      "seconds": 0.365056991999154,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.RouteParser",
+      "exit_code": 0,
+      "seconds": 0.7162369490106357,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.DispatchParser",
+      "exit_code": 0,
+      "seconds": 0.5151452129939571,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.CellSpine",
+      "exit_code": 0,
+      "seconds": 0.515464972006157,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.BasePath",
+      "exit_code": 0,
+      "seconds": 0.46583594199910294,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.MutableBase",
+      "exit_code": 0,
+      "seconds": 0.6656548570026644,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.CanonicalStep",
+      "exit_code": 0,
+      "seconds": 0.8162199240032351,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.CellDeletion",
+      "exit_code": 0,
+      "seconds": 0.46527918899664655,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.RouteExecution",
+      "exit_code": 0,
+      "seconds": 0.3648202229960589,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.RouteAction",
+      "exit_code": 0,
+      "seconds": 0.3646757379901828,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.LocalResponse",
+      "exit_code": 0,
+      "seconds": 0.36481370399997104,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.RootPath",
+      "exit_code": 0,
+      "seconds": 0.3649015889968723,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.CarrierDecoder",
+      "exit_code": 0,
+      "seconds": 0.6153529360017274,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.Cursor",
+      "exit_code": 0,
+      "seconds": 0.5151652790082153,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.Probe",
+      "exit_code": 0,
+      "seconds": 0.5656990889983717,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.Script",
+      "exit_code": 0,
+      "seconds": 0.4663876779959537,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.WeakPath.Interface",
+      "exit_code": 0,
+      "seconds": 0.4150316729937913,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.FiniteController",
+      "exit_code": 0,
+      "seconds": 0.6158265840058448,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetSelectorContract",
+      "exit_code": 0,
+      "seconds": 0.7668579160090303,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.Research.RootResetContractProjection",
+      "exit_code": 0,
+      "seconds": 0.3648199849994853,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.PendingFrame",
+      "exit_code": 0,
+      "seconds": 0.5153073139954358,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.ReachableAudit",
+      "exit_code": 0,
+      "seconds": 0.5150846159958746,
+      "timed_out": false
+    },
+    {
+      "module": "PureSFormal.PureS.CanonicalTraversal",
+      "exit_code": -6,
+      "seconds": 0.31470679699850734,
+      "timed_out": false
+    }
+  ]
+}

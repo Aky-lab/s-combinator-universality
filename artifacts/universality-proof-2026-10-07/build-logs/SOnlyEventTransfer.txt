@@ -1,0 +1,7 @@
+'SOnlyEventTransfer.exactChain_sample' depends on axioms: [propext]
+'SOnlyEventTransfer.trajectory_eq_contractionRun' depends on axioms: [propext, Quot.sound]
+'SOnlyEventTransfer.exactChain_rootReset_sample' depends on axioms: [propext, Quot.sound]
+'SOnlyEventTransfer.freshShell_audit' depends on axioms: [propext]
+'SOnlyEventTransfer.freshLayer_audit' depends on axioms: [propext]
+'SOnlyEventTransfer.completed_readPrestate' depends on axioms: [propext, Quot.sound]
+'SOnlyEventTransfer.selectedResponse_readPrestate' depends on axioms: [propext, Quot.sound]

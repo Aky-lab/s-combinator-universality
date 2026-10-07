@@ -1,0 +1,5 @@
+'SOnlySimulation.compiler_width_bound' depends on axioms: [propext, Quot.sound]
+'SOnlySimulation.finalEvent_readCounter' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SOnlySimulation.finalEvent_readMachineValue' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SOnlySimulation.compiled_noPrematureEmpty' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SOnlySimulation.compiled_halting_iff_cts_event' depends on axioms: [propext, Classical.choice, Quot.sound]

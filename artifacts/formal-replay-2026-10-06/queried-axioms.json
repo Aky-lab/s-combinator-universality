@@ -1,0 +1,167 @@
+{
+  "declarations": [
+    {
+      "declaration": "PureSFormal.Research.RootResetFiniteAllInputsTraceAgreement.selectsEveryContractionRun",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "PureSFormal.Research.RootResetFiniteAllInputsTraceAgreement.termOnlyPath_eq_persistentPath",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "PureSFormal.Research.RootResetFinitePrioritySelector.selectorContract",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "PureSFormal.Research.RootResetFinitePrioritySelector.all_input_linear",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "PureSFormal.Research.RootResetFinitePrioritySelector.all_input_terminal",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "PureSFormal.Research.RootResetSelectorContract.Contract.InterInvocationState",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "PureSFormal.Research.RootResetContractProjection.some_result",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "PureSFormal.Research.RootResetContractProjection.none_result",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "PureSFormal.Research.RootResetContractProjection.invocation_bound",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "PureSFormal.PureS.SchedulerStageAssembly.allNonemptyRawAt",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "PureSFormal.PureS.SchedulerRecurrence.positiveStages",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "PureSFormal.PureS.SchedulerRecurrence.initialGood",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "PureSFormal.PureS.SchedulerRecurrence.exactCheckpoint",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "PureSFormal.PureS.SchedulerCycle.SelectedResponseTrace",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "PureSFormal.PureS.SchedulerCycle.normalResponse_exactPositionedMutationChain",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "PureSFormal.PureS.SchedulerCycle.normalResponse_exactPairedMutationChain",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "PureSFormal.PureS.SchedulerResponseInvariant.responseEntries_spec",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "PureSFormal.PureS.CheckpointRun.decodeCarrier?_of_decode",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "PureSFormal.PureS.generator_size_counts_exact",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "PureSFormal.PureS.BalancedActionTree.dispatcher",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "PureSFormal.WeakPathUniversality.canonicalDispatcher",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "PureSFormal.WeakPathUniversality.finiteCTSWeakPathUniversality",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "PureSFormal.Research.RootResetContractProjection.none_iff_normal",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "PureSFormal.PureS.SchedulerCycle.SelectedResponseTrace.targetDecode",
+      "axioms": [
+        "propext"
+      ]
+    }
+  ],
+  "queried_count": 24,
+  "observed_axioms": [
+    "Quot.sound",
+    "propext"
+  ],
+  "inter_invocation_definition": "fun _contract => Unit",
+  "log_sha256": "0bb776348f3d2029c5cde2e25dba44c5533e80c279f8a994f3e2ffb761a2ba32"
+}

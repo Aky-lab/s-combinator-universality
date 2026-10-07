@@ -1,0 +1,3 @@
+'SOnlySimulation.machine_first_cts_reads_given_result' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SOnlySimulation.machine_first_cts_reads_value' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SOnlySimulation.machine_result_iff_first_cts_result' depends on axioms: [propext, Classical.choice, Quot.sound]

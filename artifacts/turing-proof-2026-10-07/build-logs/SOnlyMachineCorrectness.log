@@ -1,0 +1,2 @@
+'SOnlyMachineCorrectness.output_iff' depends on axioms: [propext, Quot.sound]
+'SOnlyMachineCorrectness.every_halt_reads_result' depends on axioms: [propext, Quot.sound]

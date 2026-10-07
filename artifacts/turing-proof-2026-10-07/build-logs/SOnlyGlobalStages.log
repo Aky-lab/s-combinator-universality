@@ -1,0 +1,5 @@
+'SOnlyGlobalStages.nonfinalJobs_licensed' depends on axioms: [propext, Quot.sound]
+'SOnlyGlobalStages.allNonemptyRaw_licensed' depends on axioms: [propext, Quot.sound]
+'SOnlyGlobalStages.positiveStages_licensed' depends on axioms: [propext, Quot.sound]
+'SOnlyGlobalStages.contractionRun_licensed' depends on axioms: [propext, Quot.sound]
+'SOnlyGlobalStages.no_event_on_nonempty_event_free_run' depends on axioms: [propext, Quot.sound]

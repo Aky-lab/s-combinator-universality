@@ -1,0 +1,17 @@
+{
+  "command": [
+    "/usr/bin/env",
+    "LEAN_PATH=/work/.lake/build/lib/lean:/work/universality-20261007T0209-build",
+    "/opt/lean/bin/lean",
+    "-j2",
+    "-M1536",
+    "/work/SOnlyEncoderExecution.lean"
+  ],
+  "exit_code": 0,
+  "stop_reason": null,
+  "elapsed_seconds": 0.6100986349920277,
+  "sampled_peak_namespace_rss_bytes": 1138794496,
+  "sampled_peak_namespace_virtual_bytes": 7963889664,
+  "sampled_namespace_rss_cap_bytes": 2147483648,
+  "sample_interval_seconds": 0.05
+}

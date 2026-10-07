@@ -1,0 +1,4 @@
+'SOnlyResult.firstRun_counter' depends on axioms: [propext, Quot.sound]
+'SOnlyResult.decodeLength_counter' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SOnlyResult.readCounter_correct' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SOnlyResult.readMachineValue_correct' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,10 @@
+/work/universality-20261007T0209-src/SOnlySimulationHalt.lean:102:16: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+/work/universality-20261007T0209-src/SOnlySimulationHalt.lean:102:16: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+'SOnlySimulation.halt_output_exact' depends on axioms: [propext, Quot.sound]
+'SOnlySimulation.halt_run' depends on axioms: [propext, Quot.sound]
+'SOnlySimulation.halt_output_grammar' depends on axioms: [propext, Quot.sound]
+'SOnlySimulation.result_separator_properties' depends on axioms: [propext, Quot.sound]

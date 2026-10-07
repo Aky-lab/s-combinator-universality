@@ -1,0 +1,2 @@
+replaying SOnly38 with --fresh
+RESOURCE_GUARD {"command": ["/opt/lean/bin/leanchecker", "--fresh", "-v", "SOnly38"], "exit_code": 0, "stop_reason": null, "elapsed_seconds": 113.72738979499263, "sampled_peak_namespace_rss_bytes": 1513676800, "sampled_peak_namespace_virtual_bytes": 4527120384, "sampled_namespace_rss_cap_bytes": 4294967296, "sample_interval_seconds": 0.05}

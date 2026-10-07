@@ -1,0 +1,27 @@
+{
+  "all_checks_passed": true,
+  "counts": {
+    "pinned_sources": 426,
+    "pinned_outputs": 424,
+    "official_toolchain": 17505,
+    "new_frozen_source_output_files": 21
+  },
+  "replay": {
+    "command": [
+      "/usr/bin/env",
+      "LEAN_PATH=/work/.lake/build/lib/lean:/work/formal-build:/work/bridges-20261007T0043",
+      "/opt/lean/bin/leanchecker",
+      "--fresh",
+      "-v",
+      "SOnlyBridgesReplay"
+    ],
+    "exit_code": 0,
+    "stop_reason": null,
+    "elapsed_seconds": 117.61928659200203,
+    "sampled_peak_namespace_rss_bytes": 1519308800,
+    "sampled_peak_namespace_virtual_bytes": 4531339264,
+    "sampled_namespace_rss_cap_bytes": 4294967296,
+    "sample_interval_seconds": 0.05
+  },
+  "seconds": 2.739873163009179
+}

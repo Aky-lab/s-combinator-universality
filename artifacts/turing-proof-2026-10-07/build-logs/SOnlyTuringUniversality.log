@@ -1,0 +1,8 @@
+'SOnlyTuringUniversality.encode' depends on axioms: [propext, Quot.sound]
+'SOnlyTuringUniversality.halting_iff_event' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SOnlyTuringUniversality.halting_iff_first_event' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SOnlyTuringUniversality.halting_first_result' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SOnlyTuringUniversality.selector_executes' depends on axioms: [propext, Quot.sound]
+'SOnlyTuringUniversality.every_step_native' depends on axioms: [propext, Quot.sound]
+'SOnlyTuringUniversality.nonhalting_no_event' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SOnlyTuringUniversality.left_stack_result_iff_first_event' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,14 @@
+'SOnly38.enumerated_appendants' depends on axioms: [propext]
+'SOnly38.appendant_bit_count' does not depend on any axioms
+'SOnly38.appendant_one_count' does not depend on any axioms
+'SOnly38.target_selected_route' depends on axioms: [propext]
+'SOnly38.every_input_linear' depends on axioms: [propext, Quot.sound]
+'SOnly38.every_input_terminal' depends on axioms: [propext, Quot.sound]
+'SOnly38.selected_one_contraction' depends on axioms: [propext, Quot.sound]
+'SOnly38.rejected_zero_contractions' depends on axioms: [propext, Quot.sound]
+'SOnly38.trajectory_eq_persistent' depends on axioms: [propext, Quot.sound]
+'SOnly38.trajectory_selects' depends on axioms: [propext, Quot.sound]
+'SOnly38.trajectory_contracts' depends on axioms: [propext, Quot.sound]
+'SOnly38.exact_checkpoint' depends on axioms: [propext, Quot.sound]
+'SOnly38.checkpoint_accepts_only' depends on axioms: [propext, Quot.sound]
+RESOURCE_GUARD {"command": ["/opt/lean/bin/lean", "-j2", "-M3072", "-o", "/work/formal-build/SOnly38.olean", "/work/SOnly38.lean"], "exit_code": 0, "stop_reason": null, "elapsed_seconds": 1.3212097939976957, "sampled_peak_namespace_rss_bytes": 1183076352, "sampled_peak_namespace_virtual_bytes": 7939244032, "sampled_namespace_rss_cap_bytes": 4294967296, "sample_interval_seconds": 0.05}

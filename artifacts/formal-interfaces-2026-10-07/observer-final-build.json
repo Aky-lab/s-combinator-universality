@@ -1,0 +1,19 @@
+{
+  "command": [
+    "/usr/bin/env",
+    "LEAN_PATH=/work/.lake/build/lib/lean:/work/formal-build:/work/event-build",
+    "/opt/lean/bin/lean",
+    "-j2",
+    "-M1536",
+    "-o",
+    "/work/observer-build/SOnlyObserver.olean",
+    "/work/SOnlyObserver.lean"
+  ],
+  "exit_code": 0,
+  "stop_reason": null,
+  "elapsed_seconds": 0.7114252850005869,
+  "sampled_peak_namespace_rss_bytes": 1145315328,
+  "sampled_peak_namespace_virtual_bytes": 7939915776,
+  "sampled_namespace_rss_cap_bytes": 2147483648,
+  "sample_interval_seconds": 0.05
+}

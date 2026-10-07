@@ -1,0 +1,5 @@
+'SOnlyDecoderBound.carrier_output_length' depends on axioms: [propext, Quot.sound]
+'SOnlyDecoderBound.carrierFuel_eq' depends on axioms: [propext, Quot.sound]
+'SOnlyDecoderBound.carrierCharge_le' depends on axioms: [propext, Quot.sound]
+'SOnlyDecoderBound.carrier_cubic_charge' depends on axioms: [propext, Quot.sound]
+'SOnlyDecoderBound.spineVisits_quadratic' depends on axioms: [propext, Quot.sound]

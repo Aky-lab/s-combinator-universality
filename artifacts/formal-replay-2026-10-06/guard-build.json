@@ -1,0 +1,13 @@
+{
+  "command": [
+    "/usr/bin/python3",
+    "/work/BuildClosure.py"
+  ],
+  "exit_code": 0,
+  "stop_reason": null,
+  "elapsed_seconds": 388.41994890199567,
+  "sampled_peak_namespace_rss_bytes": 1443426304,
+  "sampled_peak_namespace_virtual_bytes": 16862601216,
+  "sampled_namespace_rss_cap_bytes": 4294967296,
+  "sample_interval_seconds": 0.05
+}

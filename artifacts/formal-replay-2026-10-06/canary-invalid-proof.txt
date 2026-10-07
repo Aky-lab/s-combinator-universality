@@ -1,0 +1,6 @@
+replaying InvalidProof with --fresh
+uncaught exception: while replaying declaration 'invalidFalse':
+(kernel) declaration type mismatch, 'invalidFalse' has type
+  Prop
+but it is expected to have type
+  False

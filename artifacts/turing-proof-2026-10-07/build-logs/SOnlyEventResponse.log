@@ -1,0 +1,5 @@
+'SOnlyEventResponse.target_response_cost' depends on axioms: [propext]
+'SOnlyEventResponse.response_final_sample' depends on axioms: [propext, Quot.sound]
+'SOnlyEventResponse.target_final_sample' depends on axioms: [propext, Quot.sound]
+'SOnlyEventResponse.target_completion_event_and_readout' depends on axioms: [propext, Quot.sound]
+'SOnlyEventResponse.selectedTarget_event_and_readout' depends on axioms: [propext, Quot.sound]

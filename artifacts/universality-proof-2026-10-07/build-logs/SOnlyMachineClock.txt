@@ -1,0 +1,40 @@
+/work/universality-20261007T0209-src/SOnlyMachineClock.lean:108:49: warning: Variable name `h` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/work/universality-20261007T0209-src/SOnlyMachineClock.lean:167:0: warning: automatically included section variable(s) unused in theorem `SOnlyMachineClock.mem_clockList`:
+  [DecidableEq α]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq α] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/work/universality-20261007T0209-src/SOnlyMachineClock.lean:256:31: warning: This simp argument is unused:
+  if_pos rfl
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [step, encode]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/work/universality-20261007T0209-src/SOnlyMachineClock.lean:331:23: warning: This simp argument is unused:
+  if_neg h
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [encode, raw, SOnlyMachineBP2.Halted, SOnlyMachineBP2.State.pc, h, iff_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/work/universality-20261007T0209-src/SOnlyMachineClock.lean:331:62: warning: This simp argument is unused:
+  SOnlyMachineBP2.State.pc
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [encode, if_neg h, raw, SOnlyMachineBP2.Halted, h, iff_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/work/universality-20261007T0209-src/SOnlyMachineClock.lean:377:32: warning: This simp argument is unused:
+  SOnlyMachineBP2.State.value
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [encode, if_pos hh, SOnlyMachineWaterfallBP2.ready, SOnlyMachineWaterfallBP2.store, normalized]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

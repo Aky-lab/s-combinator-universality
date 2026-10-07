@@ -1,0 +1,10 @@
+{
+  "exit_code": 0,
+  "stage": "audit",
+  "command": [
+    "/opt/lean/bin/lean",
+    "-j2",
+    "-M2048",
+    "/src/SOnlyTuringUniversalityAudit.lean"
+  ]
+}

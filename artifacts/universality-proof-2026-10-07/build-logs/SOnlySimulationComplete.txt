@@ -1,0 +1,5 @@
+'SOnlySimulation.source_halt_run' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SOnlySimulation.source_step_run' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SOnlySimulation.source_termination_first_event' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SOnlySimulation.source_nontermination_safe' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SOnlySimulation.source_halting_iff_event' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,6 @@
+'SOnlyStageEvents.selectedResponse_chain' depends on axioms: [propext]
+'SOnlyStageEvents.stageStart_prefix' depends on axioms: [propext, Quot.sound]
+'SOnlyStageEvents.firstJob_response_prefix' depends on axioms: [propext, Quot.sound]
+'SOnlyStageEvents.sourceTarget_witness_at' depends on axioms: [propext, Quot.sound]
+'SOnlyStageEvents.nonempty_prefix_of_nonempty_iterate' depends on axioms: [propext]
+'SOnlyStageEvents.sourceEvent_reaches_observer' depends on axioms: [propext, Quot.sound]
