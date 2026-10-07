@@ -1,0 +1,911 @@
+SOnlyMemory.Cell : Type
+'SOnlyMemory.Cell' does not depend on any axioms
+SOnlyMemory.cellWord (h : Bool) : List SOnlySource.Symbol
+'SOnlyMemory.cellWord' depends on axioms: [propext]
+SOnlyMemory.inverter : List SOnlySource.Symbol
+'SOnlyMemory.inverter' depends on axioms: [propext]
+SOnlyMemory.component (h a : Bool) : List SOnlySource.Symbol
+'SOnlyMemory.component' depends on axioms: [propext]
+SOnlyMemory.memory (cells : List SOnlyMemory.Cell) : List SOnlySource.Symbol
+'SOnlyMemory.memory' depends on axioms: [propext]
+SOnlyMemory.nextAlignment (q h a : Bool) : Bool
+'SOnlyMemory.nextAlignment' does not depend on any axioms
+SOnlyMemory.updatedDynamic (q h : Bool) : Bool
+'SOnlyMemory.updatedDynamic' does not depend on any axioms
+SOnlyMemory.normalUpdate (q : Bool) : List SOnlyMemory.Cell → List SOnlyMemory.Cell
+'SOnlyMemory.normalUpdate' does not depend on any axioms
+SOnlyMemory.reset (cells : List SOnlyMemory.Cell) : List SOnlyMemory.Cell
+'SOnlyMemory.reset' does not depend on any axioms
+SOnlyMemory.markerComponent (a : Bool) : List SOnlySource.Symbol
+'SOnlyMemory.markerComponent' depends on axioms: [propext]
+SOnlyMemory.markerWord (cells : List SOnlyMemory.Cell) : List SOnlySource.Symbol
+'SOnlyMemory.markerWord' depends on axioms: [propext]
+SOnlyMemory.memory_nil : SOnlyMemory.memory [] = []
+'SOnlyMemory.memory_nil' depends on axioms: [propext]
+SOnlyMemory.memory_cons (h a : Bool) (tail : List SOnlyMemory.Cell) :
+  SOnlyMemory.memory ((h, a) :: tail) = SOnlyMemory.component h a ++ SOnlyMemory.memory tail
+'SOnlyMemory.memory_cons' depends on axioms: [propext]
+SOnlyMemory.component_phase (h a q : Bool) :
+  SOnlyCounter.phaseAfter (SOnlyMemory.component h a).length q = SOnlyMemory.nextAlignment q h a
+'SOnlyMemory.component_phase' depends on axioms: [propext]
+SOnlyMemory.command_phase_stable (h a q p : Bool) :
+  SOnlyCounter.phaseAfter (SOnlyCounter.pass q (SOnlyMemory.component h a)).length p = p
+'SOnlyMemory.command_phase_stable' depends on axioms: [propext, Quot.sound]
+SOnlyMemory.parity_phase_stable (h a q p r : Bool) :
+  SOnlyCounter.phaseAfter (SOnlyCounter.pass p (SOnlyCounter.pass q (SOnlyMemory.component h a))).length r = r
+'SOnlyMemory.parity_phase_stable' depends on axioms: [propext, Quot.sound]
+SOnlyMemory.component_normal (h a q : Bool) :
+  SOnlyCounter.halfcommand q true true (SOnlyMemory.component h a) =
+    SOnlyMemory.component (SOnlyMemory.updatedDynamic q h) a
+'SOnlyMemory.component_normal' depends on axioms: [propext, Quot.sound]
+SOnlyMemory.component_reset (h a q p : Bool) :
+  SOnlyCounter.halfcommand q p false (SOnlyMemory.component h a) = SOnlyMemory.component false a
+'SOnlyMemory.component_reset' depends on axioms: [propext, Quot.sound]
+SOnlyMemory.component_marker (h a q : Bool) :
+  SOnlyCounter.pass false (SOnlyCounter.pass q (SOnlyMemory.component h a)) = SOnlyMemory.markerComponent a
+'SOnlyMemory.component_marker' depends on axioms: [propext, Quot.sound]
+SOnlyMemory.halfcommand_component (h a q p r : Bool) (tail : List SOnlySource.Symbol) :
+  SOnlyCounter.halfcommand q p r (SOnlyMemory.component h a ++ tail) =
+    SOnlyCounter.halfcommand q p r (SOnlyMemory.component h a) ++
+      SOnlyCounter.halfcommand (SOnlyMemory.nextAlignment q h a) p r tail
+'SOnlyMemory.halfcommand_component' depends on axioms: [propext, Quot.sound]
+SOnlyMemory.memory_normal (cells : List SOnlyMemory.Cell) (q : Bool) :
+  SOnlyCounter.halfcommand q true true (SOnlyMemory.memory cells) =
+    SOnlyMemory.memory (SOnlyMemory.normalUpdate q cells)
+'SOnlyMemory.memory_normal' depends on axioms: [propext, Quot.sound]
+SOnlyMemory.memory_reset (cells : List SOnlyMemory.Cell) (q p : Bool) :
+  SOnlyCounter.halfcommand q p false (SOnlyMemory.memory cells) = SOnlyMemory.memory (SOnlyMemory.reset cells)
+'SOnlyMemory.memory_reset' depends on axioms: [propext, Quot.sound]
+SOnlyMemory.memory_marker (cells : List SOnlyMemory.Cell) (q : Bool) :
+  SOnlyCounter.pass false (SOnlyCounter.pass q (SOnlyMemory.memory cells)) = SOnlyMemory.markerWord cells
+'SOnlyMemory.memory_marker' depends on axioms: [propext, Quot.sound]
+SOnlyMemory.marker_event (cells : List SOnlyMemory.Cell) (hne : cells ≠ []) (take : Bool) :
+  SOnlySource.Selected { word := SOnlyMemory.markerWord cells, take := take } ↔ take = true
+'SOnlyMemory.marker_event' depends on axioms: [propext]
+SOnlyMemory.normal_fixed (cells : List SOnlyMemory.Cell) (q : Bool) :
+  List.map Prod.snd (SOnlyMemory.normalUpdate q cells) = List.map Prod.snd cells
+'SOnlyMemory.normal_fixed' depends on axioms: [propext]
+SOnlyMemory.combined (cells : List SOnlyMemory.Cell) : List Bool
+'SOnlyMemory.combined' does not depend on any axioms
+SOnlyMemory.runningXor (g : Bool) : List Bool → List Bool
+'SOnlyMemory.runningXor' does not depend on any axioms
+SOnlyMemory.memory_running_xor (cells : List SOnlyMemory.Cell) (q : Bool) :
+  SOnlyMemory.combined (SOnlyMemory.normalUpdate q cells) = SOnlyMemory.runningXor (!q) (SOnlyMemory.combined cells)
+'SOnlyMemory.memory_running_xor' does not depend on any axioms
+SOnlyMemory.memory_reset_vector (cells : List SOnlyMemory.Cell) :
+  SOnlyMemory.combined (SOnlyMemory.reset cells) = List.map Prod.snd cells
+'SOnlyMemory.memory_reset_vector' depends on axioms: [propext, Quot.sound]
+SOnlyMemory.widthParity (cells : List SOnlyMemory.Cell) : Bool
+'SOnlyMemory.widthParity' does not depend on any axioms
+SOnlyMemory.component_width (h a : Bool) : (SOnlyMemory.component h a).length % 2 = if (h ^^ a) = true then 1 else 0
+'SOnlyMemory.component_width' depends on axioms: [propext]
+SOnlyMemory.memory_width (cells : List SOnlyMemory.Cell) :
+  (SOnlyMemory.memory cells).length % 2 = if SOnlyMemory.widthParity cells = true then 1 else 0
+'SOnlyMemory.memory_width' depends on axioms: [propext]
+SOnlyMemory.safePass (take : Bool) : List SOnlySource.Symbol → Bool
+'SOnlyMemory.safePass' does not depend on any axioms
+SOnlyMemory.safePass_cons (symbol : SOnlySource.Symbol) (tail : List SOnlySource.Symbol) (q : Bool) :
+  SOnlyMemory.safePass q (symbol :: tail) = true ↔ (q = true → symbol ≠ ⟨17, ⋯⟩) ∧ SOnlyMemory.safePass (!q) tail = true
+'SOnlyMemory.safePass_cons' depends on axioms: [propext]
+SOnlyMemory.safePass_append (front tail : List SOnlySource.Symbol) (q : Bool) :
+  SOnlyMemory.safePass q (front ++ tail) =
+    (SOnlyMemory.safePass q front && SOnlyMemory.safePass (SOnlyCounter.phaseAfter front.length q) tail)
+'SOnlyMemory.safePass_append' depends on axioms: [propext]
+SOnlyMemory.safe_prefix_no_event (front suffix : List SOnlySource.Symbol) (q : Bool) (time : Nat)
+  (hsafe : SOnlyMemory.safePass q front = true) (htime : time < front.length) :
+  ¬SOnlySource.Selected (SOnlySource.iterate time { word := front ++ suffix, take := q })
+'SOnlyMemory.safe_prefix_no_event' depends on axioms: [propext, Quot.sound]
+SOnlyMemory.component_command_safe (h a q : Bool) : SOnlyMemory.safePass q (SOnlyMemory.component h a) = true
+'SOnlyMemory.component_command_safe' depends on axioms: [propext]
+SOnlyMemory.component_parity_safe (h a q p : Bool) :
+  SOnlyMemory.safePass p (SOnlyCounter.pass q (SOnlyMemory.component h a)) = true
+'SOnlyMemory.component_parity_safe' depends on axioms: [propext, Quot.sound]
+SOnlyMemory.component_reset_safe (h a q p r : Bool) :
+  p = true ∨ r = false →
+    SOnlyMemory.safePass r (SOnlyCounter.pass p (SOnlyCounter.pass q (SOnlyMemory.component h a))) = true
+'SOnlyMemory.component_reset_safe' depends on axioms: [propext, Quot.sound]
+SOnlyMemory.memory_command_safe (cells : List SOnlyMemory.Cell) (q : Bool) :
+  SOnlyMemory.safePass q (SOnlyMemory.memory cells) = true
+'SOnlyMemory.memory_command_safe' depends on axioms: [propext]
+SOnlyMemory.memory_parity_safe (cells : List SOnlyMemory.Cell) (q p : Bool) :
+  SOnlyMemory.safePass p (SOnlyCounter.pass q (SOnlyMemory.memory cells)) = true
+'SOnlyMemory.memory_parity_safe' depends on axioms: [propext, Quot.sound]
+SOnlyMemory.memory_reset_safe (cells : List SOnlyMemory.Cell) (q p r : Bool) (legal : p = true ∨ r = false) :
+  SOnlyMemory.safePass r (SOnlyCounter.pass p (SOnlyCounter.pass q (SOnlyMemory.memory cells))) = true
+'SOnlyMemory.memory_reset_safe' depends on axioms: [propext, Quot.sound]
+SOnlyMemory.componentCount (cells : List SOnlyMemory.Cell) : Nat
+'SOnlyMemory.componentCount' does not depend on any axioms
+SOnlyMemory.command_component_length (h a q : Bool) :
+  (SOnlyCounter.pass q (SOnlyMemory.component h a)).length = 2 * (1 + if a = true then 1 else 0)
+'SOnlyMemory.command_component_length' depends on axioms: [propext, Quot.sound]
+SOnlyMemory.parity_component_length (h a q p : Bool) :
+  (SOnlyCounter.pass p (SOnlyCounter.pass q (SOnlyMemory.component h a))).length = 2 * (1 + if a = true then 1 else 0)
+'SOnlyMemory.parity_component_length' depends on axioms: [propext, Quot.sound]
+SOnlyMemory.memory_command_length (cells : List SOnlyMemory.Cell) (q : Bool) :
+  (SOnlyCounter.pass q (SOnlyMemory.memory cells)).length = 2 * SOnlyMemory.componentCount cells
+'SOnlyMemory.memory_command_length' depends on axioms: [propext, Quot.sound]
+SOnlyMemory.memory_parity_length (cells : List SOnlyMemory.Cell) (q p : Bool) :
+  (SOnlyCounter.pass p (SOnlyCounter.pass q (SOnlyMemory.memory cells))).length = 2 * SOnlyMemory.componentCount cells
+'SOnlyMemory.memory_parity_length' depends on axioms: [propext, Quot.sound]
+SOnlyMemory.componentCount_positive (cells : List SOnlyMemory.Cell) (hne : cells ≠ []) :
+  0 < SOnlyMemory.componentCount cells
+'SOnlyMemory.componentCount_positive' depends on axioms: [propext, Quot.sound]
+SOnlyMemory.intermediate_words_nonempty (cells : List SOnlyMemory.Cell) (q p : Bool) (hne : cells ≠ []) :
+  SOnlyCounter.pass q (SOnlyMemory.memory cells) ≠ [] ∧
+    SOnlyCounter.pass p (SOnlyCounter.pass q (SOnlyMemory.memory cells)) ≠ []
+'SOnlyMemory.intermediate_words_nonempty' depends on axioms: [propext, Quot.sound]
+SOnlyProvenanceRows.b_carries (P : PureSFormal.PureS.Term → Prop) : SOnlyProvenance.AllH6 P PureSFormal.PureS.b
+'SOnlyProvenanceRows.b_carries' depends on axioms: [propext]
+SOnlyProvenanceRows.p_carries (P : PureSFormal.PureS.Term → Prop) : SOnlyProvenance.AllH6 P PureSFormal.PureS.p
+'SOnlyProvenanceRows.p_carries' depends on axioms: [propext]
+SOnlyProvenanceRows.valueTag_carries (P : PureSFormal.PureS.Term → Prop) (bit : Bool) :
+  SOnlyProvenance.AllH6 P (PureSFormal.PureS.valueTag bit)
+'SOnlyProvenanceRows.valueTag_carries' depends on axioms: [propext]
+SOnlyProvenanceRows.live_carries (P : PureSFormal.PureS.Term → Prop) (bit : Bool) :
+  SOnlyProvenance.AllH6 P (PureSFormal.PureS.live bit)
+'SOnlyProvenanceRows.live_carries' depends on axioms: [propext]
+SOnlyProvenanceRows.appender_carries (P : PureSFormal.PureS.Term → Prop) (bits : List Bool) :
+  SOnlyProvenance.AllH6 P (PureSFormal.PureS.appender bits)
+'SOnlyProvenanceRows.appender_carries' depends on axioms: [propext]
+SOnlyProvenanceRows.selectedAction_carries (P : PureSFormal.PureS.Term → Prop) (program : PureSFormal.CTS.Program)
+  (label : PureSFormal.PureS.ActionLabel program) :
+  SOnlyProvenance.AllH6 P (PureSFormal.PureS.selectedAction program label)
+'SOnlyProvenanceRows.selectedAction_carries' depends on axioms: [propext]
+SOnlyProvenanceRows.compileDispatcher_carries (P : PureSFormal.PureS.Term → Prop) {Label : Type}
+  (encode : Label → PureSFormal.PureS.Term) (tree : PureSFormal.PureS.Dispatcher.Tree Label)
+  (leaves : ∀ (label : Label), SOnlyProvenance.AllH6 P (encode label)) :
+  SOnlyProvenance.AllH6 P (PureSFormal.PureS.compileDispatcher encode tree)
+'SOnlyProvenanceRows.compileDispatcher_carries' depends on axioms: [propext]
+SOnlyProvenanceRows.compileActions_carries (P : PureSFormal.PureS.Term → Prop) (program : PureSFormal.CTS.Program)
+  (tree : PureSFormal.PureS.Dispatcher.Tree (PureSFormal.PureS.ActionLabel program)) :
+  SOnlyProvenance.AllH6 P (PureSFormal.PureS.compileActions program tree)
+'SOnlyProvenanceRows.compileActions_carries' depends on axioms: [propext]
+SOnlyProvenanceRows.live_fold_carries {P : PureSFormal.PureS.Term → Prop} (bits : List Bool)
+  (start : PureSFormal.PureS.Term) (hs : SOnlyProvenance.AllH6 P start) :
+  SOnlyProvenance.AllH6 P (List.foldl (fun acc bit => (PureSFormal.PureS.live bit).app acc) start bits)
+'SOnlyProvenanceRows.live_fold_carries' depends on axioms: [propext]
+SOnlyProvenanceRows.word_carries (P : PureSFormal.PureS.Term → Prop) (bits : List Bool) :
+  SOnlyProvenance.AllH6 P (PureSFormal.PureS.word bits)
+'SOnlyProvenanceRows.word_carries' depends on axioms: [propext]
+SOnlyProvenanceRows.seed_carries (P : PureSFormal.PureS.Term → Prop) (bits : List Bool) :
+  SOnlyProvenance.AllH6 P (PureSFormal.PureS.seedCode bits)
+'SOnlyProvenanceRows.seed_carries' depends on axioms: [propext]
+SOnlyProvenanceRows.environment_carries (P : PureSFormal.PureS.Term → Prop) (program : PureSFormal.CTS.Program)
+  (tree : PureSFormal.PureS.Dispatcher.Tree (PureSFormal.PureS.ActionLabel program)) (bits : List Bool) :
+  SOnlyProvenance.AllH6 P (PureSFormal.PureS.environmentCode (PureSFormal.PureS.compileActions program tree) bits)
+'SOnlyProvenanceRows.environment_carries' depends on axioms: [propext]
+SOnlyProvenanceRows.other_app_carries {P : PureSFormal.PureS.Term → Prop} {head arg : PureSFormal.PureS.Term}
+  (hh : SOnlyProvenance.AllH6 P head) (ha : SOnlyProvenance.AllH6 P arg)
+  (hc : SOnlyProvenance.classify head = SOnlyProvenance.State.other) : SOnlyProvenance.AllH6 P (head.app arg)
+'SOnlyProvenanceRows.other_app_carries' depends on axioms: [propext]
+SOnlyProvenanceRows.other_app_class {head arg : PureSFormal.PureS.Term}
+  (h : SOnlyProvenance.classify head = SOnlyProvenance.State.other) :
+  SOnlyProvenance.classify (head.app arg) = SOnlyProvenance.State.other
+'SOnlyProvenanceRows.other_app_class' depends on axioms: [propext]
+SOnlyProvenanceRows.compiled_call_carries {P : PureSFormal.PureS.Term → Prop} (program : PureSFormal.CTS.Program)
+  (tree : PureSFormal.PureS.Dispatcher.Tree (PureSFormal.PureS.ActionLabel program)) {carrier : PureSFormal.PureS.Term}
+  (hc : SOnlyProvenance.AllH6 P carrier) :
+  SOnlyProvenance.AllH6 P
+    (PureSFormal.PureS.RouteGrammar.compiledCall (PureSFormal.PureS.selectedAction program) tree carrier)
+'SOnlyProvenanceRows.compiled_call_carries' depends on axioms: [propext]
+SOnlyProvenanceRows.compiled_call_other (program : PureSFormal.CTS.Program)
+  (tree : PureSFormal.PureS.Dispatcher.Tree (PureSFormal.PureS.ActionLabel program))
+  (carrier : PureSFormal.PureS.Term) :
+  SOnlyProvenance.classify
+      (PureSFormal.PureS.RouteGrammar.compiledCall (PureSFormal.PureS.selectedAction program) tree carrier) =
+    SOnlyProvenance.State.other
+'SOnlyProvenanceRows.compiled_call_other' depends on axioms: [propext]
+SOnlyProvenanceRows.route_row_other {program : PureSFormal.CTS.Program} {carrier : PureSFormal.PureS.Term}
+  {tree : PureSFormal.PureS.Dispatcher.Tree (PureSFormal.PureS.ActionLabel program)}
+  {route : PureSFormal.PureS.Dispatcher.Route} {label : PureSFormal.PureS.ActionLabel program} {done : Bool}
+  {term : PureSFormal.PureS.Term}
+  (progress :
+    PureSFormal.PureS.SchedulerResponseInvariant.RouteMutation (PureSFormal.PureS.selectedAction program) carrier tree
+      route label done term)
+  (hc : SOnlyProvenance.Endpoint carrier) : SOnlyProvenance.classify term = SOnlyProvenance.State.other
+'SOnlyProvenanceRows.route_row_other' depends on axioms: [propext]
+SOnlyProvenanceRows.route_row_carries {P : PureSFormal.PureS.Term → Prop} {program : PureSFormal.CTS.Program}
+  {carrier : PureSFormal.PureS.Term} {tree : PureSFormal.PureS.Dispatcher.Tree (PureSFormal.PureS.ActionLabel program)}
+  {route : PureSFormal.PureS.Dispatcher.Route} {label : PureSFormal.PureS.ActionLabel program} {done : Bool}
+  {term : PureSFormal.PureS.Term}
+  (progress :
+    PureSFormal.PureS.SchedulerResponseInvariant.RouteMutation (PureSFormal.PureS.selectedAction program) carrier tree
+      route label done term)
+  (hc : SOnlyProvenance.AllH6 P carrier) (endpoint : SOnlyProvenance.Endpoint carrier) : SOnlyProvenance.AllH6 P term
+'SOnlyProvenanceRows.route_row_carries' depends on axioms: [propext]
+SOnlyProvenanceRows.extend_carries {P : PureSFormal.PureS.Term → Prop} (bit : Bool) {initial : PureSFormal.PureS.Term}
+  (hi : SOnlyProvenance.AllH6 P initial) : SOnlyProvenance.AllH6 P (PureSFormal.PureS.extendAccumulator bit initial)
+'SOnlyProvenanceRows.extend_carries' depends on axioms: [propext]
+SOnlyProvenanceRows.history_carries {P : PureSFormal.PureS.Term → Prop} (bit : Bool) {initial : PureSFormal.PureS.Term}
+  (hi : SOnlyProvenance.AllH6 P initial) (endpoint : SOnlyProvenance.Endpoint initial) :
+  SOnlyProvenance.AllH6 P (PureSFormal.PureS.pushHistory bit initial)
+'SOnlyProvenanceRows.history_carries' depends on axioms: [propext]
+SOnlyProvenanceRows.pushFirst_other (bit : Bool) (rest : List Bool) (initial : PureSFormal.PureS.Term) :
+  SOnlyProvenance.classify (PureSFormal.PureS.SchedulerResponseInvariant.pushFirst bit rest initial) =
+    SOnlyProvenance.State.other
+'SOnlyProvenanceRows.pushFirst_other' depends on axioms: [propext]
+SOnlyProvenanceRows.pushSecond_other (bit : Bool) (rest : List Bool) (initial : PureSFormal.PureS.Term) :
+  SOnlyProvenance.classify (PureSFormal.PureS.SchedulerResponseInvariant.pushSecond bit rest initial) =
+    SOnlyProvenance.State.other
+'SOnlyProvenanceRows.pushSecond_other' depends on axioms: [propext]
+SOnlyProvenanceRows.pushFirst_carries {P : PureSFormal.PureS.Term → Prop} (bit : Bool) (rest : List Bool)
+  {initial : PureSFormal.PureS.Term} (hi : SOnlyProvenance.AllH6 P initial) :
+  SOnlyProvenance.AllH6 P (PureSFormal.PureS.SchedulerResponseInvariant.pushFirst bit rest initial)
+'SOnlyProvenanceRows.pushFirst_carries' depends on axioms: [propext]
+SOnlyProvenanceRows.pushSecond_carries {P : PureSFormal.PureS.Term → Prop} (bit : Bool) (rest : List Bool)
+  {initial : PureSFormal.PureS.Term} (hi : SOnlyProvenance.AllH6 P initial)
+  (endpoint : SOnlyProvenance.Endpoint initial) :
+  SOnlyProvenance.AllH6 P (PureSFormal.PureS.SchedulerResponseInvariant.pushSecond bit rest initial)
+'SOnlyProvenanceRows.pushSecond_carries' depends on axioms: [propext]
+SOnlyProvenanceRows.action_row_carries {P : PureSFormal.PureS.Term → Prop} {expected : Nat} {remaining : List Bool}
+  {initial : PureSFormal.PureS.Term} {outer : List PureSFormal.PureS.Term} {done : Bool} {term : PureSFormal.PureS.Term}
+  (progress : PureSFormal.PureS.SchedulerResponseInvariant.ActionMutation expected remaining initial outer done term)
+  (hi : SOnlyProvenance.AllH6 P initial) (endpoint : SOnlyProvenance.Endpoint initial)
+  (ho : ∀ (t : PureSFormal.PureS.Term), t ∈ outer → SOnlyProvenance.AllH6 P t) : SOnlyProvenance.AllH6 P term
+'SOnlyProvenanceRows.action_row_carries' depends on axioms: [propext]
+SOnlyProvenanceRows.c4_carries {P : PureSFormal.PureS.Term → Prop} (bit : Bool) {predecessor : PureSFormal.PureS.Term}
+  (hp : SOnlyProvenance.AllH6 P predecessor) :
+  SOnlyProvenance.AllH6 P (PureSFormal.PureS.Carrier.tombstone bit predecessor predecessor)
+'SOnlyProvenanceRows.c4_carries' depends on axioms: [propext]
+SOnlyProvenanceRows.withResponse_other {program : PureSFormal.CTS.Program}
+  {tree : PureSFormal.PureS.Dispatcher.Tree (PureSFormal.PureS.ActionLabel program)}
+  {route : PureSFormal.PureS.Dispatcher.Route} {label : PureSFormal.PureS.ActionLabel program}
+  (path : PureSFormal.PureS.Dispatcher.HasRoute tree route label) (carrier response : PureSFormal.PureS.Term)
+  (endpoint : SOnlyProvenance.Endpoint carrier) :
+  SOnlyProvenance.classify
+      (PureSFormal.PureS.PrimitiveRoute.withResponse (PureSFormal.PureS.selectedAction program) tree route carrier
+        response) =
+    SOnlyProvenance.State.other
+'SOnlyProvenanceRows.withResponse_other' depends on axioms: [propext]
+SOnlyProvenanceRows.withResponse_carries {P : PureSFormal.PureS.Term → Prop} {program : PureSFormal.CTS.Program}
+  {tree : PureSFormal.PureS.Dispatcher.Tree (PureSFormal.PureS.ActionLabel program)}
+  {route : PureSFormal.PureS.Dispatcher.Route} {label : PureSFormal.PureS.ActionLabel program}
+  (path : PureSFormal.PureS.Dispatcher.HasRoute tree route label) {carrier response : PureSFormal.PureS.Term}
+  (hc : SOnlyProvenance.AllH6 P carrier) (endpoint : SOnlyProvenance.Endpoint carrier)
+  (hr : SOnlyProvenance.AllH6 P response) :
+  SOnlyProvenance.AllH6 P
+    (PureSFormal.PureS.PrimitiveRoute.withResponse (PureSFormal.PureS.selectedAction program) tree route carrier
+      response)
+'SOnlyProvenanceRows.withResponse_carries' depends on axioms: [propext]
+SOnlyProvenanceRows.frameFirst_carries {P : PureSFormal.PureS.Term → Prop} (program : PureSFormal.CTS.Program)
+  (tree : PureSFormal.PureS.Dispatcher.Tree (PureSFormal.PureS.ActionLabel program)) (bits : List Bool)
+  {continuation carrier : PureSFormal.PureS.Term} (hb : SOnlyProvenance.AllH6 P continuation)
+  (bc : SOnlyProvenance.classify continuation = SOnlyProvenance.State.other) (hv : SOnlyProvenance.AllH6 P carrier) :
+  SOnlyProvenance.AllH6 P
+    (PureSFormal.PureS.SchedulerResponseInvariant.frameFirstRoot (PureSFormal.PureS.compileActions program tree) bits
+      continuation carrier)
+'SOnlyProvenanceRows.frameFirst_carries' depends on axioms: [propext]
+SOnlyProvenanceRows.frameSecond_carries {P : PureSFormal.PureS.Term → Prop} (program : PureSFormal.CTS.Program)
+  (tree : PureSFormal.PureS.Dispatcher.Tree (PureSFormal.PureS.ActionLabel program)) (bits : List Bool)
+  {continuation carrier : PureSFormal.PureS.Term} (hb : SOnlyProvenance.AllH6 P continuation)
+  (bc : SOnlyProvenance.classify continuation = SOnlyProvenance.State.other) (hv : SOnlyProvenance.AllH6 P carrier) :
+  SOnlyProvenance.AllH6 P
+    (PureSFormal.PureS.SchedulerResponseInvariant.frameSecondRoot (PureSFormal.PureS.compileActions program tree) bits
+      continuation carrier)
+'SOnlyProvenanceRows.frameSecond_carries' depends on axioms: [propext]
+SOnlyProvenanceRows.activeShell_carries {P : PureSFormal.PureS.Term → Prop} (bits : List Bool)
+  {continuation carrier dispatch : PureSFormal.PureS.Term} (hb : SOnlyProvenance.AllH6 P continuation)
+  (bc : SOnlyProvenance.classify continuation = SOnlyProvenance.State.other) (hv : SOnlyProvenance.AllH6 P carrier)
+  (hd : SOnlyProvenance.AllH6 P dispatch)
+  (registered :
+    P
+      (PureSFormal.PureS.Carrier.activeShell bits continuation (PureSFormal.PureS.freshHField carrier) dispatch carrier
+        carrier)) :
+  SOnlyProvenance.AllH6 P
+    (PureSFormal.PureS.Carrier.activeShell bits continuation (PureSFormal.PureS.freshHField carrier) dispatch carrier
+      carrier)
+'SOnlyProvenanceRows.activeShell_carries' depends on axioms: [propext]
+SOnlyProvenanceRows.response_row_carries {P : PureSFormal.PureS.Term → Prop} {program : PureSFormal.CTS.Program}
+  {tree : PureSFormal.PureS.Dispatcher.Tree (PureSFormal.PureS.ActionLabel program)}
+  {route : PureSFormal.PureS.Dispatcher.Route} {label : PureSFormal.PureS.ActionLabel program}
+  {path : PureSFormal.PureS.Dispatcher.HasRoute tree route label} {bits : List Bool}
+  {continuation carrier term : PureSFormal.PureS.Term} {done : Bool}
+  (row :
+    PureSFormal.PureS.SchedulerResponseInvariant.ResponseRootMutation program tree path bits continuation carrier done
+      term)
+  (hb : SOnlyProvenance.AllH6 P continuation) (bc : SOnlyProvenance.classify continuation = SOnlyProvenance.State.other)
+  (hv : SOnlyProvenance.AllH6 P carrier) (endpoint : SOnlyProvenance.Endpoint carrier)
+  (registered : SOnlyProvenance.classify term = SOnlyProvenance.State.h4 → P term) : SOnlyProvenance.AllH6 P term
+'SOnlyProvenanceRows.response_row_carries' depends on axioms: [propext, Quot.sound]
+SOnlyProvenanceRows.allH6_of_descendants {P : PureSFormal.PureS.Term → Prop} (source : PureSFormal.PureS.Term)
+  (licensed :
+    ∀ (found : PureSFormal.PureS.Term),
+      SOnlyProvenance.Descendant source found → SOnlyProvenance.classify found = SOnlyProvenance.State.h4 → P found) :
+  SOnlyProvenance.AllH6 P source
+'SOnlyProvenanceRows.allH6_of_descendants' depends on axioms: [propext]
+SOnlyProvenanceRows.allH6_descendant {P : PureSFormal.PureS.Term → Prop} {source found : PureSFormal.PureS.Term}
+  (licensed : SOnlyProvenance.AllH6 P source) (occurs : SOnlyProvenance.Descendant source found)
+  (h6 : SOnlyProvenance.classify found = SOnlyProvenance.State.h4) : P found
+'SOnlyProvenanceRows.allH6_descendant' depends on axioms: [propext]
+SOnlyProvenanceRows.response_h6_inherited_or_root {program : PureSFormal.CTS.Program}
+  {tree : PureSFormal.PureS.Dispatcher.Tree (PureSFormal.PureS.ActionLabel program)}
+  {route : PureSFormal.PureS.Dispatcher.Route} {label : PureSFormal.PureS.ActionLabel program}
+  {path : PureSFormal.PureS.Dispatcher.HasRoute tree route label} {bits : List Bool}
+  {continuation carrier term found : PureSFormal.PureS.Term} {done : Bool}
+  (row :
+    PureSFormal.PureS.SchedulerResponseInvariant.ResponseRootMutation program tree path bits continuation carrier done
+      term)
+  (bc : SOnlyProvenance.classify continuation = SOnlyProvenance.State.other)
+  (endpoint : SOnlyProvenance.Endpoint carrier) (occurs : SOnlyProvenance.Descendant term found)
+  (h6 : SOnlyProvenance.classify found = SOnlyProvenance.State.h4) :
+  SOnlyProvenance.Descendant continuation found ∨ SOnlyProvenance.Descendant carrier found ∨ found = term
+'SOnlyProvenanceRows.response_h6_inherited_or_root' depends on axioms: [propext, Quot.sound]
+SOnlyProvenanceRows.response_root_audit {program : PureSFormal.CTS.Program}
+  {tree : PureSFormal.PureS.Dispatcher.Tree (PureSFormal.PureS.ActionLabel program)}
+  {route : PureSFormal.PureS.Dispatcher.Route} {label : PureSFormal.PureS.ActionLabel program}
+  {path : PureSFormal.PureS.Dispatcher.HasRoute tree route label} {bits : List Bool}
+  {continuation carrier term : PureSFormal.PureS.Term} {done : Bool}
+  (row :
+    PureSFormal.PureS.SchedulerResponseInvariant.ResponseRootMutation program tree path bits continuation carrier done
+      term)
+  (h6 : SOnlyProvenance.classify term = SOnlyProvenance.State.h4) :
+  term.subterm?
+      [PureSFormal.PureS.Direction.left, PureSFormal.PureS.Direction.left, PureSFormal.PureS.Direction.left,
+        PureSFormal.PureS.Direction.right] =
+    some carrier
+'SOnlyProvenanceRows.response_root_audit' depends on axioms: [propext]
+SOnlyProvenanceRows.pending_carries {P : PureSFormal.PureS.Term → Prop} (program : PureSFormal.CTS.Program)
+  (tree : PureSFormal.PureS.Dispatcher.Tree (PureSFormal.PureS.ActionLabel program)) (bits : List Bool)
+  {continuation body : PureSFormal.PureS.Term} (hb : SOnlyProvenance.AllH6 P continuation)
+  (ht : SOnlyProvenance.AllH6 P body) :
+  SOnlyProvenance.AllH6 P
+    (PureSFormal.PureS.frame (PureSFormal.PureS.environmentCode (PureSFormal.PureS.compileActions program tree) bits)
+      continuation body)
+'SOnlyProvenanceRows.pending_carries' depends on axioms: [propext]
+SOnlyProvenanceRows.mutableBase_carries {P : PureSFormal.PureS.Term → Prop} (program : PureSFormal.CTS.Program)
+  (tree : PureSFormal.PureS.Dispatcher.Tree (PureSFormal.PureS.ActionLabel program)) (bits : List Bool)
+  {continuation queue beta : PureSFormal.PureS.Term} (hb : SOnlyProvenance.AllH6 P continuation)
+  (bc : SOnlyProvenance.classify continuation = SOnlyProvenance.State.other) (hq : SOnlyProvenance.AllH6 P queue)
+  (hbeta : SOnlyProvenance.AllH6 P beta) :
+  SOnlyProvenance.AllH6 P
+    (PureSFormal.PureS.MutableBase.base (PureSFormal.PureS.compileActions program tree) bits continuation queue beta)
+'SOnlyProvenanceRows.mutableBase_carries' depends on axioms: [propext]
+SOnlyProvenanceRows.tombstone_context_carries {P : PureSFormal.PureS.Term → Prop} (bit : Bool)
+  {predecessor audit : PureSFormal.PureS.Term} (hp : SOnlyProvenance.AllH6 P predecessor)
+  (ha : SOnlyProvenance.AllH6 P audit) :
+  SOnlyProvenance.AllH6 P (PureSFormal.PureS.Carrier.tombstone bit predecessor audit)
+'SOnlyProvenanceRows.tombstone_context_carries' depends on axioms: [propext]
+SOnlyProvenanceRows.action_context_carries {P : PureSFormal.PureS.Term → Prop} (histories : List PureSFormal.PureS.Term)
+  {accumulator : PureSFormal.PureS.Term} (ha : SOnlyProvenance.AllH6 P accumulator)
+  (hh : ∀ (t : PureSFormal.PureS.Term), t ∈ histories → SOnlyProvenance.AllH6 P t) :
+  SOnlyProvenance.AllH6 P ((PureSFormal.PureS.CanonicalTraversal.actionContext histories).plug accumulator)
+'SOnlyProvenanceRows.action_context_carries' depends on axioms: [propext]
+SOnlyProvenanceRows.completed_context_carries {P : PureSFormal.PureS.Term → Prop} (bits : List Bool)
+  {snapshot dispatch seedAudit endpoint continuationAudit : PureSFormal.PureS.Term}
+  (hs : SOnlyProvenance.AllH6 P snapshot) (hd : SOnlyProvenance.AllH6 P dispatch)
+  (hsa : SOnlyProvenance.AllH6 P seedAudit) (he : SOnlyProvenance.AllH6 P endpoint)
+  (hca : SOnlyProvenance.AllH6 P continuationAudit) (safe : SOnlyProvenance.Endpoint endpoint)
+  (registered :
+    P
+      (PureSFormal.PureS.Carrier.completedShell bits (PureSFormal.PureS.freshHField snapshot) dispatch seedAudit
+        endpoint continuationAudit)) :
+  SOnlyProvenance.AllH6 P
+    (PureSFormal.PureS.Carrier.completedShell bits (PureSFormal.PureS.freshHField snapshot) dispatch seedAudit endpoint
+      continuationAudit)
+'SOnlyProvenanceRows.completed_context_carries' depends on axioms: [propext]
+SOnlyProvenanceRows.OuterContext (P : PureSFormal.PureS.Term → Prop) : PureSFormal.PureS.Context → Prop
+'SOnlyProvenanceRows.OuterContext' depends on axioms: [propext]
+SOnlyProvenanceRows.outer_context_carries {P : PureSFormal.PureS.Term → Prop} {context : PureSFormal.PureS.Context}
+  (outer : SOnlyProvenanceRows.OuterContext P context) {endpoint : PureSFormal.PureS.Term}
+  (he : SOnlyProvenance.AllH6 P endpoint) (safe : SOnlyProvenance.Endpoint endpoint) :
+  SOnlyProvenance.AllH6 P (context.plug endpoint) ∧ SOnlyProvenance.Endpoint (context.plug endpoint)
+'SOnlyProvenanceRows.outer_context_carries' depends on axioms: [propext]
+SOnlyResponseLabels.responseLabel? (program : PureSFormal.CTS.Program)
+  (dispatcher : PureSFormal.PureS.ActionDispatcher program)
+  (configuration : PureSFormal.PureS.SchedulerInvariant.Configuration program dispatcher) :
+  Option (PureSFormal.PureS.ActionLabel program)
+'SOnlyResponseLabels.responseLabel?' depends on axioms: [propext]
+SOnlyResponseLabels.OnlyLabel (program : PureSFormal.CTS.Program)
+  (dispatcher : PureSFormal.PureS.ActionDispatcher program) (label : PureSFormal.PureS.ActionLabel program)
+  (configurations : List (PureSFormal.PureS.SchedulerInvariant.Configuration program dispatcher)) : Prop
+'SOnlyResponseLabels.OnlyLabel' depends on axioms: [propext]
+SOnlyResponseLabels.exactChains_same_samples (program : PureSFormal.CTS.Program)
+  (dispatcher : PureSFormal.PureS.ActionDispatcher program)
+  {terminal before : PureSFormal.PureS.SchedulerInvariant.Configuration program dispatcher}
+  {configurations : List (PureSFormal.PureS.SchedulerInvariant.Configuration program dispatcher)}
+  (chain :
+    PureSFormal.PureS.SchedulerResponseInvariant.ExactMutationChain
+      (PureSFormal.PureS.SchedulerControl.machine program dispatcher) terminal before configurations)
+  {otherTerminal :
+    PureSFormal.PureS.FiniteController.Configuration (PureSFormal.PureS.SchedulerControl.Control program dispatcher)}
+  {otherConfigurations :
+    List
+      (PureSFormal.PureS.FiniteController.Configuration
+        (PureSFormal.PureS.SchedulerControl.Control program dispatcher))} :
+  PureSFormal.PureS.SchedulerResponseInvariant.ExactMutationChain
+      (PureSFormal.PureS.SchedulerControl.machine program dispatcher) otherTerminal before otherConfigurations →
+    configurations.length = otherConfigurations.length → configurations = otherConfigurations
+'SOnlyResponseLabels.exactChains_same_samples' depends on axioms: [propext]
+SOnlyResponseLabels.responsePairs_onlyLabel {program : PureSFormal.CTS.Program}
+  {dispatcher : PureSFormal.PureS.ActionDispatcher program}
+  {registers : PureSFormal.PureS.SchedulerControl.Registers program} {bit : Bool} {seedBits : List Bool}
+  {continuation carrier : PureSFormal.PureS.Term} {parents : List PureSFormal.PureS.ParentFrame}
+  {configurations : List (PureSFormal.PureS.SchedulerInvariant.Configuration program dispatcher)}
+  {entries : List (Bool × PureSFormal.PureS.Term)}
+  (pairs :
+    PureSFormal.PureS.SchedulerCycle.ResponseSamplePairs program dispatcher registers bit seedBits continuation carrier
+      parents configurations entries) :
+  SOnlyResponseLabels.OnlyLabel program dispatcher (registers.phase, bit) configurations
+'SOnlyResponseLabels.responsePairs_onlyLabel' depends on axioms: [propext]
+SOnlyResponseLabels.selectedResponse_labelledChain (program : PureSFormal.CTS.Program)
+  (dispatcher : PureSFormal.PureS.ActionDispatcher program) (seedBits : List Bool)
+  (continuation source : PureSFormal.PureS.Term) (admissible : PureSFormal.PureS.Carrier.Admissible continuation)
+  (registers : PureSFormal.PureS.SchedulerControl.Registers program) (bit : Bool) (suffix : List Bool)
+  (outerContext fullContext innerContext targetContext : PureSFormal.PureS.Context)
+  (parents : List PureSFormal.PureS.ParentFrame) (ticks : Nat)
+  (trace :
+    PureSFormal.PureS.SchedulerCycle.SelectedResponseTrace program dispatcher seedBits continuation source admissible
+      registers bit suffix outerContext fullContext innerContext targetContext parents ticks)
+  (notSeen : registers.seen = false) :
+  ∃ configurations,
+    PureSFormal.PureS.SchedulerResponseInvariant.ExactMutationChain
+        (PureSFormal.PureS.SchedulerControl.machine program dispatcher)
+        (PureSFormal.PureS.SchedulerCycle.selectedReturnConfiguration program dispatcher registers bit suffix seedBits
+          continuation (PureSFormal.PureS.SchedulerCycle.deletedCarrier bit outerContext innerContext) parents)
+        (PureSFormal.PureS.SchedulerInvariant.upConfiguration program dispatcher registers PureSFormal.PureS.omega
+          (PureSFormal.PureS.ContextCursor.frames fullContext PureSFormal.PureS.omega
+            (PureSFormal.PureS.ParentFrame.right
+                (PureSFormal.PureS.SchedulerResponse.pendingFunction program dispatcher seedBits continuation) ::
+              parents)))
+        configurations ∧
+      configurations.length =
+          1 +
+            PureSFormal.PureS.LocalResponse.completedCost program
+              (dispatcher.route ((PureSFormal.PureS.SchedulerCycle.scannedRegisters registers bit suffix).phase, bit))
+              ((PureSFormal.PureS.SchedulerCycle.scannedRegisters registers bit suffix).phase, bit) ∧
+        SOnlyResponseLabels.OnlyLabel program dispatcher
+          ((PureSFormal.PureS.SchedulerCycle.scannedRegisters registers bit suffix).phase, bit) configurations
+'SOnlyResponseLabels.selectedResponse_labelledChain' depends on axioms: [propext]
+SOnlyResponseLabels.selectedResponse_onlyLabel (program : PureSFormal.CTS.Program)
+  (dispatcher : PureSFormal.PureS.ActionDispatcher program) (seedBits : List Bool)
+  (continuation source : PureSFormal.PureS.Term) (admissible : PureSFormal.PureS.Carrier.Admissible continuation)
+  (registers : PureSFormal.PureS.SchedulerControl.Registers program) (bit : Bool) (suffix : List Bool)
+  (outerContext fullContext innerContext targetContext : PureSFormal.PureS.Context)
+  (parents : List PureSFormal.PureS.ParentFrame) (ticks : Nat)
+  (trace :
+    PureSFormal.PureS.SchedulerCycle.SelectedResponseTrace program dispatcher seedBits continuation source admissible
+      registers bit suffix outerContext fullContext innerContext targetContext parents ticks)
+  (notSeen : registers.seen = false) {terminal : PureSFormal.PureS.SchedulerInvariant.Configuration program dispatcher}
+  {configurations : List (PureSFormal.PureS.SchedulerInvariant.Configuration program dispatcher)}
+  (chain :
+    PureSFormal.PureS.SchedulerResponseInvariant.ExactMutationChain
+      (PureSFormal.PureS.SchedulerControl.machine program dispatcher) terminal
+      (PureSFormal.PureS.SchedulerInvariant.upConfiguration program dispatcher registers PureSFormal.PureS.omega
+        (PureSFormal.PureS.ContextCursor.frames fullContext PureSFormal.PureS.omega
+          (PureSFormal.PureS.ParentFrame.right
+              (PureSFormal.PureS.SchedulerResponse.pendingFunction program dispatcher seedBits continuation) ::
+            parents)))
+      configurations)
+  (count :
+    configurations.length =
+      1 +
+        PureSFormal.PureS.LocalResponse.completedCost program
+          (dispatcher.route ((PureSFormal.PureS.SchedulerCycle.scannedRegisters registers bit suffix).phase, bit))
+          ((PureSFormal.PureS.SchedulerCycle.scannedRegisters registers bit suffix).phase, bit)) :
+  SOnlyResponseLabels.OnlyLabel program dispatcher
+    ((PureSFormal.PureS.SchedulerCycle.scannedRegisters registers bit suffix).phase, bit) configurations
+'SOnlyResponseLabels.selectedResponse_onlyLabel' depends on axioms: [propext]
+SOnlyResponseLabels.sourceLabel? (program : PureSFormal.CTS.Program) (current : PureSFormal.CTS.Config program) :
+  Option (PureSFormal.PureS.ActionLabel program)
+'SOnlyResponseLabels.sourceLabel?' does not depend on any axioms
+SOnlyResponseLabels.SourceLabels (program : PureSFormal.CTS.Program)
+  (dispatcher : PureSFormal.PureS.ActionDispatcher program) (initial : PureSFormal.CTS.Config program) (count : Nat)
+  (configurations : List (PureSFormal.PureS.SchedulerInvariant.Configuration program dispatcher)) : Prop
+'SOnlyResponseLabels.SourceLabels' depends on axioms: [propext]
+SOnlyResponseLabels.sourceLabels_prepend (program : PureSFormal.CTS.Program)
+  (dispatcher : PureSFormal.PureS.ActionDispatcher program) (phase : PureSFormal.CTS.Phase program) (bit : Bool)
+  (suffix : List Bool) (count : Nat)
+  {first tail : List (PureSFormal.PureS.SchedulerInvariant.Configuration program dispatcher)}
+  (firstLabels : SOnlyResponseLabels.OnlyLabel program dispatcher (phase, bit) first)
+  (tailLabels :
+    SOnlyResponseLabels.SourceLabels program dispatcher
+      (PureSFormal.CTS.absorbingStep program { phase := phase, data := bit :: suffix }) count tail) :
+  SOnlyResponseLabels.SourceLabels program dispatcher { phase := phase, data := bit :: suffix } (count + 1)
+    (first ++ tail)
+'SOnlyResponseLabels.sourceLabels_prepend' depends on axioms: [propext]
+SOnlyResponseLabels.selectedNonemptyPendingPrefix_labelled (program : PureSFormal.CTS.Program)
+  (dispatcher : PureSFormal.PureS.ActionDispatcher program) (inputBits seedBits : List Bool)
+  (continuation : PureSFormal.PureS.Term) (hadmissible : PureSFormal.PureS.Carrier.Admissible continuation)
+  (outerParents : List PureSFormal.PureS.ParentFrame) (layers : Nat)
+  (outer : PureSFormal.PureS.SchedulerCompletedContext.CompletedParents program dispatcher outerParents layers)
+  (remaining sampleIndex : Nat) (registers : PureSFormal.PureS.SchedulerControl.Registers program)
+  (phase : PureSFormal.CTS.Phase program) (bit : Bool) (suffix : List Bool) (source : PureSFormal.PureS.Term)
+  (outerContext fullContext innerContext targetContext : PureSFormal.PureS.Context) (ticks : Nat) :
+  PureSFormal.PureS.SchedulerInvariant.RegistersCoherent registers phase [] false →
+    PureSFormal.PureS.SchedulerCycle.SelectedResponseTrace program dispatcher seedBits continuation source hadmissible
+        registers bit suffix outerContext fullContext innerContext targetContext
+        (PureSFormal.PureS.PrimitiveFuel.pendingParents
+          (PureSFormal.PureS.environmentCode (PureSFormal.PureS.compileActions program dispatcher.tree) seedBits)
+          continuation remaining outerParents)
+        ticks →
+      (∀ (k : Nat),
+          k ≤ remaining → (PureSFormal.CTS.iterate program k { phase := phase, data := bit :: suffix }).data ≠ []) →
+        ∃ finalRegisters finalPhase finalBit finalSuffix finalSource finalOuterContext finalFullContext
+          finalInnerContext finalTargetContext finalTicks configurations,
+          PureSFormal.PureS.SchedulerResponseInvariant.ExactMutationChain
+              (PureSFormal.PureS.SchedulerControl.machine program dispatcher)
+              (PureSFormal.PureS.SchedulerInvariant.upConfiguration program dispatcher finalRegisters
+                PureSFormal.PureS.omega
+                (PureSFormal.PureS.ContextCursor.frames finalFullContext PureSFormal.PureS.omega
+                  (PureSFormal.PureS.ParentFrame.right
+                      (PureSFormal.PureS.SchedulerResponse.pendingFunction program dispatcher seedBits continuation) ::
+                    outerParents)))
+              (PureSFormal.PureS.SchedulerInvariant.upConfiguration program dispatcher registers PureSFormal.PureS.omega
+                (PureSFormal.PureS.ContextCursor.frames fullContext PureSFormal.PureS.omega
+                  (PureSFormal.PureS.ParentFrame.right
+                      (PureSFormal.PureS.SchedulerResponse.pendingFunction program dispatcher seedBits continuation) ::
+                    PureSFormal.PureS.PrimitiveFuel.pendingParents
+                      (PureSFormal.PureS.environmentCode (PureSFormal.PureS.compileActions program dispatcher.tree)
+                        seedBits)
+                      continuation remaining outerParents)))
+              configurations ∧
+            PureSFormal.PureS.SchedulerCycle.IndexedResponseSampledStates program dispatcher inputBits sampleIndex
+                configurations ∧
+              configurations.length =
+                  PureSFormal.PureS.SchedulerNestedResponse.nonemptySweepCost program dispatcher remaining
+                    { phase := phase, data := bit :: suffix } ∧
+                PureSFormal.PureS.SchedulerInvariant.RegistersCoherent finalRegisters finalPhase [] false ∧
+                  PureSFormal.PureS.SchedulerCycle.SelectedResponseTrace program dispatcher seedBits continuation
+                      finalSource hadmissible finalRegisters finalBit finalSuffix finalOuterContext finalFullContext
+                      finalInnerContext finalTargetContext outerParents finalTicks ∧
+                    { phase := finalPhase, data := finalBit :: finalSuffix } =
+                        PureSFormal.CTS.iterate program remaining { phase := phase, data := bit :: suffix } ∧
+                      SOnlyResponseLabels.SourceLabels program dispatcher { phase := phase, data := bit :: suffix }
+                        remaining configurations
+'SOnlyResponseLabels.selectedNonemptyPendingPrefix_labelled' depends on axioms: [propext, Quot.sound]
+SOnlyResponseLabels.sourceLabels_append_last (program : PureSFormal.CTS.Program)
+  (dispatcher : PureSFormal.PureS.ActionDispatcher program) (initial : PureSFormal.CTS.Config program) (count : Nat)
+  (phase : PureSFormal.CTS.Phase program) (bit : Bool) (suffix : List Bool)
+  (sourceEq : { phase := phase, data := bit :: suffix } = PureSFormal.CTS.iterate program count initial)
+  {first last : List (PureSFormal.PureS.SchedulerInvariant.Configuration program dispatcher)}
+  (firstLabels : SOnlyResponseLabels.SourceLabels program dispatcher initial count first)
+  (lastLabels : SOnlyResponseLabels.OnlyLabel program dispatcher (phase, bit) last) :
+  SOnlyResponseLabels.SourceLabels program dispatcher initial (count + 1) (first ++ last)
+'SOnlyResponseLabels.sourceLabels_append_last' depends on axioms: [propext]
+SOnlyResponseLabels.completeNonemptyJob_sourceLabels (program : PureSFormal.CTS.Program)
+  (dispatcher : PureSFormal.PureS.ActionDispatcher program) (bit : Bool) (suffix : List Bool) (remaining : Nat)
+  (continuation : PureSFormal.PureS.Term) (admissible : PureSFormal.PureS.Carrier.Admissible continuation)
+  (parents : List PureSFormal.PureS.ParentFrame) (layers : Nat)
+  (outer : PureSFormal.PureS.SchedulerCompletedContext.CompletedParents program dispatcher parents layers)
+  (allNonempty :
+    ∀ (k : Nat),
+      k ≤ remaining + 1 →
+        (PureSFormal.CTS.iterate program k (PureSFormal.CTS.initial program (bit :: suffix))).data ≠ [])
+  {terminal : PureSFormal.PureS.SchedulerInvariant.Configuration program dispatcher}
+  {configurations : List (PureSFormal.PureS.SchedulerInvariant.Configuration program dispatcher)}
+  (chain :
+    PureSFormal.PureS.SchedulerResponseInvariant.ExactMutationChain
+      (PureSFormal.PureS.SchedulerControl.machine program dispatcher) terminal
+      (PureSFormal.PureS.SchedulerNestedPhase.fuelTerminalConfigurationAt program dispatcher (bit :: suffix)
+        (PureSFormal.PureS.SchedulerControl.Registers.newJob program) continuation parents (remaining + 1) 0)
+      configurations)
+  (count :
+    configurations.length =
+      PureSFormal.PureS.ExactCheckpointRun.jobCost program dispatcher (bit :: suffix) (remaining + 1)) :
+  SOnlyResponseLabels.SourceLabels program dispatcher (PureSFormal.CTS.initial program (bit :: suffix)) (remaining + 1)
+    configurations
+'SOnlyResponseLabels.completeNonemptyJob_sourceLabels' depends on axioms: [propext, Quot.sound]
+SOnlyResponseLabels.target_sourceLabel_iff (config : PureSFormal.CTS.Config SOnly38.program) :
+  SOnlyResponseLabels.sourceLabel? SOnly38.program config = some SOnly38.targetLabel ↔ SOnlySource.Event config
+'SOnlyResponseLabels.target_sourceLabel_iff' depends on axioms: [propext]
+SOnlyResponseLabels.no_target_script_of_no_source_event (initial : PureSFormal.CTS.Config SOnly38.program) (count : Nat)
+  (configurations : List (PureSFormal.PureS.SchedulerInvariant.Configuration SOnly38.program SOnly38.dispatcher))
+  (labels : SOnlyResponseLabels.SourceLabels SOnly38.program SOnly38.dispatcher initial count configurations)
+  (noEvent :
+    ∀ (index : Nat), index < count → ¬SOnlySource.Event (PureSFormal.CTS.iterate SOnly38.program index initial))
+  (configuration : PureSFormal.PureS.SchedulerInvariant.Configuration SOnly38.program SOnly38.dispatcher) :
+  configuration ∈ configurations →
+    SOnlyResponseLabels.responseLabel? SOnly38.program SOnly38.dispatcher configuration ≠ some SOnly38.targetLabel
+'SOnlyResponseLabels.no_target_script_of_no_source_event' depends on axioms: [propext]
+SOnlyResponseLabels.NoResponseLabels (program : PureSFormal.CTS.Program)
+  (dispatcher : PureSFormal.PureS.ActionDispatcher program)
+  (configurations : List (PureSFormal.PureS.SchedulerInvariant.Configuration program dispatcher)) : Prop
+'SOnlyResponseLabels.NoResponseLabels' depends on axioms: [propext]
+SOnlyResponseLabels.noResponse_sourceLabels {program : PureSFormal.CTS.Program}
+  {dispatcher : PureSFormal.PureS.ActionDispatcher program}
+  {configurations : List (PureSFormal.PureS.SchedulerInvariant.Configuration program dispatcher)}
+  (none : SOnlyResponseLabels.NoResponseLabels program dispatcher configurations)
+  (initial : PureSFormal.CTS.Config program) (count : Nat) :
+  SOnlyResponseLabels.SourceLabels program dispatcher initial count configurations
+'SOnlyResponseLabels.noResponse_sourceLabels' depends on axioms: [propext]
+SOnlyResponseLabels.sourceLabels_append {program : PureSFormal.CTS.Program}
+  {dispatcher : PureSFormal.PureS.ActionDispatcher program} {initial : PureSFormal.CTS.Config program} {count : Nat}
+  {first tail : List (PureSFormal.PureS.SchedulerInvariant.Configuration program dispatcher)}
+  (firstLabels : SOnlyResponseLabels.SourceLabels program dispatcher initial count first)
+  (tailLabels : SOnlyResponseLabels.SourceLabels program dispatcher initial count tail) :
+  SOnlyResponseLabels.SourceLabels program dispatcher initial count (first ++ tail)
+'SOnlyResponseLabels.sourceLabels_append' depends on axioms: [propext]
+SOnlyResponseLabels.fuel_noResponse (program : PureSFormal.CTS.Program)
+  (dispatcher : PureSFormal.PureS.ActionDispatcher program) (bits : List Bool)
+  (registers : PureSFormal.PureS.SchedulerControl.Registers program) (continuation : PureSFormal.PureS.Term)
+  (parents : List PureSFormal.PureS.ParentFrame) (fuel depth : Nat) :
+  SOnlyResponseLabels.NoResponseLabels program dispatcher
+    (PureSFormal.PureS.SchedulerNestedPhase.fuelConfigurationsAt program dispatcher bits registers continuation parents
+      fuel depth)
+'SOnlyResponseLabels.fuel_noResponse' depends on axioms: [propext]
+SOnlyResponseLabels.clockTail_noResponse (program : PureSFormal.CTS.Program)
+  (dispatcher : PureSFormal.PureS.ActionDispatcher program) (bits : List Bool)
+  (registers : PureSFormal.PureS.SchedulerControl.Registers program) (stage : Nat)
+  (parents : List PureSFormal.PureS.ParentFrame) (wrappers remaining : Nat) :
+  SOnlyResponseLabels.NoResponseLabels program dispatcher
+    (PureSFormal.PureS.SchedulerNestedPhase.clockTailConfigurationsAt program dispatcher bits registers stage parents
+      wrappers remaining)
+'SOnlyResponseLabels.clockTail_noResponse' depends on axioms: [propext]
+SOnlyResponseLabels.phase_noResponse (program : PureSFormal.CTS.Program)
+  (dispatcher : PureSFormal.PureS.ActionDispatcher program) (bits : List Bool)
+  (registers : PureSFormal.PureS.SchedulerControl.Registers program) (parents : List PureSFormal.PureS.ParentFrame)
+  (fuel : Nat) :
+  SOnlyResponseLabels.NoResponseLabels program dispatcher
+    (PureSFormal.PureS.SchedulerNestedPhase.positiveStageConfigurationsAt program dispatcher bits registers parents
+      fuel)
+'SOnlyResponseLabels.phase_noResponse' depends on axioms: [propext]
+SOnlyResponseLabels.handoff_noResponse (program : PureSFormal.CTS.Program)
+  (dispatcher : PureSFormal.PureS.ActionDispatcher program) (bits : List Bool) (fuel remaining : Nat)
+  (parents : List PureSFormal.PureS.ParentFrame) :
+  SOnlyResponseLabels.NoResponseLabels program dispatcher
+    (PureSFormal.PureS.SchedulerJobHandoff.handoffFuelConfigurationsAt program dispatcher bits fuel remaining parents)
+'SOnlyResponseLabels.handoff_noResponse' depends on axioms: [propext]
+SOnlyResponseLabels.LabelledNonfinalJobs (program : PureSFormal.CTS.Program)
+  (dispatcher : PureSFormal.PureS.ActionDispatcher program) (bit : Bool) (suffix : List Bool)
+  (fuel count sampleIndex : Nat) (outerParents : List PureSFormal.PureS.ParentFrame) (layers : Nat)
+  (_outer : PureSFormal.PureS.SchedulerCompletedContext.CompletedParents program dispatcher outerParents layers) : Prop
+'SOnlyResponseLabels.LabelledNonfinalJobs' depends on axioms: [propext]
+SOnlyResponseLabels.nonfinalJobs_labelled (program : PureSFormal.CTS.Program)
+  (dispatcher : PureSFormal.PureS.ActionDispatcher program) (bit : Bool) (suffix : List Bool) (fuel : Nat)
+  (allNonempty :
+    ∀ (index : Nat),
+      index ≤ fuel + 1 →
+        (PureSFormal.CTS.iterate program index (PureSFormal.CTS.initial program (bit :: suffix))).data ≠ [])
+  (count sampleIndex : Nat) (outerParents : List PureSFormal.PureS.ParentFrame) (layers : Nat)
+  (outer : PureSFormal.PureS.SchedulerCompletedContext.CompletedParents program dispatcher outerParents layers) :
+  SOnlyResponseLabels.LabelledNonfinalJobs program dispatcher bit suffix fuel count sampleIndex outerParents layers
+    outer
+'SOnlyResponseLabels.nonfinalJobs_labelled' depends on axioms: [propext, Quot.sound]
+SOnlyResponseLabels.allNonemptyRaw_labelled (program : PureSFormal.CTS.Program)
+  (dispatcher : PureSFormal.PureS.ActionDispatcher program) (bit : Bool) (suffix : List Bool) (fuel sampleIndex : Nat)
+  (parents : List PureSFormal.PureS.ParentFrame)
+  (outer :
+    PureSFormal.PureS.SchedulerCompletedContext.CompletedParents program dispatcher parents
+      (PureSFormal.PureS.CheckpointRun.cumulativeLayers fuel))
+  (allNonempty :
+    ∀ (index : Nat),
+      index ≤ fuel + 1 →
+        (PureSFormal.CTS.iterate program index (PureSFormal.CTS.initial program (bit :: suffix))).data ≠ [])
+  (indexEq :
+    sampleIndex + PureSFormal.PureS.ExactCheckpointRun.stageCost program dispatcher (bit :: suffix) (fuel + 1) =
+      PureSFormal.PureS.ExactCheckpointRun.checkpointTime program dispatcher (bit :: suffix) (fuel + 1)) :
+  ∃ nextParents configurations checkpoint semantic,
+    PureSFormal.PureS.SchedulerStageAssembly.RawStageSegment program dispatcher (bit :: suffix) (fuel + 1) sampleIndex
+        parents (PureSFormal.PureS.CheckpointRun.cumulativeLayers fuel) nextParents configurations checkpoint semantic ∧
+      SOnlyResponseLabels.SourceLabels program dispatcher (PureSFormal.CTS.initial program (bit :: suffix)) (fuel + 1)
+        configurations
+'SOnlyResponseLabels.allNonemptyRaw_labelled' depends on axioms: [propext, Quot.sound]
+SOnlyResponseLabels.sourceLabels_mono {program : PureSFormal.CTS.Program}
+  {dispatcher : PureSFormal.PureS.ActionDispatcher program} {initial : PureSFormal.CTS.Config program}
+  {smaller larger : Nat} {configurations : List (PureSFormal.PureS.SchedulerInvariant.Configuration program dispatcher)}
+  (bound : smaller ≤ larger)
+  (labels : SOnlyResponseLabels.SourceLabels program dispatcher initial smaller configurations) :
+  SOnlyResponseLabels.SourceLabels program dispatcher initial larger configurations
+'SOnlyResponseLabels.sourceLabels_mono' depends on axioms: [propext]
+SOnlyResponseLabels.prelude_noResponse (program : PureSFormal.CTS.Program)
+  (dispatcher : PureSFormal.PureS.ActionDispatcher program) (bits : List Bool) :
+  SOnlyResponseLabels.NoResponseLabels program dispatcher
+    (PureSFormal.PureS.SchedulerRecurrence.initialPreludeConfigurations program dispatcher bits)
+'SOnlyResponseLabels.prelude_noResponse' depends on axioms: [propext]
+SOnlyResponseLabels.positiveStages_labelled (program : PureSFormal.CTS.Program)
+  (dispatcher : PureSFormal.PureS.ActionDispatcher program) (bit : Bool) (suffix : List Bool) (offset : Nat) :
+  (∀ (index : Nat),
+      index ≤ offset + 1 →
+        (PureSFormal.CTS.iterate program index (PureSFormal.CTS.initial program (bit :: suffix))).data ≠ []) →
+    ∃ stages,
+      SOnlyResponseLabels.SourceLabels program dispatcher (PureSFormal.CTS.initial program (bit :: suffix)) (offset + 1)
+        stages.configurations
+'SOnlyResponseLabels.positiveStages_labelled' depends on axioms: [propext, Quot.sound]
+SOnlyResponseLabels.contractionRun_label_has_source (bits : List Bool) (index : Nat)
+  (allNonempty :
+    ∀ (k : Nat),
+      k ≤ index + 1 →
+        (PureSFormal.CTS.iterate SOnly38.program k (PureSFormal.CTS.initial SOnly38.program bits)).data ≠ [])
+  (label : PureSFormal.PureS.ActionLabel SOnly38.program)
+  (observed :
+    SOnlyResponseLabels.responseLabel? SOnly38.program SOnly38.dispatcher
+        ((SOnlyEventTransfer.persistentSystem bits).contractionRun (index + 1)) =
+      some label) :
+  ∃ sourceIndex,
+    sourceIndex < index + 1 ∧
+      SOnlyResponseLabels.sourceLabel? SOnly38.program
+          (PureSFormal.CTS.iterate SOnly38.program sourceIndex (PureSFormal.CTS.initial SOnly38.program bits)) =
+        some label
+'SOnlyResponseLabels.contractionRun_label_has_source' depends on axioms: [propext, Quot.sound]
+SOnlyResponseLabels.no_target_script_on_event_free_run (bits : List Bool)
+  (nonempty :
+    ∀ (k : Nat), (PureSFormal.CTS.iterate SOnly38.program k (PureSFormal.CTS.initial SOnly38.program bits)).data ≠ [])
+  (noEvent :
+    ∀ (k : Nat),
+      ¬SOnlySource.Event (PureSFormal.CTS.iterate SOnly38.program k (PureSFormal.CTS.initial SOnly38.program bits)))
+  (index : Nat) :
+  SOnlyResponseLabels.responseLabel? SOnly38.program SOnly38.dispatcher
+      ((SOnlyEventTransfer.persistentSystem bits).contractionRun index) ≠
+    some SOnly38.targetLabel
+'SOnlyResponseLabels.no_target_script_on_event_free_run' depends on axioms: [propext, Quot.sound]
+SOnlyResponseLabels.stageStart_labelled (bits : List Bool) (r : Nat)
+  (allNonempty :
+    ∀ (k : Nat),
+      k ≤ r → (PureSFormal.CTS.iterate SOnly38.program k (PureSFormal.CTS.initial SOnly38.program bits)).data ≠ []) :
+  ∃ parents configurations,
+    PureSFormal.PureS.SchedulerResponseInvariant.ExactMutationChain
+        (PureSFormal.PureS.SchedulerControl.machine SOnly38.program SOnly38.dispatcher)
+        (PureSFormal.PureS.SchedulerRecurrence.stageSourceConfiguration SOnly38.program SOnly38.dispatcher bits (r + 1)
+          parents)
+        (PureSFormal.PureS.SchedulerControl.initialConfiguration SOnly38.program SOnly38.dispatcher bits)
+        configurations ∧
+      configurations.length = SOnlyStageEvents.stageStartTime bits r ∧
+        PureSFormal.PureS.SchedulerCompletedContext.CompletedParents SOnly38.program SOnly38.dispatcher parents
+            (PureSFormal.PureS.CheckpointRun.cumulativeLayers r) ∧
+          SOnlyResponseLabels.SourceLabels SOnly38.program SOnly38.dispatcher
+            (PureSFormal.CTS.initial SOnly38.program bits) r configurations
+'SOnlyResponseLabels.stageStart_labelled' depends on axioms: [propext, Quot.sound]
+SOnlyResponseLabels.firstJob_response_prefix_labelled (bit : Bool) (suffix : List Bool) (r : Nat)
+  (allNonempty :
+    ∀ (k : Nat),
+      k ≤ r →
+        (PureSFormal.CTS.iterate SOnly38.program k (PureSFormal.CTS.initial SOnly38.program (bit :: suffix))).data ≠
+          []) :
+  have bits := bit :: suffix;
+  have environment :=
+    PureSFormal.PureS.environmentCode (PureSFormal.PureS.compileActions SOnly38.program SOnly38.dispatcher.tree) bits;
+  let continuation := PureSFormal.PureS.Dovetail.clockExit (r + 1) r environment;
+  ∃ parents registers phase responseBit responseSuffix source outerContext fullContext innerContext targetContext ticks
+    configurations,
+    PureSFormal.PureS.SchedulerResponseInvariant.ExactMutationChain
+        (PureSFormal.PureS.SchedulerControl.machine SOnly38.program SOnly38.dispatcher)
+        (PureSFormal.PureS.SchedulerInvariant.upConfiguration SOnly38.program SOnly38.dispatcher registers
+          PureSFormal.PureS.omega
+          (PureSFormal.PureS.ContextCursor.frames fullContext PureSFormal.PureS.omega
+            (PureSFormal.PureS.ParentFrame.right
+                (PureSFormal.PureS.SchedulerResponse.pendingFunction SOnly38.program SOnly38.dispatcher bits
+                  continuation) ::
+              parents)))
+        (PureSFormal.PureS.SchedulerControl.initialConfiguration SOnly38.program SOnly38.dispatcher bits)
+        configurations ∧
+      configurations.length = SOnlyStageEvents.firstJobPreResponseTime bits r ∧
+        PureSFormal.PureS.SchedulerInvariant.RegistersCoherent registers phase [] false ∧
+          PureSFormal.PureS.SchedulerCycle.SelectedResponseTrace SOnly38.program SOnly38.dispatcher bits continuation
+              source ⋯ registers responseBit responseSuffix outerContext fullContext innerContext targetContext parents
+              ticks ∧
+            { phase := phase, data := responseBit :: responseSuffix } =
+                PureSFormal.CTS.iterate SOnly38.program r (PureSFormal.CTS.initial SOnly38.program bits) ∧
+              SOnlyResponseLabels.SourceLabels SOnly38.program SOnly38.dispatcher
+                (PureSFormal.CTS.initial SOnly38.program bits) r configurations
+'SOnlyResponseLabels.firstJob_response_prefix_labelled' depends on axioms: [propext, Quot.sound]
+SOnlyResponseLabels.no_target_script_before_firstJob_response (bits : List Bool) (r : Nat)
+  (allNonempty :
+    ∀ (k : Nat),
+      k ≤ r → (PureSFormal.CTS.iterate SOnly38.program k (PureSFormal.CTS.initial SOnly38.program bits)).data ≠ [])
+  (noEvent :
+    ∀ (k : Nat),
+      k < r →
+        ¬SOnlySource.Event (PureSFormal.CTS.iterate SOnly38.program k (PureSFormal.CTS.initial SOnly38.program bits)))
+  (index : Nat) :
+  index < SOnlyStageEvents.firstJobPreResponseTime bits r →
+    SOnlyResponseLabels.responseLabel? SOnly38.program SOnly38.dispatcher
+        ((SOnlyEventTransfer.persistentSystem bits).contractionRun (index + 1)) ≠
+      some SOnly38.targetLabel
+'SOnlyResponseLabels.no_target_script_before_firstJob_response' depends on axioms: [propext, Quot.sound]
+SOnlyResult.leadingRun : List Nat → Nat
+'SOnlyResult.leadingRun' does not depend on any axioms
+SOnlyResult.firstRun : List Nat → Nat
+'SOnlyResult.firstRun' does not depend on any axioms
+SOnlyResult.decodeLength (n : Nat) : Option Nat
+'SOnlyResult.decodeLength' depends on axioms: [propext]
+SOnlyResult.readCounter (word : List Nat) : Option Nat
+'SOnlyResult.readCounter' depends on axioms: [propext]
+SOnlyResult.decodeMachineValue (counter : Nat) : Option Nat
+'SOnlyResult.decodeMachineValue' does not depend on any axioms
+SOnlyResult.readMachineValue (word : List Nat) : Option Nat
+'SOnlyResult.readMachineValue' depends on axioms: [propext]
+SOnlyResult.leadingRun_non16 (tail : List Nat) (notHead : tail.head? ≠ some 16) : SOnlyResult.leadingRun tail = 0
+'SOnlyResult.leadingRun_non16' depends on axioms: [propext]
+SOnlyResult.leadingRun_replicate (n : Nat) (tail : List Nat) :
+  SOnlyResult.leadingRun (List.replicate n 16 ++ tail) = n + SOnlyResult.leadingRun tail
+'SOnlyResult.leadingRun_replicate' depends on axioms: [propext]
+SOnlyResult.firstRun_prefix (front tail : List Nat) (no16 : ∀ (symbol : Nat), symbol ∈ front → symbol ≠ 16) :
+  SOnlyResult.firstRun (front ++ tail) = SOnlyResult.firstRun tail
+'SOnlyResult.firstRun_prefix' depends on axioms: [propext]
+SOnlyResult.firstRun_counter (front tail : List Nat) (n : Nat) (positive : 0 < n)
+  (no16 : ∀ (symbol : Nat), symbol ∈ front → symbol ≠ 16) (notHead : tail.head? ≠ some 16) :
+  SOnlyResult.firstRun (front ++ List.replicate n 16 ++ tail) = n
+'SOnlyResult.firstRun_counter' depends on axioms: [propext, Quot.sound]
+SOnlyResult.pow_four (n : Nat) : 4 ^ n = 2 ^ (2 * n)
+'SOnlyResult.pow_four' depends on axioms: [propext]
+SOnlyResult.decodeLength_counter (value : Nat) : SOnlyResult.decodeLength (4 ^ (value + 1)) = some value
+'SOnlyResult.decodeLength_counter' depends on axioms: [propext, Classical.choice, Quot.sound]
+SOnlyResult.readCounter_correct (front tail : List Nat) (value : Nat)
+  (no16 : ∀ (symbol : Nat), symbol ∈ front → symbol ≠ 16) (notHead : tail.head? ≠ some 16) :
+  SOnlyResult.readCounter (front ++ List.replicate (4 ^ (value + 1)) 16 ++ tail) = some value
+'SOnlyResult.readCounter_correct' depends on axioms: [propext, Classical.choice, Quot.sound]
+SOnlyResult.decodeMachineValue_correct (value : Nat) : SOnlyResult.decodeMachineValue (2 * value + 3) = some value
+'SOnlyResult.decodeMachineValue_correct' depends on axioms: [propext, Quot.sound]
+SOnlyResult.readMachineValue_correct (front tail : List Nat) (value : Nat)
+  (no16 : ∀ (symbol : Nat), symbol ∈ front → symbol ≠ 16) (notHead : tail.head? ≠ some 16) :
+  SOnlyResult.readMachineValue (front ++ List.replicate (4 ^ (2 * value + 4)) 16 ++ tail) = some value
+'SOnlyResult.readMachineValue_correct' depends on axioms: [propext, Classical.choice, Quot.sound]
+SOnlyResultBits.decodeBlock (bits : List Bool) : Option Nat
+'SOnlyResultBits.decodeBlock' does not depend on any axioms
+SOnlyResultBits.decodeBlocks : Nat → List Bool → Option (List Nat)
+'SOnlyResultBits.decodeBlocks' does not depend on any axioms
+SOnlyResultBits.published (word : List SOnlySource.Symbol) : List Nat
+'SOnlyResultBits.published' does not depend on any axioms
+SOnlyResultBits.decodeEventWord : List Bool → Option (List Nat)
+'SOnlyResultBits.decodeEventWord' depends on axioms: [propext]
+SOnlyResultBits.readMachineBits (bits : List Bool) : Option Nat
+'SOnlyResultBits.readMachineBits' depends on axioms: [propext]
+SOnlyResultBits.decodeBlock_code (symbol : SOnlySource.Symbol) :
+  SOnlyResultBits.decodeBlock (SOnlySource.code symbol) = some (↑symbol + 1)
+'SOnlyResultBits.decodeBlock_code' does not depend on any axioms
+SOnlyResultBits.encodeWord_length (word : List SOnlySource.Symbol) :
+  (SOnlySource.encodeWord word).length = 19 * word.length
+'SOnlyResultBits.encodeWord_length' depends on axioms: [propext, Quot.sound]
+SOnlyResultBits.decodeBlocks_encode (word : List SOnlySource.Symbol) (fuel : Nat) (enough : word.length ≤ fuel) :
+  SOnlyResultBits.decodeBlocks fuel (SOnlySource.encodeWord word) = some (SOnlyResultBits.published word)
+'SOnlyResultBits.decodeBlocks_encode' depends on axioms: [propext, Quot.sound]
+SOnlyResultBits.event_word (tail : List SOnlySource.Symbol) :
+  (PureSFormal.CTS.iterate SOnly38.program 17 (SOnlySource.encode { word := ⟨17, ⋯⟩ :: tail, take := true })).data =
+    true :: false :: SOnlySource.encodeWord tail
+'SOnlyResultBits.event_word' depends on axioms: [propext, Quot.sound]
+SOnlyResultBits.decodeEventWord_correct (tail : List SOnlySource.Symbol) :
+  SOnlyResultBits.decodeEventWord (true :: false :: SOnlySource.encodeWord tail) =
+    some (18 :: SOnlyResultBits.published tail)
+'SOnlyResultBits.decodeEventWord_correct' depends on axioms: [propext, Quot.sound]
+SOnlyResultBits.readMachineBits_correct (tail : List SOnlySource.Symbol) (front rest : List Nat) (value : Nat)
+  (wordEq : 18 :: SOnlyResultBits.published tail = front ++ List.replicate (4 ^ (2 * value + 4)) 16 ++ rest)
+  (no16 : ∀ (symbol : Nat), symbol ∈ front → symbol ≠ 16) (notHead : rest.head? ≠ some 16) :
+  SOnlyResultBits.readMachineBits (true :: false :: SOnlySource.encodeWord tail) = some value
+'SOnlyResultBits.readMachineBits_correct' depends on axioms: [propext, Classical.choice, Quot.sound]
+SOnlyResultBits.source_event_result (tail : List SOnlySource.Symbol) (front rest : List Nat) (value : Nat)
+  (wordEq : 18 :: SOnlyResultBits.published tail = front ++ List.replicate (4 ^ (2 * value + 4)) 16 ++ rest)
+  (no16 : ∀ (symbol : Nat), symbol ∈ front → symbol ≠ 16) (notHead : rest.head? ≠ some 16) :
+  SOnlyResultBits.readMachineBits
+      (PureSFormal.CTS.iterate SOnly38.program 17 (SOnlySource.encode { word := ⟨17, ⋯⟩ :: tail, take := true })).data =
+    some value
+'SOnlyResultBits.source_event_result' depends on axioms: [propext, Classical.choice, Quot.sound]
+SOnlyWitnessResult.readShell (shell : PureSFormal.PureS.Term) : Option Nat
+'SOnlyWitnessResult.readShell' depends on axioms: [propext]
+SOnlyWitnessResult.numerical_witness (input tail : List SOnlySource.Symbol) (sourceTime value : Nat)
+  (front rest : List Nat)
+  (sourceAt :
+    SOnlySource.iterate sourceTime { word := input, take := true } = { word := ⟨17, ⋯⟩ :: tail, take := true })
+  (wordEq : 18 :: SOnlyResultBits.published tail = front ++ List.replicate (4 ^ (2 * value + 4)) 16 ++ rest)
+  (no16 : ∀ (symbol : Nat), symbol ∈ front → symbol ≠ 16) (notHead : rest.head? ≠ some 16) :
+  ∃ sampleIndex address shell,
+    SOnlyObserver.event (SOnly38.trajectory (SOnlySource.encodeWord input) sampleIndex) = true ∧
+      (SOnly38.trajectory (SOnlySource.encodeWord input) sampleIndex).subterm? address = some shell ∧
+        SOnlyEventPattern.targetPattern.matchesBool shell = true ∧ SOnlyWitnessResult.readShell shell = some value
+'SOnlyWitnessResult.numerical_witness' depends on axioms: [propext, Classical.choice, Quot.sound]
+SOnlyCurrentDecoder.findShell : PureSFormal.PureS.Term → Option PureSFormal.PureS.Term
+'SOnlyCurrentDecoder.findShell' depends on axioms: [propext]
+SOnlyCurrentDecoder.read (term : PureSFormal.PureS.Term) : Option Nat
+'SOnlyCurrentDecoder.read' depends on axioms: [propext]
+SOnlyCurrentDecoder.findShell_sound (term shell : PureSFormal.PureS.Term)
+  (found : SOnlyCurrentDecoder.findShell term = some shell) :
+  ∃ address, term.subterm? address = some shell ∧ SOnlyEventPattern.targetPattern.matchesBool shell = true
+'SOnlyCurrentDecoder.findShell_sound' depends on axioms: [propext]
+SOnlyCurrentDecoder.findShell_none_iff (term : PureSFormal.PureS.Term) :
+  SOnlyCurrentDecoder.findShell term = none ↔ ¬SOnlyObserver.Occurs SOnlyEventPattern.targetPattern term
+'SOnlyCurrentDecoder.findShell_none_iff' depends on axioms: [propext]
+SOnlyCurrentDecoder.event_iff_found (term : PureSFormal.PureS.Term) :
+  SOnlyObserver.event term = true ↔ ∃ shell, SOnlyCurrentDecoder.findShell term = some shell
+'SOnlyCurrentDecoder.event_iff_found' depends on axioms: [propext, Quot.sound]
+SOnlyCurrentDecoder.read_of_found (term shell : PureSFormal.PureS.Term)
+  (found : SOnlyCurrentDecoder.findShell term = some shell) :
+  SOnlyCurrentDecoder.read term = SOnlyWitnessResult.readShell shell
+'SOnlyCurrentDecoder.read_of_found' depends on axioms: [propext]
+SOnlyCurrentDecoder.read_of_all_witnesses (term : PureSFormal.PureS.Term) (value : Nat)
+  (accepted : SOnlyObserver.event term = true)
+  (valid :
+    ∀ (address : PureSFormal.PureS.Address) (shell : PureSFormal.PureS.Term),
+      term.subterm? address = some shell →
+        SOnlyEventPattern.targetPattern.matchesBool shell = true → SOnlyWitnessResult.readShell shell = some value) :
+  SOnlyCurrentDecoder.read term = some value
+'SOnlyCurrentDecoder.read_of_all_witnesses' depends on axioms: [propext, Quot.sound]
+RESOURCE_GUARD {"command": ["/usr/bin/env", "LEAN_PATH=/work/.lake/build/lib/lean:/work/formal-build:/work/bridges-20261007T0043:/work/extended-20261007T0100", "/opt/lean/bin/lean", "-j2", "-M1536", "/work/extended-20261007T0100/SOnlyExtendedAudit.lean"], "exit_code": 0, "stop_reason": null, "elapsed_seconds": 0.5074633399926824, "sampled_peak_namespace_rss_bytes": 1121460224, "sampled_peak_namespace_virtual_bytes": 6805991424, "sampled_namespace_rss_cap_bytes": 2147483648, "sample_interval_seconds": 0.05}

@@ -1,0 +1,291 @@
+\section{Finite registers and the numerical BP2 frontend}
+\label{sec:source-registers}
+
+The source reduction is an executable composition, with no supplied bound on
+source running time.  Its intermediate mechanisms follow ais523's
+Amnesiac From Minsk~\cite{amnesiac},
+Waterfall Model~\cite{waterfall},
+and Brainpocalypse II~\cite{bp2}
+constructions; the Waterfall account also credits zzo38's independent model.
+The explicit register-frontend tables, compiler composition, and proofs
+described here are this development's contributions.  The generic CTS-to-S
+encoding and root-reset controller are supplied by
+\href{https://github.com/cstrawberry/predictive-universe/tree/85a867988442fc423279341200f81634a1e65582/docs/paper/related/pure_s_universality}{Cinematic Strawberry's pinned construction}.
+
+A source machine has $R\geq1$ natural registers, $Q\geq1$ labels, an entry
+label, and instructions $\operatorname{INC}(i,t)$,
+$\operatorname{DECJZ}(i,t_+,t_0)$, and $\operatorname{HALT}$.
+Zero testing leaves a zero register unchanged.  BP2 instead executes a finite
+list of $+i,-i$: positive decrements advance normally, while a zero decrement
+sets that counter to one and restarts at command zero, retaining all other
+counters.  Falling off the list halts; all BP2 counters initially equal zero.
+
+\begin{theorem}[Exact register frontend]
+For every such $M$ and input tuple $a$, the total function
+\code{SOnlyMachineNat.compile} produces a nonempty finite BP2 program $B(M,a)$
+with dense counter labels.  It halts exactly when $M(a)$ halts.  For each
+$v\in\NN$, it halts with first counter $2v+3$ exactly when $M(a)$ halts with
+register zero equal to $v$.
+\end{theorem}
+
+\begin{proof}[Construction and proof]
+First use positive amnesiac counters: $+i$ increments and follows a fixed
+successor $p_i$; $-i$ decrements above one and follows $s_i$, or leaves one
+unchanged and follows $f_i$.  Lean stores these values minus one.  Keep
+$D_i=r_i+1$ and allocate five helpers $I_q,S_q,F_q,U_q,V_q$ at \emph{every}
+label, initially one.  Let $E(q)$ be $+I_q$, $+S_q$, or halt according to the
+source instruction.  The successor table is
+\[
+\begin{array}{c|ccc}
+ &p&s&f\\\hline
+D_i&-I_0&-S_0&-F_0\\
+I_q&+D_i&E(t)&-I_{q+1}\\
+S_q&+F_q&-V_q&-S_{q+1}\\
+F_q&-D_i&-U_q&-F_{q+1}\\
+U_q&-F_0&E(t_+)&+V_q\\
+V_q&-S_0&E(t_0)&+U_q
+\end{array}
+\]
+Here instruction-dependent entries apply to the appropriate instruction;
+inapplicable instruction-dependent entries and end-of-chain fallbacks are halt.  Scans visit all
+labels.  A chain with exactly one marked value two passes the ones, restores
+the mark to one, and takes precisely its success edge.  An increment marks
+$I_q$, increments $D_i$, and scans $I$.  A decrement marks $S_q,F_q$, tests
+$D_i$, then uses the $S,V,U,F$ or symmetric $F,U,V,S$ route to restore every
+helper and select $t_+$ or $t_0$.  Thus the instruction-boundary invariant is
+exact, including shared data registers and repeated call sites
+(\code{SOnlyMachine.macro_simulation}).
+
+For $k=R+5Q$ amnesiac counters, introduce $4k+1$ Waterfall clocks: data $X_i$,
+action clocks $Q_a$ for $a=+i,-i,H$, and recovery clocks $T_i$.
+At normalized action $(c,a)$ set $X_i=2c_i$, $Q_a=0$, and every other control
+clock to four.  With $e_Z$ a unit vector, the signed trigger rows are
+\[
+\begin{aligned}
+b_{Q_{+i}}&=2e_{X_i}+4e_{Q_{+i}}-4e_{Q_{p_i}},&
+b_{Q_{-i}}&=-2e_{X_i}+4e_{Q_{-i}}-3e_{T_i},\\
+b_{X_i}&=2e_{X_i}+3e_{T_i}-4e_{Q_{f_i}},&
+b_{T_i}&=\mathbf1+3e_{T_i}-4e_{Q_{s_i}}.
+\end{aligned}
+\]
+Use $A_Z=b_Z+5\cdot\mathbf1$ and $A_{Q_H}=0$, adding coincident terms.
+All nonhalt entries lie in $[1,9]$.  Subtracting the common minimum after a
+trigger cancels its uniform offset.  An increment reaches the next normalized
+action; a decrement makes $X_i=2c_i-2$ and $T_i=1$.  If $c_i=1$, $X_i$ is
+uniquely minimal and restores the failure state; otherwise $T_i$ is uniquely
+minimal and its recovery row restores the successful-decrement state.
+These arithmetic identities prove tie-free simulation
+(\code{SOnlyMachineClock.step_simulation}).
+
+BP2 implements each clock with a value cell $v_i$ and pending marker $z_i$,
+plus one marker $m$.  For a nonnegative vector $b$, write $\operatorname{Add}(b)$
+and $\operatorname{Sub}(b)$ for literal unary increments and decrements.
+The initializer is
+\[
+ \operatorname{Add}(a);-m;+m;\operatorname{Sub}(a),
+ \qquad a(v_i)=w_i,\quad a(z_i)=1,\quad a(m)=0.
+\]
+Its first zero guard preserves initialization across a restart; subsequent
+visits cancel exactly, even when working cells are zero.
+Trigger $i$ uses the same pattern guarded by $z_i$, adding
+$A_i-e_i$ to value cells.  A sweep subtracts one from every $v_i$; tests
+$-z_i;-v_i;+v_i;+z_i$ mark the unique zero and restart.  The selected trigger
+then compensates for the test's automatic increment and applies exactly $A_i$.
+The terminal pair $-m;-m$ restarts ordinary sweeps.  The halt trigger instead
+adds $2\cdot\mathbf1-e_h$ and increments $m$; one final sweep falls off with
+$v=y+\mathbf1$, every $z_i=1$, and $m=0$.  Hence the first value is
+$2(r_0+1)+1=2r_0+3$.
+Finite positive macro durations and absorbing halt states give reflection at
+arbitrary target times, not only checkpoints.  Dense renumbering preserves
+the output coordinate.  These are
+\code{SOnlyMachineNat.halt_iff} and
+\code{SOnlyMachineCorrectness.output_iff}.
+\end{proof}
+
+The formal compiler initializes clocks at $V+5$, whereas the earlier selective
+Python construction uses $V+1$ and allocates helpers only where needed.
+The formal count is $c=8k+3$, $k=R+5Q$; its checked bound, with
+$N_c=4k+1$ and $s=\sum_i a_i$, is
+\[
+ L\leq2c(2s+9)+N_c(18c+2)+c+4N_c+4
+ \quad\text{(\code{SOnlyMachineBounds.compile_length_bound}).}
+\]
+The two variants preserve semantics but are not byte-for-byte identical.
+
+\section{Programmed UT19 execution and its first event}
+\label{sec:source-ut19}
+
+The next reduction uses ais523's CC0
+UT19 construction~\cite{ut19}.
+Its literal productions, in published one-based notation, are
+\[
+\begin{array}{r@{\,\mapsto\,}l r@{\,\mapsto\,}l r@{\,\mapsto\,}l}
+1&(2,3)&2&(4,4)&3&(18,4)\\
+4&(1,1,19)&5&(7,9)&6&(8,9)\\
+7&(10,10)&8&(11,10)&9&(18,10)\\
+10&(5,6)&11&(6,5,19)&12&(14,14,14,14)\\
+13&(15)&14&(16,16)&15&(16,17)\\
+16&(12,13)&17&(12,12,12,12)&18&(18)\\
+19&\epsilon&\multicolumn{2}{c}{}&\multicolumn{2}{c}{}
+\end{array}
+\]
+Word powers denote literal repetition. A microstep removes one symbol, appends its production only in \emph{take}
+phase, and toggles take/skip.  The designated event is a \emph{prestate} with
+take phase and head 18; a skipped 18 is not an event.
+
+For a BP2 program of length $L$ and $c$ counters, add a halt counter $H=c+1$.
+Choose the least power of two $N\geq L+3$ and put $W=2N$.
+The seed is
+\[
+19\,M_1K_1\cdots M_cK_cM_HK_HM_{H+1},
+\qquad K_i=(12,13)^2.
+\]
+Each memory has $W$ cells.  The expanded program is dummy, the $L$ commands,
+halt-A, halt-B, and padding to $N$ slots.  Every slot uses two halfcommands;
+each halfcommand comprises Command, Parity, and Reset passes, where a pass
+consumes exactly its entrance word.
+
+\begin{lemma}[Finite programmed-memory window]
+For any prescribed $W$ width parities there is an explicit initializer giving
+those observations at times $0,\ldots,W-1$, independently of the incoming
+Command alignment history.  Odd Reset restores this initializer exactly.
+\end{lemma}
+
+\begin{proof}[Proof sketch]
+A cell with dynamic bit $h_i$ is $(5,6)$ or $(6,5,19)$; a fixed inverter bit
+$a_i=1$ adds $(1,1,19)$.  Put $c_i=h_i\oplus a_i$.
+Direct production calculation gives, under normal Parity and Reset,
+$c'=Pc\oplus g\mathbf1$, where $P$ is inclusive prefix XOR and $g=1$ means
+skip alignment.  Width is observed \emph{before} updating:
+$v_t=\bigoplus_i c_{t,i}$.
+For $W=2^d$, the unforced observation transform is
+\[
+ v_t=\bigoplus_{i:\,(i\mathbin{\&}t)=t}a_i,
+ \qquad
+ a_i=\bigoplus_{j:\,(j\mathbin{\&}i)=i}v_j.
+\]
+The superset transform is its own inverse over $\mathbb F_2$.
+The formal proof uses even/odd index decomposition and identifies its recursive
+transform with the increasing-stride butterfly.  The extensionally equal increasing-stride implementation uses
+$d=\log_2W$ stages and $W\log_2W/2$ bit XORs. This count concerns that
+implementation; the output-equivalence theorem is not an exact operation-count
+theorem for direct evaluation of the recursive Lean definition.  An alignment disturbance in
+update $t$ first affects observation $t+W$; reset sets every $h_i$ to zero.
+These facts are \code{SOnlyTemporalMemory.forced_initializer_correct},
+\code{initializer_eq_increasing_strides}, and
+\code{SOnlyMemory.memory_reset_vector}.  The emitted choice
+$d=\lfloor\log_2(L+2)\rfloor+2$ satisfies
+$2L+3<W\leq4L+8$ by \code{SOnlySimulation.compiler_capacity} and
+\code{compiler_width_bound}.
+\end{proof}
+
+Memory widths are adjacent XOR differences of the desired component
+alignments, so prefix XOR telescopes to exactly those alignments.
+\code{SOnlySimulation.scheduledWidth_eq_published} checks equality with the
+literal width recipes, including unused halt-B and padding slots.
+For $\mathcal C(n)=(12,13)^{2^n}$, ordinary BP2 value $x$ is
+$\mathcal C(2x+1)$.  A halfcommand increments $n$ when Command starts take;
+a positive-exponent decrement subtracts one under even Reset.
+Thus $+i$ increments all exponents, then increments $i$ and decrements the
+others.  Similarly, $-i$ decrements all, then decrements only $i$ and
+increments the others.  These implement changes of two in the target
+exponent and zero elsewhere.
+
+The zero branch requires more than ordinary decrement arithmetic.
+Decrementing $\mathcal C(0)$ produces a singleton 15 in Parity.  At a source
+zero decrement it is selected, creates odd Reset, and leaves the protected
+word $D=(12,12,12,12)$.  Every other counter is incrementing in that
+halfcommand: no positive decrement is exposed to odd Reset, which would
+otherwise produce the wrong protected form.  All memories reset exactly;
+any 18 they emit is skipped.  The restarted dummy decrements all and then
+increments all, but $D$ responds to the first half by becoming
+$\mathcal C(2)$, then $\mathcal C(3)$.  The target therefore becomes one,
+as BP2 requires, while other values are retained.  The initial leading 19
+supplies the same skip alignment for the first dummy.  This proves closure
+through arbitrarily many restarts
+(\code{SOnlySimulation.source_zero_decrement_run}).
+
+At command $i$, memory time is $2i+2$.  Each epoch either resets or reaches
+halt-A's last needed observation $2L+3<W$, so the memory lemma is never used
+past its protected window.  Halt-A decrements all exponents, then increments
+ordinary counters and decrements the halt counter with odd Parity.  The latter's
+singleton 15 is skipped and disappears; Reset begins take with head 18.
+Exactly five passes after halt-A entrance, the event queue is
+\[
+ R_1\,16^{4^{x_1+1}}\cdots R_c\,16^{4^{x_c+1}}R_HT,
+\]
+where all separators are nonempty and contain no 16.  The $x_i$ are the final
+BP2 values.  Thus maximal 16-runs give precisely the retained counters
+(\code{SOnlySimulation.finalEvent_readout}); repeated division by four
+recovers them.  The first counter then yields $(x_1-3)/2$ for register output
+(\code{finalEvent_readMachineValue}).
+
+Each preceding simulated step is a finite nonempty, event-free run.
+Unconsumed entrance symbols prevent exhaustion inside a pass, and memories
+supply nonempty output at its end.  Positive simulation durations make
+nonhalting checkpoints cofinal, excluding an event at \emph{every} finite
+microstep.  Consequently \code{SOnlySimulation.source_halting_iff_event}
+is a two-way unbounded theorem, and \code{first_event_exact} identifies the
+actual first event queue, rather than only an expected macro-boundary.
+
+\section{The fixed 38-phase interface and conventional tapes}
+\label{sec:source-cts}
+
+Encode symbol $s$ by $\eta(s)=0^{s-1}1\,0^{19-s}$.
+The fixed CTS has the nineteen encoded productions followed by nineteen empty
+appendants.  Take and skip boundaries are phases zero and nineteen.
+
+\begin{lemma}[Exact block and event transfer]
+Nineteen CTS steps simulate one UT19 microstep.  At every CTS time $t$, the
+phase-17/head-one event holds exactly when UT19 is selected at microstep
+$\lfloor t/19\rfloor$ and $t\bmod19=17$.  A first UT19 event at $n$ therefore
+becomes the first CTS event at $19n+17$.
+\end{lemma}
+
+\begin{proof}[Proof sketch]
+After consuming a prefix, FIFO order leaves its unconsumed suffix ahead of
+all generated appendants.  Scanning one 19-bit block appends exactly its
+production in the take half, or nothing in the skip half, and toggles the
+boundary phase.  The remaining original bits prevent premature exhaustion.
+The only one in $\eta(s)$ is at offset $s-1$; phase 17 can therefore signal only
+selected symbol 18.  Division with remainder covers arbitrary times.
+These are \code{SOnlySource.trajectory_simulation},
+\code{event_at_arbitrary_time}, and \code{first_event_exact}.
+\end{proof}
+
+At the event, the current CTS word is $10\,\eta(\text{tail})$, not a block-aligned
+encoding.  Restoring the known seventeen-zero prefix reconstructs the whole
+UT19 event word; \code{SOnlyResultBits.decodeEventWord_correct} proves this
+structural readout.  Composition gives
+\code{SOnlySimulation.compiled_halting_iff_cts_event} and
+\code{compiled_noPrematureEmpty}, the exact source interfaces consumed by the
+fixed S backend.  In particular, UT19's rule $18\mapsto18$ is an event marker,
+not a claim that the tag queue or S term normalizes.
+
+Finally, the source need not be assumed universal by convention.
+\code{SOnlyTapeStacks} treats a deterministic finite-alphabet machine on an
+integer-indexed tape, with left, stay, and right moves and absent transition
+meaning halt.  Finite control stores the state and scanned symbol; nearest-first
+left and right stacks represent every remaining tape cell, with empty pop
+returning blank.  For alphabet size $A$, use base $B=A+1$ and
+\[
+ \operatorname{code}([])=0,\qquad
+ \operatorname{code}(a::u)=(a+1)+B\operatorname{code}(u).
+\]
+Nonzero digits preserve explicit blanks and make this code injective.
+Literal INC/DECJZ macros implement push by multiplication and addition, and
+pop by a finite-control residue cycle and quotient transfer.  Registers zero
+and one hold the stacks; register two is scratch, restored to zero.
+The assembled table has
+$|Q_{\rm TM}|A(5(A+1)+5)+1$ labels and depends only on the machine; its entry
+selects the input's first symbol and the right register contains the remaining
+input.  Positive-duration macro execution and cofinal checkpoints reflect
+halting even inside target macros
+(\code{SOnlyTapeCompiler.input_halting_iff}).
+
+Hence \code{SOnlyTuringUniversality.halting_iff_event} covers arbitrary finite
+inputs without a tape-window or runtime premise.  Arbitrary register programs
+retain their exact natural output.  For this TM bridge the output is specifically
+the finite left-stack code, including retained blanks and visited extent:
+\code{left_stack_result_iff_first_event}.  It is a history-dependent observable
+of this simulation, not a canonical final tape-output word.

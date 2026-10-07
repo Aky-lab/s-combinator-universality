@@ -1,0 +1,17 @@
+{
+  "command": [
+    "/usr/bin/env",
+    "LEAN_PATH=/work/.lake/build/lib/lean:/work/formal-build:/work/bridges-20261007T0043:/work/extended-20261007T0100",
+    "/opt/lean/bin/lean",
+    "-j2",
+    "-M1536",
+    "/work/extended-20261007T0100/SOnlyExtendedAudit.lean"
+  ],
+  "exit_code": 0,
+  "stop_reason": null,
+  "elapsed_seconds": 0.5074633399926824,
+  "sampled_peak_namespace_rss_bytes": 1121460224,
+  "sampled_peak_namespace_virtual_bytes": 6805991424,
+  "sampled_namespace_rss_cap_bytes": 2147483648,
+  "sample_interval_seconds": 0.05
+}

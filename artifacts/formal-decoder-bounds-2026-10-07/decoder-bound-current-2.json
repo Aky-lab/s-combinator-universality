@@ -1,0 +1,28 @@
+{
+  "name": "decoder-bound-current-2",
+  "command": [
+    "/usr/bin/python3",
+    "/work/ResourceGuard.py",
+    "decoder-bound-current-2",
+    "80",
+    "1610612736",
+    "/usr/bin/env",
+    "LEAN_PATH=/work/.lake/build/lib/lean:/work/formal-build:/work/bridges-20261007T0043:/work/result-build:/work/decoder-bound-build",
+    "/opt/lean/bin/lean",
+    "-o",
+    "/work/decoder-bound-build/SOnlyDecoderBoundCurrent.olean",
+    "/work/SOnlyDecoderBoundCurrent.lean"
+  ],
+  "exit_code": 0,
+  "stop_reason": null,
+  "elapsed_seconds": 0.557217181994929,
+  "sampled_peak_aggregate_rss_bytes": 10387456,
+  "sampled_peak_aggregate_virtual_bytes": 38367232,
+  "sampled_peak_threads": 1,
+  "sampled_peak_processes": 1,
+  "timeout_seconds": 100,
+  "per_process_address_space_cap_bytes": 34359738368,
+  "outer_monitor_scope": "launcher only; namespace RSS is enforced by ResourceGuard when used",
+  "monitor_interval_seconds": 0.05,
+  "lean_num_threads_environment": 2
+}

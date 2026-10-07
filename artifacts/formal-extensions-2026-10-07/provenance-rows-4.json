@@ -1,0 +1,17 @@
+{
+  "command": [
+    "env",
+    "LEAN_PATH=/work/.lake/build/lib/lean:/work/provenance-build",
+    "lean",
+    "-o",
+    "/work/provenance-build/SOnlyProvenanceRows.olean",
+    "/work/SOnlyProvenanceRows.lean"
+  ],
+  "exit_code": 0,
+  "stop_reason": null,
+  "elapsed_seconds": 0.5131044779991498,
+  "sampled_peak_namespace_rss_bytes": 958238720,
+  "sampled_peak_namespace_virtual_bytes": 14582091776,
+  "sampled_namespace_rss_cap_bytes": 2147483648,
+  "sample_interval_seconds": 0.05
+}

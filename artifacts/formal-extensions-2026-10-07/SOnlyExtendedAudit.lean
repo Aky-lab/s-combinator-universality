@@ -1,0 +1,326 @@
+import SOnlyBridgesReplay
+import SOnlyMemory
+import SOnlyProvenanceRows
+import SOnlyResponseLabels
+import SOnlyCurrentDecoder
+
+#check SOnlyMemory.Cell
+#print axioms SOnlyMemory.Cell
+#check SOnlyMemory.cellWord
+#print axioms SOnlyMemory.cellWord
+#check SOnlyMemory.inverter
+#print axioms SOnlyMemory.inverter
+#check SOnlyMemory.component
+#print axioms SOnlyMemory.component
+#check SOnlyMemory.memory
+#print axioms SOnlyMemory.memory
+#check SOnlyMemory.nextAlignment
+#print axioms SOnlyMemory.nextAlignment
+#check SOnlyMemory.updatedDynamic
+#print axioms SOnlyMemory.updatedDynamic
+#check SOnlyMemory.normalUpdate
+#print axioms SOnlyMemory.normalUpdate
+#check SOnlyMemory.reset
+#print axioms SOnlyMemory.reset
+#check SOnlyMemory.markerComponent
+#print axioms SOnlyMemory.markerComponent
+#check SOnlyMemory.markerWord
+#print axioms SOnlyMemory.markerWord
+#check SOnlyMemory.memory_nil
+#print axioms SOnlyMemory.memory_nil
+#check SOnlyMemory.memory_cons
+#print axioms SOnlyMemory.memory_cons
+#check SOnlyMemory.component_phase
+#print axioms SOnlyMemory.component_phase
+#check SOnlyMemory.command_phase_stable
+#print axioms SOnlyMemory.command_phase_stable
+#check SOnlyMemory.parity_phase_stable
+#print axioms SOnlyMemory.parity_phase_stable
+#check SOnlyMemory.component_normal
+#print axioms SOnlyMemory.component_normal
+#check SOnlyMemory.component_reset
+#print axioms SOnlyMemory.component_reset
+#check SOnlyMemory.component_marker
+#print axioms SOnlyMemory.component_marker
+#check SOnlyMemory.halfcommand_component
+#print axioms SOnlyMemory.halfcommand_component
+#check SOnlyMemory.memory_normal
+#print axioms SOnlyMemory.memory_normal
+#check SOnlyMemory.memory_reset
+#print axioms SOnlyMemory.memory_reset
+#check SOnlyMemory.memory_marker
+#print axioms SOnlyMemory.memory_marker
+#check SOnlyMemory.marker_event
+#print axioms SOnlyMemory.marker_event
+#check SOnlyMemory.normal_fixed
+#print axioms SOnlyMemory.normal_fixed
+#check SOnlyMemory.combined
+#print axioms SOnlyMemory.combined
+#check SOnlyMemory.runningXor
+#print axioms SOnlyMemory.runningXor
+#check SOnlyMemory.memory_running_xor
+#print axioms SOnlyMemory.memory_running_xor
+#check SOnlyMemory.memory_reset_vector
+#print axioms SOnlyMemory.memory_reset_vector
+#check SOnlyMemory.widthParity
+#print axioms SOnlyMemory.widthParity
+#check SOnlyMemory.component_width
+#print axioms SOnlyMemory.component_width
+#check SOnlyMemory.memory_width
+#print axioms SOnlyMemory.memory_width
+#check SOnlyMemory.safePass
+#print axioms SOnlyMemory.safePass
+#check SOnlyMemory.safePass_cons
+#print axioms SOnlyMemory.safePass_cons
+#check SOnlyMemory.safePass_append
+#print axioms SOnlyMemory.safePass_append
+#check SOnlyMemory.safe_prefix_no_event
+#print axioms SOnlyMemory.safe_prefix_no_event
+#check SOnlyMemory.component_command_safe
+#print axioms SOnlyMemory.component_command_safe
+#check SOnlyMemory.component_parity_safe
+#print axioms SOnlyMemory.component_parity_safe
+#check SOnlyMemory.component_reset_safe
+#print axioms SOnlyMemory.component_reset_safe
+#check SOnlyMemory.memory_command_safe
+#print axioms SOnlyMemory.memory_command_safe
+#check SOnlyMemory.memory_parity_safe
+#print axioms SOnlyMemory.memory_parity_safe
+#check SOnlyMemory.memory_reset_safe
+#print axioms SOnlyMemory.memory_reset_safe
+#check SOnlyMemory.componentCount
+#print axioms SOnlyMemory.componentCount
+#check SOnlyMemory.command_component_length
+#print axioms SOnlyMemory.command_component_length
+#check SOnlyMemory.parity_component_length
+#print axioms SOnlyMemory.parity_component_length
+#check SOnlyMemory.memory_command_length
+#print axioms SOnlyMemory.memory_command_length
+#check SOnlyMemory.memory_parity_length
+#print axioms SOnlyMemory.memory_parity_length
+#check SOnlyMemory.componentCount_positive
+#print axioms SOnlyMemory.componentCount_positive
+#check SOnlyMemory.intermediate_words_nonempty
+#print axioms SOnlyMemory.intermediate_words_nonempty
+#check SOnlyProvenanceRows.b_carries
+#print axioms SOnlyProvenanceRows.b_carries
+#check SOnlyProvenanceRows.p_carries
+#print axioms SOnlyProvenanceRows.p_carries
+#check SOnlyProvenanceRows.valueTag_carries
+#print axioms SOnlyProvenanceRows.valueTag_carries
+#check SOnlyProvenanceRows.live_carries
+#print axioms SOnlyProvenanceRows.live_carries
+#check SOnlyProvenanceRows.appender_carries
+#print axioms SOnlyProvenanceRows.appender_carries
+#check SOnlyProvenanceRows.selectedAction_carries
+#print axioms SOnlyProvenanceRows.selectedAction_carries
+#check SOnlyProvenanceRows.compileDispatcher_carries
+#print axioms SOnlyProvenanceRows.compileDispatcher_carries
+#check SOnlyProvenanceRows.compileActions_carries
+#print axioms SOnlyProvenanceRows.compileActions_carries
+#check SOnlyProvenanceRows.live_fold_carries
+#print axioms SOnlyProvenanceRows.live_fold_carries
+#check SOnlyProvenanceRows.word_carries
+#print axioms SOnlyProvenanceRows.word_carries
+#check SOnlyProvenanceRows.seed_carries
+#print axioms SOnlyProvenanceRows.seed_carries
+#check SOnlyProvenanceRows.environment_carries
+#print axioms SOnlyProvenanceRows.environment_carries
+#check SOnlyProvenanceRows.other_app_carries
+#print axioms SOnlyProvenanceRows.other_app_carries
+#check SOnlyProvenanceRows.other_app_class
+#print axioms SOnlyProvenanceRows.other_app_class
+#check SOnlyProvenanceRows.compiled_call_carries
+#print axioms SOnlyProvenanceRows.compiled_call_carries
+#check SOnlyProvenanceRows.compiled_call_other
+#print axioms SOnlyProvenanceRows.compiled_call_other
+#check SOnlyProvenanceRows.route_row_other
+#print axioms SOnlyProvenanceRows.route_row_other
+#check SOnlyProvenanceRows.route_row_carries
+#print axioms SOnlyProvenanceRows.route_row_carries
+#check SOnlyProvenanceRows.extend_carries
+#print axioms SOnlyProvenanceRows.extend_carries
+#check SOnlyProvenanceRows.history_carries
+#print axioms SOnlyProvenanceRows.history_carries
+#check SOnlyProvenanceRows.pushFirst_other
+#print axioms SOnlyProvenanceRows.pushFirst_other
+#check SOnlyProvenanceRows.pushSecond_other
+#print axioms SOnlyProvenanceRows.pushSecond_other
+#check SOnlyProvenanceRows.pushFirst_carries
+#print axioms SOnlyProvenanceRows.pushFirst_carries
+#check SOnlyProvenanceRows.pushSecond_carries
+#print axioms SOnlyProvenanceRows.pushSecond_carries
+#check SOnlyProvenanceRows.action_row_carries
+#print axioms SOnlyProvenanceRows.action_row_carries
+#check SOnlyProvenanceRows.c4_carries
+#print axioms SOnlyProvenanceRows.c4_carries
+#check SOnlyProvenanceRows.withResponse_other
+#print axioms SOnlyProvenanceRows.withResponse_other
+#check SOnlyProvenanceRows.withResponse_carries
+#print axioms SOnlyProvenanceRows.withResponse_carries
+#check SOnlyProvenanceRows.frameFirst_carries
+#print axioms SOnlyProvenanceRows.frameFirst_carries
+#check SOnlyProvenanceRows.frameSecond_carries
+#print axioms SOnlyProvenanceRows.frameSecond_carries
+#check SOnlyProvenanceRows.activeShell_carries
+#print axioms SOnlyProvenanceRows.activeShell_carries
+#check SOnlyProvenanceRows.response_row_carries
+#print axioms SOnlyProvenanceRows.response_row_carries
+#check SOnlyProvenanceRows.allH6_of_descendants
+#print axioms SOnlyProvenanceRows.allH6_of_descendants
+#check SOnlyProvenanceRows.allH6_descendant
+#print axioms SOnlyProvenanceRows.allH6_descendant
+#check SOnlyProvenanceRows.response_h6_inherited_or_root
+#print axioms SOnlyProvenanceRows.response_h6_inherited_or_root
+#check SOnlyProvenanceRows.response_root_audit
+#print axioms SOnlyProvenanceRows.response_root_audit
+#check SOnlyProvenanceRows.pending_carries
+#print axioms SOnlyProvenanceRows.pending_carries
+#check SOnlyProvenanceRows.mutableBase_carries
+#print axioms SOnlyProvenanceRows.mutableBase_carries
+#check SOnlyProvenanceRows.tombstone_context_carries
+#print axioms SOnlyProvenanceRows.tombstone_context_carries
+#check SOnlyProvenanceRows.action_context_carries
+#print axioms SOnlyProvenanceRows.action_context_carries
+#check SOnlyProvenanceRows.completed_context_carries
+#print axioms SOnlyProvenanceRows.completed_context_carries
+#check SOnlyProvenanceRows.OuterContext
+#print axioms SOnlyProvenanceRows.OuterContext
+#check SOnlyProvenanceRows.outer_context_carries
+#print axioms SOnlyProvenanceRows.outer_context_carries
+#check SOnlyResponseLabels.responseLabel?
+#print axioms SOnlyResponseLabels.responseLabel?
+#check SOnlyResponseLabels.OnlyLabel
+#print axioms SOnlyResponseLabels.OnlyLabel
+#check SOnlyResponseLabels.exactChains_same_samples
+#print axioms SOnlyResponseLabels.exactChains_same_samples
+#check SOnlyResponseLabels.responsePairs_onlyLabel
+#print axioms SOnlyResponseLabels.responsePairs_onlyLabel
+#check SOnlyResponseLabels.selectedResponse_labelledChain
+#print axioms SOnlyResponseLabels.selectedResponse_labelledChain
+#check SOnlyResponseLabels.selectedResponse_onlyLabel
+#print axioms SOnlyResponseLabels.selectedResponse_onlyLabel
+#check SOnlyResponseLabels.sourceLabel?
+#print axioms SOnlyResponseLabels.sourceLabel?
+#check SOnlyResponseLabels.SourceLabels
+#print axioms SOnlyResponseLabels.SourceLabels
+#check SOnlyResponseLabels.sourceLabels_prepend
+#print axioms SOnlyResponseLabels.sourceLabels_prepend
+#check SOnlyResponseLabels.selectedNonemptyPendingPrefix_labelled
+#print axioms SOnlyResponseLabels.selectedNonemptyPendingPrefix_labelled
+#check SOnlyResponseLabels.sourceLabels_append_last
+#print axioms SOnlyResponseLabels.sourceLabels_append_last
+#check SOnlyResponseLabels.completeNonemptyJob_sourceLabels
+#print axioms SOnlyResponseLabels.completeNonemptyJob_sourceLabels
+#check SOnlyResponseLabels.target_sourceLabel_iff
+#print axioms SOnlyResponseLabels.target_sourceLabel_iff
+#check SOnlyResponseLabels.no_target_script_of_no_source_event
+#print axioms SOnlyResponseLabels.no_target_script_of_no_source_event
+#check SOnlyResponseLabels.NoResponseLabels
+#print axioms SOnlyResponseLabels.NoResponseLabels
+#check SOnlyResponseLabels.noResponse_sourceLabels
+#print axioms SOnlyResponseLabels.noResponse_sourceLabels
+#check SOnlyResponseLabels.sourceLabels_append
+#print axioms SOnlyResponseLabels.sourceLabels_append
+#check SOnlyResponseLabels.fuel_noResponse
+#print axioms SOnlyResponseLabels.fuel_noResponse
+#check SOnlyResponseLabels.clockTail_noResponse
+#print axioms SOnlyResponseLabels.clockTail_noResponse
+#check SOnlyResponseLabels.phase_noResponse
+#print axioms SOnlyResponseLabels.phase_noResponse
+#check SOnlyResponseLabels.handoff_noResponse
+#print axioms SOnlyResponseLabels.handoff_noResponse
+#check SOnlyResponseLabels.LabelledNonfinalJobs
+#print axioms SOnlyResponseLabels.LabelledNonfinalJobs
+#check SOnlyResponseLabels.nonfinalJobs_labelled
+#print axioms SOnlyResponseLabels.nonfinalJobs_labelled
+#check SOnlyResponseLabels.allNonemptyRaw_labelled
+#print axioms SOnlyResponseLabels.allNonemptyRaw_labelled
+#check SOnlyResponseLabels.sourceLabels_mono
+#print axioms SOnlyResponseLabels.sourceLabels_mono
+#check SOnlyResponseLabels.prelude_noResponse
+#print axioms SOnlyResponseLabels.prelude_noResponse
+#check SOnlyResponseLabels.positiveStages_labelled
+#print axioms SOnlyResponseLabels.positiveStages_labelled
+#check SOnlyResponseLabels.contractionRun_label_has_source
+#print axioms SOnlyResponseLabels.contractionRun_label_has_source
+#check SOnlyResponseLabels.no_target_script_on_event_free_run
+#print axioms SOnlyResponseLabels.no_target_script_on_event_free_run
+#check SOnlyResponseLabels.stageStart_labelled
+#print axioms SOnlyResponseLabels.stageStart_labelled
+#check SOnlyResponseLabels.firstJob_response_prefix_labelled
+#print axioms SOnlyResponseLabels.firstJob_response_prefix_labelled
+#check SOnlyResponseLabels.no_target_script_before_firstJob_response
+#print axioms SOnlyResponseLabels.no_target_script_before_firstJob_response
+#check SOnlyResult.leadingRun
+#print axioms SOnlyResult.leadingRun
+#check SOnlyResult.firstRun
+#print axioms SOnlyResult.firstRun
+#check SOnlyResult.decodeLength
+#print axioms SOnlyResult.decodeLength
+#check SOnlyResult.readCounter
+#print axioms SOnlyResult.readCounter
+#check SOnlyResult.decodeMachineValue
+#print axioms SOnlyResult.decodeMachineValue
+#check SOnlyResult.readMachineValue
+#print axioms SOnlyResult.readMachineValue
+#check SOnlyResult.leadingRun_non16
+#print axioms SOnlyResult.leadingRun_non16
+#check SOnlyResult.leadingRun_replicate
+#print axioms SOnlyResult.leadingRun_replicate
+#check SOnlyResult.firstRun_prefix
+#print axioms SOnlyResult.firstRun_prefix
+#check SOnlyResult.firstRun_counter
+#print axioms SOnlyResult.firstRun_counter
+#check SOnlyResult.pow_four
+#print axioms SOnlyResult.pow_four
+#check SOnlyResult.decodeLength_counter
+#print axioms SOnlyResult.decodeLength_counter
+#check SOnlyResult.readCounter_correct
+#print axioms SOnlyResult.readCounter_correct
+#check SOnlyResult.decodeMachineValue_correct
+#print axioms SOnlyResult.decodeMachineValue_correct
+#check SOnlyResult.readMachineValue_correct
+#print axioms SOnlyResult.readMachineValue_correct
+#check SOnlyResultBits.decodeBlock
+#print axioms SOnlyResultBits.decodeBlock
+#check SOnlyResultBits.decodeBlocks
+#print axioms SOnlyResultBits.decodeBlocks
+#check SOnlyResultBits.published
+#print axioms SOnlyResultBits.published
+#check SOnlyResultBits.decodeEventWord
+#print axioms SOnlyResultBits.decodeEventWord
+#check SOnlyResultBits.readMachineBits
+#print axioms SOnlyResultBits.readMachineBits
+#check SOnlyResultBits.decodeBlock_code
+#print axioms SOnlyResultBits.decodeBlock_code
+#check SOnlyResultBits.encodeWord_length
+#print axioms SOnlyResultBits.encodeWord_length
+#check SOnlyResultBits.decodeBlocks_encode
+#print axioms SOnlyResultBits.decodeBlocks_encode
+#check SOnlyResultBits.event_word
+#print axioms SOnlyResultBits.event_word
+#check SOnlyResultBits.decodeEventWord_correct
+#print axioms SOnlyResultBits.decodeEventWord_correct
+#check SOnlyResultBits.readMachineBits_correct
+#print axioms SOnlyResultBits.readMachineBits_correct
+#check SOnlyResultBits.source_event_result
+#print axioms SOnlyResultBits.source_event_result
+#check SOnlyWitnessResult.readShell
+#print axioms SOnlyWitnessResult.readShell
+#check SOnlyWitnessResult.numerical_witness
+#print axioms SOnlyWitnessResult.numerical_witness
+#check SOnlyCurrentDecoder.findShell
+#print axioms SOnlyCurrentDecoder.findShell
+#check SOnlyCurrentDecoder.read
+#print axioms SOnlyCurrentDecoder.read
+#check SOnlyCurrentDecoder.findShell_sound
+#print axioms SOnlyCurrentDecoder.findShell_sound
+#check SOnlyCurrentDecoder.findShell_none_iff
+#print axioms SOnlyCurrentDecoder.findShell_none_iff
+#check SOnlyCurrentDecoder.event_iff_found
+#print axioms SOnlyCurrentDecoder.event_iff_found
+#check SOnlyCurrentDecoder.read_of_found
+#print axioms SOnlyCurrentDecoder.read_of_found
+#check SOnlyCurrentDecoder.read_of_all_witnesses
+#print axioms SOnlyCurrentDecoder.read_of_all_witnesses

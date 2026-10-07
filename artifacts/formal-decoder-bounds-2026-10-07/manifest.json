@@ -1,0 +1,29 @@
+{
+  "status": "passed",
+  "lean": "4.33.1",
+  "size_model": "unshared finite occurrence-tree nodes",
+  "mathematical_time_bound": "O((m+1)^3) constructor/list operations; polynomial bit time",
+  "formal_scope": "All-input fuel simulation, output length, recursion charge, quadratic append-based spine cost, and exact current-tree reader identity. Local imported-parser cost accounting remains a written source audit.",
+  "exported_axioms": [
+    "propext",
+    "Quot.sound"
+  ],
+  "files": [
+    {
+      "path": "formal/SOnlyDecoderBound.lean",
+      "sha256": "6f03d85c29bb417fabf725992dd8ceddc9860a58812c1e4cf9500b40c4df50f8"
+    },
+    {
+      "path": "formal/SOnlyDecoderBoundCurrent.lean",
+      "sha256": "41eb6d506bd55ab52e3c713d4b77371cc18f2681bc6985795530e037d5d20ba4"
+    },
+    {
+      "path": "docs/lean-current-decoder-bound.md",
+      "sha256": "608079f418cb0217758149a303b5eb71fd6409e75474b11922258418e391868f"
+    }
+  ],
+  "checks": [
+    "decoder-bound-3",
+    "decoder-bound-current-2"
+  ]
+}

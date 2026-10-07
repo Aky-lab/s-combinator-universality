@@ -1,0 +1,59 @@
+{
+  "title": "Compact Fixed Controller S Computation from a 38 Phase Cyclic Tag System",
+  "date": "2026-10-07",
+  "pages": 14,
+  "files": [
+    {
+      "path": "manuscript.tex",
+      "bytes": 31008,
+      "sha256": "f10931e7c75402f216edbd386aaeb8cf40dd15b689528eee703e8cbd33437699"
+    },
+    {
+      "path": "source-section.tex",
+      "bytes": 15066,
+      "sha256": "a23a22d18bb8822eaed37647ef0eef5ba1756283c8d11933254e0674478c871e"
+    },
+    {
+      "path": "preamble.tex",
+      "bytes": 1530,
+      "sha256": "bc7b782baa636c7de45bb2437a810327c8ce1e7e39f0ec96df84d749400d4a5f"
+    },
+    {
+      "path": "references.tex",
+      "bytes": 3902,
+      "sha256": "e41407c321d3701a577ad59f182ec170165164f21d01a351579a4e3e356ce2f0"
+    },
+    {
+      "path": "build.sh",
+      "bytes": 1117,
+      "sha256": "23282a9b5d9d7624ed4bf6a4015f9585098679489267efd97fc5089fc3bbdbba"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1850,
+      "sha256": "2a6d03e6869ccd8ae52b51ed346b5e752aed89eead758e9dbc3d2bacd7938d65"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 65,
+      "sha256": "37391b00fce376843da1b61e7c989925a52616df7989227321189fd3d4befb30"
+    },
+    {
+      "path": "compact-s-combinator-construction.pdf",
+      "bytes": 351703,
+      "sha256": "a36ce7e77bc0ac378bb417a9322c8d351ff9bc73fccbf3404eb4b8afdeaa3884"
+    }
+  ],
+  "claims_review": "passed against exact formal declarations, source definitions, resource-scope records and pinned prior-work comparison",
+  "visual_review": "All 14 final pages rendered at 120 dpi and inspected; the final inline-command correction changed only page 11, which was re-inspected.",
+  "build_checks": {
+    "overfull_boxes": 0,
+    "unresolved_references": 0,
+    "missing_glyph_warnings": 0,
+    "minor_underfull_paragraph_warnings": 1
+  },
+  "formal_proof_sources_unchanged": 67,
+  "formal_result_manifest_sha256": "588778633d2b5a26288a4b77ed870dd2730a282e0ff67fadfd64bcb4a913916a",
+  "main_formal_source_sha256": "9a8b1e653f5e5f0c206a4be305deb24be51e7e1f7ae93e9e9a200862d02056a3",
+  "proof_or_regression_rerun_during_manuscript_preparation": false
+}

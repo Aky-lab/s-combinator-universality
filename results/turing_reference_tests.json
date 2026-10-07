@@ -1,0 +1,57 @@
+{
+  "total_test_methods": 721,
+  "completed_before_interruption": 584,
+  "remaining": 137,
+  "prefix_log": "artifacts/turing-reference-regression-2026-10-07/prefix-584.log",
+  "prefix_sha256": "e49b20ed9f26aec6af72889ea2cf6bc6dcfe7571dc887305eef0bdd087091836",
+  "first_resumed_test": "test_succinct_selector.WholeSuccinctSelectorTests.test_every_same_index_primitive_and_frozen_legacy_digest",
+  "last_resumed_test": "test_walkers.StructuralOracleTests.test_suffix_free_addresses_reconstruct_root_started_paths",
+  "prefix_had_no_terminal_summary": true,
+  "prefix_process_id_unavailable_after_runtime_interruption": true,
+  "status": "passed",
+  "resumed_test_count": 137,
+  "resumed_seconds": 64.7054513309995,
+  "failures": 0,
+  "errors": 0,
+  "all_721_test_methods_passed": true,
+  "resumed_log": "artifacts/turing-reference-regression-2026-10-07/remaining-137.log",
+  "method": "The ordered 584 completed methods were matched exactly to the start of current unittest discovery. The unfinished method and remaining136 were rerun as one137-test suite; allpassed. No interrupted method was counted before it completed.",
+  "standalone_focused_checks": {
+    "formal_evidence_tests": 29,
+    "replay_helper_tests": 20,
+    "status": "passed"
+  },
+  "earlier_complete_reference_suite": {
+    "tests": 693,
+    "elapsed_seconds": 799.369,
+    "status": "passed",
+    "receipt": "results/final_reference_tests.json"
+  },
+  "evidence": [
+    {
+      "path": "artifacts/turing-reference-regression-2026-10-07/formal-evidence-tests.log",
+      "bytes": 4303,
+      "sha256": "5cd0266f68ae1d76703866a05e6234965e769b662caea50d5083716e8a5ecdb6"
+    },
+    {
+      "path": "artifacts/turing-reference-regression-2026-10-07/prefix-584.log",
+      "bytes": 93878,
+      "sha256": "e49b20ed9f26aec6af72889ea2cf6bc6dcfe7571dc887305eef0bdd087091836"
+    },
+    {
+      "path": "artifacts/turing-reference-regression-2026-10-07/remaining-137.log",
+      "bytes": 23826,
+      "sha256": "abcb360caee0606d661fe7c29683fa49b3a09a659d0553152a4026447aee5696"
+    },
+    {
+      "path": "artifacts/turing-reference-regression-2026-10-07/replay-helper-tests.log",
+      "bytes": 2652,
+      "sha256": "f53bbba629feb1dbef9142e10839e76acde4794b61cd46423543aebfa4abef45"
+    },
+    {
+      "path": "artifacts/turing-reference-regression-2026-10-07/resume-tests.py",
+      "bytes": 2343,
+      "sha256": "934bf94bc126613d2a21dcd7d7726f1bd5b876d3c88f30261801fa3a99b88965"
+    }
+  ]
+}

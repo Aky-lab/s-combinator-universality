@@ -1,0 +1,26 @@
+{
+  "name": "decoder-bound-3",
+  "command": [
+    "/usr/bin/python3",
+    "/work/ResourceGuard.py",
+    "decoder-bound-3",
+    "80",
+    "1610612736",
+    "/opt/lean/bin/lean",
+    "-o",
+    "/work/decoder-bound-build/SOnlyDecoderBound.olean",
+    "/work/SOnlyDecoderBound.lean"
+  ],
+  "exit_code": 0,
+  "stop_reason": null,
+  "elapsed_seconds": 0.5570670719898771,
+  "sampled_peak_aggregate_rss_bytes": 10375168,
+  "sampled_peak_aggregate_virtual_bytes": 38359040,
+  "sampled_peak_threads": 1,
+  "sampled_peak_processes": 1,
+  "timeout_seconds": 100,
+  "per_process_address_space_cap_bytes": 34359738368,
+  "outer_monitor_scope": "launcher only; namespace RSS is enforced by ResourceGuard when used",
+  "monitor_interval_seconds": 0.05,
+  "lean_num_threads_environment": 2
+}

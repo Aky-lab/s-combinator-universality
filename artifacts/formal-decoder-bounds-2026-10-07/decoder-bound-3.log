@@ -1,0 +1,6 @@
+'SOnlyDecoderBound.carrier_output_length' depends on axioms: [propext, Quot.sound]
+'SOnlyDecoderBound.carrierFuel_eq' depends on axioms: [propext, Quot.sound]
+'SOnlyDecoderBound.carrierCharge_le' depends on axioms: [propext, Quot.sound]
+'SOnlyDecoderBound.carrier_cubic_charge' depends on axioms: [propext, Quot.sound]
+'SOnlyDecoderBound.spineVisits_quadratic' depends on axioms: [propext, Quot.sound]
+RESOURCE_GUARD {"command": ["/opt/lean/bin/lean", "-o", "/work/decoder-bound-build/SOnlyDecoderBound.olean", "/work/SOnlyDecoderBound.lean"], "exit_code": 0, "stop_reason": null, "elapsed_seconds": 0.5078073299955577, "sampled_peak_namespace_rss_bytes": 930635776, "sampled_peak_namespace_virtual_bytes": 15696404480, "sampled_namespace_rss_cap_bytes": 1610612736, "sample_interval_seconds": 0.05}

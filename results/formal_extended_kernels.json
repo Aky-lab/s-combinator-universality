@@ -1,0 +1,117 @@
+{
+  "schema": "s-only-formal-extensions-v1",
+  "date": "2026-10-07",
+  "status": "passed",
+  "base_checkpoint": "results/formal_event_interfaces.json",
+  "upstream_commit": "85a867988442fc423279341200f81634a1e65582",
+  "lean_version": "4.33.1",
+  "new_modules": [
+    {
+      "module": "SOnlyMemory",
+      "source": "formal/SOnlyMemory.lean",
+      "source_sha256": "9cd4b53fad2d3eed24e111cedebd3792e8067d89f5084897824061dd73acdf0e",
+      "source_bytes": 14298,
+      "build_log": "memory-kernel-05.txt",
+      "build_guard": "memory-kernel-05.json"
+    },
+    {
+      "module": "SOnlyProvenanceRows",
+      "source": "formal/SOnlyProvenanceRows.lean",
+      "source_sha256": "3cd1130787f179b8e04468c0a294bf997713a8234a46de63e51c240ab4ce32de",
+      "source_bytes": 24308,
+      "build_log": "provenance-rows-4.txt",
+      "build_guard": "provenance-rows-4.json"
+    },
+    {
+      "module": "SOnlyResponseLabels",
+      "source": "formal/SOnlyResponseLabels.lean",
+      "source_sha256": "67013f10f9d2ddcc6cb9068dd363d00598e3fd747cadf1101777cb7363e681ca",
+      "source_bytes": 73865,
+      "build_log": "response-labels-build-11.txt",
+      "build_guard": "response-labels-build-11.json"
+    },
+    {
+      "module": "SOnlyResult",
+      "source": "formal/SOnlyResult.lean",
+      "source_sha256": "18f61e394e4fa92842bfe40312f69daf4f2696dc8877f06aa399ad5c9e9f411e",
+      "source_bytes": 5150,
+      "build_log": "result-build-final.txt",
+      "build_guard": "result-build-final.json"
+    },
+    {
+      "module": "SOnlyResultBits",
+      "source": "formal/SOnlyResultBits.lean",
+      "source_sha256": "aa2f8837595c518e98ae94918b2860b7674d4c86a4e1046e7515412a067b9819",
+      "source_bytes": 4961,
+      "build_log": "result-bits-final.txt",
+      "build_guard": "result-bits-final.json"
+    },
+    {
+      "module": "SOnlyWitnessResult",
+      "source": "formal/SOnlyWitnessResult.lean",
+      "source_sha256": "0948ee049b7d95b93145954fe296b86a8330c93f836a7ba25b3fdccfe5733d6c",
+      "source_bytes": 2637,
+      "build_log": "witness-result-final.txt",
+      "build_guard": "witness-result-final.json"
+    },
+    {
+      "module": "SOnlyCurrentDecoder",
+      "source": "formal/SOnlyCurrentDecoder.lean",
+      "source_sha256": "f383d408f68da089311b618eb9fdb22052fab3ae46c7fcbcffdc213aedc4bd2d",
+      "source_bytes": 4941,
+      "build_log": "current-decoder-final.txt",
+      "build_guard": "current-decoder-final.json"
+    }
+  ],
+  "combined_project_module_count": 16,
+  "axiom_query_count": 160,
+  "combined_axiom_query_count": 402,
+  "observed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "fresh_kernel_replay": {
+    "command": [
+      "/usr/bin/env",
+      "LEAN_PATH=/work/.lake/build/lib/lean:/work/formal-build:/work/bridges-20261007T0043:/work/extended-20261007T0100",
+      "/opt/lean/bin/leanchecker",
+      "--fresh",
+      "-v",
+      "SOnlyExtendedReplay"
+    ],
+    "exit_code": 0,
+    "stop_reason": null,
+    "elapsed_seconds": 123.33536805599579,
+    "sampled_peak_namespace_rss_bytes": 1525485568,
+    "sampled_peak_namespace_virtual_bytes": 4534484992,
+    "sampled_namespace_rss_cap_bytes": 4294967296,
+    "sample_interval_seconds": 0.05
+  },
+  "post_replay_integrity": {
+    "all_checks_passed": true,
+    "counts": {
+      "pinned_sources": 426,
+      "pinned_outputs": 424,
+      "official_toolchain": 17505,
+      "first_bridge_snapshot": 21,
+      "new_extensions": 17
+    }
+  },
+  "evidence_directory": "artifacts/formal-extensions-2026-10-07",
+  "key_results": [
+    "Actual scheduler sample labels have genuine CTS source-index witnesses",
+    "No target normal-response PC on a nonempty event-free source run",
+    "Local response/context H6 inheritance and frozen audit preservation",
+    "Uniform three-pass memory algebra and running-XOR recurrence",
+    "Valid event-bitword and numerical first-counter projection",
+    "Actual accepted S sample with a correct numerical witness under source-result premises",
+    "Fixed first-preorder current-tree decoder, correct under an all-witness certificate"
+  ],
+  "composition_frontier": [
+    "Whole generated job/stage label-and-audit origin closure",
+    "Sharp first S-event and all-witness audit agreement",
+    "Global BP2-to-UT19 scheduling/restart and machine-to-BP2 compiler",
+    "Formal operational bounds and full intended decoder correspondence"
+  ]
+}

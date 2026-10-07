@@ -1,0 +1,7 @@
+tex-cache/
+render/
+*.aux
+*.log
+*.out
+manuscript.pdf
+missfont.log

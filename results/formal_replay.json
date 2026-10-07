@@ -1,0 +1,283 @@
+{
+  "schema": "s-only-generic-formal-replay-v1",
+  "date": "2026-10-06",
+  "status": "passed",
+  "upstream": {
+    "repository": "cstrawberry/predictive-universe",
+    "commit": "85a867988442fc423279341200f81634a1e65582",
+    "subtree": "docs/paper/related/pure_s_universality/formalization"
+  },
+  "toolchain": {
+    "lean_version": "4.33.1",
+    "lean_commit": "819816b2e0a3bf405af45ae5c7af2491d8f5bee6",
+    "lake_version": "5.0.0-src+819816b",
+    "archive_url": "https://github.com/leanprover/lean4/releases/download/v4.33.1/lean-4.33.1-linux.zip",
+    "archive_bytes": 896280645,
+    "archive_sha256": "0376ac87487246b40dd077268c097e701f552e94c6d020d2373b50c7444fa22f",
+    "executable_sha256": {
+      "lean": "e8baaa71855a616dc351028f3ad2200051b0671f423a1696a100e809302d5550",
+      "lake": "60330ab6f07dce20f3fa9ebb08e8b984ea9549eac172afeb15d9d2227060e2b3",
+      "leanchecker": "84bc3e7cd6efa5bfecd1e7c37571fed9428fb2b3e16da0ddf62f2163573486d0"
+    }
+  },
+  "closure": {
+    "pinned_project_modules": 423,
+    "source_and_configuration_files": 426,
+    "roots": [
+      "PureSFormal.Research.RootResetFiniteAllInputsTraceAgreement",
+      "PureSFormal.Research.RootResetContractProjection",
+      "PureSFormal.PureS.EncoderSize"
+    ],
+    "official_import_boundary": [
+      "Std",
+      "Init"
+    ],
+    "source_audit": "results/generic_formal_closure.json"
+  },
+  "build": {
+    "method": "direct official Lean in verified dependency-first order, using fresh local outputs",
+    "command_pattern": "lean -j2 -M3072 -o OUTPUT SOURCE",
+    "successful_modules": 423,
+    "first_attempt_successes_reused": 38,
+    "resumed_attempt_successes": 385,
+    "all_final_module_exit_codes_zero": true,
+    "successful_module_seconds_sum": 407.24484972297796,
+    "resumed_attempt_elapsed_seconds": 388.38382843999716,
+    "resumed_sampled_namespace_peak_rss_bytes": 1443426304,
+    "resource_retries": [
+      "Initial 6-GiB virtual-address canaries required a larger reservation for Lean imports.",
+      "The first project attempt stopped at module 39 under a 12-GiB virtual cap; its 38 successful fresh outputs were preserved.",
+      "The resumed build used a 32-GiB virtual cap and a separately tested sampled 4-GiB namespace RSS guard."
+    ]
+  },
+  "declaration_audit": {
+    "declarations": [
+      {
+        "declaration": "PureSFormal.Research.RootResetFiniteAllInputsTraceAgreement.selectsEveryContractionRun",
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "PureSFormal.Research.RootResetFiniteAllInputsTraceAgreement.termOnlyPath_eq_persistentPath",
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "PureSFormal.Research.RootResetFinitePrioritySelector.selectorContract",
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "PureSFormal.Research.RootResetFinitePrioritySelector.all_input_linear",
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "PureSFormal.Research.RootResetFinitePrioritySelector.all_input_terminal",
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "PureSFormal.Research.RootResetSelectorContract.Contract.InterInvocationState",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "declaration": "PureSFormal.Research.RootResetContractProjection.some_result",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "declaration": "PureSFormal.Research.RootResetContractProjection.none_result",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "declaration": "PureSFormal.Research.RootResetContractProjection.invocation_bound",
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "PureSFormal.PureS.SchedulerStageAssembly.allNonemptyRawAt",
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "PureSFormal.PureS.SchedulerRecurrence.positiveStages",
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "PureSFormal.PureS.SchedulerRecurrence.initialGood",
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "PureSFormal.PureS.SchedulerRecurrence.exactCheckpoint",
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "PureSFormal.PureS.SchedulerCycle.SelectedResponseTrace",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "declaration": "PureSFormal.PureS.SchedulerCycle.normalResponse_exactPositionedMutationChain",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "declaration": "PureSFormal.PureS.SchedulerCycle.normalResponse_exactPairedMutationChain",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "declaration": "PureSFormal.PureS.SchedulerResponseInvariant.responseEntries_spec",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "declaration": "PureSFormal.PureS.CheckpointRun.decodeCarrier?_of_decode",
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "PureSFormal.PureS.generator_size_counts_exact",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "declaration": "PureSFormal.PureS.BalancedActionTree.dispatcher",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "declaration": "PureSFormal.WeakPathUniversality.canonicalDispatcher",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "declaration": "PureSFormal.WeakPathUniversality.finiteCTSWeakPathUniversality",
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "PureSFormal.Research.RootResetContractProjection.none_iff_normal",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "declaration": "PureSFormal.PureS.SchedulerCycle.SelectedResponseTrace.targetDecode",
+        "axioms": [
+          "propext"
+        ]
+      }
+    ],
+    "queried_count": 24,
+    "observed_axioms": [
+      "Quot.sound",
+      "propext"
+    ],
+    "inter_invocation_definition": "fun _contract => Unit",
+    "log_sha256": "0bb776348f3d2029c5cde2e25dba44c5533e80c279f8a994f3e2ffb761a2ba32"
+  },
+  "fresh_kernel_replay": {
+    "command": [
+      "leanchecker",
+      "--fresh",
+      "-v",
+      "SOnlyGenericReplay"
+    ],
+    "helper_has_exact_root_imports": true,
+    "helper_has_no_own_declarations": true,
+    "exit_code": 0,
+    "elapsed_seconds": 119.45204817899503,
+    "sampled_namespace_peak_rss_bytes": 1516060672,
+    "scope": "safe, nonpartial declarations in the complete imported environment of the three-root helper",
+    "implementation": "official Lean kernel, freshly reconstructed environment"
+  },
+  "controls": {
+    "source_toolchain_and_replay_outputs_readonly": true,
+    "private_workspace_paths_unmounted": true,
+    "clean_environment": true,
+    "new_socket_creation_denied": true,
+    "ptrace_process_vm_pidfd_getfd_and_io_uring_denied": true,
+    "ordinary_process_creation_and_signals_available_within_pid_namespace": true,
+    "virtual_address_cap_bytes": 34359738368,
+    "sampled_namespace_rss_limit_bytes": 4294967296,
+    "sampling_interval_seconds": 0.05,
+    "memory_scope": "Sampled guard for the reviewed sources; transient overshoot is possible. Outer launcher-only measurements are excluded.",
+    "compiler_lean_memory_limit_megabytes": 3072,
+    "per_module_timeout_seconds": 300,
+    "build_or_replay_wall_timeout_seconds": 1800
+  },
+  "canaries": {
+    "valid_proof_fresh_replay_exit": 0,
+    "ordinary_invalid_source_exit": 1,
+    "injected_invalidFalse_fresh_replay_exit": 1,
+    "injected_invalidFalse_error": "kernel declaration type mismatch: Prop versus False",
+    "private_paths_environment_socket_checks_passed": true,
+    "readonly_replay_checks_passed": true,
+    "sampled_rss_refusal_control_passed": true,
+    "invalid_canary_outputs_excluded_from_project_search_path": true
+  },
+  "post_replay_integrity": {
+    "all_checks_passed": true,
+    "counts": {
+      "source_files": 426,
+      "output_files": 424,
+      "toolchain_files": 17505
+    },
+    "helpers": 3,
+    "outputs_unchanged": true,
+    "sources_unchanged": true,
+    "toolchain_unchanged": true,
+    "verification_seconds": 4.2437057069910225,
+    "output_manifest_sha256": "6973fcccc26c434d3d83d53b1e7d18297831a080450b525c3b1b4b445fdcbdcd",
+    "source_manifest_sha256": "c90a264962c28aa5cedf002f27945e00476f0cf586975ea6ad25036b94b5b301",
+    "toolchain_manifest_sha256": "63e9784560dabaca6ef9142ae500eff02959007fb4f96673532cc625979a1fc8"
+  },
+  "evidence_directory": "artifacts/formal-replay-2026-10-06",
+  "proof_boundary": {
+    "kernel_checked": "Pinned generic CTS-to-S controller, stage and trajectory dependency closure.",
+    "written_reviewed_components": "Project-specific finite-machine front end, compact source invariants, Local-origin/first-F17 lift and output composition.",
+    "checker_independence": "Fresh replay uses the same official Lean kernel; no alternate kernel implementation was run.",
+    "axiom_audit_scope": "The 24 listed declarations, not every declaration in the 423-module closure."
+  }
+}

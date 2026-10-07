@@ -1,0 +1,47 @@
+{
+  "date": "2026-10-07",
+  "status": "passed",
+  "target": "turing",
+  "helper_version": "two-profile helper with explicit --target turing",
+  "helper_sha256": "c031bcf6e0943c826111de4e6ec04716078fcff0521d93fb1032946f61a1cdee",
+  "project_modules": 67,
+  "pinned_upstream_modules": 423,
+  "fresh_compiler_invocations": 491,
+  "fresh_output_hashes_verified": 491,
+  "kernel_replay": {
+    "step": "fresh-kernel-replay",
+    "command": [
+      "/opt/lean/bin/leanchecker",
+      "--fresh",
+      "-v",
+      "SOnlyTuringUniversalityReplay"
+    ],
+    "exit_code": 0,
+    "timed_out": false,
+    "elapsed_seconds": 136.14217969799938,
+    "log": "logs/fresh-kernel-replay.log"
+  },
+  "process_guard": {
+    "command": [
+      "/usr/bin/python3",
+      "/packet/tools/replay_formal.py",
+      "--lean-bin",
+      "/opt/lean/bin",
+      "--upstream-source",
+      "/upstream",
+      "--target",
+      "turing",
+      "--build-dir",
+      "/work/fresh"
+    ],
+    "exit_code": 0,
+    "stop_reason": null,
+    "elapsed_seconds": 633.8015760470007,
+    "sampled_peak_namespace_rss_bytes": 1515950080,
+    "sampled_peak_namespace_virtual_bytes": 18253279232,
+    "sampled_namespace_rss_cap_bytes": 4294967296,
+    "sample_interval_seconds": 0.05
+  },
+  "evidence_directory": "artifacts/portable-turing-replay-2026-10-07",
+  "isolation": "read-only verified sources and official toolchain; no prior project/dependency outputs mounted; socket creation denied; all staged source modules compiled in dependency order before fresh kernel replay"
+}

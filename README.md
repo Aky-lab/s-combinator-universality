@@ -1,8 +1,11 @@
 # S-combinator universality
 
-A constructive route from finite counter machines to S-only computation, with
+A constructive route from conventional Turing machines to S-only computation, with
 explicit encoders, native reduction controllers, structural output readers,
 and independently checked proof steps.
+
+[Technical manuscript (PDF)](paper/compact-s-combinator-construction.pdf) ·
+[LaTeX sources and build instructions](paper/README.md)
 
 ```text
 term ::= S | (term term)
@@ -11,27 +14,41 @@ S x y z -> x z (y z)
 
 Application associates to the left. A native step contracts one occurrence in a finite application tree.
 
-## Proof route
+## Main theorem
 
-The [consolidated theorem](docs/universality-theorem.md) gives the fixed-controller
-construction. The [proof roadmap](docs/proof-dependencies.md) identifies its
-component proofs, source attribution, and verification status:
+[The Turing-machine theorem](docs/formal-turing-universality.md) gives an
+executable encoding of every finite-alphabet, integer-tape Turing machine and
+finite input into one fixed S-only trajectory. Source halting is equivalent
+to a fixed regular event. The 67-module development passed fresh Lean kernel
+replay; the encoder is executable and choice-free.
+
+The formal endpoint is
+[`SOnlyTuringUniversality.halting_iff_event`](formal/SOnlyTuringUniversality.lean).
+The [register-machine result theorem](docs/universality-theorem.md) additionally
+returns the exact natural result at the first accepted current tree. The TM
+extension also identifies the specified finite left-stack result.
+
+The controller resets at the root, retains only the S term between invocations,
+and performs native S contractions. The fixed first-preorder decoder reads
+only the accepted current tree.
 
 ```text
-register machine + input → BP2 → UT19 → 38-phase CTS → native S trajectory
+Turing machine + input → 3 registers → BP2 → UT19 → fixed 38-phase CTS → S
 ```
 
-- [Uniform machine-to-BP2 reduction](docs/universal-bp2-front-end.md): arbitrary finite inputs, restart-safe initialization, exact compiler size, and fixed numerical output
-- [Compact source simulation](docs/ut19-simulation-invariants.md): first-event halting equivalence and preserved counters under one fixed UT19 program
-- [Local-event provenance](docs/local-event-provenance.md): origin of the completed response marker and preservation of its frozen output audit
-- [Regular event language](docs/pattern-automaton.md): a finite bottom-up observer for the fixed phase-17 response
-- [Exact first-event transfer](docs/cts-event-transfer.md): ordered native-stage coverage, first acceptance, and seed-free frozen-audit decoding
-- [Bounded current-S output reader](docs/s-event-readout.md): explicit polynomial work, current-tree-only decoding, and adversarial independent review
+- [Conventional tape bridge and final verification](docs/formal-turing-universality.md): literal compiler, all-microstep halting, 67-module replay and 1,359 declaration queries
+- [Formal frontend](docs/formal-register-machine-frontend.md): arbitrary machines/inputs, actual initialization and restart, exact result and polynomial compiler-size bound
+- [Source/event interfaces](docs/formal-event-interfaces.md): uniform one-hot simulation, literal target language and actual event completeness
+- [Extended kernels](docs/formal-extended-kernels.md): source-indexed scheduler labels, memory algebra and current-tree output interfaces
+- [Current-tree decoder bound](docs/lean-current-decoder-bound.md): total input-size-fuel simulation and polynomial occurrence-tree cost
+- [Register checkpoint verification](docs/final-verification.md): exact numerical output, source identities and negative controls
 
-The written first-event composition has independent review. Fresh formal replay
-and mechanization of the new bridge are the next validation steps. The S
-protocol is attributed to Cinematic Strawberry; source provenance is linked in
-the component proofs.
+Cinematic Strawberry's prior package already states fixed-controller
+universality for a 912-phase construction. Its generic S protocol is reused
+with attribution. This development supplies the compact 38-phase route, its
+explicit source/event/output composition and independent verification. The
+formal frontend's uniform helper allocation is documented alongside the
+earlier selective Python reference implementation.
 
 ## Reproduced computations
 
@@ -101,5 +118,5 @@ include explicit process and memory limits.
 - [Structural UT19 result reader](docs/ut19-readout.md): current-state Reset grammar and the exact 17-bit CTS event offset
 - [Generated source artifacts](artifacts/neary-left-toggle/) and [experiment reports](results/)
 
-Current work focuses on fresh checking of the pinned formal dependency closure
-and mechanizing the new first-event composition.
+Current work focuses on mechanizing the Local-event and source/output
+composition on top of the checked 38-phase instance.

@@ -1,0 +1,222 @@
+{
+  "schema": "s-only-fixed-38-lean-instance-v1",
+  "date": "2026-10-06",
+  "status": "fresh-kernel-replay-passed",
+  "source": "formal/SOnly38.lean",
+  "upstream_commit": "85a867988442fc423279341200f81634a1e65582",
+  "lean_version": "4.33.1",
+  "claims": [
+    "Exact 38-phase, 760-bit, 40-one appendant table with all-phase enumeration.",
+    "Phase 17 target appendant and route 0100011 in the pinned balanced dispatcher.",
+    "Nonempty target response for every suffix.",
+    "Fixed-root finite-controller all-input termination and linear bound.",
+    "Exact one/zero-contraction selector answers.",
+    "Every-sample root-reset/persistent trajectory equality and public checkpoints."
+  ],
+  "checked_instance": {
+    "source_sha256": "3fb5944191b4a22c7152f2594b2b8e3d97579da1b4f86081bd046f4993ee9128",
+    "output_sha256": "e99cf78d1037f8e3104889d26cbbdecb415396af0cb16de0ddfbf37ace36137f",
+    "output_bytes": 258792,
+    "original_outputs_unchanged_before_instance_replay": true,
+    "all_post_replay_checks_passed": true,
+    "source_unchanged": true,
+    "output_unchanged": true,
+    "pinned_sources_unchanged": 426,
+    "pinned_and_helper_outputs_unchanged": 424,
+    "toolchain_files_unchanged": 17505,
+    "verification_seconds": 3.517918091994943,
+    "queried_axioms": [
+      {
+        "declaration": "SOnly38.enumerated_appendants",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "declaration": "SOnly38.appendant_bit_count",
+        "axioms": []
+      },
+      {
+        "declaration": "SOnly38.appendant_one_count",
+        "axioms": []
+      },
+      {
+        "declaration": "SOnly38.target_selected_route",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "declaration": "SOnly38.every_input_linear",
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "SOnly38.every_input_terminal",
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "SOnly38.selected_one_contraction",
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "SOnly38.rejected_zero_contractions",
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "SOnly38.trajectory_eq_persistent",
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "SOnly38.trajectory_selects",
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "SOnly38.trajectory_contracts",
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "SOnly38.exact_checkpoint",
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "SOnly38.checkpoint_accepts_only",
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "fresh_replay": {
+      "command": [
+        "/opt/lean/bin/leanchecker",
+        "--fresh",
+        "-v",
+        "SOnly38"
+      ],
+      "exit_code": 0,
+      "stop_reason": null,
+      "elapsed_seconds": 113.72738979499263,
+      "sampled_peak_namespace_rss_bytes": 1513676800,
+      "sampled_peak_namespace_virtual_bytes": 4527120384,
+      "sampled_namespace_rss_cap_bytes": 4294967296,
+      "sample_interval_seconds": 0.05
+    }
+  },
+  "build": {
+    "command": [
+      "/opt/lean/bin/lean",
+      "-j2",
+      "-M3072",
+      "-o",
+      "/work/formal-build/SOnly38.olean",
+      "/work/SOnly38.lean"
+    ],
+    "exit_code": 0,
+    "stop_reason": null,
+    "elapsed_seconds": 1.3212097939976957,
+    "sampled_peak_namespace_rss_bytes": 1183076352,
+    "sampled_peak_namespace_virtual_bytes": 7939244032,
+    "sampled_namespace_rss_cap_bytes": 4294967296,
+    "sample_interval_seconds": 0.05
+  },
+  "earlier_attempts": [
+    {
+      "command": [
+        "/opt/lean/bin/lean",
+        "-j2",
+        "-M3072",
+        "-o",
+        "/work/formal-build/SOnly38.olean",
+        "/work/SOnly38.lean"
+      ],
+      "exit_code": 1,
+      "stop_reason": null,
+      "elapsed_seconds": 39.11342776300444,
+      "sampled_peak_namespace_rss_bytes": 2870222848,
+      "sampled_peak_namespace_virtual_bytes": 9013272576,
+      "sampled_namespace_rss_cap_bytes": 4294967296,
+      "sample_interval_seconds": 0.05,
+      "attempt": 1
+    },
+    {
+      "command": [
+        "/opt/lean/bin/lean",
+        "-j2",
+        "-M3072",
+        "-o",
+        "/work/formal-build/SOnly38.olean",
+        "/work/SOnly38.lean"
+      ],
+      "exit_code": 124,
+      "stop_reason": "wall clock cap",
+      "elapsed_seconds": 180.0633614279941,
+      "sampled_peak_namespace_rss_bytes": 1168560128,
+      "sampled_peak_namespace_virtual_bytes": 7939948544,
+      "sampled_namespace_rss_cap_bytes": 4294967296,
+      "sample_interval_seconds": 0.05,
+      "attempt": 2
+    },
+    {
+      "command": [
+        "/opt/lean/bin/lean",
+        "-j2",
+        "-M3072",
+        "-o",
+        "/work/formal-build/SOnly38.olean",
+        "/work/SOnly38.lean"
+      ],
+      "exit_code": 124,
+      "stop_reason": "wall clock cap",
+      "elapsed_seconds": 180.05056557699572,
+      "sampled_peak_namespace_rss_bytes": 1166635008,
+      "sampled_peak_namespace_virtual_bytes": 7939948544,
+      "sampled_namespace_rss_cap_bytes": 4294967296,
+      "sample_interval_seconds": 0.05,
+      "attempt": 3
+    }
+  ],
+  "earlier_attempt_resolution": "Prove selector/projection equality first at abstract ProbeSpec function level, then specialize and transport equality.",
+  "python_checks": {
+    "file": "tests/test_formal_cts_instance.py",
+    "tests_passed": 3
+  },
+  "complementary_written_layers": [
+    "Finite-machine source compilation and compact UT19 simulation.",
+    "Local-event provenance and first-F17 lift.",
+    "Regular event detector and numerical output composition."
+  ],
+  "evidence_directory": "artifacts/formal-replay-2026-10-06",
+  "instance_import_closure": {
+    "upstream_modules": 422,
+    "project_owned_modules": 1,
+    "upstream_roots": [
+      "PureSFormal.Research.RootResetFiniteAllInputsTraceAgreement",
+      "PureSFormal.Research.RootResetContractProjection"
+    ],
+    "generic_replay_upstream_modules": 423
+  }
+}

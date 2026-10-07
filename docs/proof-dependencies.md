@@ -1,134 +1,86 @@
-# The proof and its verification dependencies
+# Proof dependency map
 
-The [consolidated theorem](universality-theorem.md) gives a fixed-controller
-S-only universality construction with a fixed regular event language and
-current-tree output decoding. The [official S Combinator Challenge](https://writings.stephenwolfram.com/2021/06/1920-2020-and-a-20000-prize-announcing-the-s-combinator-challenge/)
-discusses selected evaluation paths, results observed during continuing growth,
-and bounds on auxiliary encoding/detection/decoding. Its acceptance criterion
-also includes human assessment of whether a construction answers the question.
+The conventional Turing-machine endpoint is
+[`SOnlyTuringUniversality.halting_iff_event`](../formal/SOnlyTuringUniversality.lean).
+The numerical register-machine endpoint remains
+[`SOnlyUniversality.result_iff_first_event`](../formal/SOnlyUniversality.lean).
+[The 67-module verification](formal-turing-universality.md) records the extended
+clean build, fresh replay and 1,359-declaration audit; the
+[register checkpoint](final-verification.md) also preserves negative controls.
 
-## Construction route
+## 0. Conventional tape machines to three registers
 
-```text
-finite register machine + input
-    -> restart-safe all-zero BP2 source
-    -> compact UT19 initial queue
-    -> one fixed 38-phase ordinary binary CTS
-    -> exact pinned S encoding and root-reset controller
-    -> first regular event and frozen-audit result.
-```
+- `SOnlyTapeStacks`: true Int-indexed tapes, every-cell stack representation, finite runs, halting/divergence and injective arithmetic stack codes
+- `StackMacros`: actual finite INC/DECJZ push/pop execution and scratch restoration
+- `StackPushTable`, `StackPopTable`, `StackMacroTime`: concrete tables and exact positive macro lengths
+- `SOnlyTapeCompilerCheckpoints`: cofinal checkpoint simulation and all-microstep halting/final-state reflection
+- `SOnlyTapeCompiler`: explicit finite label table, literal macro rows, arbitrary finite-input halting and chosen-left-stack result
+- `SOnlyTuringUniversality`: composition with the same fixed S encoder/controller/observer/decoder
 
-The machine and its data vary only through the initial S term. The native
-controller, event language, result grammar, and final output coordinate remain
-fixed. Every invocation begins at the root with the same finite control and
-contracts one occurrence of `S x y z -> x z (y z)` along the encoded path.
+[Conventional tape theorem and proof map](formal-turing-universality.md)
 
-## Source compilation and outputs
+## 1. Source machine and explicit compiler
 
-The [complete machine/input-to-BP2 reduction](universal-bp2-front-end.md)
-provides restart-safe initialization, tie-free clock simulation, and a fixed
-output convention. For `d` registers, `I` increment instructions, `J` decrement
-instructions, and input sum `s`, put `k=d+I+4J`. Its BP2 program has `8k+3`
-labels and exactly `168k^2+124k+19+4s` commands. It halts exactly when the
-source does and leaves first counter `2n+3` for source result `n`.
-[Independent algebraic review](universal-bp2-front-end-review.md) checks the
-three intermediate models, arbitrary counter magnitudes, restart boundaries,
-and syntax-only size formulas.
+- `SOnlyMachine`: typed INC/DECJZ/HALT source, amnesiac macro simulation and halting equivalence
+- `SOnlyMachineBP2`: actual literal BP2 execution, guarded blocks and initialization
+- `SOnlyMachineWaterfallBP2`: finite Waterfall-to-BP2 compiler
+- `SOnlyMachineClock`: amnesiac clock rows and complete BP2 simulation
+- `SOnlyMachineFinite`, `SOnlyMachineNat`: finite/dense counter enumeration and Nat-label projection
+- `SOnlyMachineCorrectness`: halted-output uniqueness and value-specific equivalence
+- `SOnlyMachineBounds`: polynomial size bound for the actual uniform-helper compiler
 
-The [compact BP2-to-UT19 proof](ut19-simulation-invariants.md) establishes
-restart closure, first selected-18 equivalence, no premature queue exhaustion,
-and counter runs of lengths `4^(x+1)` at the event. The
-[one-hot lemma](alternating-tag.md) transfers that event to CTS phase 17 with
-leading bit 1. [Structural readers](ut19-readout.md) recover the complete
-counter tuple. The fixed final map `(first-3)/2` recovers the register-machine
-result.
+[Frontend definitions and bounds](formal-register-machine-frontend.md)
 
-The [auxiliary-interface bounds](auxiliary-interface-bounds.md), with
-[independent review](auxiliary-interface-bounds-review.md), give exact initial
-S size `16,529+306q` for `q` tag symbols and a singly exponential encoder bound
-in explicit binary source-description size. Construction loops are bounded by
-syntax, independently of source running time.
+## 2. Fixed UT19 computation
 
-## Exact S trajectory and first event
+- `SOnlyCounter`: all raw counter branches, including protected odd Reset
+- `SOnlyMemory`: actual local memory passes, prefix-XOR update and microstep safety
+- `SOnlyTemporalMemory`: explicit initializer, protected forcing window and stride-transform identity
+- `SOnlySimulation`, `Normal`, `Exceptional`, `Halt`: assembled-word normal/zero/halt transitions
+- `SOnlySimulationEpoch`, `Schedule`, `Instructions`, `Restart`: actual source epochs, programmed widths and restart
+- `SOnlySimulationComplete`: arbitrary BP2 halting/event equivalence and cofinal nontermination safety
+- `SOnlySimulationReadout`, `Interface`, `Universal`, `Output`: event grammar, efficient depth, machine input composition and specified numerical output
+- `SOnlySimulationPublished`: all-slot published-width and initialized-memory agreement
 
-The mathematical construction uses the exact generic encoder, dispatcher, and
-finite controller in the pinned
-[Cinematic Strawberry package](https://github.com/cstrawberry/predictive-universe/tree/85a867988442fc423279341200f81634a1e65582/docs/paper/related/pure_s_universality).
-Its source declarations provide arbitrary-finite-input controller totality,
-a fixed-root one-contraction contract, and equality with the persistent
-scheduler at every contraction sample.
+[Written source invariants](ut19-simulation-invariants.md)
 
-The [labelled prefix proof](cts-event-transfer.md) lifts the actual stage
-construction with Local-origin and frozen-snapshot annotations. Each stage
-`h` executes `h` jobs, each recomputing the first `h` source responses from the
-original seed and phase zero. If `r` is the first target CTS prestate, the
-first completed target Local is the final response of the first job in stage
-`r+1`.
+## 3. One-hot translation and generic S controller
 
-Only nonempty stages are required: the source proof prevents exhaustion before
-the first event, and its nonempty target appendant also preserves `c_(r+1)`.
-For a nonhalting source, every finite horizon stays nonempty. This discharges
-the restricted stage hypothesis for every input produced by the source
-compiler. [Independent transfer review](cts-event-transfer-review.md) checks
-the inclusive horizon, every-sample ordering, job resets, fixed syntax,
-selector identity, and the public snapshot-decoder bridge.
+- `SOnlySource`: exact source/CTS simulation, every-offset events and least-event index
+- `SOnly38`: literal 38-phase program, exact route, fixed controller contract and every-sample agreement
+- Pinned `PureSFormal`: generic encoding, native scheduler, finite selector and root-reset trajectory
 
-## Event provenance and current-tree output
+[Pinned dependency replay](formal-replay.md) · [Concrete instance](formal-cts-instance.md)
 
-The [event-language audit](ut19-s-event-audit.md) identifies a completed fresh
-Local with label `(17,1)`, route `0100011`, and 19 action-history arguments.
-Descendant occurrence is a regular tree language. Its
-[bottom-up automaton](pattern-automaton.md) has a fixed `2^1751` state cover.
+## 4. Generated origins and first acceptance
 
-The [Local-origin proof](local-event-provenance.md), independently
-[reviewed](local-event-provenance-review.md), examines new nodes, copies, and
-rebuilt ancestors in every registered construction context. The stage lift
-supplies those contexts for all samples needed by the first-event theorem.
-It also preserves the literal post-deletion snapshot at Local address `LLLR`.
+- `SOnlyEventTransfer`, `EventPattern`, `EventResponse`: exact samples, literal target pattern and public audit
+- `SOnlyProvenance`, `ProvenanceRows`: H6 congruence and actual constructor/context inheritance
+- `SOnlyGeneratedOrigins`, `CanonicalOrigins`: label/snapshot licenses and canonical C4 preservation
+- `SOnlySchedulerOrigins`, `GlobalAncestors`, `GlobalOrigins`, `GlobalTerminal`: actual phase, parent, response and job closure
+- `SOnlyResponseLabels`, `GlobalStages`, `GlobalFirstPrefix`: source-indexed labels and constructed whole-stage prefixes
+- `SOnlyFirstEventOrigins`, `FirstEventResponse`, `GlobalFirstEvent`, `GlobalFirstStructure`: sharp creation time and identical frozen audits at every first-event match
+- `SOnlyEventEquivalence`: source/S event equivalence under source liveness, discharged by the final compiler
 
-The [bounded current-tree reader](s-event-readout.md), independently
-[reviewed](s-event-readout-review.md), locates the first preorder witness,
-reads that frozen snapshot, restores the deleted 1, and applies the fixed CTS
-result grammar. Its sufficient charged work is `4096(N+1)^3(C+1)^2`, with
-polynomial bit-time and storage under the stated input/cap convention. The
-exact upstream theorem `CheckpointRun.decodeCarrier?_of_decode` links the
-response's semantic snapshot to this seed-free public grammar.
+## 5. Fixed observation and current-tree result
 
-Thus the first accepting tree contains precisely the source result needed by
-the fixed reader. A mutable accumulator is unnecessary: the recorded `101`
-fixture shows an old Local accumulator changing from `011` to `11` while its
-frozen audit continues to decode `01`.
+- `SOnlyObserver`: finite bottom-up cover and exact descendant recognition
+- `SOnlyInitial`: all-input initial event absence
+- `SOnlyResult`, `ResultBits`: exact first-counter arithmetic and unaligned event-bitword recovery
+- `SOnlyWitnessResult`: numerical result in a genuine accepted sample
+- `SOnlyCurrentDecoder`: fixed first-preorder choice and all-witness correctness interface
+- `SOnlyDecoderBound`, `DecoderBoundCurrent`: input-size-fuel simulation, output size and charged recursion
 
-## Verification ledger
+[All-input decoder complexity](lean-current-decoder-bound.md)
 
-| Component | Current evidence |
-| --- | --- |
-| Register-machine → BP2 → UT19 → CTS | Written quantified invariants, independent algebraic review, executable finite checks |
-| Local provenance and frozen audit | Written occurrence proof, independent review, adversarial native fixtures |
-| Nonempty stage lift and first-event composition | Exact pinned source inspection and independent written proof review |
-| Regular detector and bounded decoder | Explicit algorithms/bounds, independent review, adversarial implementation tests |
-| Generic fixed-root S controller and all-sample transfer | Pinned upstream formal proof sources inspected; local kernel replay pending |
-| New composed theorem | Written proof assembled from the components above; local mechanization pending |
-| Independent Python controller port | Exact finite-table/trace comparisons and bounded native tests; all-input port correspondence is a separate reproduction theorem |
+## 6. End-to-end statement
 
-For the Python reproduction, whole-controller preflight gives 2,122,868,774
-indexed controls and original start 2,064,502,462 for the fixed UT19 endpoint.
-The independently compiled pooled representation preserves those indices.
-This implementation count is separate from the abstract coefficient in the
-exact pinned controller's all-input theorem.
+`SOnlyUniversality` joins the concrete encoder, fixed controller, fixed regular
+observer and fixed current-tree result function. Its halting and output
+statements have no remaining source-event, liveness, origin or numerical
+success hypotheses.
 
-The next main validation step is fresh checking of the inherited formal
-dependency closure, followed by mechanizing the new event lift/composition.
-The [consolidated statement](universality-theorem.md) supplies the target and
-[the source index](cts-event-transfer.md#pinned-source-index) supplies the exact
-imported declarations. The [supplemental source manifest](../results/first_event_sources.json)
-records exact Git-blob and SHA-256 identities for the 33 additionally inspected
-proof files.
-
-## Attribution
-
-Cinematic Strawberry supplies the generic S protocol and formal controller
-results. UT19 and its underlying component ideas are attributed to ais523.
-The project documents its explicit front-end normal forms, compact-source
-invariants, Local-event derivation, first-event stage lift, bounded readers,
-independent code, and representation analyses alongside those sources.
+The conventional Turing-machine-to-register-machine reduction is now checked
+by layer 0. Complete bit-cost interpretation remains written mathematics, as
+identified in [the theorem](universality-theorem.md). Earlier component reports
+preserve their dated checkpoint scope.

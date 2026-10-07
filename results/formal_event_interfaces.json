@@ -1,0 +1,122 @@
+{
+  "schema": "s-only-formal-interfaces-v1",
+  "date": "2026-10-07",
+  "status": "passed",
+  "upstream_commit": "85a867988442fc423279341200f81634a1e65582",
+  "lean_version": "4.33.1",
+  "modules": [
+    {
+      "module": "SOnlySource",
+      "source": "formal/SOnlySource.lean",
+      "source_sha256": "fa747d52a40e8bc710a6e94154a46b89ca0142841a5b2988c28c76105b1ef01f",
+      "source_bytes": 12874,
+      "build_log": "source-translation-final.txt",
+      "build_guard": "source-translation-final.json"
+    },
+    {
+      "module": "SOnlyCounter",
+      "source": "formal/SOnlyCounter.lean",
+      "source_sha256": "a89af07f7fdbb01b291218212892922d088932d654db30798a16f65a7eb7ca39",
+      "source_bytes": 15364,
+      "build_log": "counter-kernel-07.txt",
+      "build_guard": "counter-kernel-07.json"
+    },
+    {
+      "module": "SOnlyEventTransfer",
+      "source": "formal/SOnlyEventTransfer.lean",
+      "source_sha256": "e9be6c2361c66e44560ced85b8fd7e263284ef82f7425b1c7e723074e586df17",
+      "source_bytes": 10286,
+      "build_log": "event-transfer-build-3.txt",
+      "build_guard": "event-transfer-build-3.json"
+    },
+    {
+      "module": "SOnlyEventPattern",
+      "source": "formal/SOnlyEventPattern.lean",
+      "source_sha256": "080774e065a74cff4f451e17e453466ec804e403aaf7191b83812f866812154e",
+      "source_bytes": 9940,
+      "build_log": "event-pattern-build-2.txt",
+      "build_guard": "event-pattern-build-2.json"
+    },
+    {
+      "module": "SOnlyEventResponse",
+      "source": "formal/SOnlyEventResponse.lean",
+      "source_sha256": "67814e9634aba7cfc1a9599b47ecde6db067658e5e99228653f945577471a702",
+      "source_bytes": 9899,
+      "build_log": "event-response-build-4.txt",
+      "build_guard": "event-response-build-4.json"
+    },
+    {
+      "module": "SOnlyObserver",
+      "source": "formal/SOnlyObserver.lean",
+      "source_sha256": "0fa49468cdc43292debf9f36335733772089ebf8be867f3e0bde6b93eac8f58b",
+      "source_bytes": 10924,
+      "build_log": "observer-final-build.txt",
+      "build_guard": "observer-final-build.json"
+    },
+    {
+      "module": "SOnlyInitial",
+      "source": "formal/SOnlyInitial.lean",
+      "source_sha256": "94ab0d686ec3b74fddb7613dfdaedcf0e5ebde9969373379ce6a4eeb00f2965f",
+      "source_bytes": 4409,
+      "build_log": "initial-final-build.txt",
+      "build_guard": "initial-final-build.json"
+    },
+    {
+      "module": "SOnlyProvenance",
+      "source": "formal/SOnlyProvenance.lean",
+      "source_sha256": "a209f5fc1e2ff0f6bbf1ecacc5844520f9ac2d47d4d1c3da93382c571a654ac2",
+      "source_bytes": 20278,
+      "build_log": "provenance-compile-5.txt",
+      "build_guard": "provenance-compile-5.json"
+    },
+    {
+      "module": "SOnlyStageEvents",
+      "source": "formal/SOnlyStageEvents.lean",
+      "source_sha256": "02b58639a6877f0b2017696c86791f8347466dd2046efd153114ea4fa6499ef5",
+      "source_bytes": 22433,
+      "build_log": "stage-events-build-8.txt",
+      "build_guard": "stage-events-build-8.json"
+    }
+  ],
+  "axiom_query_count": 242,
+  "observed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "fresh_kernel_replay": {
+    "command": [
+      "/usr/bin/env",
+      "LEAN_PATH=/work/.lake/build/lib/lean:/work/formal-build:/work/bridges-20261007T0043",
+      "/opt/lean/bin/leanchecker",
+      "--fresh",
+      "-v",
+      "SOnlyBridgesReplay"
+    ],
+    "exit_code": 0,
+    "stop_reason": null,
+    "elapsed_seconds": 117.61928659200203,
+    "sampled_peak_namespace_rss_bytes": 1519308800,
+    "sampled_peak_namespace_virtual_bytes": 4531339264,
+    "sampled_namespace_rss_cap_bytes": 4294967296,
+    "sample_interval_seconds": 0.05
+  },
+  "post_replay_integrity": {
+    "all_checks_passed": true,
+    "counts": {
+      "pinned_sources": 426,
+      "pinned_outputs": 424,
+      "official_toolchain": 17505,
+      "new_frozen_source_output_files": 21
+    }
+  },
+  "evidence_directory": "artifacts/formal-interfaces-2026-10-07",
+  "principal_theorem": "SOnlyStageEvents.sourceEvent_reaches_observer",
+  "principal_statement": "Every designated CTS event reaches an actual accepted S sample with a matching witness whose seed-free audit is exactly the CTS event prestate word.",
+  "remaining_composition": [
+    "Global generated-event soundness and firstness",
+    "All-witness/first-preorder audit agreement at first acceptance",
+    "Complete machine-to-BP2-to-UT19 global memory/restart proof",
+    "Fixed numerical decoder composition and formal operational bounds"
+  ]
+}

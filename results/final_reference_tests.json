@@ -1,0 +1,40 @@
+{
+  "date": "2026-10-07",
+  "status": "passed",
+  "reference_suite": {
+    "test_count": 693,
+    "elapsed_seconds": 799.369,
+    "exit_code": 0,
+    "command": "python -B -m unittest discover -s tests -v",
+    "wall_limit_seconds": 1200,
+    "virtual_memory_limit_mib": 4096,
+    "log": "artifacts/reference-regression-2026-10-07/full-suite.log"
+  },
+  "replay_helper_suite": {
+    "test_count": 8,
+    "elapsed_seconds": 0.002,
+    "exit_code": 0,
+    "command": "python -B -m unittest discover -s tests -p test_replay_formal.py -v",
+    "log": "artifacts/reference-regression-2026-10-07/replay-helper-tests.log"
+  },
+  "combined_test_count": 701,
+  "scope": "The reference suite was discovered before the eight portable-helper tests were added. All 701 current test methods passed across the full reference run and the separate helper run. No Lean source was changed.",
+  "offline_preflight": "passed against the existing official Lean 4.33.1 installation and all 482 project/upstream source/config hashes",
+  "evidence": [
+    {
+      "path": "artifacts/reference-regression-2026-10-07/full-suite.log",
+      "bytes": 113084,
+      "sha256": "d5777f9a1a4fd74a17754d1ff2916dd0c5704457060d3f88a1b384f057a508c4"
+    },
+    {
+      "path": "artifacts/reference-regression-2026-10-07/replay-helper-tests.log",
+      "bytes": 904,
+      "sha256": "4eed67ebf1179add544b0eac16059d3820bf485e0fb171024f39becafb6a585e"
+    },
+    {
+      "path": "artifacts/reference-regression-2026-10-07/replay-preflight.log",
+      "bytes": 240,
+      "sha256": "3f8278b59751b3b4ec2a7575f83fe535bf0205fe02d0bd9f56d8d259daa17c47"
+    }
+  ]
+}

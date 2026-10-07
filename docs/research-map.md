@@ -1,6 +1,6 @@
 # Research map
 
-Reviewed 6 October 2026. The project studies native S rewriting, fixed reduction controllers, source compilers, and structural observation interfaces.
+Literature reviewed 6 October 2026; verification updated 7 October 2026. The project studies native S rewriting, fixed reduction controllers, source compilers, and structural observation interfaces. The [end-to-end theorem](universality-theorem.md) and [final verification](final-verification.md) record the completed 67-module construction and fresh kernel replay.
 
 ## The computation interface
 
@@ -26,7 +26,7 @@ The package is under the repository's [MIT license](https://github.com/cstrawber
 
 Version check: the latest upstream commit found was [`c402a632`](https://github.com/cstrawberry/predictive-universe/commit/c402a63231bad6309c541b6951badf86c4d52749), dated 29 September 2026. Its [five-commit comparison](https://github.com/cstrawberry/predictive-universe/compare/85a867988442fc423279341200f81634a1e65582...c402a63231bad6309c541b6951badf86c4d52749) has no changed path inside the pure-S package. The audit therefore keeps the package pinned at `85a867988442fc423279341200f81634a1e65582`.
 
-Verification recorded here so far: source-level inspection of the public interface and its definition inventory. A fresh Lean build, kernel replay and axiom census have not been run locally. Those are separate verification deliverables.
+The pinned 423-module dependency closure has now passed a clean build, fresh official Lean kernel replay and axiom audit. The added 67-module construction, including the conventional tape-machine compiler, also passed fresh replay with 1,359 declaration queries; see the [final verification record](formal-turing-universality.md). This checks the dependency closure used by the concrete 38-phase construction, rather than all 1,239 upstream modules.
 
 ## Recent complementary work
 
@@ -68,7 +68,7 @@ The finite restoring-pattern compiler is implemented with an explicit six-observ
 
 The [compact source fixture](neary-fixture.md) now materializes a 482-phase CTS and verifies both two-state write-and-halt cases. Its [generic S initial encoding](cts-encoding.md) has exactly 1,342,619 expanded nodes. [Spine-walker components](spine-walkers.md) add descending and restoring ancestor queries to the finite-controller toolkit. The [event-composition lemma](event-composition.md) isolates how a distinguished CTS production event can be observed through exact S readout.
 
-The fixed two-phase [root-reset selector](root-selector.md) is reconstructed as a 257,299-state primitive control graph. It independently chooses all 85 published addresses. A separate model review disables source/fixture access during execution and tests 6,918 small trees plus 500 adversarial contexts. The next formal stage is a fresh, pinned headline build and official kernel replay, with theorem meaning and execution scope reviewed separately.
+The fixed two-phase [root-reset selector](root-selector.md) is reconstructed as a 257,299-state primitive control graph. It independently chooses all 85 published addresses. A separate model review disables source/fixture access during execution and tests 6,918 small trees plus 500 adversarial contexts. The pinned build and official kernel replay are complete, with theorem meaning and execution scope reviewed separately in the [proof audit](formal-proof-review.md).
 
 The [succinct positive-period controllers](succinct-periodic.md) reproduce the
 same indexed graphs through period five. [Construction-time code sharing](pooled-selector.md)
@@ -80,5 +80,5 @@ UT19 as an explicit 38-phase ordinary CTS endpoint. Its
 [memory lemma](running-xor-memory.md), and
 [counter/clock simulation proof](ut19-simulation-invariants.md) specify the
 unpadded BP2 interface, exact first selected-18 event, and preserved results.
-S-level event observation and output composition are the corresponding next
-integration targets.
+S-level event observation and exact first-sample numerical output are joined
+in `SOnlyUniversality.result_iff_first_event`; see the [dependency map](proof-dependencies.md).

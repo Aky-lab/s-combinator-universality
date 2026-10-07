@@ -404,9 +404,10 @@ performs unbounded source evaluation.
 - **Previously written and independently reviewed here:** Local occurrence
   nonmanufacture/frozen-audit lemma, source front end and UT19 invariants,
   regular pattern detector, and bounded structural output reader.
-- **Not locally checked by Lean:** this new composition and the imported
-  dependency closure. No Lean installation, kernel replay, upstream-code
-  execution, or large UT19 native S trajectory was performed for this audit.
+- **Subsequent formal validation:** the imported 423-module dependency closure
+  has passed [fresh official Lean kernel replay](formal-replay.md), with exact
+  type/axiom probes for the relevant interfaces. The new labelled-prefix and
+  first-event composition remains the written proof reviewed here.
 - **Still a separate reproduction task:** an all-input equivalence theorem for
   the Python encoder/selector/controller and fixed-code factories. Existing
   finite fixture agreement does not establish it. The mathematical theorem
